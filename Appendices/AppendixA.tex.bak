@@ -1,0 +1,105 @@
+% Appendix A
+
+\chapter{Bibliography}
+\label{Bibliography}
+\lhead{\emph{Bibliography}}
+
+\begin{thebibliography}{00}
+\bibitem{1}O.P.Agrawal. \emph{Solution for a fractional diffusion-wave equation defined in a bounded domain}Nonlinear
+Dynamics,29:145-155,2002.
+\bibitem{2}O.P.Agrawal. \emph{A numerical scheme for initial compliance and creep response of a system} Mechanics Research Communication,36(4)44-451,2009.
+\bibitem{3}K.Al-Khaled and S.Momani\emph{An approximate solution for a fractional diffusion-wave equation using the decomposition method}Appl.Math.Comput.165(2):473-483,2005.
+\bibitem{5}J.M.Angulo,M.D.Ruiz-Medina, V.V.Anh,and W.Grecksch\emph{Fractional diffusion and fractional heat equation}Adv. Appl.Probability,32(4)1077-1099,2000.
+\bibitem{6}V.V.Anh and N.N.Leonenko.\emph{Scaling laws for fractional diffusion-wave equations with singular data}.Statistics and Problility Letters,48(3)239-252,2000.
+\bibitem{7}V.V.Anh and N.N.Leonenko.\emph{Spectral analysis of fractional kinetic equations with random date}Jouurnal of Statistical Physics,104(5)1349-1387,2001.
+\bibitem{11}E.Barkai, R.Metzler, and J.Klafter.\emph{From continuous time random walks to the fractional Fokker-Plank equation}Phy.Rev.E,61(1)132-138,2000.
+\bibitem{12}L.Beghin and E.Orsingher \emph{The telegraph process stopped at stable-distributed times and its connection with the fractional telegraph equation}Fractional Calculus and Applied Analysi,6(2)187-204,2003.
+\bibitem{13} D.A.Benson,S.W.Wheatcraft, and M.M.Meerschaert \emph{Application of a fractional advection-dispersion equation}Water Resource Reasearch,36(6)1403-1412,2000.
+\bibitem{18}A.Bunde and S.Havlin \emph{Fractals and Disordered Systems}Springer,Heidelberg,1991
+\bibitem{19}A.Carpinteri and F.Mainardi,editors\emph{Fractals and Fractional Calculus in Continumum Mechanics,Volume 378 of CISM Course and Lectures.}Springer-Verlag,Berlin,1997.
+\bibitem{20}C.Chen,F.Liu,and V.Anh.\emph{A Fourier method and an extrapolation technique for Stokes first problem for a heated generalized second grade fluid with fractional derivative}.J.Comp.Appl.Math.,233:777-789,2009.
+\bibitem{21}Chang-Ming Chen,F.Liu,and K.Burrage.\emph{Finite difference methods and Fourier analysis for the fractional reaction-subdiffusion equation.}Appl.Math.Comp.,198:754-769,2009.
+\bibitem{22}Chang-Ming Chen,F.Liu,I.Turner, and K.Burrage.{A Fourier method for the fractional diffusion equation describing sub-diffusion}Journal of Computational Physics,page in press,2007.
+\bibitem{24}S.Chen,F.Liu,P.Zhuang,and V.Anh\emph{Finite difference approximations for the fractional Fokker-Plank equation}Applied Mathematical Modelling,33(1)256-273,2009.
+\bibitem{ld}Lokenath Debnath,\emph{Recent Applications of Fractional Calculus to Science and Engineering}, IJMMS ( 2003): 54,3413-3442.
+    
+% Chap-2
+\bibitem{A} G. Adomian, \emph{Solving Frontier Problems of Physics: The Decomposition Method,} Kluwer, Boston, 1994.
+\bibitem{a} G. Adomian, \emph{A review of the decomposition method in applied mathematics,} J.Math.Anl.Appl.135(1988)501-544.
+\bibitem{d} L. Debnath,\emph{Nonlinear Partial Differentia Equations for Scientists and Engineers,} Birkhauser, Boston, 1997.
+\bibitem{l} J.D. Logan,\emph{An Introduction to Nonlinear Partial Differential Equations,} Wiley-Interscience, New York, 1994.
+\bibitem{w} G.B. Whitham,\emph{Linear and Nonlinear Waves,} Wiley-Interscience, New York, 1994.
+\bibitem{W} A.M. Wazwaz,\emph{A reliable modification of Adomaion's decomposition method,} Appl.Math.Comput.102(1999)77-86.
+\bibitem{W1} A.M. Wazwaz,\emph{The decomposition method applied to systems of partial differential equations and to the reaction-diffusion Brusselator model,} Appl.Math.Comput.110(2000)251-264.
+\bibitem{W2} A.M. Wazwaz,\emph{A new algorithm for calculating the Adomian polynomials for nonlinear operators,} Appl.Math.Comput.110(1999)251-264.
+\bibitem{W3} A.M. Wazwaz,\emph{A reliable technique for solving linear and nonlinear Schrodinger equations by Adomaion's decomposition method,} Bull.Inst.Math.29(2001)125-134.
+\bibitem{W4} A.M. Wazwaz,\emph{A reliable analysis for nonlinear Schrodinger equations with cubic nonlinearity and a power law nonlinearity,} Math.Comput.Model.43(2006)178-184.
+\bibitem{W5} A.M. Wazwaz,\emph{Exact solutions for the fourth order nonlinear Schrodinger equations with cubic nonlinearity and a power law nonlinearity,} Math.Comput.Model.43(2006)802-808.
+
+\bibitem{ad} S.Abbasbandy, M.T.Darvishi,\emph{A numerical solution of Burger's equation by time discretization of Adomian's decomposition method,} Appl.Math.Comput.170(2005)95-102.
+\bibitem{dh} M.Dehghan, A.Hamidi,M.Shakourifar,\emph{The solution of coupled Burger's equation using Adomian-Pade technique,} Appl.Math.Comput.189(2007)1034-1047.
+\bibitem{kel} D.Kaya, S.M.El-Sayed,\emph{A numerical solution of the Klein-Gordon equation and convergence of the decomposition method,}Appl.Math.Comput.156(2)(2004)341-353.
+\bibitem{kel1} D.Kaya, S.M.El-Sayed,\emph{An application of the decomposition method for the generalized Kdv and RLW equations,} Chos.Soliton.Fract.17(5)(2003)869-877.
+\bibitem{S} N.T, Shawagfeh,\emph{Analytical approximate solution for nonlinear fractional differential equatins,} Appl.Math.Comput.131(2)(2002)517-529.
+\bibitem{jg}H.Jafari, V.Daftardar-Gejji \emph{ Solving linear and nonlinear fractional diffusion and wave equations by Adomian decomposition ,} Appl.Math.Comput.180(2006)488-497.
+\bibitem{be} A.Bratsos, M.Ehrhardt, I Th.Famelis,\emph{A discrete Adomian decomposition method for discrete nonlinear Schrodinger equations,} Appl.Math.Comput.197(2008)190-205.
+\bibitem{hh} Hongqing Zhu, Huazhong Shu, Meiyu Ding,\emph{Numerical solution of two-dimensional Burger's equations by discrete Adomian decomposition method,} Comput.Math.Appl.60(2010)840-848.
+\bibitem{p} I.Podlubny,\emph{Fractional Differential Equations,} Academic Press, San Diego,1999.
+\bibitem{sk} S.G.Samko, A.A. Kilbas, O.I.Marichev,\emph{Fractional Integral and Derivatives: Theory and Applications,} Gordon and Breach, Yverdon,1993.
+\bibitem{Gs} G.D. Smith,\emph{Numerical Solution of Partial Differential Equations Finite Difference Methods,} Clarendon Press Oxford, 1978.
+\bibitem{gs}V.Daftardar-Gejji, Sachin Bhalekar \emph{ Solving multi-term linear and nonlinear diffusion-wave equations of fractional order by Adomian decomposition ,} Appl.Math.Comput.202(2008)113-120.
+\bibitem{rb} S.S. Ray,R.K.Bera \emph{Analytical solution of a fractional diffusion equation by Adomian decomposition method,} Appl.Math.Comput.174(2006)329-336.
+\bibitem{ga} R.Gorenflo,E.A.Abdel-Rehim\emph{Approximation of time fractional diffusion with central drift by difference schemes,}Berlin Free University, 2003.
+    \bibitem{lg} Yu.Luchko, R.Gorenflo\emph{An operational method for solving fractional differential equations with Caputo derivatives,} Acta.Math.Vietnam.24(1999)207-233.lg
+\bibitem{ts} A.Trombettoni, A.Smerzi,\emph{Discrete solition and breathers with dilute Bose-Einstein condensates,} Phy.Rev.Lett.86(2001)2353-2356.
+\bibitem{b} H.Bateman,\emph{Some recent researches in motion of fluids,} Mon.Weather Rev.43(1915)163-170.
+\bibitem{B}J.M.Burgers,\emph{A Mathematical model illustration the theory of turbulence,} Advances in Applied Mechanics,1, Academic Press, New York,1948,171-199.
+
+% Chap-3
+
+\bibitem{d} L. Debnath,\emph{Nonlinear Partial Differentia Equations for Scientists and Engineers,} Birkhauser, Boston, 1997.
+\bibitem{l} J.D. Logan,\emph{An Introduction to Nonlinear Partial Differential Equations,} Wiley-Interscience, New York, 1994.
+\bibitem{w} G.B. Whitham,\emph{Linear and Nonlinear Waves,} Wiley-Interscience, New York, 1994.
+\bibitem{a1}G.Adomian,\emph{The diffusion-Brussselator equation,} Comput.Math.Appl.29(1995) 1-3.
+\bibitem{ms} W.M.Moslem,R.Sabry,\emph{Zakharov-Kuznetso-Burger's equation for dust ion acoustic waves,}Chaos Solitonsn Fractals 36(2008)628-634.
+\bibitem{f} C.A.J.Fletcher, \emph{Generating exact solutions of the two-dimensional Burger's equation,}Int.J.Numer.Math.Fluids 3(1983)213-216.
+\bibitem{wg} F.W.Wubs,E.D.de Goede, \emph{An explicit-implicit method for a class of time-dependent partial differential equations,}Appl.Numer.Math. 9(1992)157-181.
+\bibitem{bb} A.R.Bahadir,\emph{A fully implicit finite-difference scheme for two dimensional Burger's equations,}Appl.Maath.Comput. 137(2003)131-137.
+\bibitem{A} G. Adomian, \emph{Solving Frontier Problems of Physics: The Decomposition Method,} Kluwer, Boston, 1994.
+\bibitem{a} G. Adomian, \emph{A review of the decomposition method in applied mathematics,} J.Math.Anl.Appl.135(1988)501-544.
+\bibitem{W} A.M. Wazwaz,\emph{A reliable modification of Adomaion's decomposition method,} Appl.Math.Comput.102(1999)77-86.
+\bibitem{W1} A.M. Wazwaz,\emph{The decomposition method applied to systems of partial differential equations and to the reaction-diffusion Brusselator model,} Appl.Math.Comput.110(2000)251-264
+\bibitem{S}N.T.Shawagfeh,\emph{Analytical approximate solution for nonlinear fractional differential equatins,} Appl.Math.Comput.131(2)(2002)517-529.
+\bibitem{lw}Changpin Li,Y.Wang,\emph{Numerical algorithm based on Adomian decomposition method for fractional differential equations,} Comput.Math.Appl.57(2009)1672-1681.
+\bibitem{Gs} G.D. Smith,\emph{Numerical Solution of Partial Differential Equations Finite Difference Methods,} Clarendon Press Oxford, 1978.
+\bibitem{be} A.Bratsos, M.Ehrhardt, I Th.Famelis,\emph{A discrete Adomian decomposition method for discrete nonlinear Schrodinger equations,} Appl.Math.Comput.197(2008)190-205.
+\bibitem{hh} Hongqing Zhu, Huazhong Shu, Meiyu Ding,\emph{Numerical solution of two-dimensional Burger's equations by discrete Adomian decomposition method,} Comput.Math.Appl.60(2010)840-848.
+\bibitem{p} I.Podlubny,\emph{Fractional Differential Equations,} Academic Press, San Diego,1999.
+\bibitem{sk} S.G.Samko, A.A. Kilbas, O.I.Marichev,\emph{Fractional Integral and Derivatives: Theory and Applications,} Gordon and Breach, Yverdon,1993.
+\bibitem{b} H.Bateman,\emph{Some recent researches in motion of fluids,} Mon.Weather Rev.43(1915)163-170.
+\bibitem{B}J.M.Burgers,\emph{A Mathematical model illustration the theory of turbulence,} Advances in Applied Mechanics,1, Academic Press, New York,1948,171-199.
+
+%Chap-4    
+    
+\bibitem{A} G. Adomian, \emph{Solving Frontier Problems of Physics: The Decomposition Method,} Kluwer, Boston, 1994.
+\bibitem{a} G. Adomian, \emph{A review of the decomposition method in applied mathematics,} J.Math.Anl.Appl.135(1988)501-544.l
+\bibitem{d} L. Debnath,\emph{Nonlinear Partial Differentia Equations for Scientists and Engineers,} Birkhauser, Boston, 1997.
+\bibitem{dbd}D.B.Dhaigude, G.A.Birajdar,\emph{Numerical solution of time fractional discrete space linear and nonlinear parital differential equations by Adomian decoposition method}(Accepted)
+\bibitem{l} J.D. Logan,\emph{An Introduction to Nonlinear Partial Differential Equations,} Wiley-Interscience, New York, 1994.
+\bibitem{W} A.M. Wazwaz,\emph{A reliable modification of Adomaion's decomposition method,} Appl.Math.Comput.102(1999)77-86.
+\bibitem{W1} A.M. Wazwaz,\emph{The decomposition method applied to systems of partial differential equations and to the reaction-diffusion Brusselator model,} Appl.Math.Comput.110(2000)251-264.
+\bibitem{W2} A.M. Wazwaz,\emph{A new algorithm for calculating the Adomian polynomials for nonlinear operators,} Appl.Math.Comput.110(1999)251-264.
+\bibitem{ss}  M.El-Shahed,A.Salem,\emph{On the generalized Navier-Stokes equation,}
+    Appl.Math.Comput.156(1)(2004)287-293.
+\bibitem{p} I.Podlubny,\emph{Fractional Differential Equations,} Academic Press, San Diego,1999.
+\bibitem{sk} S.G.Samko, A.A. Kilbas, O.I.Marichev,\emph{Fractional Integral and Derivatives: Theory and Applications,} Gordon and Breach, Yverdon,1993.
+\bibitem{kel} D.Kaya, S.M.El-Sayed,\emph{A numerical solution of the Klein-Gordon equation and convergence of the decomposition method,}Appl.Math.Comput.156(2)(2004)341-353.
+\bibitem{kel1} D.Kaya, S.M.El-Sayed,\emph{An application of the decomposition method for the generalized Kdv and RLW equations,} Chos.Soliton.Fract.17(5)(2003)869-877.
+\bibitem{S} N.T, Shawagfeh,\emph{Analytical approximate solution for nonlinear fractional differential equatins,} Appl.Math.Comput.131(2)(2002)517-529.
+\bibitem{M} S.Momani, Z.Odibat,\emph{Analytical solution of a time-fractional Navier-Stokes equation by Adomian decomposition method,} Appl.Math.Comput.177(2006)488-494.
+\bibitem{Gs} G.D. Smith,\emph{Numerical Solution of Partial Differential Equations Finite Difference Methods,} Clarendon Press Oxford, 1978.
+\bibitem{be} A.Bratsos, M.Ehrhardt, I Th.Famelis,\emph{A discrete Adomian decomposition method for discrete nonlinear Schrodinger equations,} Appl.Math.Comput.197(2008)190-205.
+\bibitem{hh} Hongqing Zhu, Huazhong Shu, Meiyu Ding,\emph{Numerical solution of two-dimensional Burger's equations by discrete Adomian decomposition method,} Comput.Math.Appl.60(2010)840-848.
+    
+
+\end{thebibliography}

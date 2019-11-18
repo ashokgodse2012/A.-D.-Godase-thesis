@@ -1,0 +1,367 @@
+
+%\def\baselinestretch{1}
+
+
+\chapter{Fourth Order Uniformly Elliptic Equations}
+\begin{quote}
+\texttt{In every mathematical investigation, the question will arise
+whether we can apply our mathematical results to the real
+world.}
+\begin{flushright}
+V. I. ARNOLD.
+\end{flushright}
+\end{quote}
+
+
+
+\vfill{\rule{3in}{2pt}\\\begin{small}{The content of this chapter is communicated in following paper.\\
+
+Bounds for solutions of elliptic equations via maximum principle,   ( Communicated )}
+\end{small}
+
+
+\newpage
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Fourth Order Uniformly Elliptic Equations}
+\chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+\def\baselinestretch{1.80}
+\begin{large}
+
+%=============================
+\section{Introduction}
+In the development of partial differential equations fourth order elliptic equation plays very crucial role. Due to this motivation many researchers have used the P-function method to obtain different results for fourth order elliptic equations  \cite{py2,s1,cd,gs2,gs3,z}, etc.). In \cite{sc} Schaefer uses functions containing the square of the Laplacian of the solution, $(\Delta u )^{2} $, and deduce bounds on several quantities of interest, such as the Laplacian and gradient of the solution. Dunninger \cite{du1} developed maximum principles for equations of the form
+\begin{equation}
+\Delta^{2}u - a \Delta u + b u = 0\,\, \quad \text{in}\,\, \quad \Omega ,
+\label{eq1a}\end{equation}
+where $\Omega$ is a bounded domain in $ R^{n} $ and other related linear fourth order equations. Dhaigude and Gosavi \cite{dg}developed maximum principle for equation of the form
+ \begin{equation*}
+\Delta^{2}u + a(x, y) \Delta u + b(x, y) f(u) = 0.
+\end{equation*}
+In this paper, we generalize the result for equation of the form \\ $$ \Delta^{2}u + p(x) (\Delta u )^{k}  + q(x) f(u) = 0 $$and
+$$L^2 u+ q(x)(L u)^{k}+p(x)f(u)=0$$
+and briefly indicate some immediate consequences. From these maximum principles we deduce bounds for quantities of interest such as, the solution of the equation, and so on.
+For simplicity, we use the summation convention and denote partial derivatives $ \dfrac{\partial u }{\partial x_{i}} \,\,\, \text{by} \,\,\,u_{,i}\,\, ,$
+ $ \dfrac{ \partial^{2}u}{ \partial x^{2}_{i}} \,\,\,  \text{by}\,\,\,u_{,ii}$ and $ \dfrac{ \partial^{2}u}{ \partial x_{i} \partial x_{j} }  \,\,\,  \text{by}\,\,\,u_{,ij}.$\\
+We organize the chapter as follows. In section 4.2 we study maximum principles for fourth order uniformly elliptic equations. The last section is devoted for rigorous discussion of applications.
+
+\section{Maximum Principles}
+In this section we prove the theorems for function without gradient term and with gradient term defined on solution of elliptic equation.
+elliptic equations
+\subsection{Elliptic Equations}
+Consider $\Omega$ is a nonempty bounded domain in $R^{n}$. First we consider the equation of the form
+\begin{equation*}
+   \Delta^2 u+ a(x)(\Delta u)^{k}+ b(x)f(u)=0 \quad \text{in} \quad \Omega.
+\end{equation*}
+\subsection*{Function without gradient term}
+The following theorem is the first result of this chapter.
+\begin{theorem}\label{c4th1}
+ Suppose that $u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation
+\begin{equation}\label{c4.1}
+   \Delta^2 u+ a(x)(\Delta u)^{k}+ b(x)f(u)=0 \quad \text{in} \quad \Omega
+\end{equation}
+where $ k = 2 m + 1 > 0 $ and a(x), b(x) and f(u) satisfy $a(x) \leq 0 $, $b(x) \in C^{2}(\Omega) \bigcap C(\bar{\Omega}) ,$ $\quad \ b(x) \geq b_{0} > 0 , \Delta b \leq 0,  and \,f(u) \in C^{1} (R), f^{'}\geq 0.$
+Define the function
+\begin{equation}\label{c4.2}
+   P(x)=\frac{(\Delta u)^{2}}{b(x)}+ \int_{0}^{u} f(s)ds.
+\end{equation}
+Then $P$ attains its maximum at some point on the boundary $\partial \Omega.$
+\end{theorem}
+ \textbf{Proof:} We have, the function
+\begin{equation*}
+   P(x)=\frac{(\Delta u)^{2}}{b(x)}+  2 \int_{0}^{u} f(s)ds.
+\end{equation*}
+To  prove this result it is sufficient to show that $P$ is subharmonic.
+Differentiating $P$ with respect to $x_{i}$, we have
+\begin{equation*}
+   P_{,i}=  \frac{2( \Delta u) ( \Delta u)_{,i}}{b(x)}   -   \frac{(\Delta u)^{2} b_{,i}}{b^{2}}  +  f(u) u_{,i}.
+\end{equation*}
+Again differentiating with respect to $x_{i}$, we get
+\begin{align}\nonumber
+   P_{,ii} &=  \frac{2( \Delta u)_{,i} ( \Delta u)_{,i}}{b(x)}   +    \frac{2( \Delta u) ( \Delta u)_{,ii}}{b(x)}   -  \frac{2( \Delta u) ( \Delta u)_{,i} b_{,i}}{b^{2}} -  \frac{2( \Delta u) ( \Delta u)_{,i} b_{,i}}{b^{2}} \\ \nonumber & -   \frac{(\Delta u)^{2} b_{,ii}}{b^{2}}  +    \frac{(\Delta u)^{2} b_{,i} 2 b b_{,i} }{b^{4}} +  2 f' u_{,i} u_{,i}  +   2 f  u_{,ii}.
+\end{align}
+Using notations, we can write
+\begin{align}\label{c4.3}\nonumber
+ \Delta P = & \frac{2 (\Delta u)_{,i} (\Delta u)_{,i}}{b} +  \frac{2 (\Delta u)(\Delta ^{2}u)}{b} - \frac{4 (\Delta u)(\Delta u)_{,i}b_{,i}}{b^{2}}  - \frac{(\Delta u)^{2} \Delta b}{b^{2}} \\
+ &+ \frac{2 (\Delta u)^{2} {\mid \nabla b \mid}^{2}}{b^{3}} + 2 f^{'}(u) {\mid \nabla u \mid}^{2}+ 2 f(u) \Delta u
+\end{align}
+using equation \eqref{c4.1}, we have
+\begin{align}\label{c4.3}\nonumber
+ \Delta P = & \frac{2 (\Delta u)_{,i} (\Delta u)_{,i}}{b}  -  \frac{2 a(x) }{b(x)} (\Delta u)^{k + 1}  -  2 (\Delta u) f(u)
+ - \frac{4 (\Delta u)(\Delta u)_{,i}b_{,i}}{b^{2}} \\ & - \frac{(\Delta u)^{2} \Delta b}{b^{2}} +  \frac{2 (\Delta u)^{2} {\mid \nabla b \mid}^{2}}{b^{3}} + 2 f^{'}(u) {\mid \nabla u \mid}^{2}+ 2 f(u) \Delta u
+\end{align}
+After simplification, we obtain
+\begin{align}\label{c4.5}\nonumber
+ \Delta P =& 2\bigg [\frac{(\Delta u)_{,i}}{b^{\frac{1}{2}}} - \frac{(\Delta u) b_{,i}}{b^\frac{3}{2}}\bigg]^{2} - \frac{2 a(x)}{b(x)}(\Delta u)^{k + 1} - \frac{(\Delta u)^{2} \Delta b}{b^{2}}\\  &+ 2 f^{'}(u) {\mid \nabla u \mid}^{2}.
+\end{align}
+By assumptions of Theorem \ref{c4th1}, we observed that the right hand side of equation \eqref{c4.5} is non-negative. Therefore $ \Delta P \geq 0 $. Thus the result follows.
+
+\subsection*{Function with gradient term}
+
+\begin{theorem}\label{c4th2}
+ Suppose that $ u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation \eqref{c4.1}, where $ k = 2 m + 1 > 0 $ and $b(x) \in C^{2}(\Omega) \bigcap C(\bar{\Omega}) , f(u) \in C^{1}(R)$  and the functions p, f and q satisfy the requirements\\
+i) $ b(x) \geq b_{0} > \alpha > 0$ for some constant $\alpha, \text{and} \,\, {\Delta B}^{- 1} \leq 0 , \text{where} $ $B(x) = b(x) - \alpha ;$\\
+ii) $ f(0) = 0, f^{'}(u) \geq \beta > 0 $ for some constant $ \beta$ , and \\ $ 2 F(u) F^{''}(u) - [ F ^{'}(u)]^{2} \geq 0$ where $ F(u) = \int_{0}^{u} f(s)ds$;\\
+iii) $a \leq 0$
+and $\gamma \geq  max \bigg \{ \dfrac{1}{2}, \dfrac{1}{2 \alpha  \beta} \bigg\}.$
+
+Then the function
+\begin{equation}\label{c4.6}
+   P(x)= {\mid \nabla u \mid}^{2} + \gamma (\Delta u)^{2} + 2  \gamma b(x) F(u),
+\end{equation}
+achieve its maximum at some point on boundary $\partial \Omega.$
+\end{theorem}
+\textbf{Proof:} We have, the function
+\begin{equation*}
+   P(x)= {\mid \nabla u \mid}^{2} + \gamma (\Delta u)^{2} + 2  \gamma b(x) F(u),
+\end{equation*}
+Differentiate with respect to $x_{k}$, we get
+\begin{equation*}
+   P_{,k} = 2 u_{,i} u_{,ik} +  2 \gamma (\Delta u) (\Delta u)_{,k} + 2  \gamma b_{,k} F(u)  +  2  \gamma b(x) f(u) u_{,k}.
+\end{equation*}
+Again we differentiate $P_{,k}$ with respect to $x_{k}$, which gives
+\begin{align}\nonumber
+   P_{,kk} &= 2 u_{,ik} u_{,ik}  +   2 u_{,i} u_{,ikk}  +  2 \gamma (\Delta u)_{,k} (\Delta u)_{,k}  +   2 \gamma (\Delta u) (\Delta u)_{,kk}  + 2  \gamma b_{,kk} F(u) \\ \nonumber &+  2  \gamma b_{,k} f(u) u_{,k}  +  2  \gamma b_{,k} f(u) u_{,k}  +   2  \gamma b(x) f' u_{,k} u_{,k}  +   2  \gamma b(x) f(u) u_{,kk}.
+\end{align}
+After using notations and simplification, we have
+\begin{align}\label{c4.7}\nonumber
+\Delta P &= 2 u_{,ik} u_{,ik} + 2 u_{,i} \Delta u_{,i} + 2 \gamma ( \Delta u ) ( \Delta ^{2}u)\\
+ &+  2 \gamma (\Delta u)_{,i}(\Delta u)_{,i} + 2 \gamma (\Delta b) F(u)\nonumber \\
+&+ 2 \gamma b(x) f(u) \Delta u + 2 \gamma b(x) f^{'} u_{,i} u_{,i} + 4\gamma f(u) b_{,i} u_{,i}.
+\end{align}
+Using \eqref{c4.1} and adding and subtracting $u_{,i}u_{,i}$ and  $(\Delta u)_{,i}(\Delta u)_{,i}$, we can write
+\begin{align}\label{c4.8}\nonumber
+\Delta P &= 2 u_{,ik} u_{,ik} + {\mid \Delta u_{,i} + u_{,i}\mid}^{2} -  2 \gamma \alpha(\Delta u)^{k+1}\\
+&+ (2\gamma - 1)(\Delta u)_{,i}(\Delta u)_{,i} + 2 \gamma (\Delta b) F(u) \nonumber\\
+&+ [ 2 \gamma b(x) f^{'}(u) - 1 ] u_{,i} u_{,i} + 4 \gamma f(u) b_{,i} u_{,i}.
+\end{align}.
+
+Since $ b_{0} > \alpha > 0 $ and $ B = B(x) = b(x) - \alpha.$ Add and subtract $2 \gamma \alpha f^{'} u_{,i} u_{,i}$ in equation \eqref{c4.8}, we get
+\begin{align}\label{c4.9}\nonumber
+\Delta P &= 2 u_{,ik} u_{,ik} +|\Delta u_{,i} + u_{,i}|^{2} - 2 \gamma \alpha ( \Delta u )^{ k+ 1 } \\
+ &+  ( 2 \gamma - 1) (\Delta u)_{,i}(\Delta u)_{,i} + (2 \gamma \alpha f^{'}  - 1 ) u_{,i} u_{,i}\nonumber\\
+&+2 \gamma \{ B f' u_{,i} u_{,i} + 2 f B_{,i} u_{,i}+  (\Delta B) F\}
+\end{align}
+Now we simplify the bracket to make it perfect square, we have
+\begin{align}\nonumber
+  B f' u_{,i} u_{,i} &+ 2 f B_{,i} u_{,i} +  (\Delta B) F \\   &=   B f' u_{,i} u_{,i} + 2 f B_{,i} u_{,i}  +  \frac{f^{2} B_{,i} B_{,i}}{B f'} -  \frac{f^{2} B_{,i} B_{,i}}{B f'}  +  (\Delta B) F.\label{c4.91}
+\end{align}
+\begin{align}\nonumber
+  B f' u_{,i} u_{,i} &+ 2 f B_{,i} u_{,i} +  (\Delta B) F \\ \nonumber &=   B f' \bigg[  u_{,i} u_{,i} +  \frac{2 f B_{,i} u_{,i}}{B f'}  +  \frac{f^{2} B_{,i} B_{,i}}{B^{2} f'^{2}}\bigg]   -   \frac{f^{2} B_{,i} B_{,i}}{B f'}  +  (\Delta B) F.
+\end{align}
+\begin{align}\nonumber
+  B f' u_{,i} u_{,i} + 2 f B_{,i} u_{,i} &+  (\Delta B) F \\  &=   B f' \bigg|  u_{,i} +  \frac{ f B_{,i}}{B f'} \bigg|^{2} -   \frac{f^{2} B_{,i} B_{,i}}{B f'}  +  (\Delta B) F.
+\end{align}
+and $\Delta (B^{-1}) \leq 0 $ this implies
+\begin{align*}
+&2 {\mid \nabla B \mid}^{2}   -  B \Delta B \leq 0\\ \text{i.e.}
+&B \Delta B - 2 {\mid \nabla B \mid}^{2} \geq 0
+\end{align*}
+Therefore equation \eqref{c4.91} we can simplify as follows
+\begin{align}\nonumber
+  B f' u_{,i} u_{,i} &+ 2 f B_{,i} u_{,i} +  (\Delta B) F \\  &\geq   B f' \bigg|  u_{,i} +  \frac{ f B_{,i}}{B f'} \bigg|^{2} +  \frac{ {\mid \nabla B \mid }^{2} }{B f'}  [ 2 F F^{''} - F^{'2} ]
+\end{align}
+Thus the equation \eqref{c4.9}, becomes
+\begin{align}\nonumber
+\Delta P &\geq 2 u_{,ik} u_{,ik} +|\Delta u_{,i} + u_{,i}|^{2} - 2 \gamma \alpha ( \Delta u )^{ k+ 1 } \\ \nonumber
+ &+  ( 2 \gamma - 1) (\Delta u)_{,i}(\Delta u)_{,i} + (2 \gamma \alpha f^{'}  - 1 ) u_{,i} u_{,i}\\
+&+2 \gamma \bigg\{ B f' \bigg|  u_{,i} +  \frac{ f B_{,i}}{B f'} \bigg|^{2} +  \frac{ {\mid \nabla B \mid }^{2} }{B f'}  [ 2 F F^{''} - F^{'2} ] \bigg\}. \label{c4.92}
+\end{align}
+By stated assumptions of Theorem \ref{c4th2}, we conclude that
+\begin{equation*}
+\Delta P \geq 0.
+\end{equation*}
+Thus the result follows.
+
+\subsection{ Uniformly Elliptic Equations}
+In this section, we deal with the equation of the form
+\begin{equation*}
+   L^2u + a(x)(L u)^{k} + b(x)f(u) = 0 \quad \text{in} \quad \Omega
+\end{equation*}
+where $\Omega$ is nonempty bounded domain in $R^{n}$.
+\subsection*{Function without gradient term}
+
+\begin{theorem}\label{c4th3}
+Suppose that \\
+i) u $\in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation
+\begin{equation}\label{c4.11}
+   L^2 u+ q(x)(L u)^{k}+p(x)f(u)=0 \quad \text{in} \quad \Omega,
+\end{equation}
+where\\
+ ii) $p(x) \in C^{2}(\Omega) \bigcap C(\bar{\Omega}) $, $p(x)  > 0$ and $Lp^{- 1} \leq 0$,\\
+ iii) $ f(u) \in C^{1} (R)  $ and $ f^{'}(u) > 0, $\\
+ iv) $ F(u) = \int_{0}^{u(x)} f(t)dt $,\, $  F(u) \geq 0$ \, and \quad $2 F(u) F^{''}(u) - [ F^{'}(u)]^{2} \geq 0$,\\
+ v)$ q(x) \leq 0, k = 2m + 1 > 0.$\\
+ Define the function
+ \begin{equation}\label{c4.12}
+   Q(x)=(Lu)^{2}+ 2 p(x) F(u).
+\end{equation}
+Then $Q$ assumes its maximum at some point on boundary $\partial \Omega.$
+\end{theorem}
+
+\textbf{Proof:} Consider the function
+\begin{equation}\nonumber
+   Q(x)=(Lu)^{2}+ 2 p(x) F(u)
+\end{equation}
+ Differentiating $Q$ with respect to $x_{k}$, we have
+\begin{equation}\nonumber
+   Q_{,k} = 2 (Lu) (Lu)_{,k}+ 2 p_{,k} F(u)  +  2 p(x) f(u) u_{,k}
+\end{equation}
+Again differentiating with respect to $x_{l}$, we get
+\begin{align}\nonumber
+   Q_{,kl} =& 2 (Lu)_{,l} (Lu)_{,k} +  2 (Lu) (Lu)_{,kl} + 2 p_{,kl} F(u)  + 2 p_{,k} f(u) u_{,l} \\ \nonumber & +  2 p_{,l} f(u) u_{,k} +  2 p f^{'}(u) u_{,l} u_{,k}  +  2 p f(u) u_{,kl}
+\end{align}
+\begin{align}\nonumber
+ a_{kl}  Q_{,kl} =& 2 a_{kl}(Lu)_{,l} (Lu)_{,k} +  2 a_{kl} (Lu) (Lu)_{,kl} + 2 a_{kl} p_{,kl} F(u)  + 2 a_{kl} p_{,k} f(u) u_{,l}\\ \nonumber &+  2 a_{kl} p_{,l} f(u) u_{,k} +  2 a_{kl} p f^{'}(u) u_{,l} u_{,k}  +  2  a_{kl} p f(u) u_{,kl}
+\end{align}
+Using notation
+\begin{equation*}\nonumber
+  Lu  =  a_{ij} u_{,i} u_{,j}  =  a_{ij} \frac{\partial^{2} u}{ \partial x_{i} \partial x_{j}}
+\end{equation*}
+\begin{align}\label{c4.12.2}\nonumber
+ LQ =&  2a_{kl} (Lu)_{,k} (Lu)_{,l} + 2 (Lu)(L^{2}u) + 2 (Lp) F + 2 f \bigg(  a_{kl}  p_{,k} u_{,l}  +  a_{kl} u_{,k} p_{,l} \bigg) \\ &+ 2 p f (Lu) + 2 p f^{'} a_{kl} u_{,k}u_{,l}.
+\end{align}
+Using equation \eqref{c4.11}, we have
+\begin{equation*}
+   L^2 u + q(x)(L u)^{k} + p(x)f(u)=0.
+\end{equation*}
+\begin{equation*}
+ \therefore   L^2 u =  - q(x)(L u)^{k}  -  p(x)f(u).
+\end{equation*}
+Therefore equation \eqref{c4.12.2}, becomes
+\begin{align}\label{eq12.2a}\nonumber
+ LQ =&  2a_{kl} (Lu)_{,k} (Lu)_{,l} -  2 q(x)(Lu)^{k+1} + 2 (Lp) F \\& + 2 f\bigg(  a_{kl}  p_{,k} u_{,l} + a_{kl} u_{,k} p_{,l}\bigg)   + 2 pf^{'}(a_{kl} u_{,k}u_{,l}).
+\end{align}
+Add and subtract $ \frac{2f^{2}}{pf^{'}}(a_{kl}p_{,k}p_{,l})$,
+\begin{align}\label{c4.12.2b}\nonumber
+ LQ =&  2a_{kl} (Lu)_{,k} (Lu)_{,l} -  2 q(x)(Lu)^{k+1} + 2 (Lp) F + 2 f(  a_{kl}  p_{,k} u_{,l} + a_{kl} u_{,k} p_{,l}) \\ &   + 2 pf^{'}(a_{kl} u_{,k}u_{,l}) + \frac{2f^{2}}{pf^{'}}(a_{kl}p_{,k}p_{,l})  -   \frac{2f^{2}}{pf^{'}}(a_{kl}p_{,k}p_{,l}).
+\end{align}
+\begin{align}\label{c4.12.2c}\nonumber
+LQ =& 2a_{kl} (Lu)_{,k} (Lu)_{,l} - 2q(x) (Lu)^{k+1} + 2 p f^{'} \bigg[ a_{kl} u_{,k}u_{,l}  +  \frac{f a_{kl} u_{,k} p_{,l}}{pf^{'}} \\& +   \frac{f a_{kl} u_{,l} p_{,k}}{pf^{'}}  +  \frac{2 f^{2} a_{kl} p_{,k} p_{,l}}{p^{2}f'^{2}} \bigg]  + 2(Lp) F - \frac{2f^{2}}{pf^{'}}(a_{kl}p_{,k}p_{,l}).
+\end{align}
+\begin{align}\label{c4.12.3}\nonumber
+LQ =& 2a_{kl} (Lu)_{,k} (Lu)_{,l} - 2q(x) (Lu)^{k+1} + 2 p f^{'} \bigg[ a_{kl} ( u_{,k} + \frac{f p_{,k}}{pf^{'}})( u_{,l} + \frac{f p_{,l}}{pf^{'}}) \bigg] \\& + 2(Lp) F - \frac{2f^{2}}{pf^{'}}(a_{kl}p_{,k}p_{,l}).
+\end{align}
+Since $ p > 0, Lp^{-1} \leq 0,$
+after simplification it implies that
+\begin{equation}\nonumber
+ p(Lp) - 2 a_{kl} p_{,k} p_{,l} \geq 0 ,
+\end{equation}
+\begin{equation}\nonumber
+ \therefore p(Lp) \geq  2 a_{kl} p_{,k} p_{,l} ,
+\end{equation}
+\begin{equation}\nonumber
+   (Lp) F \geq \frac{ 2 a_{kl} p_{,k} p_{,l}}{p} F ,
+\end{equation}
+\begin{equation}\nonumber
+   (Lp) F  -  \frac{f^{2}}{p f^{'}} a_{kl} p_{,k} p_{,l} \geq \frac{ 2 a_{kl} p_{,k} p_{,l}}{p} F  -  \frac{f^{2}}{p f^{'}} a_{kl} p_{,k} p_{,l} ,
+\end{equation}
+\begin{equation}\nonumber
+   (Lp) F  -  \frac{f^{2}}{p f^{'}} a_{kl} p_{,k} p_{,l} \geq \frac{  a_{kl} p_{,k} p_{,l}}{p f^{'}} \bigg( 2 F f^{'}  -  f^{2} \bigg)
+\end{equation}
+\begin{equation}\label{c4.12.4}
+(Lp)F - \frac{f^{2}}{pf^{'}}( a_{kl} p_{,k} p_{,l}) \geq \frac{a_{kl} p_{,k} p_{,l}}{p f^{'}}( 2FF^{''} - F ^{'2}).
+\end{equation}
+
+Substituting equation \eqref{c4.12.4} into equation \eqref{c4.12.3}, we have
+\begin{align}\label{eq13}\nonumber
+LQ \geq & 2 a_{kl} (Lu)_{,k} (Lu)_{,l} - 2q(x) (Lu)^{k+1} + 2 p f^{'} a_{kl} \bigg( u_{,k} + \frac{f p_{,k}}{pf^{'}}\bigg) \bigg( u_{,l} + \frac{f p_{,l}}{pf^{'}}\bigg) \\& + \frac{ 2 a_{kl} p_{,k} p_{,l}}{p f^{'}}( 2FF^{''} - F'^{2})].
+\end{align}
+Thus by stated assumptions of Theorem \ref{c4th3}, we see that
+\begin{equation*}
+ LV \geq 0 .
+\end{equation*}
+By Hopf's maximum principle, the result follows.\\
+In the next section we discuss some applications of the results of this section.
+
+\section{Applications}
+As an application of results of previous section we have obtain bounds on some important quantities.
+\begin{cor}\label{c4.cor1}
+  Suppose that\\
+  i)$u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation \eqref{c4.1}, \\
+  ii) all the assumptions of Theorem \ref{c4th1} are satisfied and \\
+  iii)F is an even function. \\
+  Then
+\begin{equation*}
+ {\mid  u(x) \mid} \leq {\mid  u(x_{0}) \mid} \quad \text{for all} \quad x \in \Omega
+\end{equation*}
+ and  $ x_{0} \in  \partial \Omega $ provided $ \Delta u = 0 $ on $ \partial \Omega $.
+\end{cor}
+\textbf{Proof:} From Theorem \ref{c4th1}, $P(x)$ achieve its maximum at some point $ x_ {0} $ on the $ \partial\Omega $ . \\
+Therefore,
+$$  P (x) \leq   P(x_{0}) \quad \quad  \text{for all} \quad x \in  \Omega$$
+Thus it follows that
+$$ \frac{ ( \Delta u)^{2}}{ p(x)} + 2\int_{0}^{u(x)} f(s)ds \leq \frac{ ( \Delta u( x_{0} ) )^{2}}{ p(x_{0})} + 2\int_{0}^{u(x_{0})} f(s)ds. $$
+Since $ \Delta u( x_{0} ) = 0$ , therefore
+$$ 2\int_{0}^{u(x)} f(s)ds \leq \frac{ ( \Delta u )^{2}}{ p(x)} + 2\int_{0}^{u(x) } f(s)ds  \leq 2\int_{0}^{u(x_{0})} f(s)ds .$$
+Which implies
+$${\mid  u(x) \mid} \leq {\mid  u(x_{0}) \mid} \quad \text{for all} \quad x \in \Omega ,$$\\
+Hence the result.
+\begin{cor}\label{c4.cor2}
+Suppose that\\
+ i) $u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation \eqref{c4.11},\\
+ ii)the assumptions of Theorem \ref{c4th3} are satisfied and \\
+ iii) F is an even function.
+ Then
+ $${\mid  u(x) \mid} \leq {\mid  u(x_{0}) \mid} \quad \text{for all} \quad x \in \Omega $$
+ and some point $ x_{0} \in  \partial \Omega $ provided $ Lu = 0 $ on $ \partial \Omega $ and $ p(x_{0}) \leq p(x) $
+\end{cor}
+\textbf{Proof:} From Theorem \ref{c4th3}, $Q(x)$ obtains its maximum at some point, say $ x_ {0} $ on  $ \partial \Omega .$
+Thus
+$$  Q(x) \leq   Q(x_{0}) \quad \quad  \text{for all} x \in \Omega$$
+
+Hence it follows that
+$$ ( Lu(x))^{2} + 2 p(x) 2\int_{0}^{u(x)} f(t)dt \leq ( Lu( x_{0} ) )^{2} + 2 p(x_{0}) + 2\int_{0}^{u(x_{0})} f(t)dt. $$
+
+Since $ Lu( x_{0} ) = 0,$ it gives
+$$ 2 p(x) \int_{0}^{u(x)} f(t)dt \leq ( Lu (x))^{2} + 2 p(x) \int_{0}^{u(x) } f(t)dt  \leq  2 p(x_{0})\int_{0}^{u(x_{0})} f(t)dt.$$
+
+And $ p(x) \geq p(x_{0}) > 0,$ we have
+$${\mid  u(x) \mid} \leq {\mid  u(x_{0}) \mid} \quad \text{for all} \quad x \in \Omega .$$ \\
+Hence the result.
+
+\begin{cor}\label{c4.cor3}
+Suppose that\\
+  i)$u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation \eqref{c4.1}, \\
+  ii) all the assumptions of Theorem \ref{c4th1} are satisfied, \\
+   then
+ $${\mid  \Delta u(x) \mid} \leq {\mid  \Delta u(x_{0}) \mid} $$
+ at some point $ x_{0} \in  \partial \Omega $ provided $  u = 0 $ on $ \partial \Omega $ and $ p(x_{0}) \leq p (x)$.
+\end{cor}
+\textbf{Proof:} From Theorem \ref{c4th1}, $P(x)$ achieve its maximum at some point $ x_ {0} $ on the $ \partial\Omega $ . \\
+Therefore
+$$  P (x) \leq   P(x_{0}) \quad \quad  \text{for all} \quad x \in \Omega$$
+i.e.
+ $$ \frac{ ( \Delta u(x))^{2}}{ p(x)} + 2\int_{0}^{u(x)} f(s)ds \leq \frac{ ( \Delta u( x_{0} ) )^{2}}{ p(x_{0})} + 2\int_{0}^{u(x_{0})} f(s)ds. $$
+Since $ u(x_{0}) = 0 ,$  therefore
+$$ \frac{ ( \Delta u(x))^{2}}{ p(x)}  \leq \frac{ ( \Delta u(x))^{2}}{ p(x)} + 2\int_{0}^{u(x)} f(s)ds \leq \frac{ ( \Delta u( x_{0} ) )^{2}}{ p(x_{0})}  $$
+i.e.
+$$ {\mid \Delta u(x) \mid} \leq {\mid \Delta u(x_{0}) \mid} \quad \text{for all} \,\,x_{0} \in \partial \Omega . $$
+Hence the proof.\\
+
+\begin{cor}\label{c4.cor4}
+Suppose that\\
+ i) $u \in C^{4}(\Omega) \bigcap C^{2}(\bar{\Omega})$ is a solution of equation \eqref{c4.11},\\
+ ii)the assumptions of Theorem \ref{c4th3} are satisfied, \\
+ then
+ $${\mid  Lu(x) \mid} \leq {\mid  Lu(x_{0}) \mid} $$
+ at some point $ x_{0} \in  \partial \Omega $ provided $  u = 0 $ on $ \partial \Omega $ and $ p(x_{0}) \leq p (x)$.
+\end{cor}
+\textbf{Proof:} From Theorem \ref{c4th3}, $Q(x)$ obtains its maximum at some point, say $ x_ {0} $ on  $ \partial \Omega .$
+Thus
+$$  Q(x) \leq   Q(x_{0}) \quad \quad  \text{for all} \quad x \in \Omega$$.
+
+Hence it follows that
+ $$ \frac{ ( Lu(x))^{2}}{ p(x)} + 2\int_{0}^{u(x)} f(s)ds \leq \frac{ ( Lu( x_{0} ) )^{2}}{ p(x_{0})} + 2\int_{0}^{u(x_{0})} f(s)ds. $$
+  However, $ u(x_{0}) = 0, $ which yields
+$$ ( Lu(x))^{2} \leq ( Lu(x))^{2} + 2 p(x) \int_{0}^{u(x)} f(s)ds \leq  (Lu( x_{0} ) )^{2}$$
+i.e. $$ {\mid L u(x) \mid} \leq {\mid L u(x_{0}) \mid} \quad \text{for all} \,\,x_{0} \in \partial \Omega . $$
+Thus the result follows.
+\end{large}

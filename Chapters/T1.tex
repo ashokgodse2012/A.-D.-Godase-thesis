@@ -1,0 +1,289 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+\newpage
+\def\baselinestretch{1.80}
+\begin{large}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Introduction} \chead{}
+\rfoot{\scriptsize\medskip\itshape Anil D.Chindhe}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Balbhim College,Beed.(M.S.)}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+%%% ---------------------------------------------------------------------------
+\lhead{\scriptsize\itshape\medskip Preliminary Remark}
+\chapter{Introduction}
+\section{Preliminary Remark}
+The scientific disciplines like physical sciences, chemical sciences, mathematical sciences, life sciences are comes under one roof called as basic sciences. In basic sciences, we study the natural phenomenon which occurs in above disciplines. Among all these disciplines, mathematical science plays the vital role due to its accuracy and interdisciplinary approach. As a result of that,in the development of interdisciplinary research application of mathematics has significant role. There are several fields in applies sciences where the mathematical methods and mathematical approach are being used to resolve the problems encountered in the study of these subjects. This shows that, mathematics contributing great in the development of basic sciences.\\
+
+No doubt that mathematical function is an abstract concept and this concept broadly using in almost every branch of applied sciences and engineering. To define a function one need to specify the proper domain and co-domain by means of which the said function is well defined. In a growing  research,a function can be viewed by its action as a functional on the given testing space of functions. This leads to introduction of new concept called as generalized functions. Now a days,the theory of generalized functions becomes the growing branch of pure and applied mathematics and attract the researcher due to its wide range of applications. In this theory of generalized functions,a function is governed by its action as a functional on the given testing space. With the help of these generalized functions one can solve the problems in ordinary differential equations,partial differential equations,integral equations,fluid mechanics etc.
+
+\lhead{\scriptsize\itshape\medskip Motivation of the Work}
+\section{Motivation of the Work}
+The theory of generalized integral transforms have been changed the study of integral transform in a classical manner. In the literature we can see that many integral transforms have been extended to the space of generalized functions. The first attempt towards the generalized integral transform was made by L.Schwartz\cite{R72,R73} by extending Fourier transform to a generalized function. After that Zemanian\cite{R97,R98} have extended the classical integral transform to a generalized functions viz. Laplace, Fourier, Mellin,Hankel etc.using the theory of L.Schwarts. Some more extension of integral transformation to a generalized functions can be seen in\cite[R3,R64,R35,R56,R60,R61,R63,R64,R87]. There are extensions of double and triple integral transformation to a specified generalized functions[R18,R19,R20,R55,R90,R97].\\
+Literature survey revels that in the recent years there has been introduced new integral transforms and so that there is a scope to extend them to the space of generalized functions. Moreover,to study the applications of these new integral transforms in the distributional sense,we are motivated to study these generalized integral transform.In the present work,we study the new integral transform called Natural transform in the distributional sense, derived some properties and its applications. With same analogy we study other integral transform called Sumudu transform in the distributional sense. There are some integral equations which do not solution in classical integral transform theory,however that can be solved by integral transforms in distributional sense,so to have solutions of such problems we must study the generalized integral transforms.
+
+\lhead{\scriptsize\itshape\medskip Integral Transform}
+\section{Integral Transform}
+
+Integral transformations have been successfully used since last two centuries in solving many problems in applied mathematics, mathematical physics, and engineering. Historically, the origin of the integral transforms including the Laplace transform and Fourier transform can be traced back to celebrate work of P.S.Laplace(1749–1827)on the probability theory in the 1780s and to monumental treatise of Joseph Fourier (1768–1830) on La Theorie Analytique de la Chaleur published in 1822. Infact, Laplace's classic book on La Theorie Analytique des Probabilities included some basic results of the Laplace transform which was one of the oldest and most commonly used integral transforms available in the mathematical literature. Most of the examples occurred in differential equations and integral equations can be solved with the help of integral transform.
+
+\subsection{Basic Concept and Definition}
+
+The integral transform of a function $f(x)$ defined in $ (-\infty,\infty) $ is denoted by $\mathfrak{I}[f(x)]=F(s)$,and is defined by equation
+\begin{equation}
+\mathfrak{I}[f(x)]=F(s)=\int_{-\infty}^{\infty}K(s,x)f(x)dx
+\end{equation}
+where $K(s,x)$ is the given function of two variables $x$ and $s$ called as kernel of the integral transform. It being assumed,that indefinite integral in the equation (1.3.1) is convergent in the sense of Riemann integration. When the given $f(x)$ is defined over some finite interval $[a,b]$,then the corresponding range of integration becomes finite and it is called as finite integral transformation. The basic concept behind the integral transform operator is,when a function or equation is difficult to solve in its original domain then we operate the suitable integral transform on it to get the another function or equation in a new domain which can be solved in that new domain and by inverting back, using inverse integral transform operator we can have the solution to original problem in the original domain. The tremendous problems of physics,applied mathematics, applied engineering have been solved by using this technique of integral transformations. In the literature we can see that many classical integral transformations such as Fourier,Laplace,Hankel and Mellin have been used extensively in both pure and applied mathematics to solve the differential equations and integral equations.
+From equation(1.3.1),we must mentioned that for different types of kernels, we get different integral transforms. In the following table, we can see some standard integral transforms with their corresponding kernels.
+\begin{center}
+\begin{tabular}{|c|c|c|} 
+\hline
+ Integral Transform & Kernel of transformation & Range \\ [0.5ex]
+ \hline
+ Fourier transform & $e^{-isx}$ & $(-\infty,\infty)$ \\ 
+ \hline
+ Laplace transform & $e^{-sx}$ & $(-\infty,\infty)$  \\ 
+ \hline
+ fourier sine transform & $ Sin(sx) $ & $(0,\infty)$ \\
+ \hline
+   fourier sine transform & $ Cos(sx) $  & $(0,\infty)$ \\
+   \hline
+   Mellin transform & $ x^{s-1} $ & $(0,\infty)$  \\
+   \hline
+   Hankel transform & $\sqrt{sx} \mathbb{J}_{v}(sx)$ & $(0,\infty)$ \\ [1ex]
+   \hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item[1] The Laplace Transform:\\
+The conventional Laplace transformation is given by
+\begin{equation}
+\mathfrak{L}[f(x)]=F(s)=\int_{0}^{\infty}e^{-sx}f(x)dx
+\end{equation}
+which has always a subject  of great interest because of its mathematical elegance and also because of its  ability in solving certain types of boundary value problems. Many mathematicians have done great work on the study of properties and applications of the Laplace transformation.
+\item[2]Fourier Transform:\\
+If $f(t)$ is locally integrable function such that $ \int_{-\infty}^{\infty}\vert f(t)\vert dt < \infty $ i.e. $ f(t) $ is absolutely integrable then Fourier transform of $ f(t) $ is defined by an equation
+\begin{equation*}
+\mathfrak{F}[f(t)]=\bar{f(\omega)}=\int_{-\infty}^{\infty}f(t)e^{-i\omega t}dt
+\end{equation*}
+Frequency domain analysis and Fourier transforms are a cornerstone of signal and system analysis. These ideas have great importance in electrical engineering. Among all of the mathematical tools utilized in electrical
+engineering, frequency domain analysis is arguably the most far-reaching. In fact, these ideas are so important that they are widely used in many fields – not just in electrical engineering, but in practically all branches of engineering and science, and several areas of mathematics.
+\item[3]Mellin Transform:\\
+The conventional Mellin transform maps a suitably restricted function $ f(x) $ on $0< x < \infty $ into a function $F(s)$ defined on some strip in the complex plane by the equation
+\begin{equation*}
+\mathfrak{M}[f(x)]=F(s)=\int_{0}^{\infty}f(x)x^{s-1}dx
+\end{equation*}
+The change of variable $ x=e^{-x} $ shows that the Mellin transform is closely related to the Laplace transform and the Fourier transform. However, despite this connection, there are numerous applications where it proves that Mellin transform is more convenient to operate than Laplace and Fourier transforms.
+\item[4]Hankel Transform:\\
+The conventional Hankel transform is defined by the equation
+\begin{equation*}
+\mathfrak{H_{\mu}}[f]=F(y)=\int_{0}^{\infty}f(x)\sqrt{xy}J_{\mu}{(xy)}dx
+\end{equation*}
+The Hankel transform has wide range of applications as that of Laplace and Fourier transforms. It is used in network with time varying parameters,spherically symmetric converge problems,solving integral equations which involves the Bessel function of first kind etc.
+\end{itemize}
+\subsection{Applications of Integral Transformation}
+In this section we list some of the important applications of integral transformation.
+\begin{itemize}
+\item[(1)]The current in a simple circuit containing the resistance R and inductance L satisfies the equation $L\dfrac{dI}{dt}+RI = E(t)$ where E(t) is the applied electromagnetic force and R ,L are constants. With the help of Fourier transform we can solve the equation and find the value of current I in the given simple circuit.
+\item[(2)]Partial differential equations like Cauchy problem for diffusion equation,Newman problem in the half plane,Cauchy problem for the wave equation,the Schrodinger equation in quantum mechanics can be solved by Fourier transform.
+\item[(3)]Current and Charge in a electrical network can be found with the help of Laplace transform. Also linear dynamical systems and signals,delay differential equations,the renewal equation in statistics,transfer function in physical system etc.are the some application fields of Laplace transformation.
+\item[(4)]The problems of steady temperature distribution in a semi-infinite solid with a steady heat source,Axis symmetric diffusion equation,Axis symmetric biharmonic equation etc.are the field of applications of Hankel transformation. 
+\item[(5)]As the integral transform converts an analytical problem into algebriac expression and we know that algebric expressions are easier than analytic expression,hence in all above examples,integral transform played a vibrant role to solve in a simple way.
+\end{itemize}
+
+Nowadays,as the applicability of integral transform have been increased,hence mathematician are tends to develop the new integral transform by defining the suitable kernel. The author like Widder, Sneddon, Truter, Bosanquet, Bous, Brijmohan, Bhonsle, Saxena, Debnath and many more have contributed in the development of integral transformation.\\
+
+\lhead{\scriptsize\itshape\medskip Generalized Functions}
+\section{Generalized Functions}
+The generalized functions has its origin in 1927 due to mathematician Dirac. He introduced the function called as Dirac delta function to represent some physical quantity in his study of quantum mechanics. The Dirac\cite{R36} delta function is denoted by symbol $ \delta $ and is defined by
+\begin{align*}
+  \delta(x) = \begin{cases}
+  0\hspace{0.5cm}  x\neq 0 \\
+  \infty\hspace{0.5cm} x=0.
+  \end{cases}
+ \end{align*}
+with 
+\begin{equation}
+\int_{-\infty}^{\infty}\delta(x)=1
+\end{equation}
+The beauty of this function is that there is no other ordinary function in classical mathematics which shows the above property. There are some physical phenomenon such as point charges, concentrated load on structures,point source, voltage or current source acting for very short time which can be represented as delta function. Also this delta function is not function in classical mathematics. Actually delta was not having any mathematical meaning and hence to give it mathematical meaning ,L Schwartz developed a new theory called theory of distributions.\\
+The function $ f(x) $ can be assign the value $ f(0) $ with the help of this delta function in the sense of distribution as\\
+\begin{equation}
+\int _{-\infty}^{\infty} \delta(t)f(t)dt=f(0)
+\end{equation}
+There is another function called Heaviside unit step function defined by equation
+\begin{align*}
+  H(x) = \begin{cases}
+  1\hspace{0.5cm}  x>0 \\
+  0\hspace{0.5cm} x<0.
+  \end{cases}
+ \end{align*}
+The relation between Heaviside unit step function and delta function is given by equation
+\begin{equation}
+H^{\prime}(x)=\delta(x)
+\end{equation}
+The theory of distribution had great importance in mathematical analysis. It provides a rigorous justification for a number of formal manipulation that had become quite common in the technical literature.  Moreover, distribution theory opened up a new area of mathematical research ,which in turn provides an impetus in the development of a number of mathematical disciplines,such as ordinary and partial differential equations,operational calculus, transformation theory and functional analysis. S.L.Sobolev\cite{R71}investigated the notion of generalized derivative and also of generalized solution of differential equations by means of integration by parts. Every locally integrable function(and indeed every generalized function) can be considered as the integral of some generalized function and thus becomes infinitely differentiable. To provide a rigorous mathematical justification for a correct formulation of the definition and properties of the delta function, one has to generalize the whole concept of classical functions. The generalized function is a generalization of the classical concept of mathematical function.Gel'fand,Shilov\cite{R38,R39} have comprehensive work on the generalized functions. Now a days theory of generalized functions is far advanced and has numerous applications in physics and mathematics. Laurent Schwartz\cite{R72,R73},in his well known monograph “Theories des Distributions” gave the brief about generalized functions and motivated from his study many authors have contributed their work in the development of theory of generalized functions.
+
+\lhead{\scriptsize\itshape\medskip Generalized Integral Transform}
+\section{Integral Transformation of Generalized Functions(Generalized Integral Transform)}
+The utility of integral transform is depend upon the domain. If we enlarge the domain of integral transform and to utilize integral transform in the best way,mathematicians extended integral transform to the space of generalized functions. The notion of generalized integral transform is the combination of two powerful tools of mathematics viz.Integral transform and generalized functions. The first attempt towards the generalized integral transform was made by L.Schwartz\cite{R72,R73} by extending Fourier transform to a generalized function.This gives a birth to study of theory and applications of generalized integral transform. It has applications in the various field like wave equation, electricity potential\cite{R98},heat conduction\cite{R74},gas dynamics\cite{R40},heat diffusion\cite{R41} and many more. Since then mathematician started to extend classical integral transform to a generalized functions\cite{R60,R66}.
+
+A general classical integral transform is defined by \\
+\begin{equation}
+T(f(t))(s)=F(s)=\int_{I}K(s,t)f(t)dt
+\end{equation}
+where $K(s,t)$ is known as kernel of the transformation,$f(t)$a transformable function defined on I. This integral transform can be extended to generalized functions. If $ I = (-\infty,\infty)$,then it is known as infinite integral transform, whereas if $ I =(a, b)$ where $a$ and $b$ are finite, then it is known as finite integral transform. Integral transformations have been used for over a century to facilitate the study of various problems in applied mathematics, physics and engineering. The theory of integral transformations presents a direct and systematic technique for the resolution of certain types of classical boundary and initial value problems. In the development of generalized integral transform,Zemanaian have great contribution. Zemanian \cite{R97,R98}extended Laplace,Hankel, Mellin etc.to a generalized functions using the theory of L.Schwartz. On the other hand there are mathematician who studied the extension of Laplace transform to generalized function in different sense like Bhosale\cite{R20,R21}, copper\cite{R29}, jones\cite{R49},korevar\cite{R53}, livermax\cite{R54}, saxena\cite{R67}.Recently Sadikali Shaikh\cite{R68} have extended the sumudu transform to a distribution space and Bohemians.M.S.Tandale\ and S.K.Panchal\cite{R82} have extended laplace Marchi Zgrabich integral transform to a generalized function.S.K.Q.Al-Omari\cite{R75,R76,R77,R78,R79,R80,R81} worked on the integral transforms like Sumudo,Krätzel Transform,Struve Transformation,Hartley Transform, Hartley-Hilbert and Fourier-Hilbert transforms and its generalization.Deshna Looner and P.K.Banerji\cite{R30}extended Natural transform to a distribution space and derived its basic properties. Thange and M.S.Chodhary\cite{R84} studied some integral transform on distribution spaces.\\
+To extend the given integral transform to a generalized functions,we can have the following theories so far developed by corresponding mathematician.
+\begin{itemize}
+\item[1] The Mikusinski-Temple theory of generalized functions\\
+This theory provides the information about the construction and properties of generalized functions of n number of variables which ensure that any generalized function possesses its full complement of generalized partial derivatives of all orders,any sequence of generalized function has a generalized limit which is also a generalized function.
+\item[2] Schwartz's Theory of distributions\\
+One of the great events in the contemporary history of mathematics is the invention of the theory of distributions by Laurent Schwartz. The great achievement of this theory is that it has provided a simple and rigorous calculus which unifies in one system a very wide variety of special techniques which have been devised in order to generalize such concepts
+as Fourier transforms, solutions of partial differential equations, and extremals of variational problems. This advance has been rendered
+possible mainly by a precise analytical interpretation of the "improper" functions and "symbolic" methods as a special type of linear functionals. The purpose of this Address may be broadly described as an alternative and simplified exposition of the theory of distributions as an application of the concept of "weak" convergence.\\
+In this theory the linear functionals are restricted to act only on a special type of test function and to satisfy a special condition of continuity. Such linear functionals are called "distributions", and all the improper functions hitherto employed in mathematical physics can be replaced by appropriate linear functionals. An immediate and striking advantage of Schwartz's theory is that we can prove that every distribution possesses a derivative which is itself
+another distribution.
+\item[3] Generalized derivatives on locally integrable functions\\
+In this method all contineous,differentiable  functions of n variables are considered as a generalized functions such that whose all derivatives are generalized functions. The set of test function contains all derivatives of given generalized function.
+\item[4] Mikusinski's operational calculus\\
+Mikusinski's operational calculus provides a simpler approach than the Laplace transform to the solution of the differential equations of science and technology. The mathematical demands of a proper understanding of the Laplace transform can be greatly reduced by
+adopting Mikusinski's approach, and, in particular, this approach provides a simple algebraic foundation to the generalization of the concept of 'function' without the intellectual difficulties of the theory of distributions. The operational calculus of Mikusinski represents a return to the operational philosophy of Heaviside following an era in which operational methods for the solution of the differential equations of science and technology had been very largely abandoned in favour of methods using integral transform techniques. However, the combination of integral transform theory (which includes complex
+variable analysis) and Schwartz' theory of distributions, a combination necessary for the
+proper understanding of (for example) the use of the Laplace transform in the analysis of linear systems involving impulsive functions, presents the scientist or technologist with a formidable mathematical barrier which, because of the comparatively simple techniques involved in actual calculation, seems to him to be highly unjustifiable.\cite{H. GRAHAM FLEGG}
+\end{itemize}
+
+In the literature one can find the following methods to extend a given integral transform to a generalized function.
+\begin{enumerate}
+\item Direct or Kernel or Embedding Method\\
+In this method one has to construct testing space $D(I)$containing the kernel $K(s, t)$. The dual space $D'(I)$ consists of continuous linear functional on $D(I)$ which are called generalized functions. The generalized transform $F(s)$ of $ f(t)\in D'(I) $ is now defined as direct application of $f$ to the kernel $K(s, t)$.\\
+\begin{equation}
+ F(s)=<f(t),K(s,t)>
+ \end{equation}
+ Where $<f(t),K(s,t)>$ denotes the number that the linear functional $f$,assigns to $K$ as a
+function of $x$ .
+\item Indirect or Adjoint Method\\
+In this method extension is done using the Parseval equation related to the classical
+integral transformation.
+\begin{itemize}
+\item Automorphism\\
+ let $T$ be an integral transform.Construct a testing function space $D(I)$  such that $T :D(I)\rightarrow D(I) $ is an automorphism. Then the adjoint operator $T^{-1}$ is the generalized integral transform on $D(I)$.That is when $f \in D'(I) ,\phi=T(f)\in D(I)$ then
+\begin{equation*}
+<T'f,\phi> = <f,\phi>
+<T'f,\phi> = <f,T^{-1}\phi>
+\end{equation*}
+Fourier and Hankel transforms are extended in this way.
+\item Isomorphism \\
+Let T be an integral transform.Construct the testing the testing function space $M(I)$ such that $T(\phi)$ exists for all $\phi\in M(I)$. Let $M^{\wedge}(I)$ consists all transforms of the members in $M(I)$. By showing $T$ is an isomorphism from $M(I)$ onto $M'(I)$ we can claim that $M^{\wedge}(I)$ is also a testing function space. Then the adjoint operator of $T^{-1}$ is the generalized integral transform denoted by $T'$ on $M'(I)$ that is
+\begin{equation}
+<T'f,\phi> = <f,\phi>
+\end{equation}
+Gelfand and Shilov (1969) extended some transform pairs by using this method.
+\end{itemize}
+\item Convolution Method\\
+This method treats an integral transform $T$ of the form\\
+\begin{equation}
+(Tf)x=\int_{0}^{\infty}K(x-t)f(t)dt \hspace{0.5cm} 0<x<\infty
+\end{equation}
+So that it is the convolution of the kernel $K$ and the unknown function $ f(t) $. Convolution is an operation which is meaningful for the distribution whose support is bounded on the left. Hence if $K$ generates a distribution $K^{\prime} \subset D'(0,\infty)$, then we can define an extension $T^{\prime}$ on $D'(0,\infty)$
+\begin{equation}
+T^{\prime}f=K^{\prime}\ast f
+\end{equation}
+where $ \ast $ denotes distributional convolution. Here $D(0,\infty)$is the Schwartz space of test functions and $D^{\prime}(0,\infty)$ is the dual of $D(0,\infty)$.
+\item The Sequence Method\\   
+This method is used when generalized functions are defined as limits of sequences of smooth functions. In this case if $(h_{n})$ is a sequence of smooth functions converging to a generalized function $h$,and if $\lim \underset{n\rightarrow \infty}L(h_{n})$ exist in some sense,usually in the weak sense,then we define the transformation of $h$ as,
+\begin{equation}
+L[h]=\lim \underset{n\rightarrow \infty}L(h_{n})
+\end{equation}
+The first method is much more popular,the second is more elegant and admittedly more difficult. Since the first method will be used more often in the sequel, we shall give a more detailed procedure for its implementation. This will be done in one dimension, not only to simplify the notation, but also to concur with the applications.
+\end{enumerate}
+In the present work,the following integral transformations have been considered for extension and further investigations.\\
+\lhead{\scriptsize\itshape\medskip Sumudu Transformation}
+\textbf{Sumudu Transform}\\
+ In early 90's Watugala\cite{R90} have introduced new integral transform the Sumudu transform which is defined over the set of functions\\
+ $A=[f(t)/\exists M,\tau_{1}, \tau_{2} > 0 ,|f(t)|< M e^{\frac{|t|}{\tau_{j}}} , \hspace*{0.25cm}  t \in (-1)^{j}\times[0,\infty)$ ] by the formula
+ \begin{equation}
+\mathbb{S}[f(t)] = G(u) = \int_{0}^{\infty}e^{-t}f(ut)dt   \hspace{0.5 cm} u \in (-\tau_{1}, \tau_{2})
+ \end{equation} 
+ In comparison with the traditional integral transform, the Sumudu transform was shown to have units preserving properties and hence may be used to solve problems without resorting to the frequency domain. Further details and properties about sumudu transform can be seen in \cite{R10,R11}.\\ 
+Watugala first advocated the Integral transform as an alternative to the standard Laplace transform, and gave it the name Sumudu transform (Sumudu means “smooth”). It appeared like the modification of the well known Laplace transform.However in\cite{R15},some fundamental properties of the Sumudu transform were established. By looking at the properties of this transform has very special and useful properties and it can help with intricate applications in sciences and engineering. Once more, Watugala's work was followed by Weerakoon\cite{R95} by introducing a complex inversion formula for the Sumudu transform.  Recently, A.Kilicman and H. Eltayeb in\cite{R52},have introduced a new method to produce a partial differential equation having polynomial coefficients by using the PDEs with constant coefficients and also studied the classification of the new partial differential equations.\\
+
+\lhead{\scriptsize\itshape\medskip Natural Transform}
+\textbf{Natural Transform}\\
+The Natural transform initially defined by Khan and Khan\cite{R51} as N-transform who studied its properties and application as unsteady fluid flow problem over a plane wall. Later on Belgacem\cite{R12,R13}defined the inverse Natural transform,studied some properties and applications of Natural transforms. Further applications of Natural transform can be seen in \cite{R12,R24,R25}\\
+The Natural transform of the function $f(t)$ $\in$ $\Re^{2}$ is given by the following integral equation \cite{R13}
+\begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt 
+ \end{equation} 
+ where $Re(s)$ $>$ 0 , u $\in$ ($\tau_{1}$, $\tau_{2}$)
+ provided the function $f(t)\in\Re^{2}$ is  piecewise continuous and of exponential order defined over the set
+ $A=[f(t)/\exists M,\tau_{1}, \tau_{2} > 0 ,|f(t)| < M e^{\frac{|t|}{\tau_{j}}} ,  t \in(-1)^{j}\times[0,\infty)$ ]\\
+ The inverse Natural transform related with Bromwich contour integral\cite{R12,R13} is defined by
+ \begin{equation}
+ \mathbb{N}^{-1}[R(s,u)] = f(t) = \lim _{T\rightarrow\infty} \frac{1}{2\Pi i}\int_{\gamma-iT}^{\gamma+iT}e^{\frac{st}{u}}R(s, u)ds
+ \end{equation}
+ 
+\lhead{\scriptsize\itshape\medskip Notations and Terminology}
+\section{Notations and Terminology}
+Throughout the thesis, we follow the notation and terminology mainly of Zemanian\cite{R97,R98}. Regular as well as singular distribution are denoted by the same symbols. The generalized $n^{th}$ derivative of $ f $ is denoted by $ D^{k}f $ or $ f^{k}(t) $. We use the following theorems of zemanian\cite{R97}. We shall use the adjective " conventional function " to distinguish this from the concept of generalized function.
+
+\begin{lemma}
+Let $\Lambda$ be a multinormed space with multinorm $T$. A sequence $\lbrace \Psi_{v}\rbrace_{v=1}^{v=\infty}$ converges in $ \Lambda $ to the limit $ \Psi $ if and only if for each $\gamma\in T$,  $ \gamma(\Psi-\Psi_{v}) \rightarrow 0 $ as $v\rightarrow \infty.$ The limit $ \Psi $ in unique.
+\end{lemma}
+
+\begin{lemma}
+Let $\tau_{1}$ and $\tau_{2}$ be two topologies generated by the two different multinorms $ P =\lbrace\sigma_{\xi}\rbrace_{\xi \in A} $ and $ Q =\lbrace\nu_{\xi}\rbrace_{\xi \in B} $ respectively on $ \lambda $. A necessary and sufficient condition for $ \tau_{1}  $ to be weaker than $ \tau_{2}  $ is that for each $ \xi \in P $ there exists a finite set of seminorms $ \nu_{1},\nu_{2},\nu_{3},...\nu_{n} \in Q $ such that for every $\Phi \in \lambda $
+\begin{equation*}
+\sigma(\Phi) \leq M [\nu_{1}(\Phi)+\nu_{2}(\Phi)...\nu_{n}(\Phi)]
+\end{equation*}
+Where,$ M $ is a positive number and both the numbers $ M,n $ are depend on the choice of $ \sigma $
+\end{lemma}
+
+\begin{lemma}
+
+Let $ \lambda $ be a linear space with a topology generated by the countable multinorm $\lbrace \Psi_{v}\rbrace_{v=1}^{v=\infty}$ where $ \Psi_{1} $ is a norm. Let the countable multinorm $\lbrace \sigma_{v}\rbrace_{v=1}^{v=\infty}$ be defined by,$ \sigma_{v} = max\lbrace \Psi_{1},\Psi_{2},...\Psi_{n} \rbrace $.For each continuous linear functional $ f $ defined on $ \lambda $ there exists a positive constant $ M $ and a non-negative integer $ n $ such that for every                  $ \vert <f,\phi >   \vert\leq M \sigma_{r}(\phi)$ \hspace{0.5cm} for every $ \phi \in \lambda $.\\
+Where $ M,n $ are depend on $f$ but not on $ \phi $
+\end{lemma}
+
+\begin{lemma}
+Let $ \lambda $ be a countably multinormed space. A necessary and sufficient condition for a linear functional $ f $ on  $ \lambda $ to be contineous is that,for every sequence $\lbrace \Psi_{v}\rbrace_{v=1}^{v=\infty}$ where $ \Psi_{1} $ is a norm that converges in $ \lambda $ to zero,we have $ lim \underset{v\rightarrow \infty} <f,\phi_{v} > =0 $
+\end{lemma}
+
+\begin{lemma}
+A mapping $ \tau $ of a countably multinormed space $ \Gamma $ into a multinormed space $\Theta$ contineous iff $ \tau(\phi_{v})\rightarrow \tau(\phi) $ in $\Theta$ where $ \phi_{v}\rightarrow \phi $ in $ \Gamma $.Moreover if $ \tau $ is linear,then $ \tau $ is contineous if and only if $ \tau(\phi_{v})\rightarrow 0_{v} $ in $\Theta $ where $ \phi_{v}\rightarrow 0_{v} $ in $ \Gamma $.
+
+\begin{theorem}
+If $ \tau $ is a countably multinormed space,then its dual $ \tau^{'} $ is also complete.
+\end{theorem}
+
+\begin{definition}
+
+A set $ \tau(I) $ is said to be a testing function space on $ I $ if the following three conditions are satisfied.
+\begin{enumerate}
+\item[(1)] $ \tau(I) $ consists entirely of smooth complex-valued function on $ I $ 
+\item[(2)] $ \tau(I) $  is either a complete countable multinormed space or a complete countable union space.
+\item[(3)] If $\lbrace \Psi_{v}\rbrace_{v=1}^{v=\infty}$ converges in $ \tau(I) $ to zero then for every non negative integer $ n $ in $ \mathbb{R}^{n} $, $\lbrace D^{n}\Psi_{v}\rbrace_{v=1}^{v=\infty}$ converges to zero function uniformely on every compact subset of $ I $.
+\end{enumerate}
+\end{definition}
+\end{lemma}
+
+\lhead{\scriptsize\itshape\medskip Plan of the Thesis}
+\textbf{Plan of the Thesis}\\
+The thesis comprises of six chapters and are organized as follows:\\
+The chapter-1 is introductory it contains review of literature, motivation of work, basic concepts and definitions of integral transform, generalized functions, integral transformation of generalized function,notation and terminology.\\
+Chapter-2 In this chapter we studied generalized Natural transform in which we defined the generalized Natural transform by defining suitable testing space over which the transform is well defined. Further,the characterization theorem,analyticity theorem,Inversion and uniqueness theorem are proved with the help of theory developed by Zemanian\cite{R97}.\\
+In Chapter-3,we derived some properties of generalized Natural transform which are useful for the application purpose. The properties like linearity of distributional Natural transform, differentiation of distributional Natural transform, multiplication by $ t^{n} $, shifting property, scaling property,  multiplication by $ e^{at} $, differentiation of convolution are discussed in this chapter. These all properties are useful to solve the problems occurred in the field of engineering and applied science.\\
+chapter-4,is devoted to the study of generalized Sumudu transform. In which we proved abelian theorem,  representation theorem for the generalized Sumudu transform.\\
+In chapter-5 we studied the applications of generalized Natural transform which involves some illustrative examples of generalized functions.\\
+Chapter-6 It consists the applications of Sumudu transform and Natural transform.We have developed four different methods using these transforms which are useful to solve some problems in applied field.Some examples are illustrated for the support of all methods which we have studied in previous chapters of this thesis.\\
+An up-to-date comprehensive list of references is added in alphabetical
+order at the end of the thesis.
+
+\end{large}
+
+

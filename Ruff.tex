@@ -1,0 +1,47 @@
+ Further more we recall some
+definitions of following weighted spaces \cite{kst}:
+\begin{align}\label{e1}
+  C_{\gamma}[a,b]&=\{f:(a,b]\to\R :  (x-a)^{\gamma}f(x)\in C[a,b]\},\nonumber\\
+  C_{\gamma}^{n}[a,b]&=\{f\in C^{n-1}[a,b]:f^{(n)}(x)\in C_{\gamma}[a,b]\},\, n\in \N,\\
+  C_{n-\gamma}^{\alpha,\beta}[a,b]&=\{f\in C_{n-\gamma}[a,b]:D_{a^+}^{\alpha,\beta}f(x)\in C_{n-\gamma}[a,b]\}.\nonumber
+\end{align}
+Note that,
+$D_{a^+}^{\alpha,\beta}f=I_{a^+}^{\beta(1-\alpha)}D_{a^+}^{\gamma}f$ and
+$C_{n-\gamma}^{\gamma}[a,b]\subset
+C_{n-\gamma}^{\alpha,\beta}[a,b],\,\gamma=\alpha+n\beta-\alpha\beta$,
+$n-1<\alpha<n, 0\leq\beta\leq1,$ for details see \cite{kmf}. Consider the
+space $ C_{\gamma}^{0}[a,b]$ with the norm
+\begin{equation}\label{n1}
+{\|f\|}_{C_{\gamma}^{n}}=\sum_{k=0}^{n-1}{\|f^{(k)}\|}_{C}+{\|f^{(n)}\|}_{C_{\gamma}}.
+\end{equation}
+
+
+\begin{defn}\cite{kst}
+Let $f\in L^{1}(a,b).$ Then Riemann-Liouville fractional integral of order
+$\alpha$ of function $f$ is defined as
+\begin{equation}\label{d1}
+I_{a^+}^{\alpha}f(x):=\frac{1}{\Gamma(\alpha)}\int_{a}^{x}(x-t)^{\alpha-1}f(t)dt,\qquad x>a,\,\, \alpha>0,
+\end{equation}
+where $\Gamma$ is the Euler's Gamma function.
+\end{defn}
+\begin{defn} \cite{kst}
+The left-sided Riemann-Liouville fractional derivative of order $\alpha,
+n-1<\alpha<n,$ of function $f\in L^{1}(a,b)$ is expressed as
+  \begin{equation}\label{d2}
+    D_{a^+}^{\alpha}f(x)=D^{n}I_{a^+}^{n-\alpha}f(x),\qquad D^n=\frac{d^n}{dx^n}.
+  \end{equation}
+\end{defn}
+\begin{defn} \cite{hr} The left-sided Hilfer fractional derivative of order $\alpha$, and type $\beta$, $(n-1<\alpha<n,0\leq\beta\leq1),$ of a function $f\in L^{1}(a,b)$ is defined as
+  \begin{equation}\label{d3}
+    D_{a^+}^{\alpha,\beta}f(x)=I_{a^+}^{\beta(n-\alpha)}D^{n}I_{a^+}^{(1-\beta)(n-\alpha)}f(x),\quad n-1<(1-\beta)(n-\alpha)<n.
+  \end{equation}
+\end{defn}
+\begin{defn}
+Let $G\subset\R$ and $f:(a,b]\times G\rightarrow\R$ satisfies Lipschitz
+condition
+\begin{equation}\label{d4}
+  |f(x,y_1)-f(x,y_2)|\leq A|y_1-y_2|,
+\end{equation}
+for all $x\in(a,b]$ and for any $y_1,y_2\in G,$ where $A>0$ does not depend
+on $x\in(a,b]$ is Lipschitz constant.
+\end{defn}

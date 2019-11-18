@@ -1,0 +1,327 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+\newpage
+\def\baselinestretch{1.80}
+\begin{large}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Introduction} \chead{}
+\rfoot{\scriptsize\medskip\itshape Ashok D.Godase}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Vinayakrao Patil Mahavidyalaya, Vaijapur, Dist. Aurangabad.(M.S.)}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+%%% ---------------------------------------------------------------------------
+\lhead{\scriptsize\itshape\medskip Preliminary Remark}
+\chapter{Introduction}
+This chapter provides introduction to the origin of Fibonacci sequence and  Lucas sequence. Herein we list some higher order recurrence sequences namely Tribonacci, Tetranacci, Pentanacci, Hexanacci, Heptanacci, octanacci and Nonanacci and their first few terms. Moreover various types of generalised Fibonacci sequences available in the literature are given. 
+\label{chap:intro}
+\section*{Introduction}
+\noindent Leonardo Fibonacci, also known as \textit{Leonardo Pisano} or Leonard of Pisa, was the most famous mathematician of the European Middle Ages. Fibonacci was born around $(1170)$ in the \textit{Bonacci} family of Pisa. His father \textit{Guglielmo} (William) was a productive merchant. Around $(1190)$,  he brought Leonardo to Algerian city of \textit{Bugia} to learn the art of computation.
+
+\noindent As a teen, Fibonacci frequently visited to Egypt, Syria, France, and Greece  where he studied an arithmetic, and shared views with other scholars. 
+
+\noindent Around $(1200)$, at the age of $30$, Fibonacci returned  to Pisa. In $(1202)$, Fibonacci published his work, \textit{Liber Abaci} (The Book of the Abacus). \textit{Liber Abaci} was dedicated to arithmetic and algebra. 
+\noindent After Liber Abaci, Fibonacci wrote three other famous books. \textit{Practica Geometriae}, written in $(1220)$, next two books, the \textit{Flos} and the \textit{Liber Quadratorum}  were published in $(1225)$. 
+
+\noindent In $(1225)$ Frederick $II$ wanted to check Fibonacci's brilliance, so he invited him  for a mathematical tournament. The contest consisted of three problems.  In the contest, none of Fibonacci's contender could solve any of three problems other than Fibonacci. 
+
+\noindent The Emperor acknowledged Fibonacci's contributions as a teacher and as a citizen by forming statue of Fibonacci in a garden near the Leaning Tower of Pisa.
+
+\noindent Fibonacci's  book,\textit{ Liber Abaci}, contains many elementary problems, including rabbit problem.
+\noindent The numbers in the last row of table(\ref{Tab1}) are called Fibonacci numbers, and the natural number sequence $1$, $1$, $2$, $3$, $5$, $8$, . . . is known as the Fibonacci sequence. 
+\begin{table}[H]
+\begin{center}
+\small
+\begin{tabular}{|ccccccccc|}      
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \textbf{Number of Pairs} & \textbf{Jan} & \textbf{Feb} & \textbf{March} & \textbf{April} & \textbf{May} & \textbf{June} & \textbf{July }& \textbf{August }\\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \textbf{Adults} & 0 & 1 & 1 & 2 & 3 & 5 & 8 & 13 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \textbf{Babies}  & 1 & 0 & 1 & 1 & 2 & 3 & 5 & 8 \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \textbf{Total} & 1 & 1 & 2 & 3 & 5 & 8 & 13 & 21 \\ 
+\hline 
+\end{tabular} 
+\caption{{Rabbits after the month April}}
+\label{Tab1} 
+\end{center}
+\end{table}
+
+\noindent The sequence is so important  that a association of mathematicians, ``The Fibonacci Association" is shaped for the study of Fibonacci and connected integer sequences. The association was founded in $(1963)$ it publishes the most precious journal  \textit{Fibonacci Quarterly}, dedicated to articles related to integer sequences. 
+
+\noindent In ($1595-1632$), Dutch mathematician \textit{Albert Girard}  demonstrated recursive definition of the $n^{th}$ Fibonacci number, $F_n$ as  $F_{n+1} = F_{n}+F_{n-1}$ with initial conditions $F_1 =1$, $F_2 = 1$. 
+
+\noindent In ($1870$),  Edouard Lucas discovered Lucas Sequence or Lucas number having recursive definition of the $n^{th}$ Lucas number, $L_n$ as  $L_{n+1} = L_{n}+L_{n-1}$ with initial conditions $L_1 =1$, $L_2 = 2$.
+\subsection*{Generalised Fibonacci Sequences}
+\noindent In the case of Fibonacci and Lucas numbers, every element, except for the first two, can be obtained by adding its two immediate predecessors. The Fibonacci sequence has been generalized in many ways, some by preserving the initial conditions, and others by preserving the recurrence relation. Suppose we are given three initial conditions and add the three immediate predecessors to compute their successor in a number sequence. Such a sequence is the tribonacci sequence, originally studied by M. Feinberg\cite{Fein-1} in(1963).
+
+\noindent Generalized Fibonacci  sequences are varied sequences similar to the Fibonacci sequence in which initial terms are changed together, or multiplied by a constant. However, the recursive relation is $F_{n+1}=F_n + F_{n-1}$. The new sequence has similar characteristics to that of the Fibonacci, but also has its own patterns and properties.
+
+\noindent In $(1963)$, Basin\cite{basin-1}  change the initial terms in the Fibonacci sequence  by $p$ and $q$. In a generalized Fibonacci sequence where $G_1=p$ and $G_2=p+q$ it is observed that $G_n= pG_n+qG_{n-1}$. 
+
+\noindent In $(1963)$, Horadam\cite{Horadam-1} used a similar technique to find the recurrence relation to find  $n^{th}$ term. 
+
+\noindent In $(2009)$, Marcia Edson and Omer Yayenie\cite{marcia} studied a new generalization $\lbrace q_n \rbrace$, with initial conditions $q_0 = 0$ and $q_1 = 1$ which is generated by the recurrence relation $q_n = aq_{n+1} + q_{n+2}$ (when $n$ is even) or $q_n = bq_{n+1} + q_{n+2}$ (when $n$ is odd), where $a$ and $b$ are non-zero real numbers. Some well-known sequences are special cases of this generalization. The Fibonacci sequence is a special case of $\lbrace q_n \rbrace$ with $a = b = 1$.
+Pell's sequence is $\lbrace q_n \rbrace$ with $a = b = 2$ and the $k$-Fibonacci sequence is $\lbrace q_n \rbrace$ with $a = b = k$.
+Marcia Edson and Omer Yayenie also produced an Binet's formula for the sequence $\lbrace q_n \rbrace$ and identities such as
+Cassini's, Catalan's, d'Ocagne's, etc for this sequence.
+
+\noindent In $(2015)$, Ipek and K. Ari\cite{ipek}  obtained many new relations between the generalizations of Fibonacci and Lucas sequences. The generalized Fibonacci sequence have been rigorously studied for many years and become curious topic in Pure Mathematics as well as Applied Mathematics. 
+
+\noindent In $(2013)$, Bravo\cite{bravo} introduced sequences similar to  Fibonacci sequence having different initial terms, they can also be lifted to higher powers by summing initial terms. Given that the variable $k \geq 2$ is a whole number, the value of $k$ is used to denote the order of the Fibonacci sequence, or the number of terms summed to generate the next term. If $k=2$, the classical Fibonacci sequence is generated, if $k=3$ the Tribonacci sequence is generated, if $k=4$ the Tetranacci sequence is generated, if $k=5$ the Pentanacci sequence is generated  and so on.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline 
+\textbf{k} &\textbf{ Name} & \textbf{First Few terms }\\ 
+\hline 
+$2 $& Fibonacci & $1$, $1$, $2$, $3$, $5$, $8$, $13$, $21$, $34$,.... \\ 
+\hline 
+$3 $& Tribonacci &  $1$, $1$, $2$, $4$, $7$, $13$, $24$, $44$, $81$, $149$,.... \\ 
+\hline 
+$4 $& Tetranacci & $1$, $1$, $2$, $4$, $8$, $15$, $29$, $56$, $108$, $208$, $401$, $773$, $1490$,... \\ 
+\hline 
+$5 $& Pentanacci &  $1$, $1$, $2$, $4$, $8$, $16$, $31$, $61$, $120$, $236$, $464$, $912$, $1793$, $3525$, $6930$, $13624$,... \\ 
+\hline 
+$6 $& Hexanacci & $1$, $1$, $2$, $4$, $8$, $16$, $32$, $63$, $125$, $248$, $492$, $976$, $1936$, $3840$, $7617$, $15109$,... \\ 
+\hline 
+$7 $& Heptanacci & $1$, $1$, $2$, $4$, $8$, $16$, $32$, $64$, $127$, $253$, $504$, $1004$, $2000$, $3984$, $7936$, $15808$,...\\ 
+\hline 
+$8 $& Octanacci & $1$, $1$, $2$, $4$, $8$, $16$, $32$, $64$, $128$, $255$, $509$, $1016$, $2028$, $4048$, $8080$, $16128$,...\\ 
+\hline 
+$9 $& Nonanacci &  $1$, $1$, $2$, $4$, $8$, $16$, $32$, $64$, $128$, $256$, $511$, $1021$, $2040$, $4076$, $8144$, $16272$,.... \\ 
+\hline 
+\end{tabular}
+\vspace{1mm}
+\caption{From left to right, the order, name, and first few terms of each higher order sequence}
+\label{Tab2}
+\end{center}
+\end{table} 
+\subsection*{Coupled Fibonacci Sequences}
+\noindent In $(1995)$, Peter Hope\cite{hope} gave the idea for a Fibonacci like sequence with the form $X_0 = 0$, $X_1 = 1$, $X_{n+2} = a_{n}X_{n+1}+b_{n}X_{n} \quad(n\geq 0)$, where $\lbrace a_n\rbrace $ and $\lbrace b_n\rbrace $ are known sequences with positive numbers. 
+
+\noindent Coupled Fibonacci sequences contain two sequences of integers in which the elements of one sequence are part of the generalization of the other and vice versa. In $(1986)$ Atanassov K. T.\cite{Atanassov-2} first introduced coupled Fibonacci sequences of second order in additive form and also discussed many curious properties and new direction of generalization of Fibonacci sequence in his series of papers on coupled Fibonacci sequences. He defined and studied  four different ways to generate coupled sequences and called them coupled Fibonacci sequences (or 2-F sequences). In $(2003)$, P. Glaister\cite{glaister} studied  multiplicative Fibonacci Sequences. The parallel of the standard Fibonacci sequence in this form is
+$F_0 = a$, $F_1 = b$, $F_{n+2} = F_{n+1}\cdot F_{n} \quad(n\geq 0)$.
+
+\noindent In $(1985)$, Attanasov K. T.\cite{Atanassov-1} introduced a new perspective of generalized Fibonacci sequences by taking a pair of sequences $\left\{X_{n}\right\}_{n=0}^{n=\infty}$ and $\left\{Y_{n}\right\}_{n=0}^{n=\infty}$ and which can be generated by famous Fibonacci formula and gave various identities involving Fibonacci sequence called the coupled Fibonacci sequences. With some initial values $x_{0}$, $x_{1}$,  $y_{0}$, $y_{1}$ and for $n\geq 0$ four different schemes were defined. He also introduced a new perspective of generalized Fibonacci sequences by taking a pair of sequences $\left\{X_{n}\right\}_{n=0}^{n=\infty}$ and $\left\{Y_{n}\right\}_{n=0}^{n=\infty}$ and which can be generated by famous Tribonacci formula and gave various identities involving Fibonacci sequence called the coupled Fibonacci sequences of third order. With some initial values $x_{0}$, $x_{1}$, $x_{2}$, $y_{0}$, $y_{1}$ and $y_{2}$ eight different schemes were defined.
+
+\noindent In $(2014)$, Krishna Kumar Sharma, Vikas Panwar and Sumitkumar Sharma\cite{krishna} introduced a new perspective of generalized Fibonacci sequences by taking a pair of sequences $\left\{X_{n}\right\}_{n=0}^{n=\infty}$ and $\left\{Y_{n}\right\}_{n=0}^{n=\infty}$ and which can be generated by $r^{th}$ order recurrence relation called the coupled Fibonacci sequences of $r^{th}$ order. With some initial values $x_{0}$, $x_{1}$, $x_{2}$, $x_{3}$......, $x_{r-1}$ and $y_{0}$, $y_{1}$, $y_{2}$, $y_{3}$......, $y_{r-1}$, $2^{r}$ different schemes were defined. 
+
+\noindent In $(2010)$, Singh-Sikhwal \cite{singh-shikwal-1}  defined coupled and multiplicative coupled Fibonacci sequences by varying initial conditions and recurrence relation under different schemes for higher order. Herein chapter (2), we defined multiplicative coupled Fibonacci sequences of $r^{th}$ order by varying recurrence relation and  some identities for these mentioned sequences are also obtained under four different schemes out of ${2^{r - 1}}$ schemes.
+\subsection*{ \kF\hspace{0mm} and \kL\hspace{0mm} Sequences}
+\noindent In $(2007)$, Sergio Falcon \cite{fal-1} defined $k$ Generalised Fibonacci sequence  with  the integer $k$. The \kF\hspace{0mm} numbers can be represented by the recurrence relation $F_{k,n+1}=k F_{k,n} + F_{k,n-1}$, with initial conditions $F_{k,0} = 0$ and $F_{k,1} =1$. The converging ratios are the positive solutions to the equation $r^2-kr-1 = 0$, which is $\dfrac{k\mp \sqrt{k^2+4}}{2}$. If $k=1$, then the traditional Fibonacci sequence is produced and the ratio is $\dfrac{1 \mp \sqrt{5}}{2}$, also known as the Golden Ratio or $\phi$. If $k=2$, then the sequence converges to the Silver Ratio, $1+\sqrt{2}$, and if $k=3$ then the Bronze Ratio is produced, $\dfrac{(3+\sqrt{13})}{2}$. 
+
+\noindent Fibonacci sequence is a source of many nice and interesting identities. A similar interpretation exists for \kF\hspace{0mm} and \kL\hspace{0mm} numbers. Many of these identities have been documented in the work of Falcon and Plaza, where they are proved by algebraic means.
+
+\noindent In another papers \cite{fal-2, fal-3, fal-4,fal-5, fal-6, fal-7} Falcon and Plaza proved many  properties of \kF\hspace{0mm} and \kL\hspace{0mm} sequences by simple matrix algebra. 
+
+\noindent In $(2014)$, Yashwant K. Panwar, G. P. S. Rathore and Richa Chawla\cite{panwar} deduced many properties of these numbers and relate with the so-called Pascal $2$-triangle. In addition, the generating functions for these \kF\hspace{0mm} sequences have been given. Falcon presented Lucas triangle and its relationship with the \kL\hspace{0mm} numbers, combinatorial formula for \kL\hspace{0mm} numbers, generating function and defined Properties of the diagonals of the Lucas triangle and the rows of the Lucas triangle. In his third paper S. Falcon, study the properties of the \kL\hspace{0mm} numbers and proved these properties are related with the \kF\hspace{0mm} numbers. From a special sequence of squares of \kF\hspace{0mm} numbers, the \kL\hspace{0mm} sequences are obtained in a natural form. In S. Falcon examine some of the interesting properties of the \kL\hspace{0mm} numbers themselves as well as looking at its close relationship with the \kF\hspace{0mm} numbers. The \kL\hspace{0mm} numbers have lots of properties, similar to those of \kF\hspace{0mm} numbers and often occur in various formulae simultaneously in papers on \kF\hspace{0mm} numbers.
+
+\noindent In, $(2013)$ Yazlik, Yilmaz and Taskara\cite{yilmaz} investigated some properties of $k$-Fibonacci and $k$-Lucas sequences and obtained new identities on sums of powers  of these sequences and obtained the recurrence relations for powers of $k$-Fibonacci and $k$-Lucas sequences. Also they give new formulas for the powers of $k$-Fibonacci and $k$-Lucas sequences. 
+%\newpage
+\section*{Plan of The Thesis}
+\noindent In this thesis, the work is presented in seven chapters. A brief account
+of the work done in each chapter is mentioned below.
+
+\noindent \textbf{Chapter $1$} provides introduction to the origin of Fibonacci sequence and  Lucas sequence. Herein we list some higher order recurrence sequences namely Tribonacci, Tetranacci, Pentanacci, Hexanacci, Heptanacci, octanacci and Nonanacci and their first few terms. Moreover various types of generalised Fibonacci sequences available in the literature are given. 
+
+\noindent \textbf{In chapter $2$}, coupled Fibonacci sequences of lower order have been generalized in number of ways. In this chapter the Multiplicative Coupled Fibonacci Sequence has been generalized for $r^{th}$  order and some new interesting properties under two specific schemes are given.
+
+\noindent In this chapter many results are obtained for multiplicative coupled Fibonacci  sequences $X_{n}$ and $Y_{n}$ of $r^{th}$  order, some of these are listed below.
+\begin{theorem}For every integer $n, r\geq0 \quad X_{2n(r+1)}\cdot Y_{0}=Y_{2n(r+1)}\cdot X_{0}.$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad X_{2n(r+1)+1}\cdot Y_{1}=Y_{2n(r+1)+1}\cdot X_{1}.$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{2n(r+1)+2}\cdot Y_{2}=Y_{2n(r+1)+2}\cdot X_{2}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{2n(r+1)+3}\cdot Y_{3}=Y_{2n(r+1)+3}\cdot X_{3}
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{2n(r+1)+m}\cdot Y_{m}=Y_{2n(r+1)+m}\cdot X_{m}
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+\displaystyle\prod_{i=1}^{i=n}X_{ri+1}\cdot Y_{ri+1}=\displaystyle\prod_{i=1}^{i=rn}Y_{i}\cdot X_{i}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{n(r+1)}\cdot Y_{0}=Y_{n(r+1)}\cdot X_{0}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{n(r+1)+1}\cdot Y_{1}=Y_{n(r+1)+1}\cdot X_{1}
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{n(r+1)+2}\cdot Y_{2}=Y_{n(r+1)+2}\cdot X_{2}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r\geq0 \quad
+X_{n(r+1)+3}\cdot Y_{3}=Y_{n(r+1)+3}\cdot X_{3}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem} For every integer $n, r, m\geq0 \quad
+X_{n(r+1)+m}\cdot Y_{m}=Y_{n(r+1)+m}\cdot X_{m}.
+$
+\end{theorem}\vspace{-0.3cm}
+\begin{theorem}For every integer $n, r\geq0 \quad\displaystyle\prod_{i=1}^{i=n}X_{ri+1}=\displaystyle\prod_{i=1}^{i=rn}Y_{i}, \displaystyle\prod_{i=1}^{i=n}Y_{ri+1}=\prod_{i=1}^{i=rn}X_{i}.
+$
+\end{theorem}
+\noindent \textbf{In chapter  $3$}, some properties of $k-$Fibonacci and $k-$Lucas sequences are derived and proved by using matrix methods. We defined matrices $S$, $M$, $M_{k}(n,m)$, $T_{k}(n)$, $S_{k}{(n,m)}$, $A_{n}$, $E$, $Y_{n}$, $W_{n}$, $G_{n}$ and $H_{n}$ for $k$-Fibonacci and $k$-Lucas sequences, using these matrices many interesting identities for $k-$Fibonacci and $k-$Lucas sequences are derived.
+
+\noindent In this chapter different interesting results for $k$- Fibonacci sequences are derived, some of these are listed below.
+\begin{theorem}For all $x,y,z\in Z$
+$$L^2_{k,x+y}-(k^2+4)(-1)^{x+y+1}F_{k,z-x}L_{k,x+y}F_{k,y+z}-(k^2+4)(-1)^{x+z}F^2_{k,y+z}=(-1)^{y+z}L^2_{k,z-x}.$$
+\end{theorem}%\vspace{-0.3cm}
+\begin{theorem}For all $x,y,z\in Z $, $x\neq z$
+$$L^2_{k,x+y}-(-1)^{x+z}L_{k,z-x}L_{k,x+y}L_{k,y+z}+(-1)^{x+z}L^2_{k,y+z}=(-1)^{y+z+1}(k^2+4)F^2_{k,z-x}.$$
+\end{theorem}%\vspace{-0.3cm}
+\begin{theorem}For all $x,y,z\in Z $, $x\neq z$
+$$F^2_{k,x+y}-L_{k,x-z}F_{k,x+y}F_{k,y+z}+(-1)^{x+z}F^2_{k,y+z}=(-1)^{y+z}F^2_{k,z-x}.$$
+\end{theorem}%\vspace{-0.3cm}
+
+\noindent \textbf{In chapter  $4$}, we investigate the binomial sums, congruence properties, telescoping series of \kF\vspace{1mm} and \kL\vspace{.5mm} sequences. Also, we defined new relationship between \kF\vspace{1mm} and \kL\vspace{.5mm} using continued fractions and series of fractions.
+\noindent In this chapter different identities for $k$- Fibonacci sequence $\mathcal{F}_{k,n}$ and $k$- Lucas sequence $\mathcal{L}_{k,n}$ are derived, some of these are listed below. 
+ \begin{theorem} 
+$\mathcal{F}_{k,s+2t}+\dfrac{\mathcal{L}_{k,2t-1}}{k}\mathcal{F}_{k,s}=\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{L}_{k,s+1},
+\mathcal{L}_{k,s+10}+\dfrac{\mathcal{L}_{k,2t-1}}{k}\mathcal{L}_{k,s}=\dfrac{\mathcal{F}_{k,2t}}{k}\delta\mathcal{F}_{k,s+1}.$
+ \end{theorem}
+  \begin{theorem} 
+  $\mathcal{F}_{k,s+2t+1}+\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{L}_{k,s}=\dfrac{\mathcal{L}_{k,2t+1}}{k}\mathcal{F}_{k,s+1},
+\mathcal{L}_{k,s+2t+1}+\delta\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{F}_{k,s}=\dfrac{\mathcal{L}_{k,2t+1}}{k}\mathcal{L}_{k,s+1}.$
+ \end{theorem}
+   \begin{theorem} For $n, s,t\geq 1$,\\$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}(\mathcal{L}_{k,2t-1})^{(n-i)}\mathcal{F}_{k,2ti+s}=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}(\mathcal{L}_{k,2t-1})^{(n-i)}\mathcal{L}_{k,2ti+s}=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $ 
+\end{theorem}
+  \begin{theorem} 
+  For $n, s,t\geq 1$,\\ $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\mathcal{F}_{k,2t(n-i)+n}=\begin{cases} 
+0,& \text{if $n$ is even;}\\
+2(k)^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\mathcal{L}_{k,2t(n-i)+n}=\begin{cases} 
+2(k)^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}},& \text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+ \end{theorem}
+
+\noindent \textbf{In chapter $5$}, we introduce a new generalisation \M\vspace{.5mm}  of \kL\vspace{.5mm} sequence. We present generating functions and Binet formulas for generalized \kL\vspace{.5mm} sequence, and state some binomial and congruence sums containing these sequences.
+
+\noindent In this chapter many identities for generalized \kL\vspace{.5mm} sequence \M\vspace{.5mm} are established, some of these are listed below.
+
+ \begin{theorem}\textbf{(Catalan's Identity)}. For $n, r\geq{1}$, $
+\mathcal{M}_{k,n-r}\mathcal{M}_{k,n+r}-{\mathcal{M}_{k,n}}^2={(-1)}^{n-r}{\delta(1-\delta)F_{k,r}^2}$.
+\end{theorem}
+ \begin{theorem}\textbf{(Cassini's Identity)}. For $n\geq{1}$, $\mathcal{M}_{k,n-1}\mathcal{M}_{k,n+1}-{\mathcal{M}_{k,n}}^2={(-1)}^{n+1}{\delta(1-\delta)}$.
+\end{theorem}
+ \begin{theorem}\textbf{(d'Ocagene's Identity)}. Let $n$ be any non-negative integer and $r$ a natural number. If $n\geq {r+1}$, then
+$\mathcal{M}_{k,r}\mathcal{M}_{k,n+1}-\mathcal{M}_{k,r+1}\mathcal{M}_{k,n}=(-1)^n \delta(1-\delta) F_{k,r-n}$.
+\end{theorem}
+\begin{theorem}\textbf{(Convolution Theorem)}. For $n,r\geq{1}$, $
+\mathcal{M}_{k,r} \mathcal{M}_{k,n+1} + \mathcal{M}_{k,r-1}\mathcal{M}_{k,n} = \mathcal{M}_{k,n+r} + ({\delta}^2+\delta-\sqrt{\delta})F_{k,n+r}+(2\delta+\sqrt{\delta})L_{k,n+r}.
+$
+\end{theorem}
+\begin{theorem}\textbf{(Asymptotic Behaviour)}. For $n,r\geq{1}$, $
+\lim_{n \to \infty }\dfrac{\mathcal{M}_{k,n}}{\mathcal{M}_{k,n-r}}=r_{1}^r.$
+\end{theorem}
+\begin{theorem}
+The generating function for the generalized \kF\vspace{.5mm} sequence $\m_{k,tn}$ is \\
+$
+\displaystyle\sum_{n=0}^{\infty}\mathcal{M}_{k,tn}x^n=\dfrac{x\mathcal{M}_{k,t}-2xL_{k,t}+2}{1-xL_{k,t}+x^2(-1)^t}.
+$
+\end{theorem}
+
+\noindent \textbf{In chapter $6$}, we demonstrate two new generalizations of Fibonacci polynomial. We produce an extended Binet's formula for these generalized polynomials and thereby identities such as Simpson's, Catalan's, d'Ocagene's, etc. using matrix algebra. Moreover, we derived some identities of $M_{n}(x)$, $\widehat{F}_{n}(x)$ and $\widehat{L}_{n}(x)$ using matrix and vector methods. 
+Some results of these polynomials are listed below.
+ \begin{theorem} For $n\geq{1}$, 
+ $$M_{n-1}(x).M_{n+1}(x)-{{M}_{n}}^2(x)={(-1)}^{n+1}{[{k^{2}(x)-m^{2}(x)+4}]}.$$
+\end{theorem}
+\begin{theorem}
+For $n,r\geq{1},$
+$$M_{r}(x)M_{n+1}(x)-M_{r+1}(x)M_{n}(x)=[k^{2}(x)-m^{2}(x)+4](-1)^nF_{r-n}(x).$$
+\end{theorem}
+\begin{theorem}For $n\geq{1},$ $$
+(-1)^{n}M_{-n}(x)=M_{n}(x)-2m(x)F_{n}(x).$$
+\end{theorem}
+\begin{theorem}(Sum of the first n-terms)
+$$
+\displaystyle\sum_{i=0}^{i=n}M_{i}(x)=\frac{1}{k(x)}[M_{n+1}(x)+M_{n}(x)-m(x)+k(x)+2].
+$$
+\end{theorem}
+\begin{theorem}(Sum of the first n-terms with odd indices)
+$$
+\displaystyle\sum_{i=0}^{i=(n-1)}M_{2i+1}(x)=\frac{1}{k(x)}[M_{2n}(x)+2].$$
+\end{theorem}
+\begin{theorem}
+$$
+\displaystyle\sum_{i=0}^{i=n-1}M_{2i}(x)=\frac{1}{k(x)}[M_{2n-1}(x)+k(x)-m(x)].$$
+\end{theorem}
+\begin{theorem}
+For an integer $n\geq0$, 
+$$\displaystyle\sum_{i=0}^{i=n}\binom {n}{i}k^i(x)M_{2i}(x)=M_{2n}(x).$$
+\end{theorem}
+\begin{theorem}
+For arbitrary integers $p,q\geq1$, 
+$$
+\displaystyle\sum_{i=1}^{p}M_{qi}(x)=\dfrac{M_{pq+q}(x)-(-1)^qM_{pq}(x)-M_{q}(x)+2(-1)^q}{r_{1}^q+r_{2}^q-(-1)^q-1}.$$
+\end{theorem}
+\begin{theorem}
+For arbitrary integers $p,q,j\geq1$ with $j\geq{q}$
+$$\displaystyle\sum_{i=1}^{p}M_{qi+j}(x)=\dfrac{M_{pq+q+j}(x)-(-1)^qM_{pq+j}(x)-M_{q+j}(x)+(-1)^qM_{j}(x)}{r_{1}^q+r_{2}^q-(-1)^q-1}.
+$$
+\end{theorem}
+\begin{theorem}
+For arbitrary integers $n,j\geq1$, we have
+$$\displaystyle\sum_{i=1}^{n}M_{i+j}(x)=\dfrac{1}{k(x)}[{M_{n+j+1}(x)+M_{n+j}(x)-M_{j}(x)-M_{j-1}(x)}].$$
+\end{theorem}
+\begin{theorem}(Sum of square)
+$$\displaystyle\sum_{i=1}^{i=n}M_{i}^2(x)=\dfrac{M_{n}(x)M_{n+1}(x)-2M_{1}(x)}{k(x)}.$$
+\end{theorem}
+\noindent \textbf{In chapter $7$}, we defined the hyperbolic \kF\hspace{.5mm} quaternions $\hf_{k,n}$,  hyperbolic \kL\hspace{.5mm} quaternions $\hl_{k,n}$  and hyperbolic \kF\hspace{.5mm} octonions $\hp_{k,n}$,  hyperbolic \kL\hspace{.5mm} octonions $\hq_{k,n}$. We present generating functions and Binet formulas for the \kF\hspace{.5mm} and \kL\hspace{.5mm} hyperbolic quaternions, and establish binomial and congruence sums of hyperbolic \kF\hspace{.5mm} and \kL\hspace{.5mm} quaternions and octonions. Furthermore, we present several well-known identities such as Catalan's, Cassini's and d'Ocagne's identities for \kF\hspace{0mm} and \kL\hspace{0mm} hyperbolic octonions. Some main results of this chapter are listed below.
+\begin{theorem}\textbf{(Binet Formulas)}. For all $n\geq{0}$,\\ $
+1.\quad\hf_{k,n}= \dfrac{\bar{r_1}{{r_1}}^n-\bar
+r_2{r_{2}}^n}{r_1-r_2},\\
+2.\quad\hl_{k,n}= \bar{r_1}{r_{1}}^n +\bar{r_2}{r_{2}}^n.
+$
+\end{theorem}
+\begin{theorem}\textbf{(Catalan's Identity)}. For any integer $t$ and $s$, \\$
+(i)\quad\hf_{k,n-t}\hf_{k,n+t}-{\hf_{k,n}}^2={(-1)}^{n-t}{{F}_{k,t}}\big(0, -2F_{k,t+1},-2F_{k,t+2}, -2F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big),\\
+(ii)\quad\hl_{k,n-t}\hl_{k,n+t}-{\hl_{k,n}}^2=\delta{(-1)}^{n-t+1}{{F}_{k,t}}\big(0, -2F_{k,t+1},-2F_{k,t+2}, -2F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big).
+$
+\end{theorem}
+\begin{theorem}\textbf{(Cassini's Identity)}. For all $n\geq{1}$,\\ $
+(i)\quad\hf_{k,n-1}\hf_{k,n+1}-{\hf_{k,n}}^2={(-1)}^{n}\big(0, -2F_{k,2},2F_{k,3}, F_{k,4}\big),\\(ii)\quad
+\hl_{k,n-1}\hl_{k,n+1}-{\hl_{k,n}}^2={\delta(-1)}^{n-1}\big(0, -2F_{k,2},2F_{k,3}, F_{k,4}\big).
+$
+\end{theorem}
+\begin{theorem}\textbf{(d'Ocagene's Identity)}. Let $n$ be any non-negative integer and $t$ a natural number. If $t\geq {n+1}$,\\ $
+(i)\quad\hf_{k,t}\hf_{k,n+1}-\hf_{k,t+1}\hf_{k,n}=(-1)^n \big(0, -2F_{k,t-n-1},2F_{k,t-n-2}, F_{k,t-n+3}+F_{k,t-n-3}+F_{k,t-n+1}+F_{k,t-n-1}\big),\\
+(ii)\quad\hl_{k,t}\hl_{k,n+1}-\hl_{k,t+1}\hl_{k,n}=(-1)^{n+1}\delta \big(0, -2F_{k,t-n-1},2F_{k,t-n-2}, F_{k,t-n+3}+F_{k,t-n-3}+F_{k,t-n+1}+F_{k,t-n-1}\big).$
+\end{theorem}
+
+\begin{theorem} For all $n\geq{0}$, \\$
+(i)\quad \hp_{k,n+2}=k\hp_{k,n+1}+\hp_{k,n},\\
+(ii)\quad\hq_{k,n+2}=k\hq_{k,n+1}+\hq_{k,n}\\
+(iii)\quad\hq_{k,n}=\hp_{k,n+1}+\hp_{k,n-1}\\
+(iv)\quad \bar{\hp}_{k,n+2}=k\bar{\hp}_{k,n+1}+\bar{\hp}_{k,n},\\
+(v)\quad\bar{\hq}_{k,n+2}=k\bar{\hq}_{k,n+1}+\bar{\hq}_{k,n}\\
+(vi)\quad\bar{\hq}_{k,n}=\bar{\hp}_{k,n+1}+\bar{\hp}_{k,n-1}.
+$
+\end{theorem}
+
+\end{large}
+%=========================================================

@@ -1,0 +1,221 @@
+
+%\def\baselinestretch{1}
+\chapter{Applications of Natural Transform in Distribution}
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+In this chapter, we will give the applications of generalized Natural transform. In other words, we will study the applications of Natural transform in the distribution space. Here we consider some ordinary differential equations which consists the generalized functions such as Heaviside function, Dirac delta function etc.
+\lhead{\scriptsize\itshape\medskip The Heaviside Function}
+\subsection{The Heaviside Function}
+The Heaviside function $ H(x) $ assign the value zero for every negative value of $x$ and assign unity for every positive value of $x$, that is
+\begin{align*}
+   H(x) = \begin{cases}
+  0\hspace{0.5cm}  x<0 \\
+  1\hspace{0.5cm}  x>0
+  \end{cases}
+ \end{align*}
+It has a jump discontinuity at $x = 0$ and is also called the unit step function. Its value at $x = 0$ is usually taken to be $ \frac{1}{2} $. Sometimes it is taken to be a constant $ c,0< c < 1 $, and then the function is written $H_{c}(x)$. If the jump in the Heaviside function is at a point $x = a$, then the function is written $H_{x-a}$.\\
+Hence $ H(-x)=1-H(x),H(a-x)=1-H(x-a)$\\
+The function $H (x)$ plays an important role in describing the functions which are having jump discontinuity and in the study of generalized functions. Let $F(x)$ be a function which is continuous everywhere except for the point $x =\xi$, at which $F(x)$ has a jump discontinuity
+\begin{align*}
+  F(x) = \begin{cases}
+ F_{1}(x)\hspace{0.5cm}  x<\xi \\
+ F_{2}(x)\hspace{0.5cm}  x>\xi
+  \end{cases}
+ \end{align*}
+From this equation, we can write $ F(x) $ as\\
+$ F(x)=F_{1}(x)H(\zeta-x)+F_{2}(x)H(x-\zeta)$\\
+This concept can be generalized for more than one point of jump discontinuity.
+
+\lhead{\scriptsize\itshape\medskip The Dirac Delta Function}
+\section{The Dirac Delta Function}
+In physical problem we often encounters idealized concepts such as a force concentrated at a point or an impulsive force that acts instantaneously. These forces are described by the Dirac delta function $ \delta(x-\xi) $ which has several significant properties.
+\begin{equation}
+\delta(x-\xi)=0,x\neq \xi  
+\end{equation}
+\begin{align}
+ \int_{a}^{b}\delta(x-\xi)= \begin{cases}
+ 0\hspace{0.5cm}  a,b<\xi or \xi <a,b \\
+ 1\hspace{0.5cm}  a\leq \xi \leq b
+  \end{cases}
+ \end{align}
+ \begin{equation}
+\int_{-\infty}^{\infty}\delta(x-\xi)dx=1
+\end{equation}
+  \begin{equation}
+\int_{-\infty}^{\infty}\delta(x-\xi)f(x)dx=f(\xi)
+\end{equation}
+where $ f(x) $ is a sufficiently smooth function,  equation (5.2.4) is called shifting property or the reproducing property of the delta function. The language of classical mathematics is inadequate to justify such function. In a classical mathematics, if a function is zero except at a point then its integral is necessarily zero, without regard for the definition used for the integral, which shows contradiction to equation (5.2.1) and (5.2.2).But there are some sequences which shows the property (5.2.4)i.e.$ \underset{m \rightarrow \infty}\lim \int_{-\infty}^{\infty}f(x)\frac{Sin(mx)}{\pi x}dx=f(0) $. This is called as Dirichlet formula.
+  
+  \lhead{\scriptsize\itshape\medskip Natural Transform of Distribution}
+\section{Natural Transform of Distribution}
+
+Let $ f(t) $ be a distribution whose support is bounded on the left at zero, then the Natural transform of $ f(t) $ is defined by equation
+\begin{equation}
+\mathbb{N}[f(t)]=\bar{f}(s,u)=\int_{0}^{\infty}f(t)e^{\frac{-st}{u}}dt= <f(t),\frac{1}{u}e^{\frac{-st}{u}} >
+\end{equation}
+Here we can examine the above relation in a way that, there exists a real number $\frac{c_{1}}{c_{2}}$ such that $ e^{\frac{c_{1}}{c_{2}}t} $ is a distribution belonging to $\mathfrak{D}^{\prime}$(the class of tempered distribution). Then we can write equation (5.3.1) as
+\begin{equation}
+\mathbb{N}[f(t)]=R_{f}(s,u)=\int_{0}^{\infty}f(t)e^{\frac{-st}{u}}dt= <e^{\frac{-c_{1}}{c_{2}}t}f(t),H(t)\frac{1}{u}e^{\frac{-(s-c)t}{u}} >
+\end{equation}
+where $ H(t) $ is the Heaviside function. For $ Re(\frac{s}{u})> Re(\frac{c}{u})$,the function $ H(t)\frac{1}{u}e^{\frac{-(s-c)t}{u}} $ is a test function in $\mathfrak{S}$, and hence the above definition makes sense.
+\section{The Natural Transform of Heaviside Function and Dirac Delta Function }
+\begin{itemize}
+\item[1]The Heaviside Function\\
+$\mathbb{N}[H(t)]=\int_{0}^{\infty}e^{\frac{-st}{u}}=\frac{u}{s}$
+\item[2]The Dirac Delta Function and its Derivatives
+\begin{center}
+\begin{tabular}{ c c }
+$\mathbb{N}[\delta(t)] = \frac{1}{u}$ & $\mathbb{N}[\delta(t-c)] = \frac{1}{u}e^{\frac{-cs}{u}}$ \\ 
+$\mathbb{N}[\delta(t-c)f(t)] = \frac{1}{u}f(c)e^{\frac{-cs}{u}}$ & $\mathbb{N}[\delta^{\prime}(t-c)] = \frac{s}{u^{2}}e^{\frac{-cs}{u}}$\\
+\end{tabular}
+\end{center}
+In general, $\mathbb{N}[\delta^{(n)}(t-c)] = (\frac{s^{n}}{u^{n+1}})e^{\frac{-cs}{u}}$\\
+If we set $c=0$ ,then we have 
+\begin{center}
+\begin{tabular}{ c c }
+$\mathbb{N}[\delta(t)] = \frac{1}{u}$ & $\mathbb{N}[\delta(t)f(t)] = \frac{1}{u}f(o)$ \\ 
+$\mathbb{N}[\delta^{\prime}(t)] = \frac{s}{u^{2}}$ \\
+\end{tabular}
+\end{center}
+In general, $\mathbb{N}[\delta^{(n)}(t)] = (\frac{s^{n}}{u^{n+1}})$
+\end{itemize}
+\lhead{\scriptsize\itshape\medskip Natural Transform of Distributional Derivative}
+\section{The Natural Transform of Distributional Derivative}
+Let $ f(t)\in \mathfrak{D}^{\prime} $, then by the definition of Natural transform we have 
+\begin{equation}
+\mathbb{N}[\overline{f^{\prime}(t)}]=<\overline{f^{\prime}(t)},\frac{1}{u}e^{\frac{-st}{u}}>
+\end{equation}
+Let $ f(t) $ be a function defined by 
+\begin{align}
+ f(t))= \begin{cases}
+g_{1}(t)\hspace{0.5cm}  t<a \\
+g_{2}(t)\hspace{0.5cm} t>a
+  \end{cases}
+  =g_{1}(t)H(a-t)+g_{2}(t)H(t-a)
+ \end{align}
+where $ a>0 $ and $g_{1}(t), g_{2}(t)$ are continuously differentiable functions. The classical derivative of $f(t)$ is given by
+\begin{equation}
+f^{\prime}(t)=g_{1}^{\prime}(t)H(a-t)+g_{2}^{\prime}(t)H(t-a)
+\end{equation}
+For all $ t\neq a $, the distributional derivative is 
+$\overline{f^{\prime}(t)}=f^{\prime}(t)+[f]\delta(t-a)$\\
+where $[f]=f(a_{+})-f(a_{-})$\\
+The Natural transform of equation (5.5.3) is given by
+\begin{align*}
+\mathbb{N}[f^{\prime}(t)]=\frac{1}{u}\int_{0}^{\infty}f^{\prime}(t)e^{\frac{-st}{u}}&=\frac{1}{u}\int_{0}^{a}g_{1}^{\prime}(t)e^{\frac{-st}{u}}+\frac{1}{u}\int_{a}^{\infty}g_{2}^{\prime}(t)e^{\frac{-st}{u}}\\
+&=\frac{1}{u}\lbrace[e^{\frac{-st}{u}}g_{1}(t)]_{0}^{a}+\frac{s}{u}\int_{0}^{a}g_{1}(t)e^{\frac{-st}{u}}\rbrace\\
+&+\frac{1}{u}\lbrace[e^{\frac{-st}{u}}g_{2}(t)]_{a}^{\infty}+\frac{s}{u}\int_{a}^{\infty}g_{2}(t)e^{\frac{-st}{u}}\rbrace\\
+&=\frac{s}{u^{2}}[\int_{0}^{a}g_{1}(t)e^{\frac{-st}{u}}+\int_{a}^{\infty}g_{2}(t)e^{\frac{-st}{u}}]\\
+&-\frac{1}{u}(e^{\frac{-as}{u}}[f]+g_{1}(0))\\
+&=\frac{s}{u^{2}}\bar{f(t)}-\frac{1}{u}(f(0)+[f]e^{\frac{-as}{u}})
+\end{align*}
+where $f(0)=g_{1}(0)$. On the other hand 
+\begin{align*}
+\mathbb{N}[\overline{f^{\prime}(t)}]&=<\overline{f^{\prime}(t)},e^{\frac{-st}{u}}>\\
+&=<f^{\prime}(t)+[f]\delta(t-a),\frac{1}{u}e^{\frac{-st}{u}}>\\
+&=\frac{1}{u}\int_{0}^{\infty}f^{\prime}(t)e^{\frac{-st}{u}}+\frac{1}{u}[f]e^{\frac{-as}{u}}\\
+&=\frac{s}{u^{2}}\bar{f(t)}-\frac{1}{u}f(0)
+\end{align*}
+The above relation makes the sense even when we allow $a$ to tend to zero, because in that case we have
+\begin{align*}
+\mathbb{N}[f^{\prime}(t)]&=\frac{1}{u}\int_{0}^{\infty}g_{2}^{\prime}(t)e^{\frac{-st}{u}}\\
+&=\frac{s}{u^{2}}\int_{0}^{\infty}g_{2}(t)e^{\frac{-st}{u}}dt-g_{2}(0)\\
+&=\frac{s}{u^{2}}\bar{f(t)}-\frac{1}{u}f(0_{+})\\
+&=\frac{s}{u^{2}}\bar{f(t)}-\frac{1}{u}f(0_{-})-[f(0_{+})-f(0_{-})]e^{\frac{-0s}{u}}
+\end{align*}
+which is consistent with above equation.
+\lhead{\scriptsize\itshape\medskip Illustrative Examples}
+\section{Application of Generalized Natural Transform}
+\textbf{Example (1)} Solve $y^{\prime\prime}+6y^{\prime}+5y=\delta(t)+\delta(t-2)$ with initial condition $y(0)=1,y^{\prime}(0)=0$\\
+\textbf{Solution} \\
+Taking Natural transform on both sides of the given equation and simplifying
+\begin{equation*}
+\mathbb{N}[y^{\prime\prime}+6y^{\prime}+5y]=\mathbb{N}[\delta(t)+\delta(t-2)]
+\end{equation*}
+\begin{equation*}
+[\frac{s^2}{u^2}\mathbb{N}[y]-\frac{s}{u^2}y(0)+\frac{1}{u}y^{\prime}(0)]+6[\frac{s}{u}\mathbb{N}[y]-\frac{1}{u}y(0)]+5\mathbb{N}[y]=\frac{1}{u}+e^{\frac{-2s}{u}}
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[y][\frac{s^2+6su+5u^2}{u^2}]=\frac{s}{u^2}+\frac{6}{u}+\frac{1}{u}+\frac{1}{u}e^{\frac{-2s}{u}}
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[y]=\frac{s+7u}{s^2+6su+5u^2}+\frac{u}{s^2+6su+5u^2}e^{\frac{-2s}{u}}
+\end{equation*}
+Now using the partial fraction method  we have
+\begin{equation*}
+\mathbb{N}[y]=\frac{\frac{3}{2}}{s+u}+\frac{\frac{-1}{2}}{s+5u}+(\frac{\frac{1}{4}}{s+u}-\frac{\frac{1}{4}}{s+5u})e^{\frac{-2s}{u}}
+\end{equation*}
+Applying inverse Natural transform on both sides we get
+\begin{equation}
+y(t)=\frac{3}{2}e^{-t}-\frac{1}{2}e^{-5t}+\frac{1}{4}u_{2}(t)(e^{-t+2}-e^{-5t+10})
+\end{equation}
+\newpage
+\textbf{Example(2)} Solve $y^{\prime\prime}+2y^{\prime}+10y=-\delta(t-4\pi)$ with initial condition $y(0)=0,y^{\prime}(0)=1$\\
+\textbf{Solution} 
+Taking Natural transform on both sides of the given equation and simplifying
+\begin{equation*}
+\mathbb{N}[y^{\prime\prime}+2y^{\prime}+10y]=\mathbb{N}[\delta(t-4\pi)]
+\end{equation*}
+\begin{equation*}
+[\frac{s^2}{u^2}\mathbb{N}[y]-\frac{s}{u^2}y(0)+\frac{1}{u}y^{\prime}(0)]+2[\frac{s}{u}\mathbb{N}[y]-\frac{1}{u}y(0)]+10\mathbb{N}[y]=\frac{1}{u}e^{\frac{-4\pi s}{u}}
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[y][\frac{s^2+2su+10u^2}{u^2}]=-\frac{1}{u}-\frac{1}{u}e^{\frac{-4\pi s}{u}}
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[y]=\frac{u}{s^2+2su+10u^2}+\frac{u}{s^2+2su+10u^2}e^{\frac{-4\pi s}{u}}
+\end{equation*}
+Applying inverse Natural transform on both sides we get
+\begin{equation}
+\mathbb{N}^{-1}[y]=\mathbb{N}^{-1}[\frac{u}{s^2+2su+10u^2}+\frac{u}{s^2+2su+10u^2}e^{\frac{-4\pi s}{u}}]
+\end{equation}
+The expression $ \frac{u}{s^2+2su+10u^2} $ can be written as $\frac{1}{3}[\frac{3u}{(s+u)^{2}+9u^{2}}]$ whose inverse Natural transform found to be $ \frac{1}{3}e^{-t}Sin(3t) $. Also in second part ,the factor $ e^{\frac{-4\pi s}{u}} $ gains its effect of a unit step function and a translation by $c=4\pi $ so that its inverse Natural transform is $ -\frac{1}{3}u_{4\pi}(t)(e^{-(t-4\pi)}) $
+\begin{align*}
+y(t&)=\frac{1}{3}e^{-t}Sin(3t)-\frac{1}{3}u_{4\pi}(t)e^{-(t-4\pi)}\\
+&=\frac{1}{3}e^{-t}Sin(3t)-\frac{1}{3}u_{4\pi}(t)e^{-t+4\pi}
+\end{align*}
+
+\textbf{Example (3)} A simply supported beam of length L bars a load P concentrated at its midpoint($x=\frac{L}{2}$). Find the deflection of the beam.\\
+\textbf{Solution:} We know the equation of beam with the required boundary conditions as
+\begin{equation}
+EIy^{(4)}=P\delta(x-\frac{L}{2})
+\end{equation}
+with, $y(0)=y^{\prime\prime}(0)=y(L)=y^{\prime\prime}(L)=0$\\
+Assume that the function y(x)is defined on the domain $ [ 0,\infty)$, but it only has physical meaning on $ [ 0,L]$. From the initial conditions given we can see that, the conditions like $y^{\prime}(0)$ and $y^{\prime\prime}(0)$ are not known. To solve the given problem, we can assign some value to these conditions for our convenience say $y^{\prime}(0)= a$ and $y^{\prime\prime}(0)=b$, which we can determine using the known conditions.\\
+Now apply the Natural transform on both sides and using the initial conditions, we get
+\begin{equation*}
+EI\mathbb{N}[y^{(4)}]=P\mathbb{N}[\delta(x-\frac{L}{2})]
+\end{equation*}
+\begin{equation*}
+EI[\frac{s^{4}}{u^{4}}\mathbb{N}[y]-\frac{s^{3}}{u^{4}}y(0)-\frac{s^{2}}{u^{3}}y^{\prime}(0)-\frac{s}{u^{2}}y^{\prime\prime}(0)-\frac{1}{u}y^{\prime\prime\prime}(0)]=P\frac{1}{u}e^{\frac{-sL}{2u}}
+\end{equation*}
+\begin{equation*}
+EI\mathbb{N}[y]=\frac{u}{s^2}a+\frac{u^{3}}{s^{4}}b+P\frac{u^{3}}{s^{4}}\frac{1}{EI}e^{\frac{-sL}{2u}}
+\end{equation*}
+Now apply the inverse Natural transform, we have
+\begin{equation}
+y(x)=ax+b\frac{1}{6}x^{3}+P\frac{1}{6EI}u_{(\frac{L}{2})}(x)(x-\frac{L}{2})^{3}
+\end{equation}
+Now using the boundary conditions $y(L)=0$ and $y^{\prime\prime}(L)=0$, we get
+\begin{equation}
+y^{\prime\prime}(x)=bx+P\frac{1}{EI}(x-\frac{L}{2})
+\end{equation}
+$\therefore y(L)=aL+b\frac{1}{6}L^{3}+P\frac{L^3}{48EI}=0$ \hspace{0.25cm}   and \hspace{0.25cm}
+$y^{\prime\prime}(L)=bL+P\frac{L}{2EI}$
+Solving these equations for $a$ and $b$ ,we get\\
+$ a=\frac{PL^2}{16EL} $ and $ b=\frac{-P}{2EI} $\\
+Finally the deflection curve is given by
+\begin{equation}
+y(x)=\frac{PL^2}{16EL}x+\frac{-P}{2EI}\frac{1}{6}x^{3}+P\frac{1}{6EI}u_{(\frac{L}{2})}(x)(x-\frac{L}{2})^{3}
+\end{equation}
+More explicitly, the beam deflection is given by
+\begin{align*}
+  y(x) = \begin{cases}
+  \frac{PL^2}{16EL}x+\frac{-P}{12EI}x^{3}\hspace{4.5cm}  0\leq x<\frac{L}{2} \\
+  \frac{PL^2}{16EL}x+\frac{-P}{12EI}x^{3}+P\frac{1}{6EI}u_{(\frac{L}{2})}(x)(x-\frac{L}{2})^{3}\hspace{0.5cm}  \frac{L}{2}\leq x\leq L.
+  \end{cases}
+ \end{align*}

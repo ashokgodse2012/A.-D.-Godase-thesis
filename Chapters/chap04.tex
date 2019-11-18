@@ -1,0 +1,961 @@
+%
+% File: chap01.tex
+% Author: Victor F. Brena-Medina
+% Description: Introduction chapter where the biology goes.
+%
+\let\textcircled=\pgftextcircled
+\chapter{Identities Involving $k$- Fibonacci and $k$- Lucas Sequences}
+\label{chap:Identities Involving }
+In this chapter, we investigate the binomial sums, congruence properties, telescoping series of \kF\vspace{1mm} and \kL\vspace{.5mm} sequences. Also, we defined new relationship between \kF\vspace{1mm} and \kL\vspace{.5mm} using continued fractions and series of fractions.
+\vspace{2mm}
+\let\thefootnote\relax\footnote{\textbf{\hspace{-0.78cm}The content of this chapter is published in the following papers.}}\footnote{\hspace{-0.78cm}Identities Involving k-Fibonacci and k-Lucas Sequences, Mathematics Today 34(2018), 125-143.}\footnotetext{\hspace{-0.78cm}Fibonacci and k Lucas Sequences as Series of Fractions, Mathematical Journal of Interdisciplinary Sciences, 04(2016), 107-119.}
+\section{Introduction}
+The well known Fibonacci sequence is an integer sequence, which is defined by the numbers that satisfy the second order recurrence relation $\mathcal{F}_n = \mathcal{F}_{n-1}+\mathcal{F}_{n-2}$ with the initial conditions $\mathcal{F}_0 = 0$ and $\mathcal{F}_1 = 1$. Fibonacci numbers have many interesting properties and applications in various research areas such as Architecture, Engineering, Nature and Art. The Lucas sequence is companion sequence of Fibonacci sequence defined with the Lucas numbers which are defined with the recurrence relation $\mathcal{L}_n = \mathcal{L}_{n-1}+\mathcal{L}_{n-2}$ with the initial conditions $\mathcal{L}_0 = 2$ and $\mathcal{L}_1 = 1$. Binet's formulas for the Fibonacci and Lucas numbers are 
+$$\mathcal{F}_n=\frac{{r_1}^n-{r_2}^n}{r_1-r_2}$$ and $$\mathcal{L}_n={r_1}^n+{r_2}^n$$ respectively, where $r_1 = \frac{1+\sqrt{5}}{2}$ and $r_2=\frac{1-\sqrt{5}}{2}$ are the roots of the characteristic equation $x^2 - x -1 = 0$. The positive root $r_1$ is known as the golden ratio. \\
+The Fibonacci and Lucas  sequences are generalised by changing the initial conditions or changing the recurrence relation. One of the famous generalization of the Fibonacci sequence is $k$- Fibonacci sequence first introduced by Falcon and Plaza in \cite{5}. The $k$- Fibonacci sequence is defined by the numbers which satisfy the second order recurrence relation $\mathcal{F}_{k,n} = k\mathcal{F}_{k,n-1}+\mathcal{F}_{k,n-2}$ with the initial conditions $\mathcal{F}_{k,0} = 0$ and $\mathcal{F}_{k,1} = 1$. Falcon \cite{4} defined the $k$- Lucas sequence which is companion sequence of $k$- Fibonacci sequence defined with the $k$- Lucas numbers which are defined with the recurrence relation $\mathcal{L}_{k,n} = k\mathcal{L}_{k,n-1}+\mathcal{L}_{k,n-2}$ with the initial conditions $\mathcal{L}_{k,0} = 2$ and $\mathcal{L}_{k,1} = k$. Binet's formulas for the $k$- Fibonacci and $k$- Lucas numbers are $$\mathcal{F}_{k, n}=\frac{{r_1}^n-{r_2}^n}{r_1-r_2}$$ and $$\mathcal{L}_{k,n}={r_1}^n+{r_2}^n$$ respectively, where $r_1 = \frac{k+\sqrt{k^2+4}}{2}$ and $r_2=\frac{k-\sqrt{k^2+4}}{2}$ are the roots of the characteristic equation $x^2 - kx -1 = 0$.  The characteristic roots $r_1$ and $r_2$ satisfy the properties  
+ \begin{align*} 
+   r_{1}-r_{2} = \sqrt{k^2+4}= \sqrt{\delta}\text{,}
+ \quad r_{1}+r_{2}=k\text{,}\quad r_{1}r_{2}=-1.
+\end{align*} 
+Many properties of $k$- Fibonacci and $k$- Lucas numbers are appeared in \cite{4, 5}, some of these are listed below.
+\begin{align*}
+&(1)\quad \mathcal{F}_{k,n-r}\mathcal{F}_{k,n+r}-{\mathcal{F}_{k,n}}^2={(-1)}^{n+1-r}{\mathcal{F}_{k,r}}^2\quad \text{\textbf{(Catalan's Identity)}},\\
+&(2)\quad \mathcal{F}_{k,n-1}\mathcal{F}_{k,n+1}-{\mathcal{F}_{k,n}}^2={(-1)}^{n}\quad \text{\textbf{(Cassini's Identity)} },\\
+&(3)\quad \mathcal{F}_{k,r+1}\mathcal{F}_{k,n}=(-1)^n \mathcal{F}_{k,r-n}\quad \text{\textbf{(d'Ocagene's Identity)} },\\
+&(4)\quad \mathcal{F}_{k,r} \mathcal{F}_{k,n+1} + \mathcal{F}_{k,r-1}\mathcal{F}_{k,n} = \mathcal{F}_{k,n+r}\quad \text{\textbf{(Convolution Theorem)} },\\
+&(5)\quad \lim_{n \to \infty }\dfrac{\mathcal{F}_{k,n}}{\mathcal{F}_{k,n-r}}=r_{1}^r\quad \text{\textbf{(Asymptotic Behaviour)} }.\\
+&\text{The generating functions for the subsequence of \kF\vspace{0mm} and \kL\vspace{0mm}}\\&\text{ sequences are}\\ 
+&(6)\quad  \sum_{n=0}^{\infty}\mathcal{F}_{k,tn}x^n=\dfrac{x\mathcal{F}_{k,t}}{1-xL_{k,t}+x^2(-1)^t},\\
+&(7)\quad \sum_{n=0}^{\infty}\mathcal{L}_{k,tn}x^n=\dfrac{2-x\mathcal{L}_{k,t}}{1-xL_{k,t}+x^2(-1)^t},\\
+&(8)\quad \sum_{n=0}^{\infty}\mathcal{F}_{k,tn}\mathcal{L}_{k,tn}x^n=\dfrac{x\mathcal{F}_{k,2t}}{1-xL_{k,2t}+x^2(-1)^{2t}}.\\
+&\text{The sums of \kF\vspace{0mm} and \kL\vspace{0mm} sequences are}\\ 
+&(9)\quad \sum_{i=1}^{n}\mathcal{F}_{k,i}=\dfrac{\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n}-(2+k)}{k},\\
+&(10)\quad\sum_{i=1}^{n}\mathcal{L}_{k,i}=\dfrac{\mathcal{L}_{k,n+1}+\mathcal{L}_{k,n}-1}{k},\\
+\end{align*}
+\begin{align*}
+&(11)\quad \sum_{i=1}^{n}\mathcal{F}_{k,2i}=\dfrac{\mathcal{F}_{k,2n+1}-1}{k},\\
+&(12)\quad \sum_{i=1}^{n}\mathcal{F}_{k,2i-1}=\dfrac{\mathcal{F}_{k,2n}}{k},\\
+&(13)\quad \sum_{i=1}^{n}\mathcal{L}_{k,2i}=\dfrac{\mathcal{L}_{k,2n+1}-k}{k},\\
+&(14)\quad \sum_{i=1}^{n}\mathcal{L}_{k,2i-1}=\dfrac{\mathcal{L}_{k,2n}-2}{k},\\
+&(15)\quad \sum_{i=1}^{n}\mathcal{F}_{k,i}^2=\dfrac{\mathcal{F}_{k,n+1}\mathcal{F}_{k,n}-k^2}{k},\\
+&(16)\quad \sum_{i=1}^{n}\mathcal{L}_{k,i}^2=\dfrac{k\mathcal{L}_{k,n+1}\mathcal{L}_{k,n}+k^2}{k},\\
+&(17)\quad \sum_{i=1}^{n}\mathcal{F}_{k,i}\mathcal{L}_{k,i}=\dfrac{\mathcal{F}_{k,2n+1}-1}{k}.
+ \end{align*}
+ \section{Binomial and Congruence Identities of \kF \vspace{0mm} and \kL \vspace{0mm} Sequences}
+\noindent In this section, we have adapted the techniques of Carlitz\cite{2} and Zhizheng Zhang\cite{3} to \kF\vspace{0mm}  and \kL\vspace{0mm}  sequences and derived many interesting  binomial and congruence identities for \kF\vspace{0mm}  and \kL\vspace{0mm}  sequences.
+\subsection{{Binomial Identities of the \kF\vspace{0mm} and \kL\vspace{0mm} Sequences}}
+In this section, we explore certain binomial identities of the \kF\vspace{0mm} and \kL\vspace{0mm} sequences. 
+\begin{lemma}
+Let $u=r_{1}$ or $r_{2}$, then\label{3.1}
+\begin{enumerate}
+\item[(a)] $u^2=ku+1$.
+\item[(b)] $u^n=u\mathcal{F}_{k,n}+\mathcal{F}_{k,n-1}$.
+\item[(c)] $u^{2n}=u^n\mathcal{L}_{k,n}-(-1)^n$.
+\item[(d)] $u^{tn}=u^n\dfrac{\mathcal{F}_{k,tn}}{\mathcal{F}_{k,n}}-(-1)^n-\dfrac{\mathcal{F}_{k,(t-1)n}}{\mathcal{F}_{k,n}}$.
+\item[(e)] $u^{sn}\mathcal{F}_{k,rn}-u^{rn}\mathcal{F}_{k,sn}=(-1)^{sn}\mathcal{F}_{k,(r-s)n}$.
+\end{enumerate}
+\end{lemma}
+\begin{theorem}For $n, r, s, t\geq 1$, we have\label{3.2}
+\begin{enumerate}
+\item[(a)] $\mathcal{F}_{k,n+t}=\mathcal{F}_{k,n}\mathcal{F}_{k,t+1}+\mathcal{F}_{k,n-1}\mathcal{F}_{k,t}$.
+\item[(b)] $\mathcal{F}_{k,2n+t}=\mathcal{L}_{k,n}\mathcal{F}_{k,n+t}-(-1)^n\mathcal{F}_{k,t}$.
+\item[(c)] $\mathcal{F}_{k,sn+t}=\dfrac{\mathcal{F}_{k,sn}}{\mathcal{F}_{k,n}}\mathcal{F}_{k,n+t}-(-1)^n\dfrac{\mathcal{F}_{k,(s-1)n}}{\mathcal{F}_{k,n}}\mathcal{F}_{k,t}$. 
+\item[(d)] $\mathcal{F}_{k,sn+t}\mathcal{F}_{k,rn}-\mathcal{F}_{k,rn+t}\mathcal{F}_{k,sn}=(-1)^{sn}\mathcal{F}_{k,t}\mathcal{F}_{k,(r-s)n}$.
+\end{enumerate}
+\end{theorem}
+\begin{theorem}For $n, r, s, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.3}
+\begin{enumerate}
+\item $\mathcal{D}_{k,2n}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\mathcal{D}_{k,i} $.
+\item $\mathcal{D}_{k,2n+t}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\mathcal{D}_{k,i+t} $.
+\item $\mathcal{D}_{k,rn+t}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) \mathcal{F}_{k,r}^{i}\mathcal{F}_{k,r-1}^{n-i}\mathcal{D}_{k,i+t} $.
+\item $\mathcal{D}_{k,2rn+t}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)(r+1)} \mathcal{L}_{k,r}^{i}\mathcal{D}_{k,ri+t} $.
+\item $\mathcal{D}_{k,trn+l}=\dfrac{1}{\mathcal{F}_{k,r}^{n}}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)(r+1)} \mathcal{F}_{k,(t-1)r}^{n-i}\mathcal{F}_{k,tr}^{i}\mathcal{D}_{k,ri+l} $.
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{i} \mathcal{D}_{k,r(n-i)+i+t}\mathcal{F}_{k,r}^{i}=\mathcal{D}_{k,t}\mathcal{F}_{k,r-1}^{n} $.
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)} \mathcal{D}_{k,ri+t}\mathcal{F}_{k,r-1}^{(n-i)}=\mathcal{D}_{k,n+t}\mathcal{F}_{k,r}^{n} $.
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}\mathcal{F}_{k,sm}^{(n-i)}\mathcal{F}_{k,rm}^{(i)} \mathcal{D}_{k,m[rn+i(s-r)]+t}=(-1)^{smn}\mathcal{D}_{k,t}\mathcal{F}_{k,(r-s)m}^{n} $.
+\end{enumerate}
+\end{theorem}
+\begin{lemma}
+Let $u=r_{1}$ or $r_{2}$, then\label{3.4}
+\begin{enumerate}
+\item $k+(k^2+1)u=u^3$.
+\item $1+ku+u^6=\mathcal{L}_{k,2}u^4$.
+\item $1+ku+u^{10}=\mathcal{L}_{k,4}u^6$.
+\item $1+ku+u^{18}=\mathcal{L}_{k,8}u^{10}$.
+\item $1+ku+u^{34}=\mathcal{L}_{k,16}u^{18}$.
+\item $1+ku+u^{66}=\mathcal{L}_{k,32}u^{34}$.
+\item $1+ku+u^{130}=\mathcal{L}_{k,64}u^{66}$.
+\item $1+ku+u^{258}=\mathcal{L}_{k,128}u^{130}$.
+\item $1+ku+u^{514}=\mathcal{L}_{k,256}u^{258}$.
+\item $1+ku+u^{1026}=\mathcal{L}_{k,512}u^{514}$.
+\item $1+ku+u^{2050}=\mathcal{L}_{k,1024}u^{1026}$.
+\end{enumerate}
+In general, if $\mathcal{L}_{k,n}$ is $n^{\text{th}}$ $k$-Lucas sequence and $u=r_{1}$ or $r_{2}$, then
+$$1+ku+u^{2(2^{n+1}+1)}=\mathcal{L}_{k,2^{n+1}}u^{2(2^{n}+1)}.$$
+\end{lemma}
+\begin{theorem}For $t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.5}
+\begin{enumerate}
+\item $\mathcal{D}_{k,t+3}=(k^2+1)\mathcal{D}_{k,t+1}+k\mathcal{D}_{k,t}$.
+\item $\mathcal{D}_{k,t+4}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+6}}{\mathcal{L}_{k,2}}$.
+\item $\mathcal{D}_{k,t+6}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+10}}{\mathcal{L}_{k,4}}$.
+\item $\mathcal{D}_{k,t+10}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+18}}{\mathcal{L}_{k,8}}$.
+\item $\mathcal{D}_{k,t+18}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+34}}{\mathcal{L}_{k,16}}$.
+\item $\mathcal{D}_{k,t+34}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+66}}{\mathcal{L}_{k,32}}$.
+\item $\mathcal{D}_{k,t+66}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+130}}{\mathcal{L}_{k,64}}$.
+\item $\mathcal{D}_{k,t+130}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+258}}{\mathcal{L}_{k,128}}$.
+\item $\mathcal{D}_{k,t+258}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+514}}{\mathcal{L}_{k,256}}$.
+\item $\mathcal{D}_{k,t+514}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+1026}}{\mathcal{L}_{k,512}}$.
+\item $\mathcal{D}_{k,t+1026}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+2050}}{\mathcal{L}_{k,1024}}$.
+\end{enumerate}
+In general, for $ t\geq 1$, we have
+$$\mathcal{D}_{k,t+2^{n+1}+2}=\dfrac{\mathcal{D}_{k,t}+k\mathcal{D}_{k,t+1}+\mathcal{D}_{k,t+2^{n+2}+2}}{\mathcal{L}_{k,2^{n+1}}}.$$
+\end{theorem}
+\begin{theorem} For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.6}
+\begin{enumerate}
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}^{}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+6j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,4}}^i\mathcal{D}_{k,6i+10j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,8}}^i\mathcal{D}_{k,10i+18j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,16}}^i\mathcal{D}_{k,18i+34j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,32}}^i\mathcal{D}_{k,34i+66j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,64}}^i\mathcal{D}_{k,66i+130j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,128}}^i\mathcal{D}_{k,130i+258j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,256}}^i\mathcal{D}_{k,258i+514j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,512}}^i\mathcal{D}_{k,514i+1026j+t} $.
+\item $\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,1024}}^i\mathcal{D}_{k,1026i+2050j+t} $.
+\end{enumerate}
+In general, for $r, n, t\geq 1$, we have
+$$\mathcal{D}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2^{r+1}}}^i\mathcal{D}_{k,2^{r+1}(i+2j)+2(i+j)+t}. $$
+\end{theorem}
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.7}
+\begin{enumerate}
+\item $\mathcal{D}_{k,6n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+j+t} $.
+\item $\mathcal{D}_{k,10n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,4}}^i\mathcal{D}_{k,6i+j+t} $.
+\item $\mathcal{D}_{k,18n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,8}}^i\mathcal{D}_{k,10i+j+t} $.
+\item $\mathcal{D}_{k,34n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,16}}^i\mathcal{D}_{k,18i+j+t} $.
+\item $\mathcal{D}_{k,66n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,32}}^i\mathcal{D}_{k,34i+j+t} $.
+\item $\mathcal{D}_{k,130n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,64}}^i\mathcal{D}_{k,66i+j+t} $.
+\item $\mathcal{D}_{k,258n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,128}}^i\mathcal{D}_{k,130i+j+t} $.
+\item $\mathcal{D}_{k,514n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,256}}^i\mathcal{D}_{k,258i+j+t} $.
+\item $\mathcal{D}_{k,1026n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,512}}^i\mathcal{D}_{k,514i+j+t} $.
+\item $\mathcal{D}_{k,2050n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,1024}}^i\mathcal{D}_{k,1026i+j+t} $.
+\end{enumerate}
+In general, for $r, n, t\geq 1$, we have
+$$\mathcal{D}_{k,(2^{r+2}+2)n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{\mathcal{L}_{k,2^{r+1}}}^i\mathcal{D}_{k,(2^{r+1}+2)i+j+t}.$$
+\end{theorem}
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.8}
+\begin{enumerate}
+\item $\mathcal{D}_{k,4n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,2}}^{-n}\mathcal{D}_{k,6i+j+t} $.
+\item $\mathcal{D}_{k,6n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,4}}^{-n}\mathcal{D}_{k,10i+j+t} $.
+\item $\mathcal{D}_{k,10n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,8}}^{-n}\mathcal{D}_{k,18i+j+t} $.
+\item $\mathcal{D}_{k,18n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,16}}^{-n}\mathcal{D}_{k,34i+j+t} $.
+\item $\mathcal{D}_{k,34n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,32}}^{-n}\mathcal{D}_{k,66i+j+t} $.
+\item $\mathcal{D}_{k,66n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,64}}^{-n}\mathcal{D}_{k,130i+j+t} $.
+\item $\mathcal{D}_{k,130n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,128}}^{-n}\mathcal{D}_{k,258i+j+t} $.
+\item $\mathcal{D}_{k,258n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,256}}^{-n}\mathcal{D}_{k,514i+j+t} $.
+\item $\mathcal{D}_{k,514n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,512}}^{-n}\mathcal{D}_{k,1026i+j+t} $.
+\item $\mathcal{D}_{k,1026n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,1024}}^{-n}\mathcal{D}_{k,2050i+j+t} $.
+\end{enumerate}
+In general, for $r, n,t\geq 1$, we have
+$$\mathcal{D}_{k,(2^{r+1}+2)n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{\mathcal{L}_{k,2^{r+1}}}^{-n}\mathcal{D}_{k,(2^{r+1}+2)i+j+t}. $$
+\end{theorem}
+\begin{lemma} Let $u=r_{1}$ or $r_{2}$, then for $l_n=\sum\limits_{i=1}^n\mathcal{L}_{k,2^i}$ and $n, t\geq 1$, we have \label{3.9}
+\begin{enumerate}
+\item $1+u^4=l_1u^2$.
+\item $ 1+u^8=\dfrac{l_2}{l_1}u^4=l_2u^2-\dfrac{l_2}{l_1}$.
+\item $ 1+u^{16}=\dfrac{l_3}{l_2}u^8=\dfrac{l_3}{l_1}u^4-\dfrac{l_3}{l_2}=l_3u^2-\dfrac{l_3}{l_1}-\dfrac{l_3}{l_2}$.
+\item $ 1+u^{32}=\dfrac{l_4}{l_3}u^{16}=\dfrac{l_4}{l_2}u^8-\dfrac{l_4}{l_3}=\dfrac{l_4}{l_1}u^4-l_4\left[\dfrac{1}{l_2}+\dfrac{1}{l_3}\right]=l_4u^2-l_4\left[\dfrac{1}{l_1}+\dfrac{1}{l_2}+\dfrac{1}{l_3}\right]$.
+\item $ 1+u^{64}=\dfrac{l_5}{l_4}u^{32}=\dfrac{l_5}{l_3}u^{16}-\dfrac{l_5}{l_4}=\dfrac{l_5}{l_2}u^8-l_5\left[\dfrac{1}{l_3}+\dfrac{1}{l_4}\right]=\dfrac{l_5}{l_1}u^4-l_5\left[\dfrac{1}{l_2}+\dfrac{1}{l_3}+\dfrac{1}{l_4}\right]\\\qquad=l_5u^2-l_5\left[\dfrac{1}{l_1}+\dfrac{1}{l_2}+\dfrac{1}{l_3}+\dfrac{1}{l_4}\right]$.
+\end{enumerate}
+In general, we have
+\begin{align*}
+ 1+u^{2^n}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}}u^{2^{n-1}};\\
+\dfrac{l_{n-1}}{l_{n-t-1}}u^{2^{n-t}}-l_{n-1}\sum\limits_{i=2}^{t}\dfrac{1}{l_{n-i}}, & \text{If $t=2, 3, 4,\hdots, n-2 $ };\\l_{n-1}u^2-l_{n-1}\sum\limits_{i=2}^{n-1}\dfrac{1}{l_{n-i}}.
+ \end{cases}
+\end{align*} 
+\end{lemma}
+\begin{theorem} For $l_n=\sum\limits_{i=1}^n\mathcal{L}_{k,2^i}$, $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.10}
+\begin{enumerate}
+\item $\mathcal{D}_{k,t+4}=l_1\mathcal{D}_{k,t+2}-\mathcal{D}_{k,t} $.
+\item $\mathcal{D}_{k,t+8}=\dfrac{l_2}{l_1}\mathcal{D}_{k,t+4}-\mathcal{D}_{k,t} =l_2\mathcal{D}_{k,t+2}-(1+\dfrac{l_2}{l_1})\mathcal{D}_{k,t} $.
+\item $\mathcal{D}_{k,t+16}=\dfrac{l_3}{l_2}\mathcal{D}_{k,t+8}-\mathcal{D}_{k,t},\\ =\dfrac{l_3}{l_1}\mathcal{D}_{k,t+4}-(1+\dfrac{l_3}{l_2})\mathcal{D}_{k,t},\\ = {l_3}\mathcal{D}_{k,t+2}-(1+\dfrac{l_3}{l_1}+\dfrac{l_3}{l_2})\mathcal{D}_{k,t}$.
+\item $\mathcal{D}_{k,t+32}=\dfrac{l_4}{l_3}\mathcal{D}_{k,t+16}-\mathcal{D}_{k,t},\\ =\dfrac{l_4}{l_2}\mathcal{D}_{k,t+8}-(1+\dfrac{l_4}{l_3})\mathcal{D}_{k,t},\\ = \dfrac{l_4}{l_1}\mathcal{D}_{k,t+4}-(1+\dfrac{l_4}{l_2}+\dfrac{l_4}{l_3})\mathcal{D}_{k,t},\\ = {l_4}\mathcal{D}_{k,t+2}-(1+\dfrac{l_4}{l_1}+\dfrac{l_4}{l_2}+\dfrac{l_4}{l_3})\mathcal{D}_{k,t}$.
+\item $\mathcal{D}_{k,t+64}=\dfrac{l_5}{l_4}\mathcal{D}_{k,t+32}-\mathcal{D}_{k,t},\\
+=\dfrac{l_5}{l_3}\mathcal{D}_{k,t+16}-(1+\dfrac{l_5}{l_4})\mathcal{D}_{k,t},\\
+= \dfrac{l_5}{l_2}\mathcal{D}_{k,t+8}-(1+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,t},\\
+=\dfrac{l_5}{l_1}\mathcal{M}_{k,t+4}-(1+\dfrac{l_5}{l_2}+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,t},\\
+={l_5}\mathcal{D}_{k,t+2}-(1+\dfrac{l_5}{l_1}+\dfrac{l_5}{l_2}+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,t}$.
+\end{enumerate}
+In general, we have
+\begin{align*}
+ \mathcal{D}_{k,{t+2^n}}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}} \mathcal{D}_{k,t+2^{n-1}}- \mathcal{D}_{k,t};\\
+\dfrac{l_{n-1}}{l_{n-t-1}} \mathcal{D}_{k,{t+2^{n-s}}}-l_{n-1}\sum\limits_{i=2}^{s}(1+\dfrac{1}{l_{n-i}}) \mathcal{D}_{k,t}, & \text{If $s=2, 3, 4,\hdots, n-2 $ };\\l_{n-1} \mathcal{D}_{k,{t+2}}-l_{n-1}\sum\limits_{i=2}^{n-1}(\dfrac{1}{l_{n-i}}+1) \mathcal{D}_{k,t}.
+ \end{cases}
+\end{align*}
+ \end{theorem}
+\begin{theorem} For $l_n=\sum\limits_{i=1}^n\mathcal{L}_{k,2^i}$, $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.11}
+\begin{enumerate}
+\item $\mathcal{D}_{k,4n+t}=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) l_1^{i}(-1)^j\mathcal{D}_{k,2i+t} $.
+\item $\mathcal{D}_{k,8n+t}=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_2}{l_1})^{i}(-1)^j\mathcal{D}_{k,4i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) l_2^{i}(-1)^j(\dfrac{l_1+l_2}{l_1})\mathcal{D}_{k,2i+t}$.
+ \item $\mathcal{D}_{k,16n+t}=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_3}{l_2})^{i}(-1)^j\mathcal{D}_{k,8i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_3}{l_1})^{i}(-1)^j(1+\dfrac{l_3}{l_2})\mathcal{D}_{k,4i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) {l_3}^{i}(-1)^j(1+\dfrac{l_3}{l_1}+\dfrac{l_3}{l_2})\mathcal{D}_{k,2i+t}$.
+  \item $\mathcal{D}_{k,32n+t}=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_4}{l_3})^{i}(-1)^j\mathcal{D}_{k,16i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_4}{l_2})^{i}(-1)^j(1+\dfrac{l_4}{l_3})\mathcal{D}_{k,8i+t},\\
+=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_4}{l_1})^{i}(-1)^j(1+\dfrac{l_4}{l_2}+\dfrac{l_4}{l_3})\mathcal{D}_{k,4i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) {l_4}^{i}(-1)^j(1+\dfrac{l_4}{l_1}+\dfrac{l_4}{l_2}+\dfrac{l_4}{l_3})\mathcal{D}_{k,2i+t}$.
+   \item $\mathcal{D}_{k,64n+t}=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_5}{l_4})^{i}(-1)^j\mathcal{D}_{k,32i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_5}{l_3})^{i}(-1)^j(1+\dfrac{l_5}{l_4})\mathcal{D}_{k,16i+t},\\
+=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_5}{l_2})^{i}(-1)^j(1+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,8i+t},\\
+=\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) (\dfrac{l_5}{l_1})^{i}(-1)^j(1+\dfrac{l_5}{l_2}+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,4i+t},\\
+ =\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right) {l_5}^{i}(-1)^j(1+\dfrac{l_5}{l_1}+\dfrac{l_5}{l_2}+\dfrac{l_5}{l_3}+\dfrac{l_5}{l_4})\mathcal{D}_{k,2i+t}$.
+\end{enumerate}
+\end{theorem}
+In general, we have 
+\begin{align*}
+ \mathcal{D}_{k,{2^rn+t}}= \begin{cases}
+\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)(\dfrac{l_{r-1}}{l_{r-2}})^i(-1)^j \mathcal{D}_{k,2^{r-1}i+t};\\
+\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)(\dfrac{l_{r-1}}{l_{r-s-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\mathcal{D}_{k,2^{n-s}i+t}, \\\quad\quad\quad\quad\quad\quad\quad \text{If $s=2, 3, 4,\hdots, n-2 $ };\\\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)({l_{r-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\mathcal{D}_{k,2i+t}.
+ \end{cases}
+\end{align*}
+ \begin{lemma}\label{3.12}
+ For $t\geq 1$, we have
+ \begin{enumerate}
+ \item[(1)] $r_1^2=r_1\sqrt{\delta}-1$,\\
+   $r_2^2=-r_2\sqrt{\delta}-1$.
+   \item[(2)] $r_1^4=(k^2+2)r_1\sqrt{\delta}-(k^2+3)$,\\
+   $r_2^4=-(k^2+2)r_2\sqrt{\delta}-(k^2+3)$.
+    \item[(3)] $r_1^6=(k^2+1)(k^2+3)r_1\sqrt{\delta}-(k^4+5k^2+5)$,\\
+   $r_2^6=-(k^2+1)(k^2+3)r_2\sqrt{\delta}-(k^4+5k^2+5)$.
+    \item[(4)] $r_1^8=(k^2+2)(k^4+4k^2+2)r_1\sqrt{\delta}-(k^6+7k^4+14k^2+7)$,\\
+   $r_2^8=-(k^2+2)(k^4+4k^2+2)r_2\sqrt{\delta}-(k^6+7k^4+14k^2+7)$.
+   \item[(5)] $r_1^{10}=(k^4+3k^2+1)(k^4+5k^2+5)r_1\sqrt{\delta}-(k^2+3)(k^6+6k^4+9k^2+3)$,\\
+   $r_2^{10}=-(k^4+3k^2+1)(k^4+5k^2+5)r_2\sqrt{\delta}-(k^2+3)(k^6+6k^4+9k^2+3)$.
+    \end{enumerate}
+    In general, we have
+    \begin{align*}
+    r_1^{2t}&=\dfrac{\mathcal{F}_{k,2t}}{k}r_1\sqrt{\delta}-\dfrac{\mathcal{L}_{k,2t-1}}{k},\\
+    r_2^{2t}&=-\dfrac{\mathcal{F}_{k,2t}}{k}r_2\sqrt{\delta}-\dfrac{\mathcal{L}_{k,2t-1}}{k}.
+    \end{align*}
+     \end{lemma}
+      \begin{lemma}
+ For $t\geq 1$, we have\label{3.13}
+ \begin{enumerate}
+ \item[(1)] $r_1^3=(k^2+3)r_1-\sqrt{\delta}$,\\
+   $r_2^3=(k^2+3)r_2+\sqrt{\delta}$.
+   \item[(2)]$r_1^5=(k^4+5k^2+5)r_1-(k^2+2)\sqrt{\delta}$,\\
+   $r_2^5=(k^4+5k^2+5)r_2+(k^2+2)\sqrt{\delta}$.
+    \item[(3)] $r_1^7=(k^6+7k^4+14k^2+7)r_1-(k^2+1)(k^2+3)\sqrt{\delta}$,\\
+   $r_2^7=(k^6+7k^4+14k^2+7)r_2+(k^2+1)(k^2+3)\sqrt{\delta}$.
+    \item[(4)] $r_1^9=(k^2+3)(k^6+6k^4+9k^2+3)r_1-(k^2+2)(k^4+4k^2+2)\sqrt{\delta}$,\\
+   $r_2^9=(k^2+3)(k^6+6k^4+9k^2+3)r_2+(k^2+2)(k^4+4k^2+2)\sqrt{\delta}$,.
+   \item[(5)] $r_1^{11}=(k^{10}+11k^8+44k^6+77k^4+55k^2+11)r_1+(k^4+3k^2+1)(k^4+5k^2+5)\sqrt{\delta}$,\\
+   $r_2^{11}=(k^{10}+11k^8+44k^6+77k^4+55k^2+11)r_2-(k^4+3k^2+1)(k^4+5k^2+5)\sqrt{\delta}$.
+    \end{enumerate}
+    In general, we have
+    \begin{align*}
+    r_1^{2t+1}&=\dfrac{\mathcal{L}_{k,2t+1}}{k}r_1-\dfrac{\mathcal{F}_{k,2t}}{k}\sqrt{\delta},\\
+    r_2^{2t+1}&=\dfrac{\mathcal{L}_{k,2t+1}}{k}r_2+\dfrac{\mathcal{F}_{k,2t}}{k}\sqrt{\delta}.
+\end{align*}
+\end{lemma}
+\begin{theorem}For $s, t\geq 1$, we have\label{3.14}
+\begin{enumerate}
+\item $\mathcal{F}_{k,s+2}+\mathcal{F}_{k,s}=\mathcal{L}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+2}+\mathcal{L}_{k,s}=\delta\mathcal{F}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+4}+(k^2+3)\mathcal{F}_{k,s}=(k^2+2)\mathcal{L}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+4}+(k^2+3)\mathcal{L}_{k,s}=(k^2+2)\delta\mathcal{F}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+6}+(k^4+5k^2+5)\mathcal{F}_{k,s}=(k^2+1)(k^2+3)\mathcal{L}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+6}+(k^4+5k^2+5)\mathcal{L}_{k,s}=(k^2+1)(k^2+3)\delta\mathcal{F}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+8}+(k^6+7k^4+14k^2+7)\mathcal{F}_{k,s}=(k^2+2)(k^4+4k^2+2)\mathcal{L}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+8}+(k^6+7k^4+14k^2+7)\mathcal{L}_{k,s}=(k^2+2)(k^4+4k^2+2)\delta\mathcal{F}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+10}+(k^2+3)(k^6+6k^4+9k^2+3)\mathcal{F}_{k,s}=(k^4+3k^2+1)(k^4+5k^2+5)\mathcal{L}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+10}+(k^2+3)(k^6+6k^4+9k^2+3)\mathcal{L}_{k,s}=(k^4+3k^2+1)(k^4+5k^2+5)\delta\mathcal{F}_{k,s+1}$.
+\end{enumerate}
+In general, we have
+\begin{align}\label{31}
+\mathcal{F}_{k,s+2t}+\dfrac{\mathcal{L}_{k,2t-1}}{k}\mathcal{F}_{k,s}&=\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{L}_{k,s+1},\\
+\mathcal{L}_{k,s+10}+\dfrac{\mathcal{L}_{k,2t-1}}{k}\mathcal{L}_{k,s}&=\dfrac{\mathcal{F}_{k,2t}}{k}\delta\mathcal{F}_{k,s+1}.
+\end{align}
+\end{theorem}
+\begin{remark}
+Using $\mathcal{L}_{k,2t-1}-\mathcal{F}_{k,2t}=\mathcal{F}_{k,2t-2}$ in (\ref{31}), we get
+\begin{align*}
+\mathcal{F}_{k,s+2t}-\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{F}_{k,s+2}+\dfrac{\mathcal{F}_{k,2t-2}}{k}\mathcal{F}_{k,s}=0,\\
+\mathcal{L}_{k,s+2t}-\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{L}_{k,s+2}+\dfrac{\mathcal{F}_{k,2t-2}}{k}\mathcal{L}_{k,s}=0.
+\end{align*}
+\end{remark}
+\begin{theorem}For $s, t\geq 1$, we have\label{3.16}
+\begin{enumerate}
+\item $\mathcal{F}_{k,s+3}+\mathcal{L}_{k,s}=(k^2+3)\mathcal{F}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+3}+\delta\mathcal{F}_{k,s}=(k^2+3)\mathcal{L}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+5}+(k^2+2)\mathcal{L}_{k,s}=(k^4+5k^2+5)\mathcal{F}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+5}+\delta(k^2+2)\mathcal{F}_{k,s}=(k^4+5k^2+5)\mathcal{L}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+7}+(k^2+1)(k^2+3)\mathcal{L}_{k,s}=(k^6+7k^4+14k^2+7)\mathcal{F}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+7}+\delta(k^2+1)(k^2+3)\mathcal{F}_{k,s}=(k^6+7k^4+14k^2+7)\mathcal{L}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+9}+(k^2+2)(k^4+4k^2+2)\mathcal{L}_{k,s}=(k^2+3)(k^6+6k^4+9k^2+3)\mathcal{F}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+9}+\delta(k^2+2)(k^4+4k^2+2)\mathcal{F}_{k,s}=(k^2+3)(k^6+6k^4+9k^2+3)\mathcal{L}_{k,s+1}$.
+\item $\mathcal{F}_{k,s+11}+(k^4+3k^2+1)(k^4+5k^2+5)\mathcal{L}_{k,s}=(k^{10}+11k^8+44k^6+77k^4+55k^2+11)\mathcal{F}_{k,s+1}$,\\
+$\mathcal{L}_{k,s+11}+\delta(k^4+3k^2+1)(k^4+5k^2+5)\mathcal{F}_{k,s}=(k^{10}+11k^8+44k^6+77k^4+55k^2+11)\mathcal{L}_{k,s+1}$.
+\end{enumerate}
+In general, we have
+\begin{align}\label{33}
+\mathcal{F}_{k,s+2t+1}+\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{L}_{k,s}&=\dfrac{\mathcal{L}_{k,2t+1}}{k}\mathcal{F}_{k,s+1},\\
+\mathcal{L}_{k,s+2t+1}+\delta\dfrac{\mathcal{F}_{k,2t}}{k}\mathcal{F}_{k,s}&=\dfrac{\mathcal{L}_{k,2t+1}}{k}\mathcal{L}_{k,s+1}.
+\end{align}
+\end{theorem}
+\begin{remark}
+Using $(k^2+3)\mathcal{F}_{k,2t}-\mathcal{L}_{k,2t-1}=\mathcal{F}_{k,2t-2}$ in (\ref{33}), we obtain
+\begin{align*}
+\mathcal{F}_{k,s+2t+1}-\dfrac{\mathcal{L}_{k,2t+1}}{k(k^2+3)}\mathcal{F}_{k,s+3}+\dfrac{\mathcal{F}_{k,2t-2}}{k(k^2+3)}\mathcal{L}_{k,s}=0,\\
+\mathcal{L}_{k,s+2t+1}-\dfrac{\mathcal{L}_{k,2t+1}}{k(k^2+3)}\mathcal{L}_{k,s+3}+\dfrac{\mathcal{F}_{k,2t-2}}{k(k^2+3)}\delta\mathcal{F}_{k,s}=0.
+\end{align*}
+\end{remark}
+\begin{theorem}For $n,s, t\geq 1$, we have\label{3.18}
+\begin{enumerate}
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)\mathcal{F}_{k,2i+s}=\begin{cases} 
+\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)\mathcal{L}_{k,2i+s}=\begin{cases} 
+\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},&\text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}\mathcal{F}_{k,4i+s}=\begin{cases} 
+(k^2+2)^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},&\text{if $n$ is even;}\\
+(k^2+2)^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},&\text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}\mathcal{L}_{k,4i+s}=\begin{cases} 
+(k^2+2)^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+(k^2+2)^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^4+5k^2+5)^{(n-i)}\mathcal{F}_{k,6i+s}\\=\begin{cases} 
+(k^2+1)^n(k^2+3)^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+(k^2+1)^n(k^2+3)^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^4+5k^2+5)^{(n-i)}\mathcal{L}_{k,6i+s}\\=\begin{cases} 
+(k^2+1)^n(k^2+3)^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+(k^2+1)^n(k^2+3)^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^6+7k^4+14k^2+7)^{(n-i)}\mathcal{F}_{k,8i+s}\\=\begin{cases} 
+(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^6+7k^4+14k^2+7)^{(n-i)}\mathcal{L}_{k,8i+s}\\=\begin{cases} 
+(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(k^6+6k^4+9k^2+3)^{(n-i)}\mathcal{F}_{k,10i+s}\\=\begin{cases} 
+(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(k^6+6k^4+9k^2+3)^{(n-i)}\mathcal{L}_{k,10i+s}\\=\begin{cases} 
+(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $
+\end{enumerate}
+In general, for $n, s,t\geq 1$, we have\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}(\mathcal{L}_{k,2t-1})^{(n-i)}\mathcal{F}_{k,2ti+s}=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is odd,}\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}(\mathcal{L}_{k,2t-1})^{(n-i)}\mathcal{L}_{k,2ti+s}=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} $
+\end{theorem}
+\begin{theorem}For $n,s, t\geq 1$, we have\label{3.19}
+\begin{enumerate}
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^2+3)^i\mathcal{F}_{k,2(n-i)+n}=\begin{cases} 
+0,& \text{if $n$ is even;}\\
+2\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^2+3)^i\mathcal{L}_{k,2(n-i)+n}=\begin{cases} 
+2\delta^{\frac{n-1}{2}},& \text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^4+5k^2+5)^i\mathcal{F}_{k,4(n-i)+n}=\begin{cases} 
+0,& \text{if $n$ is even;}\\
+2(k^2+2)^n\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^4+5k^2+5)^i\mathcal{N}_{k,4(n-i)+n}=\begin{cases} 
+2(k^2+2)^n\delta^{\frac{n-1}{2}},&\text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^6+7k^4+14k^2+7)^i\mathcal{F}_{k,6(n-i)+n}\\=\begin{cases} 
+0,&\text{if $n$ is even;}\\
+2(k^2+1)^n(k^2+3)^n\delta^{\frac{n-1}{2}},&\text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^6+7k^4+14k^2+7)^i\mathcal{L}_{k,6(n-i)+n}\\=\begin{cases} 
+2(k^2+1)^n(k^2+3)^n\delta^{\frac{n-1}{2}},& \text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^2+3)^i(k^6+6k^4+9k^2+3)^i\mathcal{F}_{k,8(n-i)+n}\\=\begin{cases} 
+0,&\text{if $n$ is even;}\\
+2(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^2+3)^i(k^6+6k^4+9k^2+3)^i\mathcal{L}_{k,8(n-i)+n}\\=\begin{cases} 
+2(k^2+2)^n(k^4+4k^2+2)^n\delta^{\frac{n-1}{2}},& \text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+\item $\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^{10}+11k^8+44k^6+44k^4+55k^2+11)^i\mathcal{F}_{k,10(n-i)+n}\\=\begin{cases} 
+0,& \text{if $n$ is even;}\\
+2(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}(k^{10}+11k^8+44k^6+44k^4+55k^2+11)^i\mathcal{L}_{k,10 (n-i)+n}\\=\begin{cases} 
+2(k^4+3k^2+1)^n(k^4+5k^2+5)^n\delta^{\frac{n-1}{2}},&\text{if $n$ is even;}\\
+0,&\text{if $n$ is odd.}
+\end{cases} $
+\end{enumerate}
+In general, for $n, s,t\geq 1$, we have\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\mathcal{F}_{k,2t(n-i)+n}=\begin{cases} 
+0,& \text{if $n$ is even;}\\
+2(k)^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}},& \text{if $n$ is odd,}
+\end{cases} $\\
+$\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\mathcal{L}_{k,2t(n-i)+n}=\begin{cases} 
+2(k)^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}},& \text{if $n$ is even;}\\
+0,& \text{if $n$ is odd.}
+\end{cases} $
+\end{theorem}
+\noindent In next section, we prove some elementary and binomial properties of \kF\vspace{0mm}  and \kL\vspace{0mm}  sequences. 
+\subsection*{{The Proofs of the Main Results}}
+\textbf{Proof of Lemma(\ref{3.1}):} We prove only (a), (c) and (d) since the proofs of (b) and (e) are similar.\\
+\textit{Proof of (a):}
+Since $r_1$ and $r_2$ are roots of $r^2-kr-1=0$, then
+\begin{align}\label{4.1}
+r_1^2=kr_1+1,
+\end{align}
+\begin{align}\label{4.2}
+r_2^2=kr_2+1.
+\end{align}
+This completes the proof of (a).\\
+\textit{Proof of (c):}
+From (b), we have
+\begin{align*}
+u^{2n}&=\mathcal{F}_{k,n}u^{n+1}+u^n\mathcal{F}_{k,n-1}\\
+&=\mathcal{F}_{k,n}(u\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n})+u^n\mathcal{F}_{k,n-1}\\
+&=u\mathcal{F}_{k,n}\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n-1}u^n+\mathcal{F}_{k,n}^2\\
+&=(u^n-\mathcal{F}_{k,n-1})\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n-1}u^n+\mathcal{F}_{k,n}^2\\
+&=u^n(\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n-1})+\mathcal{F}_{k,n}^2-\mathcal{F}_{k,n}F_{k,n-1}.
+\end{align*}
+Using $\mathcal{F}_{k,n-1}\mathcal{F}_{k,n+1}-\mathcal{F}_{k,n}^2=(-1)^n$ and $\mathcal{F}_{k,n+1}+\mathcal{F}_{k,n-1}=\mathcal{L}_{k,n}$, we obtain
+\begin{align*}
+u^{2n}=\mathcal{L}_{k,n}u^n-(-1)^n.
+\end{align*}
+This completes the proof of (c).\\
+\textit{Proof of (d):}
+If $u=r_1$, then we have
+\begin{align*}
+\mathcal{F}_{k,tn}r_1^n-(-1)^n\mathcal{F}_{k,(t-1)n}&=(\dfrac{r_1^{tn}-r_2^{tn}}{r_1-r_2})r_1^{n}-(r_1r_2)^n(\dfrac{r_1^{(t-1)n}-r_2^{(t-1)n}}{r_1-r_2})\\
+&=(\dfrac{r_1^{n}-r_2^{n}}{r_1-r_2})r_1^{tn}\\
+&=\mathcal{F}_{k,n}r_1^{tn}.
+\end{align*}
+This completes the proof of (d).\\
+The proofs of Theorems (\ref{3.5}), (\ref{3.10}) are similar. Hence, we prove only Theorem (\ref{3.2}).\\
+\textbf{Proof of Theorem(\ref{3.2}):} We prove only (a), since the proofs of (b), (c) and (d) are similar.\\
+\textit{Proof of (1):}
+From \ref{3.1}(b), we have
+\begin{align}\label{4.3}
+r_1^{n}&=\mathcal{F}_{k,n}r_1+\mathcal{F}_{k,n-1},
+\end{align}
+\begin{align}\label{4.4}
+r_2^{n}&=\mathcal{F}_{k,n}r_2+\mathcal{F}_{k,n-1}.
+\end{align}
+Multiplying (\ref{4.3}) by $r_1^t$, (\ref{4.4}) by $r_2^t$ and subtracting, we obtain \\
+\begin{align*}
+\dfrac{r_1^{n+t}-r_2^{n+t}}{r_1-r_2}&=\mathcal{F}_{k,n}(\dfrac{r_1^{t+1}-r_2^{t+1}}{r_1-r_2})+\mathcal{F}_{k,n-1}(\dfrac{r_1^{t}-r_2^{t}}{r_1-r_2}).
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\mathcal{F}_{k,n+t}&=\mathcal{F}_{k,n}\mathcal{F}_{k,t+1}+\mathcal{F}_{k,n-1}\mathcal{F}_{k,t}.
+\end{align*}
+This completes the proof of (a).\\
+The proofs of Theorems (\ref{3.6})-(\ref{3.8}) and (\ref{3.11}) are similar. Hence, we prove only Theorem (\ref{3.3}).\\
+\textbf{Proof of Theorem(\ref{3.3}):} We prove only (3), since the proofs of (1), (2) and (4)-(8) are similar.\\
+\textit{Proof of (3):}From \ref{3.1}(b), we have
+\begin{align}
+r_1^{r}&=\mathcal{F}_{k,r}r_1+\mathcal{F}_{k,r-1},
+\end{align}
+\begin{align}
+r_2^{r}&=\mathcal{F}_{k,r}r_2+\mathcal{F}_{k,r-1}.
+\end{align}
+Now, by the binomial theorem, we have
+\begin{align}\label{4.7}
+r_1^{rn}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)F_{k,r}^iF_{k,r-1}^{n-i}r_1^i, 
+\end{align}
+\begin{align}\label{4.8}
+r_2^{rn}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)F_{k,r}^iF_{k,r-1}^{n-i}r_2^i.
+\end{align}
+Now, by subtracting (\ref{4.7}) from (\ref{4.8}), we obtain 
+\begin{align*}
+\dfrac{r_1^{rn+t}-r_2^{rn+t}}{r_1-r_2}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)F_{k,r}^i\mathcal{F}_{k,r-1}^{n-i}(\dfrac{r_1^{i+t}-r_2^{i+t}}{r_1-r_2}).
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\mathcal{F}_{k,rn+t}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)\mathcal{F}_{k,r}^i\mathcal{F}_{k,r-1}^{n-i}\mathcal{F}_{k,i+t}.
+\end{align*}
+Now, by adding (\ref{4.7}) and (\ref{4.8}), we get 
+\begin{align*}
+r_1^{rn+t}+r_2^{rn+t}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)\mathcal{F}_{k,r}^i\mathcal{F}_{k,r-1}^{n-i}(r_1^{i+t}+r_2^{i+t}).
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\mathcal{L}_{k,rn+t}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)\mathcal{F}_{k,r}^i\mathcal{F}_{k,r-1}^{n-i}\mathcal{L}_{k,i+t}.
+\end{align*}
+This completes the proof of (3).\\
+\textbf{Proof of Lemma(\ref{3.4}):} We prove only (1) and (2) since the proofs of (3)-(11) are similar.\\
+\textit{Proof of (1):}
+Using (\ref{4.1}) and (\ref{4.2}), we have
+\begin{align*}
+u^3&=u^2u\\
+&=(ku+1)u\\
+&=ku^2+u\\
+&=k(ku+1)+u\\
+&=k^2u+k+u\\
+&=k+(k^2+1)u.
+\end{align*}
+This completes the proof of (1).\\
+\textit{Proof of (2):}
+Using (\ref{4.1}) and (\ref{4.2}), we have
+
+\begin{align*}
+1+ku++u^6&=u^2+u^6\\
+&=u^2+u^4(ku+1)\\
+&=u^2+ku^5+u^4\\
+&=u^2+ku^3(ku+1)+u^4\\
+&=u^2+k^2u^4+ku^3+u^4\\
+&=(k^2+1)u^4+ku^3+u^2\\
+&=(k^2+1)u^4+u^2(ku+1)\\
+&=(k^2+1)u^4+u^4\\
+&=(k^2+2)u^4\\
+&=F_{k,2}u^4.
+\end{align*}
+This completes the proof of (2).
+The proofs of lemma (\ref{3.13}) are similar. Hence, we prove only Lemma (\ref{3.12}).\\
+\textbf{Proof of Lemma(\ref{3.12}):} We prove only (1) and (2) since the proofs of (3) - (5) are similar.\\
+\textit{Proof of (1):}
+Using $r_1-r_2=\sqrt{\delta}$, we have
+\begin{align*}
+r_1\sqrt{\delta}-1&=r_1(r_1-r_2)-1\\
+&=r_1^2-r_1r_2-1\\
+&=r_1^2+1-1\\
+&=r_1^2.\\
+\end{align*}
+This completes the proof of (1).\\
+\textit{Proof of (2):}
+Using (\ref{4.1}) and (\ref{4.2}), we have
+\begin{align*}
+(k^2+2)r_1\sqrt{\delta}-(k^2+3)&=(k^2+2)r_1(r_1-r_2)-(k^2+3)\\
+&=(k^2+2)(r_1^2-r_1r_2)-(k^2+3)\\
+&=(k^2+2)(r_1^2+1)-(k^2+3)\\
+&=r_1^2(k^2+2)+(k^2+2)-(k^2+3)\\
+&=r_1^2k^2+2r_1^2-1\\
+&=r_1^2k^2+2(kr_1+1)-1\\
+&=r_1^2k^2+2kr_1+1\\
+&=r_1^2k^2+kr_1+kr_1+1\\
+&=(kr_1+1)(kr_1+1)\\
+&=r_1^2r_1^2\\
+&=r_1^4.
+\end{align*}
+This completes the proof of (2).\\
+The proofs of Theorems (\ref{3.14}) and (\ref{3.16}) are similar. Hence, we prove only Theorem (\ref{3.14}).\\
+\textbf{Proof of Theorem(\ref{3.14}):} We prove only (2), since the proofs of (1) and (3)-(5) are similar.\\
+\textit{Proof of (2):}From \ref{3.12}(2), we have
+\begin{align}
+r_1^{4}+(k^2+3)&=(k^2+2)r_1\sqrt{\delta},\label{4.9}
+\end{align}
+\begin{align}
+r_2^{4}+(k^2+3)&=-(k^2+2)r_2\sqrt{\delta}.\label{4.10}
+\end{align}
+Multiplying (\ref{4.9}) by $r_1^s$, (\ref{4.10}) by $r_2^s$ and subtracting, we obtain 
+\begin{align*}
+\dfrac{r_1^{s+4}-r_2^{s+4}}{r_1-r_2}+(k^2+3)\dfrac{r_1^{s}-r_2^{s}}{r_1-r_2}=&(k^2+2)(r_1^{s+1}+r_2^{s+1})
+\end{align*}
+\text{Hence, it gives that}\\
+\begin{align*}
+\mathcal{F}_{k,s+4}+(k^2+3)\mathcal{F}_{k,s}=&(k^2+2)\mathcal{L}_{k,s+1}.
+\end{align*}
+Multiplying (\ref{4.9}) by $r_1^s$, (\ref{4.10}) by $r_2^s$ and adding, we obtain
+\begin{align*}
+r_1^{s+4}+r_2^{s+4}+(k^2+3)(r_1^{s}+r_2^{s})&=(k^2+2)\delta(\dfrac{r_1^{s+1}-r_2^{s+1}}{r_1-r_2})
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\mathcal{L}_{k,s+4}+(k^2+3)\mathcal{L}_{k,s}&=(k^2+2)\delta\mathcal{F}_{k,s+1}.
+\end{align*}
+This completes the proof of (3).\\
+The proofs of Theorems (\ref{3.18}) and (\ref{3.19}) are similar. Hence, we prove only Theorem (\ref{3.18}).\\
+\textbf{Proof of Theorem(\ref{3.18}):} We prove only (2), since the proofs of (1)and (3)-(5) are similar.\\
+\textit{Proof of (2):}From \ref{3.12}(2), we have
+\begin{align*}
+r_1^{4}+(k^2+3)&=(k^2+2)r_1\sqrt{\delta},
+\end{align*}
+\begin{align*}
+r_2^{4}+(k^2+3)&=-(k^2+2)r_2\sqrt{\delta}.
+\end{align*}
+Now, by the binomial theorem, we have
+\begin{align}\label{4.11}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(r_1^{4i+s})&=(k^2+2)^n\delta^{\frac{n}{2}}(r_1^{n+s}), 
+\end{align}
+\begin{align}\label{4.12}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(r_2^{4i+s})&=(-1)^n(k^2+2)^n\delta^{\frac{n}{2}}(r_2^{n+s}).
+\end{align}
+Now, by subtracting (\ref{4.11}) from (\ref{4.12}), we obtain \\
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(\dfrac{r_1^{4i+s}-r_2^{4i+s}}{r_1-r_2})&=(k^2+2)^n\delta^{\frac{n}{2}}(\dfrac{r_1^{n+s}-(-1)^nr_2^{n+s}}{r_1-r_2}).
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}\mathcal{F}_{k,4i+s}&=\begin{cases} 
+(k^2+2)^n\delta^{\frac{n}{2}}\mathcal{F}_{k,n+s},\quad \text{if $n$ is even;}\\
+(k^2+2)^n\delta^{\frac{n-1}{2}}\mathcal{L}_{k,n+s},\quad \text{if $n$ is odd.}\end{cases} 
+\end{align*}
+Now, by adding (\ref{4.11}) and (\ref{4.12}), we get \\
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}(r_1^{4i+s}+r_2^{4i+s})&=(k^2+2)^n\delta^{\frac{n}{2}}(\bar{r_{1}}r_1^{n+s}+(-1)^nr_2^{n+s}).
+\end{align*}
+\text{Hence, it gives that}
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(k^2+3)^{(n-i)}\mathcal{L}_{k,4i+s}&=\begin{cases} 
+(k^2+2)^n\delta^{\frac{n}{2}}\mathcal{L}_{k,n+s},\quad \text{if $n$ is even;}\\
+(k^2+2)^n\delta^{\frac{n+1}{2}}\mathcal{F}_{k,n+s},\quad \text{if $n$ is odd.}
+\end{cases}
+\end{align*}
+This completes the proof of (3).\\
+In next section, we investigate certain congruence properties of \kF\vspace{0mm}  and \kL\vspace{0mm}  sequences. 
+\subsection{{Some Congruence Properties of the Generalized $k$-Lucas Sequence}}
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{5.1}
+\begin{enumerate}
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,6j+t }\equiv 0\quad (\text{mod } L_{k,2}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,10j+t }\equiv 0\quad (\text{mod } L_{k,4}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,18j+t}\equiv 0\quad (\text{mod } L_{k,8}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,34j+t}\equiv 0\quad (\text{mod } L_{k,16}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,66j+t}\equiv 0\quad (\text{mod } L_{k,32}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,130j+t}\equiv 0\quad (\text{mod } L_{k,64}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,258j+t}\equiv 0\quad (\text{mod } L_{k,128}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,514j+t}\equiv 0\quad (\text{mod } L_{k,256}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,1026j+t}\equiv 0\quad (\text{mod } L_{k,512}) $.
+\item $\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,2050j+t}\equiv 0\quad (\text{mod } L_{k,1024}) $.
+\end{enumerate}
+In general, for $r, n,t\geq 1$, we have
+$$\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,(2^{r+2}+2)j+t} \equiv 0\quad (\text{mod } {L_{k,2^{r+1}}}). $$
+\end{theorem}
+
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{5.2}
+\begin{enumerate}
+\item $\mathcal{D}_{k,6n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,2}) $.
+\item $\mathcal{D}_{k,10n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,4}) $.
+\item $\mathcal{D}_{k,18n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,8}) $.
+\item $\mathcal{D}_{k,34n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,16}) $.
+\item $\mathcal{D}_{k,66n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,32}) $.
+\item $\mathcal{D}_{k,130n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,64}) $.
+\item $\mathcal{D}_{k,258n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,128}) $.
+\item $\mathcal{D}_{k,514n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,256}) $.
+\item $\mathcal{D}_{k,1026n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,514}) $.
+\item $\mathcal{D}_{k,2050n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n} \mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,1024}) $.
+\end{enumerate}
+In general, we have
+$$\mathcal{D}_{k,(2^{r+2}+2)n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n}\mathcal{D}_{k,j+t}\equiv 0\quad (\text{mod } L_{k,2^{r+1}}). $$
+\end{theorem}
+\noindent The proofs of theorems (\ref{5.1}) and (\ref{5.2}) are similar. Hence, we prove only Theorem (\ref{5.1}).\\
+\textbf{Proof of Theorem(\ref{5.1}):} We prove only (1), since the proofs of (2)-(10) are similar.\\
+\textit{Proof of (1):}From Theorem (\ref{3.6};(1)), For $n, t\geq 1$ and $\mathcal{D}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have
+\begin{align*}
+&\mathcal{D}_{k,n+t}=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+6j+t}\\&+\sum\limits_{{i+j+s=n};_{i= 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+6j+t},\\
+&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+6j+t}+\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,6j+t}.\\
+&\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,6j+t}=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{\mathcal{L}_{k,2}}^i\mathcal{D}_{k,4i+6j+t},\\
+&\therefore \mathcal{L}_{k,2} \quad\text{divides}\quad(\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,6j+t}),\\
+&\therefore\mathcal{D}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{D}_{k,6j+t}\equiv 0\quad (\text{mod } \mathcal{L}_{k,2}).
+\end{align*}
+This completes the proof of (1).
+
+\section{Some Telescoping Series for $k$ Fibonacci and $k$ Lucas Sequences}
+In this section some telescoping series are obtained for $k$- Fibonacci and $k$- Lucas sequences.
+\begin{theorem}
+For  $m$, $n\geq 0$, we have
+  \begin{align*}
+   &\sum_{i=1}^{i=n}(-1)^{im}\dfrac{1}{F_{k,(i+1)m}F_{k,im}} =\dfrac{1}{2F_{k,m}} \sum_{i=1}^{i=n}\left[{\dfrac{L_{k,mi}}{F_{k,mi}}-\dfrac{L_{k,m(i+1)}}{F_{k,m(i+1)}}}\right]\\
+  & = \dfrac{1}{2F_{k,m}}\left[\dfrac{L_{k,m}}{F_{k,m}}-\dfrac{L_{k,m(n+1)}}{F_{k,m(n+1)}}\right],\\
+& \sum_{i=0}^{i=n}(-1)^{im}\dfrac{1}{F_{k,(i+1)m}L_{k,im}} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}},\\
+  & \sum_{i=1}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}}{F_{k,(i+1)m}^2 F_{k,im}^2} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}},\\
+  & \sum_{i=0}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}}{L_{k,(i+1)m}^2 L_{k,im}^2} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}},\\
+  & \sum_{i=0}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}^3+ F_{k,(2i+1)m}F_{k,m}^2}{L_{k,(i+1)m}^4 L_{k,im}^4} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}}.
+ \end{align*}    
+ \end{theorem}
+ \begin{proof}
+For $m$, $n \geq 0$, we have
+\begin{align*}
+\dfrac{F_{k,(2n+1)m}}{L_{k,(n+1)m}L_{k,nm}}=\dfrac{1}{2}\left[\dfrac{F_{k,(n+1)m}}{L_{k,(n+1)m}}+\dfrac{F_{k,nm}}{L_{k,nm}}     \right], 
+\end{align*}
+\begin{align*}
+\dfrac{F_{k,(2n+1)m}}{F_{k,(n+1)m}F_{k,nm}}=\dfrac{1}{2}\left[\dfrac{L_{k,(n+1)m}}{F_{k,(n+1)m}}+\dfrac{F_{k,nm}}{L_{k,nm}}     \right], 
+\end{align*}
+\begin{align*}
+\dfrac{(-1)^{mn}F_{k,m}}{F_{k,(n+1)m}F_{k,nm}}=\dfrac{1}{2}\left[\dfrac{L_{k,nm}}{F_{k,n)m}}-\dfrac{L_{k,(n+1)m}}{F_{k,(n+1)m}}    \right], 
+\end{align*}
+\begin{align*}
+\dfrac{(-1)^{mn}F_{k,m}}{L_{k,(n+1)m}L_{k,nm}}=\dfrac{1}{2}\left[\dfrac{F_{k,(n+1)m}}{L_{k,(n+1)m}} - \dfrac{F_{k,nm}}{L_{k,nm}}  \right],
+\end{align*}
+For first sum,
+ \begin{align*}
+   \sum_{i=1}^{i=n}(-1)^{im}\dfrac{1}{F_{k,(i+1)m}F_{k,im}} &= \dfrac{1}{2F_{k,m}} \sum_{i=1}^{i=n}\left[{\dfrac{L_{k,mi}}{F_{k,mi}}-\dfrac{L_{k,m(i+1)}}{F_{k,m(i+1)}}}\right]\\&=\dfrac{1}{2F_{k,m}}\left[\dfrac{L_{k,m}}{F_{k,m}}-\dfrac{L_{k,m(n+1)}}{F_{k,m(n+1)}}\right],
+  \end{align*}
+\begin{align*}
+ \sum_{i=0}^{i=n}(-1)^{im}\dfrac{1}{F_{k,(i+1)m}L_{k,im}} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}}.
+\end{align*}
+For second sum,
+\begin{align*}
+(-1)^{mi}\dfrac{F_{k,(2i+1)m}F_{k,m}}{F_{k,(i+1)m}^2F_{k,im}^2}=\dfrac{1}{4}\left[\dfrac{L_{k,(i+1)m}^2}{F_{k,(i+1)m}^2} - \dfrac{L_{k,im}^2}{F_{k,im}^2}  \right], 
+\end{align*}
+\begin{align*}
+   \sum_{i=1}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}}{F_{k,(i+1)m}^2 F_{k,im}^2} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}}.
+ \end{align*}
+ For third sum,
+\begin{align*}
+(-1)^{mi}\dfrac{F_{k,(2i+1)m}F_{k,m}}{L_{k,(i+1)m}^2L_{k,im}^2}=\dfrac{1}{4}\left[\dfrac{F_{k,(i+1)m}^2}{L_{k,(i+1)m}^2} - \dfrac{F_{k,im}^2}{L_{k,im}^2}  \right]. 
+\end{align*}
+For fourth sum,
+\begin{align*}
+   \sum_{i=0}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}}{L_{k,(i+1)m}^2 L_{k,im}^2} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}},
+ \end{align*} 
+\begin{align*}
+\dfrac{F_{k,(2i+1)m}^2+F_{k,m}^2}{L_{k,(i+1)m}^2L_{k,im}^2} &= \dfrac{1}{4}\left[(\dfrac{F_{k,(i+1)m}^2}{L_{k,(i+1)m}} + \dfrac{F_{k,im}}{L_{k,im}})^2+(\dfrac{F_{k,(i+1)m}}{L_{k,(i+1)m}} - \dfrac{F_{k,im}}{L_{k,im}})^2  \right] 
+\\&=\left[\dfrac{F_{k,(i+1)m}^2}{L_{k,(i+1)m}^2} + \dfrac{F_{k,im}^2}{L_{k,im}^2} \right],
+\end{align*}
+\begin{align*}
+(-1)^{mi}\dfrac{F_{k,(2i+1)m}(F_{k,m}^2+F_{k,(i+1)m}^2}{L_{k,(i+1)m}^4L_{k,im}^4}=\dfrac{1}{8}\left[\dfrac{F_{k,(i+1)m}^4}{L_{k,(i+1)m}^4} - \dfrac{F_{k,im}^4}{L_{k,im}^4}  \right], 
+\end{align*}
+\begin{align*}
+   \sum_{i=0}^{i=n}(-1)^{im}\dfrac{F_{k,(2i+1)m}^3+ F_{k,(2i+1)m}F_{k,m}^2}{L_{k,(i+1)m}^4 L_{k,im}^4} = \dfrac{F_{k,m(n+1)}}{2F_{k,m}L_{k,m(n+1)}}.
+ \end{align*} 
+ \end{proof}
+\begin{lemma}
+For variable $k$ and non-negative integer $r$, we have
+\begin{align}
+\sum_{i \geq 0}\left(\stackrel{r}{i}\right)(1+k)^i=r k^{r-1}(1+k) 
+\end{align}
+\end{lemma}
+\begin{lemma}
+For positive integer $m$, $n$ the solution of the simultaneous equations 
+\begin{align*}
+1+ xr_1 ^m = y r_1 ^{-n},\\
+1+xr_2 ^m = yr_2  ^{-m}
+\end{align*}
+for the unknown $x$ and $y$ is
+\begin{align*}
+x = -\dfrac{F_{k,n}}{F_{k, m+n}},\quad  y = (-1)^n \dfrac{F_{k,m}}{F_{k,m+n}}.
+\end{align*}
+\end{lemma}\label{aaa}
+\begin{proof} We have
+\begin{align*}
+r_1^n+x  r_2^{m+n} = y = r_2^n+x r_2^{m+n}.
+\end{align*}
+Since, $m+n \neq 0$, we get
+\begin{align*}
+x = \dfrac{r_2^n - r_1^n }{r_1^{m+n}- r_2^{m+n}} = - \dfrac{F_{k,n}}{F_{k, m+n}}.
+\end{align*}
+Similarly,
+\begin{align*}
+- r_1^{-m} +y r_2^{-(m+n)} = x = - r_2^{-m}+ y r_2^{-(m+n)}, 
+\end{align*}
+\begin{align*}
+y = \dfrac{r_1^{-m}-  r_2^{-m}}{r_1^{-(m+n)}- r_2^{-(m+n)}}= \dfrac{F_{k, -m}}{F_{k, -(m+n)}}
+= \dfrac{(-1)^{m+1}F_{k, m}}{(-1)^{m+n+1}F_{k, m+n}}
+= (-1)^ {-n}\dfrac{F_{k, m}}{F_{k, m+n}}. 
+\end{align*}
+\end{proof}
+\begin{theorem}\label{aa}
+Let $r$ be a non-negative integer and for positive integers $p$, $q$, we have
+\begin{align*}
+\sum_{i \geq 0}\left(\stackrel{r}{i}\right)F_{k,p}^i F_{p+q}^{r-i}L_{k, qi} = (-1)^{q+1} F_{k,p}F_{k,q}^{r-1} L_{k, pr-(p+q)}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Since $r_1\cdot r_2 = -1$, 
+\begin{align*}
+r_1^{-q} = (-1)^q r_2^q
+\end{align*}
+It gives that
+\begin{align*}
+x_1 = x r_1^p = -\dfrac{F_{k,q}}{F_{k,p+q}}r_1^p\\
+(1+x_1) = y r_1^{-q} = (-1)^q y r_2^q = \dfrac{F_{k,p}}{F_{k,p+q}}r_2^q.
+\end{align*}
+\begin{align*}
+\sum_{i \geq 0}(-1)^{r-i}i \left(\stackrel{r}{i}\right) 
+\left(\dfrac{F_{k,p}}{F_{k,p+q}r_2^q}\right)^i =  r\left(- \dfrac{F_{k,q}}{F_{k,p+q}r_1^p}\right)^{r-1}\left(\dfrac{F_{k,p}}{F_{k,p+q}r_2^q}\right)\\
+= (-1)^{q+r-1}r\dfrac{F_{k,p}F_{k,q}^{r-1}}{F_{k,p+q}^rr_1^{pr-(p+q)}}
+\end{align*}
+Again using lemma (\ref{aaa}) with
+\begin{align*}
+x_1 = -\dfrac{F_{k,q}}{F_{p+q}}r_2^p,\\
+(1+x_1) = \dfrac{F_{k,p}}{F_{p+q}}r_1^q .
+\end{align*}
+It gives that
+\begin{align*}
+\sum_{i \geq 0}(-1)^{r-i}i \left(\stackrel{r}{i}\right)\dfrac{F_{k,p}^i}{F_{p+q}^i}r_1^{qi} = (-1)^{q+r-1} r \dfrac{F_{k,p}F_{k,q}^{r-1}}{F_{k,p+q}^r}r_2^{pr-(p+q)},
+\end{align*}
+\begin{align*}
+\sum_{i \geq 0}\left(\stackrel{r}{i}\right)F_{k,p}^i F_{p+q}^{r-i}L_{k, qi} = (-1)^{q+1} F_{k,p}F_{k,q}^{r-1} L_{k, pr-(p+q)}.
+\end{align*}
+\end{proof}
+\begin{lemma}
+For $n \geq 0$, we have
+\begin{align*}
+k \sum_{j=0}^{n-1}\left(\stackrel{2n-1-j}{j}\right)(k^2+4)^{n-j-1}(-1)^j = F_{k,2n}
+\end{align*}
+\end{lemma}
+\begin{theorem}
+For $n \geq 0$, we have
+\begin{align*}
+\sum_{i = 0}^{\left[\dfrac{n}{2}\right]}\left(\stackrel{n-i}{i}\right)k^iF_{k,3i} = \dfrac{k F_{k,2n+1}- F_{k,2n}+(-k)^{n+2}F_{k,n}+(-k)^{n+1}F_{k,n-1}}{(2k^2-1)},\\
+\sum_{i = 0}^{\left[\dfrac{n}{2}\right]}\left(\stackrel{n-i}{i}\right)k^iL_{k,3i} = \dfrac{k L_{k,2n+1}- L_{k,2n}+(-k)^{n+2}L_{k,n}+(-k)^{n+1}L_{k,n-1}}{(2k^2-1)}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using lemma (\ref{aaa}), proof is same as theorem (\ref{aa}).
+\end{proof}
+
+\section{Sequences $F_{k,n}$ and $L_{k,n}$ as Continued Fractions}
+In this section, we obtained the relationship of the sequences $F_{k,n}$ and $L_{k,n}$ as continued fractions and some new properties for $k$- Fibonacci and $k$- Lucas sequences are established using series of fraction. Also, we derived the relationship of the sequences $F_{k,n}$ and $L_{k,n}$ as continued fractions. In general, a (simple) continued fraction is an expression of the form
+\begin{align*}
+[a_0, a_1, .................,a_n] = a_0+\dfrac{1}{a_1+\dfrac{1}{a_2+\dfrac{1}{a_3+\dfrac{1}{a_4+\dfrac{1}{a_5+\dfrac{1}{a_6+...}...........}}}}}.
+\end{align*}
+The letters $a_1$, $a_2,$ . . . denote positive integers and a letter $a_0$ denotes an integer.
+\noindent 
+The expansion $\frac{F_{k,n+1}}{F_{k,n}}$ in continued fraction is written as
+\begin{align*}
+\dfrac{F_{k,n+1}}{F_{k,n}} = k+\dfrac{1}{k+\dfrac{1}{k+\dfrac{1}{k+\dfrac{1}{k+\dfrac{1}{k+\dfrac{1}{k+...}...........}}}}}.
+\end{align*}
+Here $n$ denotes the number of quantities equal to $k$.\\
+We knew that
+\begin{align*}
+  F_{k,n}^2 - F_{k,n-1}F_{k,n+1}=(-1)^{n-1}.
+ \end{align*}
+Moreover, in general we have
+$$\dfrac{F_{k,n+1}}{F_{k,n}}= r_1 \dfrac{1-(\dfrac{r_2}{r_1})^{n+1}}{1-(\dfrac{r_2}{r_1})^{n}}.$$
+Let, $r_1$ denote the larger of the root, we have
+$$\lim _{n \longrightarrow \infty}\dfrac{F_{k,n+1}}{F_{k,n}}= r_1.$$
+More generally, we can write
+\begin{align*}
+\dfrac{F_{k,(n+1)t}}{F_{k,nt}} = L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-...}...........}}}}}.
+\end{align*}
+Here, $n$ denotes the number of $L_{k,t}$'s. When $n$ increases indefinitely, we have
+$$\lim _{n \longrightarrow \infty}\dfrac{F_{k,(n+1)t}}{F_{k,nt}}= (r_1)^t.$$
+The  relation for $L_{k,n}$ is
+\begin{align*}
+\dfrac{L_{k,(n)t}}{F_{k,(n-)t}} = L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\dfrac{(-1)^t}{L_{k,t}-\cdots\cdots\cdots-\dfrac{(-1)^t}{(\dfrac{L_{k,t}}{2})}}}}}}}.
+\end{align*}
+Here $n$ denotes the number of quantities equal to $L_{k,t}$. We knew that
+\begin{align*}
+  L_{k,n}^2 - L_{k,n-1}L_{k,n+1}= (-1)^n \triangle.
+ \end{align*}
+ More generally, above equations can be modified as
+\begin{align*}
+  F_{k,nt}^2 - F_{k,(n-1)t}F_{k,(n+1)t}=(-1)^{(n-1)t}(F_{k,t})^2,
+ \end{align*}
+ \begin{align*}
+  L_{k,nt}^2 - L_{k,(n-1)t}L_{k,(n+1)t}=-(-1)^{(n-1)t}\triangle (F_{k,t})^2.
+ \end{align*}
+ Moreover, we have
+ \begin{align*}
+  \Delta F_{k,nt}^2 =r_1^{2n+2t}+r_2^{2n+2t}- 2 (-1)^{n+t},
+ \end{align*}
+ \begin{align*}
+  \Delta L_{k,n}^2 =r_1^{2n}+r_2^{2n}- 2 (-1)^{n}.
+ \end{align*}
+ Again by subtracting these equations, we have
+  \begin{align*}
+  &\Delta(F_{k,n+t}^2-(-1)^t F_{k,n}^2) = (r_1^{2n+t}-r_2^{2n+t})(r_{1}^t+r_{2}^t)\\
+ &\text{ and}\\
+   &F_{k,n+t}^2-(-1)^t F_{k,n}^2 = F_{k,t} F_{k, 2n+t}.
+ \end{align*}
+ Similarly, we obtain
+   \begin{align*}
+ L_{k,n+t}^2-(-1)^t L_{k,n}^2 = \Delta F_{k,t} F_{k, 2n+t}.
+ \end{align*}
+ \section{Sequences $F_{k,n}$ and $L_{k,n}$ as a Series of Fractions:}
+ In this section, we obtain the relationship of the sequences $F_{k,n}$ and $L_{k,n}$ as a series of fractions.
+ \begin{theorem} For $ n, k > 0$
+\begin{align*}
+ \dfrac{F_{k,n+1}}{F_{k,n}} = \dfrac{F_{k,2}}{F_{k,1}} - \dfrac{(-1)}{F_{k,1}F_{k,2}}- \dfrac{(-1)^2}{F_{k,2}F_{k,3}}- \dfrac{(-1)^3}{F_{k,3}F_{k,4}} - ......-  \dfrac{(-1)^{n-1}}{F_{k,n-1}F_{k,n}},\\
+\dfrac{L_{k,n+1}}{L_{k,n}} = \dfrac{L_{k,2}}{L_{k,1}} - \dfrac{(-1)^2 \triangle}{L_{k,2}L_{k,1}}- \dfrac{(-1)^3 \triangle}{L_{k,2}L_{k,3}}- \dfrac{(-1)^4 \triangle}{L_{k,3}L_{k,4}} - ......-  \dfrac{(-1)^{n}}{L_{k,n-1}L_{k,n}}.
+\end{align*}
+\end{theorem}
+ \begin{proof}
+We can write expressions of $\dfrac{F_{k,n+1}}{F_{k,n}}$ and $\dfrac{L_{k,n+1}}{L_{k,n}}$ in series as
+\begin{align*}
+&\frac{F_{k,n+1}}{F_{k,n}}= \frac{F_{k,2}}{F_{k,1}} +\left(\frac{F_{k,3}}{F_{k,2}}- \frac{F_{k,2}}{F_{k,1}}\right) + \left(\frac{F_{k,4}}{F_{k,3}}- \frac{F_{k,3}}{F_{k,2}}\right)+......+\left(\frac{F_{k,n+1}}{F_{k,n}}- \frac{F_{k,n}}{F_{k,n-1}}\right)\\
+&= \frac{F_{k,2}}{F_{k,1}} - \frac{( F_{k,2}^2 - F_{k,3} F_{k,1})}{F_{k,1} F_{k,2}} - \frac{( F_{k,3}^2 - F_{k,2} F_{k,4})}{F_{k,2} F_{k,3}} - ......- \frac{( F_{k,n}^2 - F_{k,n+1} F_{k,n-1})}{F_{k,n-1} F_{k,n}},\\
+&\frac{L_{k,n+1}}{L_{k,n}}= \frac{L_{k,2}}{L_{k,1}} +\left(\frac{L_{k,3}}{L_{k,2}}- \frac{L_{k,2}}{L_{k,1}}\right) + \left(\frac{L_{k,4}}{L_{k,3}}- \frac{L_{k,3}}{L_{k,2}}\right)+......+\left(\frac{L_{k,n+1}}{L_{k,n}}- \frac{L_{k,n}}{L_{k,n-1}}\right)\\
+&= \frac{L_{k,2}}{L_{k,1}} - \frac{( L_{k,2}^2 - L_{k,3} L_{k,1})}{L_{k,1} L_{k,2}} - \frac{( L_{k,3}^2 - L_{k,2} L_{k,4})}{L_{k,2} L_{k,3}} - ......- \frac{( L_{k,n}^2 - L_{k,n+1} L_{k,n-1})}{L_{k,n-1} L_{k,n}}.
+\end{align*}
+Using the equations
+ \begin{align*}
+  &F_{k,n}^2 - F_{k,n-1}F_{k,n+1}=(-1)^{n-1},\\
+  &L_{k,n}^2 - L_{k,n-1}L_{k,n+1}= (-1)^n \triangle.
+ \end{align*}
+ We get
+ \begin{align*}
+ & \frac{F_{k,n+1}}{F_{k,n}} = \frac{F_{k,2}}{F_{k,1}} - \frac{(-1)}{F_{k,1}F_{k,2}}- \frac{(-1)^2}{F_{k,2}F_{k,3}}- \frac{(-1)^3}{F_{k,3}F_{k,4}} - ......-  \frac{(-1)^{n-1}}{F_{k,n-1}F_{k,n}},\\
+ &\frac{L_{k,n+1}}{L_{k,n}} = \frac{L_{k,2}}{L_{k,1}} - \frac{(-1)^2 \triangle}{L_{k,2}L_{k,1}}- \frac{(-1)^3 \triangle}{L_{k,2}L_{k,3}}- \frac{(-1)^4 \triangle}{L_{k,3}L_{k,4}} - ......-  \frac{(-1)^{n}}{L_{k,n-1}L_{k,n}}.
+ \end{align*}
+ \end{proof}
+ \begin{remark}
+ Taking limit as ${n \rightarrow \infty} $, we get
+ $$r_{1} = \frac{1+ \sqrt{k^2 + 4}}{2} = k+ \dfrac{1}{1. k} -\frac{1}{k .(k^2 +4)}+...............$$
+ For Fibonacci series 
+ $$\dfrac{1 +\sqrt{5}}{2}= 1+ \dfrac{1}{1. 1}- \dfrac{1}{1. 2}+ \dfrac{1}{2. 3}- \dfrac{1}{3. 5}+ \dfrac{1}{5. 8} - \dfrac{1}{8. 13}+..........$$
+ \end{remark}
+\noindent Now, we obtain more general relation for $F_{k,n}$ and $L_{k,n}$ as a series of fractions.
+  \begin{theorem} For $ n, k > 0$, we have
+  \begin{align*}
+  &\frac{F_{k,(n+1)t}}{F_{k,nt}} = \frac{F_{k,2t}}{F_{k,t}} - \frac{(-1)^t F_{k,t}^2}{F_{k,t}F_{k,2t}}- \frac{(-1)^{2t}F_{k,t}^2}{F_{k,2t}F_{k,3t}}- \frac{(-1)^{3t}F_{k,t}^2}{F_{k,3t}F_{k,4t}} - ......-  \frac{(-1)^{(n-1)t}F_{k,t}^2}{F_{k,(n-1)t}F_{k,nt}},\\
+&\frac{L_{k,(n+1)t}}{L_{k,nt}} = \frac{L_{k,t}}{L_{k,0}} +\frac{\triangle F_{k,t}^2}{L_{k,0}L_{k,t}}+ \frac{(-1)^t F_{k,t}^2}{L_{k,t}L_{k,2t}} + \frac{(-1)^{2t}F_{k,t}^2}{L_{k,2t}L_{k,3t}}+......-  \frac{(-1)^{(n-1)t}F_{k,t}^2}{L_{k,(n-1)t}L_{k,nt}}.
+ \end{align*}
+ \end{theorem}
+ \begin{proof}
+ We can write expressions of $\dfrac{F_{k,(n+1)t}}{F_{k,nt}}$ and $\dfrac{L_{k,(n+1)t}}{L_{k,nt}}$ in series as
+\begin{align*}
+&\frac{F_{k,(n+1)t}}{F_{k,nt}}= \frac{F_{k,2t}}{F_{k,t}} +\left(\frac{F_{k,3t}}{F_{k,2t}}- \frac{F_{k,2t}}{F_{k,t}}\right) + \left(\frac{F_{k,4t}}{F_{k,3t}}- \frac{F_{k,3t}}{F_{k,2t}}\right)+......\\&+\left(\frac{F_{k,(n+1)t}}{F_{k,nt}}- \frac{F_{k,nt}}{F_{k,(n-1)t}}\right)
+= \frac{F_{k,2t}}{F_{k,t}} - \frac{( F_{k,2t}^2 - F_{k,3t} F_{k,t})}{F_{k,t} F_{k,2t}} - \frac{( F_{k,3t}^2 - F_{k,2t} F_{k,4t})}{F_{k,2t} F_{k,3t}} - ......\\&- \frac{( F_{k,nt}^2 - F_{k,(n+1)t} F_{k,(n-1)t})}{F_{k,(n-1)t} F_{k,nt}},\\
+&\frac{L_{k,(n+1)t}}{L_{k,nt}}= \frac{L_{k,t}}{L_{k,0}} +\left(\frac{L_{k,2t}}{L_{k,t}}- \frac{L_{k,t}}{L_{k,0}}\right) + \left(\frac{L_{k,3t}}{L_{k,2t}}- \frac{L_{k,2t}}{L_{k,t}}\right)+......\\&+\left(\frac{L_{k,(n+1)t}}{L_{k,nt}}- \frac{L_{k,nt}}{L_{k,(n-1)t}}\right)
+= \frac{L_{k,t}}{L_{k,0}} - \frac{( L_{k,t}^2 - L_{k,0} L_{k,2t})}{L_{k,0} L_{k,t}} - \frac{( L_{k,2t}^2 - L_{k,t} L_{k,3t})}{L_{k,t} L_{k,2t}} - ......\\&- \frac{( L_{k,nt}^2 - L_{k,(n+1)t} L_{k,(n-1)t})}{L_{k,(n-1)t} L_{k,nt}}.
+\end{align*}
+Using the equations 
+ \begin{align*}
+  &F_{k,nt}^2 - F_{k,(n-1)t}F_{k,(n+1)t}=(-1)^{(n-1)t}(F_{k,t})^2,\\
+ & L_{k,nt}^2 - L_{k,(n-1)t}L_{k,(n+1)t}=-(-1)^{(n-1)t}\triangle (F_{k,t})^2.
+ \end{align*}
+We get
+\begin{align*}
+&\frac{F_{k,(n+1)t}}{F_{k,nt}} = \frac{F_{k,2t}}{F_{k,t}} - \frac{(-1)^t F_{k,t}^2}{F_{k,t}F_{k,2t}}- \frac{(-1)^{2t}F_{k,t}^2}{F_{k,2t}F_{k,3t}}- \frac{(-1)^{3t}F_{k,t}^2}{F_{k,3t}F_{k,4t}} - ......-  \frac{(-1)^{(n-1)t}F_{k,t}^2}{F_{k,(n-1)t}F_{k,nt}},\\
+&\frac{L_{k,(n+1)t}}{L_{k,nt}} = \frac{L_{k,t}}{L_{k,0}} +\frac{\triangle F_{k,t}^2}{L_{k,0}L_{k,t}}+ \frac{(-1)^t F_{k,t}^2}{L_{k,t}L_{k,2t}} + \frac{(-1)^{2t}F_{k,t}^2}{L_{k,2t}L_{k,3t}}+......-  \frac{(-1)^{(n-1)t}F_{k,t}^2}{L_{k,(n-1)t}L_{k,nt}}.
+ \end{align*}
+ \end{proof}
+ \begin{theorem} For $ n, m, k > 0$, we have
+\begin{align*}
+ &\dfrac{F_{k,n+mt}}{L_{k,n+mt}} = \dfrac{F_{k,n}}{L_{k,n}} + 2(-1)^n F_{k,t} ( \dfrac{1}{L_{k,n}L_{k,n+t}} + \dfrac{(-1)^{t}}{l_{k,n+t}L_{k,n+2t}}+ \dfrac{(-1)^{2t}}{L_{k,n+2t}L_{k,n+3t}} + ......\\&+  \dfrac{(-1)^{(m-1)t}}{L_{k,n+(m-1)t}L_{k,n+mt}}),\\
+&\dfrac{F_{k,n+mt}}{L_{k,n+mt}} = \dfrac{F_{k,n}}{L_{k,n}} + 2(-1)^n F_{k,t} ( \dfrac{1}{L_{k,n}L_{k,n+t}} + \dfrac{(-1)^{t}}{l_{k,n+t}L_{k,n+2t}}+ \dfrac{(-1)^{2t}}{L_{k,n+2t}L_{k,n+3t}} + ......\\&+  \dfrac{(-1)^{(m-1)t}}{L_{k,n+(m-1)t}L_{k,n+mt}}).
+ \end{align*}
+ \end{theorem}
+ \begin{proof}
+We can write expressions of $\dfrac{F_{k,n+mt}}{L_{k,n+mt}}$ and $\dfrac{L_{k,n+mt}}{L_{k,n+mt}}$ in series as
+\begin{align*}
+&\dfrac{F_{k,n+mt}}{L_{k,n+mt}}= \frac{F_{k,n}}{L_{k,n}} +\left(\frac{F_{k,n+t}}{L_{k,n+t}} - \frac{F_{k,n}}{L_{k,n}}\right) + \left(\frac{F_{k,n+2t}}{L_{k,n+2t}}- \frac{F_{k,n+t}}{L_{k,n+t}}\right)+......\\&+\left(\frac{F_{k,n+mt}}{L_{k,n+mt}}- \frac{F_{k,n+(m-1)t}}{L_{k,n+(m-1)t}}\right)\\
+&=\frac{F_{k,n}}{L_{k,n}} + \frac{( F_{k,n+t}L_{k,n} - F_{k,n}L_{k,n+t})}{L_{k,n} L_{k,n+t}} + \frac{( F_{k,n+2t}L_{k,n+t} - F_{k,n+t}L_{k,n+2t})}{L_{k,n+t} L_{k,n+2t}}+  ......\\&+ \frac{( F_{k,n+mt}L_{k,n+(m-1)t} - F_{k,n+(m-1)t}L_{k,n+mt})}{L_{k,nt} L_{k,n+(m-1)t}}, 
+\\&\frac{L_{k,n+mt}}{F_{k,n+mt}}= \frac{L_{k,n}}{F_{k,n}} +\left(\frac{L_{k,n+t}}{F_{k,n+t}} - \frac{L_{k,n}}{F_{k,n}}\right) + \left(\frac{L_{k,n+2t}}{F_{k,n+2t}}- \frac{L_{k,n+t}}{F_{k,n+t}}\right)+......\\&+\left(\frac{L_{k,n+mt}}{F_{k,n+mt}}- \frac{L_{k,n+(m-1)t}}{F_{k,n+(m-1)t}}\right)\\
+&= \frac{L_{k,n}}{F_{k,n}} - \frac{( F_{k,n+t}L_{k,n} - F_{k,n}L_{k,n+t})}{L_{k,n} L_{k,n+t}} - \frac{( F_{k,n+2t}L_{k,n+t} - F_{k,n+t}L_{k,n+2t})}{L_{k,n+t} L_{k,n+2t}} + ......\\& \frac{( F_{k,n+mt}L_{k,n+(m-1)t} - F_{k,n+(m-1)t}L_{k,n+mt})}{L_{k,nt} L_{k,n+(m-1)t}}. 
+\end{align*}
+Using the equations 
+ \begin{align*}
+ & F_{k,nt}^2 - F_{k,(n-1)t}F_{k,(n+1)t}=(-1)^{(n-1)t}(F_{k,t})^2,\\
+&  L_{k,nt}^2 - L_{k,(n-1)t}L_{k,(n+1)t}=-(-1)^{(n-1)t}\triangle (F_{k,t})^2.
+ \end{align*}
+ We get
+\begin{align*}
+ &\dfrac{F_{k,n+mt}}{L_{k,n+mt}} = \dfrac{F_{k,n}}{L_{k,n}} + 2(-1)^n F_{k,t} ( \dfrac{1}{L_{k,n}L_{k,n+t}} + \dfrac{(-1)^{t}}{l_{k,n+t}L_{k,n+2t}}+ \dfrac{(-1)^{2t}}{L_{k,n+2t}L_{k,n+3t}} + ......\\&+  \dfrac{(-1)^{(m-1)t}}{L_{k,n+(m-1)t}L_{k,n+mt}}),\\
+&\dfrac{F_{k,n+mt}}{L_{k,n+mt}} = \dfrac{F_{k,n}}{L_{k,n}} + 2(-1)^n F_{k,t} ( \dfrac{1}{L_{k,n}L_{k,n+t}} + \dfrac{(-1)^{t}}{l_{k,n+t}L_{k,n+2t}}+ \dfrac{(-1)^{2t}}{L_{k,n+2t}L_{k,n+3t}} + ......\\&+  \dfrac{(-1)^{(m-1)t}}{L_{k,n+(m-1)t}L_{k,n+mt}}).
+ \end{align*}
+ \end{proof}
+ 
+\section{Concluding Remarks}
+In this paper, we derived telescoping series for $k$- Fibonacci and $k$- Lucas sequences and proved their relationships with $k$- Fibonacci and $k$- Lucas sequences, same identities can be derived using $M$ matrices.
+ The relationship between $k$- Fibonacci and $k$- Lucas sequences using continued fractions and series of fractions derived is different and never tried in $k$- Fibonacci sequence literature.
+
+%=========================================================

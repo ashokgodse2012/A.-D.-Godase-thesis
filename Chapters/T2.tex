@@ -1,0 +1,463 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+\chapter{On The Generalized Natural Transformation}
+\begin{quote}
+\textcolor[rgb]{0.25,0.40,0.60}{\lq\lq\textsl{An equation means nothing to
+me unless it expresses a thought of God}\rq\rq}.
+\begin{flushright}
+\textcolor[rgb]{0.55,0.00,0.55}{\em-\texttt{ SRINIVASA RAMANUJAN}}.
+\end{flushright}
+\end{quote}
+
+\lhead{\scriptsize\itshape\medskip Introduction}
+\section{Introduction}
+Integral transform method has wide range of applications in the fields of science and engineering. As we know that, the physical phenomenon can be converted into an ordinary differential equations and partial differential equations which we can solved by integral transform method. However there are integral transforms which have some limitations, due to that, the researchers are motivated to define new integral transforms and use it to solve many problems in the field of applied mathematics. Recently, the new integral transform called Natural transform(N-transform) was introduced by Khan and Khan\cite{R51}and studied its properties and some applications. Later on Belgacem\cite{R13,R14}defined the inverse Natural transform and presented properties and applications of the Natural transform.\\
+We can extract the Laplace transform, Sumudu transform, Fourier transform and Mellin transform from the Natural transform and which shows that the Natural transform converges to the Laplace transform and the Sumudu transform\cite{R50}. Moreover Natural transform plays a role, as a source for other transform and it is the theoretical dual of the Laplace transform. Further, study and applications of the Natural transform can be seen in\cite{R12,R24,R25,R31}.\\
+The distribution theory provides powerful analytical technique to solve many problems that arises in the applied field. This gives rise to define the various integral transforms to the distribution space\cite{R30,R32,R33,R34,R72,R73,R81}. In this chapter we present the Natural transform on the distributional space of compact support with the help of distribution theory. The inversion theorem, the uniqueness theorem and some properties of generalized Natural transform are to be proved. Also, we prove the convolution theorem,characterization theorem of the generalized Natural transform.
+\lhead{\scriptsize\itshape\medskip Natural Transformation}
+\subsection{The Natural Transformation}
+The Natural transform of the function $f(t)\in\mathbb{R}^{2}$ is denoted by symbol $\mathbb{N}[f(t)]=R(s,u)$ where, $s$ and $u$ are the transform variables and is defined by the following integral equation\cite{R13}
+\begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt 
+ \end{equation} 
+ where $Re(s)>0, u\in(\tau_{1}, \tau_{2})$, the function $f(t)$ is sectionwise continuous, exponential order and defined over the set\\
+ $\mathfrak{A}=[f(t)/\exists M,\tau_{1}, \tau_{2} > 0,|f(t)| < M e^{\frac{|t|}{\tau_{j}}},if t\in(-1)^{j}\times[0,\infty) ].$\\
+The equation(2.1.1) can be written in another form as
+ \begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \frac{1}{u}\int_{0}^{\infty}e^{-\frac{st}{u}}f(t)dt 
+ \end{equation}
+The inverse Natural transform of function $ R(s,u)$ is denoted by symbol $\mathbb{N}^{-1}[R(s,u)]= f(t)$ and is defined with Bromwich contour integral\cite{R12,R13}
+ \begin{equation}
+ \mathbb{N}^{-1}[R(s,u)] = f(t) = \lim _{T\rightarrow\infty} \frac{1}{2\Pi i}\int_{\gamma-iT}^{\gamma+iT}e^{\frac{st}{u}}R(s, u)ds
+ \end{equation}
+If $R(s,u)$ is the Natural transform, $F(s)$ is the the Laplace transform and $G(u)$ is the Sumudu transform of the function $ f(t) \in \mathfrak{A} $, then we  can have Natural-Laplace and Natural-Sumudu duality as
+ \begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt =\frac{1}{u}F(\frac{s}{u})
+ \end{equation}
+ and
+  \begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt =\frac{1}{s}G(\frac{u}{s})
+ \end{equation}  
+ \subsection{Basic Properties of the Natural Transform }
+ In this section, we give some basic properties of the Natural transform which require for our further study.
+ \begin{enumerate}
+ \item[1] \textbf{Linearity Property}  \\
+ If $ \alpha, \beta $ are any constants and $ f(t), g(t) $ are functions defined over the set $ \mathfrak{A} $, then
+ \begin{equation}
+ \mathbb{N}[\alpha f(t)\pm \beta g(t)]=\alpha\mathbb{N}[f(t)]\pm\beta\mathbb{N}[g(t)]
+ \end{equation}
+ \textbf{Proof}:\\
+ By the definition of the Natural transform, we have
+ \begin{align*}
+ \mathbb{N}[\alpha f(t)\pm \beta g(t)]& = \int_{0}^{\infty}e^{-st}[\alpha f(ut)\pm \beta g(ut)]dt \\
+ &=\int_{0}^{\infty}e^{-st}\alpha f(ut)dt\pm\int_{0}^{\infty}e^{-st}\beta g(ut)dt\\
+ &=\alpha\int_{0}^{\infty}e^{-st}f(ut)dt\pm\beta\int_{0}^{\infty}e^{-st}g(ut)dt\\
+ &=\alpha\mathbb{N}[f(t)]\pm\beta\mathbb{N}[g(t)]
+ \end{align*}
+ \item[2]\textbf{Change of Scale Property}\\
+ For the function $f(at) \in \mathfrak{A}$, where $a$ is non zero constant, then
+ \begin{equation}
+ \mathbb{N}[f(at)]=\frac{1}{a}R(\frac{s}{a},u)
+ \end{equation}
+ \textbf{Proof:}\\
+  By the definition of the Natural transform ,we have
+ \begin{align*}
+ \mathbb{N}[f(at)]& = \frac{1}{u}\int_{0}^{\infty}e^{-\frac{st}{u}}f(at)dt 
+ \end{align*}
+ put $ at=y $ so that $t=\frac{y}{a}$ and $dt=\frac{dy}{a} $
+ \begin{align*}
+ \mathbb{N}[f(at)]& = \frac{1}{u}\int_{0}^{\infty}e^{-\frac{sy}{ua}}f(y)\frac{dy}{a} \\
+ & =\frac{1}{ua}\int_{0}^{\infty}e^{-\frac{\frac{s}{a}y}{u}}f(y)dy\\
+  & =\frac{1}{a}\lbrace\frac{1}{u}\int_{0}^{\infty}e^{-\frac{\frac{s}{a}y}{u}}f(y)dy\rbrace\\
+  &=\frac{1}{a}R(\frac{s}{a},u)
+ \end{align*}
+ \item[3]\textbf{Shifting Property}\\
+ For the function $f(t)\in \mathfrak{A} $
+ \begin{equation}
+ \mathbb{N}[e^{\pm at}f(t)]=\frac{s}{s\mp au}R(\frac{su}{s\mp au})
+ \end{equation}
+ \textbf{Proof:}\\
+ By the definition of the Natural transform, we have
+ \begin{align*}
+ \mathbb{N}[e^{\pm at}f(t)]& = \int_{0}^{\infty}e^{-st}e^{\pm at}f(ut)dt \\
+ &=\int_{0}^{\infty}e^{-(s\mp a)t}f(ut)dt\\
+ \end{align*}
+ put $ \frac{(s\mp a)t}{s}=y $ so that $(s\mp a)t=sy $ and $ dt=\frac{sdy}{(s\mp a)} $\\
+ \begin{align*}
+ &=\frac{s}{(s\mp a)}\int_{0}^{\infty}e^{-sy}f(\frac{usy}{(s\mp a)})dy\\
+ &=\frac{s}{(s\mp a)}\int_{0}^{\infty}e^{-st}f(\frac{ust}{(s\mp a)})dt\\
+ &=\frac{s}{s\mp au}R(\frac{su}{s\mp au})
+ \end{align*}
+ \item[4]\textbf{Natural-Laplace Duality}\\
+ If $ R(s,u)$ is the Natural transform, $F(s)$ is the Laplace transform of $f(t) \in \mathfrak{A}$, then we  can have Natural-Laplace duality as\\
+ \begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt =\frac{1}{u}F(\frac{s}{u})
+ \end{equation}
+ \textbf{Proof:}\\
+ By the definition of Natural transform, we have
+ \begin{equation*}
+ \mathbb{N}[f(t)] = \int_{0}^{\infty}e^{-st}f(ut)dt 
+ \end{equation*}
+ Put $ ut=w $ so that $ dt=\frac{dw}{u} $ 
+ \begin{align*}
+  \mathbb{N}[f(t)]& = \int_{0}^{\infty}e^{\frac{-sw}{u}}f(w)\frac{dw}{u}\\
+  & = \frac{1}{u}\int_{0}^{\infty}e^{\frac{-s}{u}w}f(w)dw\\
+&=  \frac{1}{u}F(\frac{s}{u})
+ \end{align*}
+ \item[5]\textbf{Natural-Sumudu Duality}\\
+ If $ R(s,u)$ is the Natural transform, $G(u)$ is the  Sumudu transform of $f(t) \in \mathfrak{A}$, then we  can have Natural-Sumudu duality as
+ \begin{equation}
+\mathbb{N}[f(t)] = R(s,u) = \int_{0}^{\infty}e^{-st}f(ut)dt =\frac{1}{s}G(\frac{u}{s})
+ \end{equation}
+ \textbf{Proof:}
+ By the definition of Natural transform, we have
+ \begin{equation*}
+ \mathbb{N}[f(t)] = \int_{0}^{\infty}e^{-st}f(ut)dt 
+ \end{equation*}
+ Put $ st=w $ so that $ dt=\frac{dw}{s} $ 
+ \begin{align*}
+  \mathbb{N}[f(t)]& = \int_{0}^{\infty}e^{-w}f(\frac{uw}{s})\frac{dw}{s}\\
+  & = \frac{1}{s}\int_{0}^{\infty}e^{-w}f(\frac{uw}{s})dw\\
+&=  \frac{1}{s}F(\frac{u}{s})
+ \end{align*}
+ \end{enumerate}
+ \lhead{\scriptsize\itshape\medskip Generalized Natural Transform}
+\section{Generalized Natural Transform}
+         In this section we define the generalized Natural transform using the distribution theory developed by L.Schwartz\cite{R72,R73}. For this instant, we need to construct the testing function space over which the generalized Natural transform should be defined.
+\subsection{Testing Function Space $\mathfrak{D}  _{a,b}$}
+ let $\mathfrak{D}_{a,b}$ denotes the space of all complex valued smooth functions $\phi(t)$ on $-\infty<t<\infty$ on which the functions $\gamma_{k}(\phi)$ defined by\\
+ \begin{equation}
+ \gamma_{k}(\phi)\triangleq \gamma_{a,b,k}(\phi)\triangleq \underset{0<t<\infty}{Sup.}\vert K_{a,b}(t)D^{k}(t)\vert <\infty
+ \end{equation}
+ Where \begin{align*}
+  K_{a,b}(t) = \begin{cases}
+  e^{at}\hspace{0.5cm}  0\leq t<\infty \\
+  e^{bt}\hspace{0.5cm}  -\infty<t<0.
+  \end{cases}
+ \end{align*}
+This $\mathfrak{D}_{a,b}$ is a linear space under the pointwise addition of functions and their multiplication by complex numbers. Each $\gamma_{k}$ is clearly a seminorm on $\mathfrak{D}_{a,b}$ and $\gamma_{0}$ is a norm. We assign the topology generated by the sequence of seminorm ${(\gamma_{k})}_{k=0}^{\infty}$ there by making it a countably multinormed space. Note that for each fixed $s$ and $u$ the kernel $\frac{1}{u}e^{\frac{-st}{u}}$ as a function of $t$ is a member of $\mathfrak{D}_{a,b}$ iff $ a<Re(\frac{s}{u})<b $. $\mathfrak{D}_{a,b}^{'}$ denotes the dual of $\mathfrak{D}_{a,b}$ i.e. $f$ is member of $\mathfrak{D}_{a,b}^{'}$ iff it is continuous linear functional on $\mathfrak{D}_{a,b}$. Thus $\mathfrak{D}_{a,b}^{'}$ is a space of generalized functions.
+\begin{theorem}
+The space $\mathfrak{D}_{a,b}$ is complete and therefore a Frechet space.
+\end{theorem}
+\begin{proof}
+ From equation(2.2.1)we have that, $(\Phi_{n})_{n=1}^{\infty}$ is a Cauchy sequence in $\mathfrak{D}_{a,b}$ if and only if each $\Phi_{n}$ is in $\mathfrak{D}_{a,b}$ and for each $k$, the function $K_{a,b}(t)D^{k}\Phi_{n}(t)$ comprise a uniform Cauchy sequence on
+$-\infty < t < \infty $ as $n \rightarrow \infty $. In this case, it follows from a standard theorem of Apostol\cite{R2} that there exists a smooth function $\Phi(t)$ such that, for each $k$ and $t, D^{k}\Phi_{n}(t)\rightarrow D^{k}\Phi(t) $ as $n \rightarrow \infty $. Moreover, given any $\epsilon >0$ there exists a $ M_{k}$ such that for each $n, \mu > M_{k}$,
+\begin{equation}
+\vert K_{a,b}(t)D^{k}[\Phi_{n}(t)-\Phi(t)]\vert <\epsilon \hspace{0.5cm} \text{for all t}
+\end{equation}
+Taking limit as $ \mu\rightarrow\infty $, we have
+\begin{equation}
+\vert K_{a,b}(t)D^{k}[\Phi_{n}(t)-\Phi(t)]\vert \leq\epsilon
+\end{equation}
+for $-\infty < t < \infty$ and $ n < M_{k}$.\\
+Thus as $n \rightarrow \infty $,$ \gamma_{k}(\Phi_{n}(t)-\Phi(t))\rightarrow 0 $ for each k.\\
+Finally because of the uniformity of the convergence and the fact that each, $ K_{a,b}(t)D^{k}\Phi_{n}(t) $ is bounded on $-\infty < t < \infty$, there exists a constant $C_{k}$ not depending on $n$ such that 
+\begin{equation}
+\vert K_{a,b}(t)D^{k}\Phi_{n}(t)\vert <C_{k} \hspace{0.5cm} \forall t
+\end{equation}
+$\therefore$ from equation (2.2.3)we have
+\begin{equation}
+\vert K_{a,b}(t)D^{k}\Phi(t)\vert <C_{k} + \epsilon 
+\end{equation}
+which shows that the limit function $ \Phi(t) $ is a member of $\mathfrak{D}_{a,b}$.\\
+Hence the proof.
+\end{proof}
+\subsection{Properties of testing function space $\mathfrak{D}_{a,b}$ and its dual}
+\begin{itemize}
+\item[I]Let $\mathfrak{D}$ be the set of complex valued smooth functions $ \phi(t) $ whose support is the compact set. Also $\mathfrak{D}$ is a linear space under usual definitions of addition and multiplication by a complex numbers. In \cite{R98} it is proved that $\mathfrak{D}$ is a subspace of $\mathfrak{D}_{a,b}$ as well as $\mathfrak{D}(w,z)$ whatever be the values of $ a, b, w $ or $z $. Moreover convergence in $\mathfrak{D}$ implies convergence in $\mathfrak{D}_{a,b}$ and convergence in $\mathfrak{D}(w,z)$. Consequently, the restriction of any member of $\mathfrak{D}_{a,b}^{'}$ or $\mathfrak{D}(w,z)^{'}$ to $\mathfrak{D}$ is a member of $\mathfrak{D}^{'}$. However $\mathfrak{D}$ is not dense in $\mathfrak{D}_{a,b}$, Nor can be identify $\mathfrak{D}_{a,b}^{'}$ with a subspace of $\mathfrak{D}^{'}$. $\mathfrak{D}$ is dense in $\mathfrak{D}(w,z)$ for every $w$ and $z$\cite{R98}.
+
+\item[II]For any choice of $a$ and $b$, $\mathfrak{D}_{a,b}$ is a dense subspace of $\mathcal{E}$, and the topology of $\mathfrak{D}_{a,b}$ is stronger than the topology induced on $\mathfrak{D}_{a,b}$ by $ \mathcal{E} $. Moreover, since $\mathfrak{D}$  is dense in $\mathcal{E} $ and since  $\mathfrak{D}^{'}\supset \mathfrak{D}_{a,b}^{'} \supset \mathcal{E}^{'} $. Hence, It follows that $\mathfrak{D}_{a,b}$ is also dense in $\mathcal{E} $\cite{R98}.
+
+\item[III]For each $ f \in \mathfrak{D}_{a,b}^{'} $ there exists a positive constant $C$ and non negative integer $r$ such that for every $\phi \in  \mathfrak{D}_{a,b} $\cite{R98},
+\begin{equation}
+\vert <f,\phi> \vert \leq C \underset{0\leq k\leq r}{Max.}[\gamma_{a,b,k}(\phi)]
+\end{equation}
+\item[IV] Let $f$ be a member of $ \mathfrak{D}_{a,a}^{'} $ and also $ \mathfrak{D}_{b,b}^{'} $ where $ a < b $.Then there exists a unique member of $ \mathfrak{D}_{a,b}^{'} $ whose restriction to $ \mathfrak{D}_{a,a}\bigcup \mathfrak{D}_{b,b}$ coincide with the given $f$. If $f$ is also used to denote this unique member of $ \mathfrak{D}_{a,b}^{'} $, then its
+value on $ \mathfrak{D}_{a,b}$ are given by
+\begin{equation*}
+<f,\phi>\triangleq  <f,\lambda\phi>+<f,(1-\lambda\phi)>
+\end{equation*}
+where $ \phi\in \mathfrak{D}_{a,b} $ and $  \lambda$ is chosen as stated in Zemanian\cite{R98}.
+
+\item[V]If $f(t)$ is a locally integrable function such that, $ f(t)/_{K_{a,b}(t)} $ is absolutely
+integrable on $-\infty < t < \infty $, then f(t) generates a member of $ \mathfrak{D}_{a,b}^{'} $ through the definition\cite{R98}
+\begin{equation*}
+<f,\phi>\triangleq \int_{-\infty}^{\infty}f(t)\phi(t)dt
+\end{equation*}
+for every $ \phi(t)\in \mathfrak{D}_{a,b} $
+\end{itemize}
+\subsection{Generalized Natural Transform}
+Now we define the generalized Natural Transform. Given a generalized Natural transformable generalized function $f(t)$, the strip of definition $\Omega_{f}$ for $\mathbb{N}[f(t)]$ is a set in $\mathbb{C}$ defined by $\Omega_{f}\triangleq\lbrace(s,u):\omega_{1}<Re(\frac{s}{u})<\omega_{2}\rbrace$ since $f$ or each $(s,u)\in\Omega_{f}$ the kernel $\frac{1}{u}e^{\frac{-st}{u}}$ as a function of t is a member of $\mathfrak{D}_{\omega_{1},\omega_{2}}^{'}$ .\\
+ For $f\in \mathfrak{D}_{\omega_{1},\omega_{2}}^{'}$ we can define the generalized Natural transform of $f$ as conventional function
+ \begin{equation}
+  R_{f}(s,u)\triangleq \mathbb{N}[f(t)]\triangleq<f(t),\frac{1}{u}e^{\frac{-st}{u}}>
+ \end{equation}
+ We call $\Omega_{f}$ the region (or strip) of definition for $\mathbb{N}[f(t)]$ and
+$\omega_{1}$ and $\omega_{2}$ the abscissas of definition.
+ Note that the properties like linearity and continuity of generalized Natural transform will follows from \cite{R98}. Now the very natural question arise that, is  $  R_{f}(s,u) $ analytic ? To answer this question we will prove the next theorem.
+ \lhead{\scriptsize\itshape\medskip Analyticity Theorem}
+ \begin{theorem}
+\textbf{[Analyticity Theorem]}
+If $ R_{f}(s,u)\triangleq \mathbb{N}[f(t)]$ for $(s,u)\in\Omega_{f}$ then 
+$ R_{f}(s,u)$ is analytic on $\Omega_{f}$ and 
+\begin{equation}
+DR_{f}(s,u)=\frac{1}{u}<f(t),-\frac{t}{u}e^{\frac{-st}{u}}>
+\end{equation}
+\end{theorem}
+\begin{proof}
+ Let $(s,u)$ be arbitrary but fixed point in $\Omega_{f}=\lbrace(s,u):\omega_{1}<Re(\frac{s}{u})<\omega_{2}\rbrace$ Choose the real positive number $a,b$ and $r$ such that $\omega_{1}<a<Re(\frac{s}{u}-r)<Re(\frac{s}{u}+r)<b<\omega_{2}$.\\
+Let $\Delta{S}$ be the complex increment such that $ \vert\Delta{s}\vert<r $ and as $ \Delta{s}\neq 0 $ we have
+\begin{equation}
+\frac{ R_{f}(s+\Delta{s},u)-R_{f}(s,u)}{\Delta{s}}-<f(t),\frac{\partial}{\partial{s}}\frac{1}{u}e^{\frac{-st}{u}}>=<f(t),\psi_{\Delta{s}}(t)>
+\end{equation}
+where $ \psi_{\Delta{s}}(t)=\frac{1}{\Delta{s}}[e^{\frac{-(s+\Delta{s})t}{u}}-e^{\frac{-st}{u}}]-\frac{\partial}{\partial{s}}\frac{1}{u}e^{\frac{-st}{u}}$\\
+Note that $\psi_{\Delta{s}}\in \mathfrak{D}_{a,b}$ so that equation (2.2.9) is meaningful.\\
+We shall now show that as $\vert\Delta{s}\vert\rightarrow 0,\psi_{\Delta{s}}(t)$ converges to zero in $\mathfrak{D}_{a,b}$. Since $ f\in \mathfrak{D}_{a,b}^{'} $ this will imply that $ <f(t),\psi_{\Delta{s}}(t)>\rightarrow 0 $. From equation(2.2.9)and choose $a$ close to $\omega_{1}$ and $b$ close to $\omega_{2}$ which gives the analyticity of $R_{f}(s,u)$ on $\Omega_{f}$.\\
+Let $\mathfrak{C}$ denotes the circle with center at $\frac{s}{u}$ and radius $r_{1}$ where $ 0<r<r_{1}<min(Re(\frac{s}{u})-a,b-Re(\frac{s}{u}))$. We may interchange differentiation on $s$ with differentiation on $t$ and using Cauchy integral formula, then we have
+\begin{align*}
+(-D_{t})^{k}\psi_{\Delta{s}}(t)&=\frac{1}{\Delta{s}}[(\frac{s+\Delta{s}}{u})^{k}e^{\frac{-(s+\Delta{S})t}{u}}-(\frac{s}{u})^{k}e^{\frac{-st}{u}}]-\frac{\partial}{\partial{s}}(\frac{s}{u})^{k}\frac{1}{u}e^{\frac{-st}{u}}\\
+&= \frac{1}{2\Pi i\Delta{s}}\int_{C}[\frac{1}{\xi-(\frac{s+\Delta{s}}{u})}-\frac{1}{\xi-(\frac{s}{u})}]\xi^{k}e^{\frac{-\xi t}{u}}d\xi\\
+&-\frac{1}{2\Pi i}\int_{C}\frac{\xi^{k}e^{\frac{-\xi t}{u}}}{(\xi-(\frac{s}{u}))^{2}}d\xi\\
+&=\frac{\Delta{s}}{2\Pi i}\int_{C}\frac{\xi^{k}e^{\frac{-\xi t}{u}}}{(\xi-(\frac{s+\Delta{s}}{u}))(\xi-(\frac{s}{u}))^{2}}d\xi
+\end{align*}
+Now for all $\xi\in \mathfrak{C} $ and $-\infty<t<\infty$,
+$\vert K_{a,b}(t)\xi^{k}e^{\frac{-\xi t}{u}}\vert\leq M$ where $M$ is constant independent of $\xi$ and $t$. Moreover $\vert\xi-(\frac{s+\Delta{s}}{u})\vert>r_{1}-r>0$ and $\vert\xi-(\frac{s}{u})\vert =r_{1}$
+\begin{align*}
+ \vert K_{a,b}(t)D^{k}(t)\psi_{\Delta{s}}\vert&\leq\frac{\vert\Delta{s}\vert}{2\Pi}\int_{C}\frac{M}{(r_{1}-r)r_{1}^{2}} \vert d\xi\vert\\
+ &\leq\frac{\vert\Delta{s}\vert M}{(r_{1}-r)r_{1}^{2}}
+\end{align*}
+ The right hand side is independent of $t$ and converges to zero as $ \vert\Delta{s}\vert\rightarrow 0 $. This shows that $\psi_{\Delta{s}}$ converges to zero in $\mathfrak{D}_{a,b}$ as $\vert\Delta{s}\vert\rightarrow 0 $ which completes the proof.
+ \end{proof}
+ Now we prove the important theorem called characterization theorem for generalized Natural transform.
+ \lhead{\scriptsize\itshape\medskip Characterization Theorem}
+ \begin{theorem}
+  [\textbf{Characterization Theorem}] 
+ The necessary condition for the function $ R_{f}(s,u) $ to be the Natural transform of generalized function $f(t)$ are that $R_{f}(s,u)$ is analytic on $\Omega_{f}$ and for each closed strip $\lbrace(u,s):a\leq Re(\frac{s}{u})\leq b\rbrace $ of $\Omega_{f}$ there be a polynomial such that $\vert R_{f}(s,u)\vert\leq \frac{1}{u}P(\vert\frac{s}{u}\vert)$ for $ a\leq Re(\frac{s}{u})\leq b $. The polynomial $P$ will depend in general on $a$ and $b$.
+\end{theorem}
+
+\begin{proof}
+ The analyticity of $ R_{f}(s,u) $ has been already proved in the previous theorem. By the definition of the Natural transform, $f$ is a member of $\mathfrak{D}_{a,b}^{'}$ where $\omega_{1}<a<b<\omega_{2}$ so that there exists a constant $M$ and non-negative integer $r$ such that for $a\leq Re(\frac{s}{u})\leq b$
+ \begin{align*}
+ \vert R_{f}(s,u)\vert &= \vert <f(t),\frac{1}{u}e^{\frac{-st}{u}}>\vert\\
+&\leq\frac{1}{\vert u\vert}M \underset{0\leq k\leq r}{Max}\underset{t}{Sup}\vert K_{a,b}(t)D_{t}^{k}e^{\frac{-st}{u}}\vert\\
+&\leq\frac{1}{\vert u\vert}M \underset{0\leq k\leq r}{Max}{\vert\frac{s}{u}\vert}^{k}\underset{t}{Sup}\vert K_{a,b}(t)D_{t}^{k}e^{\frac{-st}{u}}\vert\\
+&\leq\frac{1}{\vert u\vert} P(\vert\frac{s}{u}\vert)
+ \end{align*}
+ In general the polynomial $P(\vert\frac{s}{u}\vert)$ depends on the choices of $a$ and $b$.
+ \end{proof}
+  \lhead{\scriptsize\itshape\medskip Inversion and Convolution}
+\section{Inversion and Convolution}
+To prove the inversion formula for the generalized  Natural transform we require following two lemmas which can be easily proved by using\cite{R97}\\
+ \begin{lemma}
+ Let $ R_{f}(s,u)=\mathbb{N}[f(t)]$ for $\omega_{1}\leq Re(\frac{s}{u})\leq \omega_{2}$ and let $\phi \in \mathcal{D}$, set $\psi(s,u)=\frac{1}{u}\int_{-\infty}^{\infty}\phi(t)e^{\frac{st}{u}}dt$. Then for any fixed real number $p$ with $ 0<p<\infty $
+\begin{equation}
+\frac{1}{u}\int_{-p}^{p}<f(\tau),\frac{1}{u}e^{\frac{-s\tau}{u}}>\psi(s,u)d\omega=<f(\tau),\frac{1}{u}\int_{-p}^{p}e^{\frac{-s\tau}{u}}\psi(s,u)d\omega>
+\end{equation}
+ Where $ s=\sigma+i\omega $ and $\sigma$ is fixed with $\sigma_{1}<\sigma<\sigma_{2}$
+ \end{lemma}
+ 
+ \begin{proof}
+ If $ \phi(t)\equiv 0 $ then the proof is very straight forward. So assume that $ \phi(t)\neq 0 $. Note that $ R_{f}(s,u)$ is analytic for $\omega_{1}\leq Re(\frac{s}{u})\leq \omega_{2}$
+and $\psi(s,u)$ is an entire function. Therefore the above integral must exits and
+\begin{equation}
+\Vert D_{\tau}^{k}\int_{-p}^{p}\frac{1}{u}e^{\frac{-s\tau}{u}}\psi(s,u)d\omega \Vert \leq \frac{1}{u}e^{\frac{-\sigma\tau}{u}}\int_{-p}^{p} \Vert (\frac{s}{u})^{k}\psi(s,u)d\omega \Vert
+\end{equation} 
+ so that $ \int_{-p}^{p}\frac{1}{u}e^{\frac{-s\tau}{u}}\psi(s,u)d\omega $  is a member of $\mathfrak{L}(\sigma_{1},\sigma_{2})$. Now partition the path of integration on the straight line from $ s=\sigma-ip $ to  $ s=\sigma+ip $ into $m$ intervals each of length $\frac{2r}{m}$ and let $s_{v}=\sigma+i\omega_{a}$ be any point in the $v^{th}$ interval.\\
+ Consider 
+ \begin{equation}
+ \Theta_{m}\triangleq \sum_{v=1}^{m}\frac{1}{u}e^{\frac{-s_{v}\tau}{u}}\psi(s_{v},u)\frac{2r}{m} 
+ \end{equation}
+ By applying $f(\tau)$ to above equation term by term, we get
+ \begin{align}
+ < f(\tau),\Theta_{m} > &= \sum_{v=1}^{m}<f(\tau),\frac{1}{u}e^{\frac{-s_{v}\tau}{u}}>\psi(s_{v},u)\frac{2r}{m}\\
+& \rightarrow \int_{-r}^{r}<f(\tau),\frac{1}{u}e^{\frac{-s\tau}{u}}>\psi(s,u)d\omega \hspace{0.5cm} m\rightarrow \infty
+ \end{align}
+ in view of the fact that $ <f(\tau),\frac{1}{u}e^{\frac{-s\tau}{u}}>\psi(s,u) $ is a continuous function of $ \omega $.\\
+ Next, choose $a$ and $b$ such that $ \sigma_{1}<a<\delta<b<\sigma_{2}$ since $ f \in \mathfrak{L}(a,b)$, all that remains to be prove is that $ \Theta_{m} $ converges in $ \mathfrak{L}(a,b) $ to $ \int_{-p}^{p}<f(\tau),\frac{1}{u}e^{\frac{-s\tau}{u}}>\psi(s,u)d\omega $. So we need merely to show that, for each fixed $k$ the following quantity converges uniformly to zero on $ -\infty<\tau<\infty $.
+ \begin{align}
+ \mathfrak{A}(\tau,m)&\triangleq K_{a,b}(\tau)D_{j}^{k}[\Theta_{m}(\tau)-\int_{-p}^{p}\frac{1}{u}e^{\frac{-s\tau}{u}}\psi(s,u)d\omega ]\\
+& =(-1)^{k}K_{a,b}(\tau)\sum_{v=1}^{m}(\frac{s_{v}}{u})^{k}\frac{1}{u}e^{\frac{-s_{v}\tau}{u}}>\psi(s_{v},u)\frac{2r}{m}\\
+&-(-1)^{k}K_{a,b}(\tau)\int_{-p}^{p}(\frac{s}{u})^{k}\frac{1}{u}e^{\frac{-s\tau}{u}}\psi(s,u)d\omega
+ \end{align}
+ Now 
+ \begin{equation*}
+ \vert K_{a,b}(\tau)\frac{1}{u}e^{\frac{-s\tau}{u}}\vert = K_{a,b}(\tau) \frac{1}{u}e^{\frac{-\sigma\tau}{u}}\rightarrow 0
+ \end{equation*}
+ as $ \vert \tau \vert \rightarrow \infty $ because $a<\delta<b$. So given any $\epsilon > 0$, we choose $\tau$ so large for all $ \vert \tau \vert > T $.\\
+ $ \vert K_{a,b}(\tau)\frac{1}{u}e^{\frac{-s\tau}{u}}\vert \leq \frac{\epsilon}{3} [\int_{-p}^{p}(\frac{s}{u})^{k}\psi(s,u)d\omega]^{-1} $\\
+ Since $ \phi(t)\neq 0 $ the right hand side is finite. Now for all $ \vert \tau \vert > T $, the magnitude of the second term on the right hand side of equation (2.3.6) is bounded by $ \frac{\epsilon}{3} $. Moreover again for $ \vert \tau \vert > T $ the magnitude of the first term on the right hand side of equation (2.3.6) is given by
+ \begin{equation}
+ \frac{\epsilon}{3} [\int_{-p}^{p}(\frac{s}{u})^{k}\psi(s,u)d\omega]^{-1}\sum_{v=1}^{m}\vert (\frac{s_{v}}{u})^{k}\psi(s_{v},u) \vert \frac{2r}{m}
+ \end{equation}
+ We can choose $ m_{0} $ so large that for all $ m > m_{0} $ the last expression is less than $ \frac{2\epsilon}{3} $. Therefore for all $ \vert \tau \vert > T $ and all $ m > m_{0} $, we have\\
+ $ \vert \mathfrak{A}(\tau,m)\vert < \epsilon $\\
+ Finally $ \vert K_{a,b}(\tau)(\frac{s}{u})^{k}\psi(s,u)\frac{1}{u}e^{\frac{-s\tau}{u}} $ is a uniformly continuous function of $(\tau,\omega,u)$ on the domain $ -T \leq \tau \leq T $,$ -r \leq\omega \leq r $.\\
+ Therefore in view of equation (2.3.6) there exists an $m_{1}$ such that for all $ m>m_{1} $, $ \vert \mathfrak{A}(\tau,m)\vert < \epsilon $ on $ -T \leq \tau \leq T $ as well.\\
+ Thus for $ m > {Max}(m_{0},m_{1}) $
+ \begin{equation}
+  \vert \mathfrak{A}(\tau,m)\vert < \epsilon \hspace{0.5cm} -\infty <\tau < \infty 
+ \end{equation}
+ \end{proof}  
+ 
+ \begin{lemma}
+ Let $ a,b,\sigma $ and $r$ be real numbers with $ a<\sigma<b $. Also let $\phi \in \mathcal{D}$ then
+ \begin{equation}
+ \frac{1}{\pi u}\int_{-\infty}^{\infty}\phi(t+\tau)e^{\frac{\sigma t}{u}}\frac{sin(rt)}{t}dt
+ \end{equation}
+ converges in $\mathfrak{D}_{a,b}$ to $\phi(\tau)$ as $r\rightarrow \infty$
+ \end{lemma}
+ 
+ \begin{proof}
+ 
+ Assume that $ r > 0 $. It is a fact that $ \int_{-\infty}^{\infty}\frac{Sin(rt)}{t}dt = \pi $ \\
+ Thus our objective is to prove that for each k =0,1,2...
+ \begin{equation}
+ \mathfrak{B}_{r}(\tau)\triangleq \frac{1}{\pi}K_{a,b}(\tau) D_{\tau}^{k}\int_{-\infty}^{\infty}[\frac{1}{u}\phi(t+\tau)e^{\frac{\sigma t}{u}}-\phi(\tau)]\frac{sin(rt)}{t}dt
+ \end{equation}
+ converges uniformly to zero on $ -\infty <\tau < \infty  $ as $ r \rightarrow \infty $.\\
+ since $ \phi $ is smooth and of bounded support, we may differentiate under the integral sign
+ \begin{align*}
+ \mathfrak{B}_{r}(\tau)& = \frac{K_{a,b}(\tau)}{\pi} \int_{-\infty}^{\infty}[\frac{e^{\frac{\sigma \tau}{u}}D_{j}^{k}\phi(t+\tau)}{u}-D_{j}^{k}\phi(\tau)]\frac{sin(rt)}{t}dt\\
+ &= \frac{K_{a,b}(\tau)}{\pi} [\int_{-\infty}^{-\delta}[\frac{e^{\frac{\sigma \tau}{u}}D_{j}^{k}\phi(t+\tau)}{u}-D_{j}^{k}\phi(\tau)]\frac{sin(rt)}{t}dt \\
+ &+\int_{-\delta}^{\delta}[\frac{e^{\frac{\sigma \tau}{u}}D_{j}^{k}\phi(t+\tau)}{u}- D_{j}^{k}\phi(\tau)]\frac{sin(rt)}{t}dt\\
+ &+\int_{\delta}^{\infty}[\frac{e^{\frac{\sigma \tau}{u}}D_{j}^{k}\phi(t+\tau)}{u}-D_{j}^{k}\phi(\tau)]\frac{sin(rt)}{t}dt]\\
+ &= I_{1}+I_{2}+I_{3}
+ \end{align*}
+ Here $ I_{1},I_{2},I_{3} $ denotes the quantities obtained by integrating over the intervals $ -\infty < t < -\delta $,$ -\delta < t < \delta $,$\delta < t < \infty $ respectively where $ \delta > 0 $\\
+ Consider $ I_{2} $, the function
+ \begin{equation}
+ H(t,\tau)\triangleq K_{a,b}(\tau) t_{-1}[\frac{e^{\frac{\sigma \tau}{u}}D_{j}^{k}\phi(t+\tau)}{u}-D_{j}^{k}\phi(\tau)]
+ \end{equation}
+ is continuous function of $ (t,\tau,u) $ for all $ \tau $ and $ t\neq 0, u\neq 0 $. Moreover, since $ \phi $ is smooth then above equation tends to
+ \begin{equation}
+ K_{a,b}(\tau)[\frac{e^{\frac{\sigma t}{u}}D_{\tau}^{k}\phi(t+\tau)}{u}]_{t=0}
+\end{equation} 
+ as $ t \rightarrow \infty $\\
+Upon assigning the value (2.3.14) to $H(0,\tau)$, we obtain a function $ H(t,\tau) $ that is continuous everywhere on the $ (t,\tau) $ plane. Since $ \phi $ is of bounded support, $ H(t,\tau) $ is bounded on the domain $\lbrace (t,\tau):-\delta < t < \delta ,-\infty < \tau < \infty \rbrace$ by a constant $M$. Thus given an $ \epsilon >0 $, we can choose $ \delta $ so small that,
+ \begin{equation}
+ \vert I_{2}\vert = \vert\frac{1}{\pi}\int_{-\delta}^{\delta}H(t,\tau)sin(rt)dt\vert \leq \frac{2M\delta}{\pi} > \epsilon \hspace{0.5cm} -\infty < \tau < \infty 
+ \end{equation}
+ fix $ \delta $ in this way. Next consider $ I_{1} $ \\
+ Set $  I_{1} = J_{1}(\tau)-J_{2}(\tau) $\\
+ where $ J_{1}(\tau) = \frac{1}{\pi}\int_{-\infty}^{-\delta}K_{a,b}(\tau)\frac{e^{\frac{\sigma t}{u}}}D_{\tau}^{k}\phi(t+\tau)\frac{sin(rt)}{t}dt $ \hspace{0.5cm}  and 
+ $ J_{2}(\tau) = \frac{1}{\pi}K_{a,b}(\tau)D_{\tau}^{k}\phi(\tau)\int_{-\infty}^{-r\delta}\frac{sin(z)}{z}dz $\\
+ Since $ K_{a,b}(\tau)D_{\tau}^{k}\phi(\tau) $ is continuous and of bounded support, it is bounded on $ -\infty < \tau < \infty $. By convergence of improper integral $ \int_{-\infty}^{0}\frac{sin(z)}{z}dz $, it follows that $ J_{2} $ tends uniformly to zero on $ -\infty < \tau < \infty $ as $ r\rightarrow \infty. $\\
+ Now to show that $ J_{1} $ tends to zero, first integrate by parts and use the fact that $ \phi(\tau) $ is of bounded support to obtain \\
+ $ J_{1} = \frac{e^{\frac{-\sigma \delta}{u}}cos(r\delta)}{\pi u r\delta}K_{a,b}(\tau)D_{\tau}^{k}\phi(\tau-\delta)+\frac{1}{\pi r}\int_{-\infty}^{-\delta} cos(rt)K_{a,b}(\tau)D_{t}[\frac{e^{\frac{\sigma t}{u}}{ut}}D_{\tau}^{k}\phi(t+\tau)]dt$\\
+ The first term on right hand side tends uniformly to zero on $ -\infty < \tau < \infty $ as $ r\rightarrow \infty $ because $ \delta $ and $ \sigma $  are fixed and $ K_{a,b}(\tau)\phi(\tau-\delta) $ is bounded function of $ \tau $.\\
+ Moreover 
+ \begin{align*}
+ K_{a,b}(\tau)D_{t}[\frac{e^{\frac{\sigma t}{u}}{ut}}D_{\tau}^{k}\phi(t+\tau)]&=K_{a,b}(\tau)\frac{e^{\frac{\sigma t}{u}}}{u}(\frac{\sigma}{tu}-\frac{1}{t^{2}})D_{\tau}^{k}\phi(t+\tau)\\
+ &+K_{a,b}(\tau)\frac{e^{\frac{\sigma \tau}{u}}}{tu}D_{\tau}^{k+1}\phi(t+\tau)
+ \end{align*}
+ But for every $k, K_{a,b}(\tau)\frac{e^{\frac{\sigma t}{u}}}{u}D_{\tau}^{k}\phi(t+\tau) $ is bounded on the $ (t,\tau) $ plane. This is because $ D_{\tau}^{k}\phi(t+\tau) $ is bounded and its support contained in the strip $\lbrace(t,\tau):\vert t+\tau \vert < A\rbrace $ where $A$ is a sufficiently large number whereas $K_{a,b}(\tau)\frac{e^{\frac{\sigma t}{u}}}{u} $ is bounded on the strip by virtue of the inequality $ a <\sigma < b. $ Thus the equation () is bounded on the domain $ \lbrace  (t,\tau): -\infty < t < -\delta ,-\infty < \tau < \infty \rbrace $ by a constant $N$.\\
+ This result and the assumption that the support of $ \phi(\tau) $ is contained in the interval $-A \leq \tau \leq A$ implies that the second term on the right hand side is bounded by $\frac{2NA}{\Pi r}$ which tends to zero as $ r \rightarrow \infty $ so truly $ J_{1} $ and therefore $ I_{1} $ tends to zero on $ -\infty < \tau < \infty $ as $ r \rightarrow \infty $. A similar argument shows that $ I_{3} $ tends to zero on $ -\infty < \tau < \infty $ as $ r \rightarrow \infty $. Thus we have $ \underset{r \rightarrow \infty}{lim}\vert\mathfrak{B}_{r}(\tau)\vert\leq\epsilon $ , since $ \epsilon >0 $
+ is arbitrary, our proof is complete.
+\end{proof} 
+\lhead{\scriptsize\itshape\medskip Inversion Theorem}
+ \subsection{Inversion Theorem}
+ For every integral transform there is an inversion theorem(inverse transform)by which we can have the solution to our original problem in its original domain. In fact, the given generalized Natural transform also has its inverse generalized Natural transform, which we prove by the following theorem.
+ \begin{theorem}
+ Let $R_{f}(s,u)=\mathbb{N}[f(t)]$ for $r_{1}<Re(\frac{s}{u})<r_{2}$, let $p$ be any real variable then in the sense of convergence in $\mathcal{D}^{'}$\\
+ \begin{equation}
+ f(t)= \underset{p\rightarrow\infty}\lim \frac{1}{2\Pi i}\int_{r-ip}^{r+ip}R_{f}(s,u)e^{\frac{st}{u}}ds
+ \end{equation}
+ where $r$ is fixed number such that $r_{1}<r<r_{2}$ (s=r+i$\omega$)
+ \end{theorem}
+ \begin{proof}
+ Let $\phi \in \mathcal{D}$, let us choose two real numbers $a$ and $b$ such that $r_{1}<a<r<b<r_{2}$. To prove the theorem it is sufficient to prove that 
+ \begin{equation}
+ \underset{p\rightarrow\infty}\lim<\frac{1}{2\Pi i}\int_{r-ip}^{r+ip}R_{f}(s,u)e^{\frac{st}{u}}ds,\phi(t)>=<f(t),\phi(t)>
+ \end{equation}
+ Now the integral on $s$ is continuous function of $t$ and therefore the left hand side of above equation can be written as
+  \begin{equation}
+ \frac{1}{2\Pi}\int_{-\infty}^{\infty}\phi(t)\int_{-p}^{p}R_{f}(s,u)e^{\frac{st}{u}}d\omega dt
+ \end{equation}
+ where $s=r+i\omega $ and $p>0$\\
+ since $\phi(t)$ is of bounded support and the integrand is a continuous function of $(t,\omega$)the order of integration may be interchanged
+ \begin{equation*}
+ \frac{1}{2\Pi}\int_{-p}^{p}R_{f}(s,u)\int_{-\infty}^{\infty}\phi(t)e^{\frac{st}{u}} dt d\omega
+ \end{equation*}
+ \begin{equation*}
+ \frac{1}{2\Pi}\int_{-p}^{p}\frac{1}{u}<f(\tau),e^{\frac{-s\tau}{u}}>\int_{-\infty}^{\infty}\phi(t)e^{\frac{st}{u}} dt d\omega
+ \end{equation*}
+by using the above lemma, we have
+ \begin{equation*}
+<f(\tau),\frac{1}{2\Pi u}\int_{-p}^{p}e^{\frac{-s\tau}{u}}\int_{-\infty}^{\infty}\phi(t)e^{\frac{st}{u}} dt d\omega>
+ \end{equation*}
+The order of integration for the repeated integral here in may be changed because again $\phi(t)$ is of bounded support and the integrand is a continuous function of $(t,\omega)$ then we have
+ \begin{equation*}
+<f(\tau),\frac{1}{2\Pi u}\int_{-\infty}^{\infty}\phi(t)\int_{-p}^{p}e^{\frac{s(t-\tau)}{u}}d\omega dt>
+\end{equation*}
+ 
+\begin{equation*}
+<f(\tau),\frac{1}{\Pi u}\int_{-\infty}^{\infty}\phi(t+\tau)\frac{Sin(pt)}{t}e^{\frac{rt}{u}}dt>
+ \end{equation*}
+ But the last expression tends to $<f(t),\phi(t)>$ as $r\rightarrow \infty$ due to lemma.\\
+ Hence the proof.
+ \end{proof}
+ 
+ \lhead{\scriptsize\itshape\medskip Convolution Theorem}
+ \subsection{Convolution}
+ In mathematics convolution is a mathematical operation on two functions $f$ and $g$, producing a third function that is typically viewed as a modified version of one of the original functions, giving the area overlap between the two functions as a function of the amount that one of the original functions is translated. It has applications that include probability, statistics, computer vision, image and signal processing, electrical engineering, and differential equations.
+The convolution of $f$ and $g$ is written as $f \ast g  $, and is defined as the integral of the product of the two functions by an equation
+\begin{equation*}
+(f \ast g )(t)=\int_{0}^{t}f(a)g(t-a)da=\int_{0}^{t}f(t-a)g(a)da
+\end{equation*}
+Similarly, we can have the definition of convolution in the distributional space as follows.
+ \begin{definition}
+ For two generalized functions $f$ and $g$ in $\mathfrak{D}_{a,b}$ (a $\leq$ b) the convolution product f$\ast$g is defined by expression,
+ \begin{equation}
+ <f\ast g,\phi>\triangleq <f(t),<g(\lambda),\phi(\lambda+t)>> \hspace{0.5cm}\phi \in \mathfrak{D}_{a,b}
+ \end{equation}
+ \end{definition}
+
+\begin{theorem}
+ Let $f$ and $g$ be two generalized functions such that $R_{f}(s,u)=\mathbb{N}[f(t)]$ and $R_{g}(s,u)=\mathbb{N}[g(t)]$ then Natural transform of the convolution is given by
+ \begin{equation}
+ \mathbb{N}[f\ast g] = u R_{f}(s,u)R_{g}(s,u)
+ \end{equation}
+\end{theorem}
+\begin{proof}
+ By the definition of convolution we have
+\begin{align*}
+\mathbb{N}[f\ast g]&=\frac{1}{u}<(f\ast g)(t),e^{\frac{-st}{u}}>\\
+&=\frac{1}{u}<f(t),<g(\lambda),e^{\frac{-s(\lambda+t)}{u}}>>\\
+&=\frac{1}{u}<f(t),e^{\frac{-st}{u}}><g(\lambda),e^{\frac{-s\lambda}{u}}>\\
+&=u.<f(t),\frac{1}{u}e^{\frac{-st}{u}}><g(\lambda),\frac{1}{u}e^{\frac{-s\lambda}{u}}>\\
+&=u.R_{f}(s,u)R_{g}(s,u)
+\end{align*}
+ Hence the proof.
+ \end{proof}
+ \lhead{\scriptsize\itshape\medskip Uniqueness Theorem}
+ \section{Uniqueness Theorem}
+\begin{theorem}
+If $\mathbb{N}[f]=R_{f}(s,u)$ for $(s,u)\in \Omega_{f}$ and $\mathbb{N}[g]=R_{g}(s,u)$ for $(s,u)\in \Omega_{g}$.If $\Omega_{f}\bigcap\Omega_{g}$ is non-empty and if $R_{f}(s,u)=R_{g}(s,u)$ for $(s,u)\in \Omega_{f}\bigcap\Omega_{g}$ then $f=g$ in the sense of equality in $\mathfrak{L}^{'}(w,z)$,where the interval $w<\sigma <z$ is the intersection of $\Omega_{f}\bigcap\Omega_{g}$ with the real axis.
+\end{theorem}
+
+\begin{proof}
+$f$ and $g$ must assign the same value to each $\phi \in \mathfrak{D}$. We choose $ \sigma $ such that $ w<\sigma <z $. Then by using inversion theorem and equating $ R_{f}(\sigma+iw,u) $ to $ R_{g}(\sigma,+iw,u) $ in the equation (2.3.17), we get that
+\begin{equation}
+<f,\phi>=<g,\phi>
+\end{equation}
+Further, $ \mathfrak{D} $ is dense in $\mathfrak{L}^{'}(w,z)$, and $f$ and $g$ are both members of $\mathfrak{L}^{'}(w,z)$
+\begin{equation}
+<f,\Theta>=<g,\Theta> \hspace{0.5cm} \text{for every } \Theta \in \mathfrak{L}(w,z)
+\end{equation}
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+

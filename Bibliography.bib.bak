@@ -1,0 +1,31 @@
+@article{Reference1,
+	Abstract = {We have developed an enhanced Littrow configuration extended cavity diode laser (ECDL) that can be tuned without changing the direction of the output beam. The output of a conventional Littrow ECDL is reflected from a plane mirror fixed parallel to the tuning diffraction grating. Using a free-space Michelson wavemeter to measure the laser wavelength, we can tune the laser over a range greater than 10 nm without any alteration of alignment.},
+	Author = {C. J. Hawthorn and K. P. Weber and R. E. Scholten},
+	Journal = {Review of Scientific Instruments},
+	Month = {December},
+	Number = {12},
+	Numpages = {3},
+	Pages = {4477--4479},
+	Title = {Littrow Configuration Tunable External Cavity Diode Laser with Fixed Direction Output Beam},
+	Volume = {72},
+	Url = {http://link.aip.org/link/?RSI/72/4477/1},
+	Year = {2001}}
+
+\bibitem{1}O.P.Agrawal. \emph{Solution for a fractional diffusion-wave equation defined in a bounded domain}Nonlinear
+Dynamics,29:145-155,2002.
+\bibitem{2}O.P.Agrawal. \emph{A numerical scheme for initial compliance and creep response of a system} Mechanics Research Communication,36(4)44-451,2009.
+\bibitem{3}K.Al-Khaled and S.Momani\emph{An approximate solution for a fractional diffusion-wave equation using the decomposition method}Appl.Math.Comput.165(2):473-483,2005.
+\bibitem{5}J.M.Angulo,M.D.Ruiz-Medina, V.V.Anh,and W.Grecksch\emph{Fractional diffusion and fractional heat equation}Adv. Appl.Probability,32(4)1077-1099,2000.
+\bibitem{6}V.V.Anh and N.N.Leonenko.\emph{Scaling laws for fractional diffusion-wave equations with singular data}.Statistics and Problility Letters,48(3)239-252,2000.
+\bibitem{7}V.V.Anh and N.N.Leonenko.\emph{Spectral analysis of fractional kinetic equations with random date}Jouurnal of Statistical Physics,104(5)1349-1387,2001.
+\bibitem{11}E.Barkai, R.Metzler, and J.Klafter.\emph{From continuous time random walks to the fractional Fokker-Plank equation}Phy.Rev.E,61(1)132-138,2000.
+\bibitem{12}L.Beghin and E.Orsingher \emph{The telegraph process stopped at stable-distributed times and its connection with the fractional telegraph equation}Fractional Calculus and Applied Analysi,6(2)187-204,2003.
+\bibitem{13} D.A.Benson,S.W.Wheatcraft, and M.M.Meerschaert \emph{Application of a fractional advection-dispersion equation}Water Resource Reasearch,36(6)1403-1412,2000.
+\bibitem{18}A.Bunde and S.Havlin \emph{Fractals and Disordered Systems}Springer,Heidelberg,1991
+\bibitem{19}A.Carpinteri and F.Mainardi,editors\emph{Fractals and Fractional Calculus in Continumum Mechanics,Volume 378 of CISM Course and Lectures.}Springer-Verlag,Berlin,1997.
+\bibitem{20}C.Chen,F.Liu,and V.Anh.\emph{A Fourier method and an extrapolation technique for Stokes first problem for a heated generalized second grade fluid with fractional derivative}.J.Comp.Appl.Math.,233:777-789,2009.
+\bibitem{21}Chang-Ming Chen,F.Liu,and K.Burrage.\emph{Finite difference methods and Fourier analysis for the fractional reaction-subdiffusion equation.}Appl.Math.Comp.,198:754-769,2009.
+\bibitem{22}Chang-Ming Chen,F.Liu,I.Turner, and K.Burrage.{A Fourier method for the fractional diffusion equation describing sub-diffusion}Journal of Computational Physics,page in press,2007.
+\bibitem{24}S.Chen,F.Liu,P.Zhuang,and V.Anh\emph{Finite difference approximations for the fractional Fokker-Plank equation}Applied Mathematical Modelling,33(1)256-273,2009.
+
+\bibitem{ld}Lokenath Debnath,\emph{Recent Applications of Fractional Calculus to Science and Engineering}, IJMMS ( 2003): 54,3413-3442.

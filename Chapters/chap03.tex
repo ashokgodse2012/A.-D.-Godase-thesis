@@ -1,0 +1,1629 @@
+%
+% File: chap01.tex
+% Author: Victor F. Brena-Medina
+% Description: Introduction chapter where the biology goes.
+%
+\let\textcircled=\pgftextcircled
+\chapter{On the properties of k-Fibonacci and k-Lucas numbers}
+\label{chap:On the properties of k-Fibonacci and k-Lucas numbers}
+In this chapter, some properties of $k-$Fibonacci and $k-$Lucas sequences are derived and proved by using matrix methods. We defined matrices $S$, $M$, $M_{k}(n,m)$, $T_{k}(n)$, $S_{k}{(n,m)}$, $A_{n}$, $E$, $Y_{n}$, $W_{n}$, $G_{n}$ and $H_{n}$ for $k$-Fibonacci and $k$-Lucas sequences, using these matrices many interesting identities for $k-$Fibonacci and $k-$Lucas sequences are derived.
+\vspace{2mm}
+\let\thefootnote\relax\footnote{\textbf{\hspace{-0.78cm}The content of this chapter is published in the following papers.}}\footnotetext{\hspace{-0.78cm}Determinantal Identities for k Lucas Sequence, Journal of New Theory, 19(2018), 01-19.}
+\footnotetext{\hspace{-0.78cm}Properties of k- Fibonacci Sequence Using Matrix Method, MAYFEB Journal of Mathematics, 12(2016), 01-07.}
+\footnotetext{\hspace{-0.78cm}Summation identities for k-Fibonacci and k-Lucas numbers using matrix methods, Int. J. Adv. Appl. Math. and Mech. 5(2016), 74-80.}
+
+\section{Introduction}
+This chapter represents an interesting investigation about some special relations between matrices and $k$-Fibonacci sequences,$k$-Lucas sequences. This investigation is valuable to obtain new $k$-Fibonacci ,$k$-Lucas identities by different methods. This chapter contributes to $k$-Fibonacci,$k$-Lucas numbers literature, and encourage  to investigate the properties of such number sequences.
+The most commonly used matrix in relation to the recurrence relation of $k$-Fibonacci sequence is
+\begin{align}
+ M = {\left[
+          \begin{array}{cc}
+            k & 1 \\
+            1 & 0 \\
+          \end{array}
+        \right]},
+\end{align}
+which for $k=1$ reduces to the ordinary $Q$- matrix studied in literature of $k$-Fibonacci sequence. In next section,  we define more general matrices $M_{k}(n,m), T_{k}(n), S_{k}{(n,m)}$ for $Q$-matrix. We use these matrices to develop various summation identities involving terms from the numbers $F_{k,n}$ and $L_{k,n}$. Several identities for $F_{k,n}$ and $L_{k,n}$ are proved by many authors using Binet forms, some of these are listed below
+\begin{align*}
+&F_{k,n+1}+F_{k,n-1}= L_{k,n},\\ 
+&F_{k,n+1}+L_{k,n-1}= \Delta F_{k,n}, \\
+&F_{k,2n}-2(-1)^n= \Delta F_{k,n}^2, \\
+&F_{k,m+n}-(-1)^{m}L_{k,n-m}= F_{k,m}L_{k,n}, \\ 
+&L_{k,m+n}-(-1)^{m}L_{k,n-m}= \Delta F_{k,m}F_{k,n},\\  
+&F_{k,m+n}F_{k,n-m}-F_{k,n}^{2}= (-1)^{n-m+1}F_{k,m}^2,\\  
+&L_{k,m+n}L_{k,n-m}-L_{k,n}^{2}= (-1)^{n-m}F_{k,m}^2,\\  
+&F_{k,m+n}F_{k,r+m}-(-1)^{m}F_{k,n}F_{k,r}= F_{k,m}F_{k,n+r+m},\\ 
+&L_{k,mn}L_{k,n}+\Delta F_{k,mn}F_{k,n}= 2L_{k,(m+1)n},\\
+&F_{k,mn}L_{k,n}+L_{k,mn}F_{k,n}= 2F_{k,(m+1)n},\\
+&L_{k,m+n}^2+(-1)^{m-1}L_{k,n}^2 = \Delta F_{k,2n+m}F_{k,m},\\
+&L_{k,m+n}L_{k,n}+(-1)^{m+1}L_{k,n-m}L_{k,n} = \Delta F_{k,2n}F_{k,m},\\
+&F_{k,m+2rn}F_{k,2n+m}+(-1)^{m+1}F_{k,2rn}F_{k,2n} = F_{k,2(r+1)n+m}F_{k,m}.
+\end{align*}
+The matrix $M$ is generalized using principle of mathematical induction as 
+\begin{align*}
+ M^n = {
+          \begin{bmatrix}
+            F_{k,n+1} & F_{k,n} \\
+                       F_{k,n} & F_{k,n-1}
+          \end{bmatrix}
+       },\quad\text{where $n$ is an integer.}
+\end{align*}
+\subsection{Properties of $k$-Fibonacci and $k$-Lucas sequences using matrices}
+
+\begin{lemma} \label{3-l-1}
+If $X$ is a square matrix with $X^2=kX+I$, then $ X^{n}=F_{k,n}X+F_{k,n-1}I$, for all $n\in Z$
+\end{lemma}
+\begin{proof}
+If $n=0$ then result is obvious. If $n=1$ then
+\begin{align*}
+(X)^1&=F_{k,1}X+F_{k,0}I\\
+		 &=1X+0I\\
+		 &=X
+\end{align*}		
+Hence result is true for $n=1$. It can be shown by induction that,\\
+%\begin{center}
+$ X^{n}=F_{k,n}X+F_{k,n-1}I$, for all $n\in Z$.
+%\end{center}
+Assume that $X^{n}=F_{k,n}X+F_{k,n-1}I$ and prove that $X^{n+1}=F_{k,n+1}X+F_{k,n}I$.\\
+Consider,
+\begin{align*}
+F_{k,n+1}X+F_{k,n}I&=(kF_{k,n}+F_{k,n-1})X+F_{k,n}I\\
+									 &=(kX+I)F_{k,n}+XF_{k,n-1}\\
+									 &=X^2F_{k,n}+XF_{k,n-1}\\
+									 &=X(XF_{k,n}+F_{k,n-1})\\
+									 &=X(X^{n})\\
+									 &=X^{n+1}
+\end{align*}		
+Hence, $X^{n+1}=F_{k,n+1}X+F_{k,n}I$.
+%\begin{center}
+By first principle of Induction,\\ $X^{n}=F_{k,n}X+F_{k,n-1}I,$ for all $n\in Z$.\\
+%\end{center}
+%\begin{center}
+Next, we show that $X^{-(n)}=F_{k,-n}X+F_{k,-n-1}I$, for all $n\in Z^{+}$.
+%\end{center}
+Let $Y=kI-X,$ then $XY=-I$, i. e. $Y=-X^{-1}$, now consider
+\begin{align*}
+								Y^2&=(kI-X)^2\\
+									 &=k^2I-2kX+X^2\\
+									 &=k^2I-2kX+kX+I\\
+									 &=k^2I-kX+I\\
+									 &=k(kI-X)+X+I\\
+									 &=kY+I.
+									 \end{align*}	
+From first part, we obtain $$Y^n=F_{k,n}Y+F_{k,n-1}I,$$
+It gives that
+	\begin{align*}	
+	(-X^{-1})^n&=F_{k,n}(kI-X)+F_{k,n-1}I\\
+			 (-1)^nX^{-n}&=-F_{k,n}X+F_{k,n+1}I.
+\end{align*}	
+Since, $F_{k,-n}=(-1)^{n+1}F_{k,n}$, $F_{k,-n-1}=(-1)^{n}F_{k,n+1}$, gives $ X^{-(n)}=F_{k,-n}X+F_{k,-n-1}I,$ for all $n\in Z^{+}.$.
+\end{proof}
+\begin{corollary}
+Let, $M={
+ \begin{bmatrix}{}
+    k & 1 \\
+    1& 0 \\
+	\end{bmatrix}
+	}$,
+	then $M^n={
+ \begin{bmatrix}{}
+    F_{k,n+1} & F_{k,n}\vspace{.2cm} \\
+    F_{k,n} & F_{k,n-1} \\
+	\end{bmatrix}
+	}$.	
+\end{corollary}
+\begin{proof}
+Since $M^2 = k M+I$, therefore using lemma(\ref{3-l-1}), we have
+\begin{align*}
+							M^n & = F_{k,n}M+F_{k,n-1}I\\
+							 & = {
+ \begin{bmatrix}{}
+    kF_{k,n} & F_{k,n}\vspace{.2cm} \\
+    F_{k,n} & 0 \\
+	\end{bmatrix}
+	}+{
+ \begin{bmatrix}{}
+    F_{k,n-1} & 0\vspace{.2cm} \\
+    0 & F_{k,n-1} \\
+	\end{bmatrix}
+	}\\
+		& = {
+ \begin{bmatrix}{}
+    F_{k,n+1} & F_{k,n}\vspace{.2cm} \\
+    F_{k,n} & F_{k,n-1} \\
+	\end{bmatrix}
+	},\text{for all}\quad n\in Z.
+\end{align*}
+\end{proof}
+\begin{corollary}
+If, $S={
+ \begin{bmatrix}{}
+    \dfrac{k}{2} & \dfrac{k^2+4}{2} \vspace{.2cm}\\
+    \dfrac{1}{2}& \dfrac{k}{2} \\
+	\end{bmatrix}
+	}, $
+	then $S^n={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}$, for every $n\in Z$.	
+\end{corollary}
+\begin{proof}
+Since $$S^2=\begin{bmatrix}{}
+    \dfrac{k^2+2}{2} & \dfrac{k(k^2+4)}{2} \vspace{.2cm}\\
+    \dfrac{k}{2}& \dfrac{k^2+2}{2} \\
+	\end{bmatrix}=kS+I.$$
+	Using lemma (\ref{3-l-1}), we have
+	$$S^n=F_{k,n}S+F_{k,n-1}I.$$
+	It gives that
+	$S^n={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}$, for every $n\in Z$.
+\end{proof}
+\begin{lemma}For all $n\in Z$,
+$L^2_{k,n}-(k^2+4)F^2_{k,n}=4(-1)^n.$ 
+\end{lemma}
+\begin{proof}
+Since, $$det(S)=-1,$$
+$$det(S^n)=(-1)^n.$$
+Moreover since,
+$$S^n={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2} \vspace{.2cm}\\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}.$$
+	We get
+	$$det(S^n)=\frac{L^2_{k,n}}{4}-\frac{(k^2+4)F^2_{k,n}}{4}.$$
+Thus it follows that
+$L^2_{k,n}-(k^2+4)F^2_{k,n}=4(-1)^n$, for all $n\in Z$.
+\end{proof}
+\begin{lemma}For $n,m\in Z$ \label{3-l-2}
+\begin{align}
+2L_{k,n+m}&=L_{k,n}L_{k,m}+(k^2+4)F_{k,n}F_{k,m},\\ 
+2F_{k,n+m}&=F_{k,n}L_{k,m}+L_{k,n}F_{k,m}.
+\end{align}
+\end{lemma}
+\begin{proof}
+Since, \begin{align*}
+S^{n+m}&=S^n\cdot S^m\\
+									 &={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}}{2} & \dfrac{(k^2+4)F_{k,m}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,m}}{2} & \dfrac{L_{k,m}}{2} \\
+	\end{bmatrix}
+	}\\
+									 &={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}L_{k,m}+(k^2+4)F_{k,n}F_{k,m}}{4} & \dfrac{(k^2+4)[L_{k,n}F_{k,m}+F_{k,n}L_{k,m}}{4}\vspace{.2cm} \\
+    \dfrac{L_{k,n}F_{k,m}+F_{k,n}L_{k,m}}{4} & \dfrac{L_{k,n}L_{k,m}+(k^2+4)F_{k,n}F_{k,m}}{4} \\
+	\end{bmatrix}
+	}.
+\end{align*}		
+Also, we have
+$$S^{n+m}={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n+m}}{2} & \dfrac{(k^2+4)F_{k,n+m}}{2} \vspace{.2cm}\\
+    \dfrac{F_{k,n+m}}{2} & \dfrac{L_{k,n+m}}{2} \\
+	\end{bmatrix}
+	}.$$
+	It gives that
+\begin{align*}
+2L_{k,n+m}&=L_{k,n}L_{k,m}+(k^2+4)F_{k,n}F_{k,m},\\ 
+2F_{k,n+m}&=F_{k,n}L_{k,m}+L_{k,n}F_{k,m}, \text{for all}\quad n,m\in Z.
+\end{align*}
+\end{proof}
+\begin{lemma}For $n,m\in Z$\label{3-l-3}
+\begin{align}
+2(-1)^mL_{k,n-m}&=L_{k,n}L_{k,m}-(k^2+4)F_{k,n}F_{k,m},\\
+2(-1)^mF_{k,n-m}&=F_{k,n}L_{k,m}-L_{k,n}F_{k,m}.
+\end{align}
+\end{lemma}
+\begin{proof}
+Since
+\begin{align*}
+S^{n-m}&=S^n.S^{-m}\\
+			 &=S^n.(S^{m})^{-1}\\
+			 &=S^n.(-1)^m
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}}{2} & \dfrac{-(k^2+4)F_{k,m}}{2} \vspace{.2cm}\\
+    \dfrac{-F_{k,m}}{2} & \dfrac{L_{k,m}}{2} \\
+	\end{bmatrix}
+	\\
+	&=(-1)^m{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2} \vspace{.2cm}\\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}}{2} & \dfrac{-(k^2+4)F_{k,m}}{2}\vspace{.2cm} \\
+    \frac{-F_{k,m}}{2} & \frac{L_{k,m}}{2} \\
+	\end{bmatrix}
+	}\\								
+	&=(-1)^m{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}L_{k,m}-(k^2+4)F_{k,n}F_{k,m}}{4} & \dfrac{(k^2+4)[L_{k,n}F_{k,m}-F_{k,n}L_{k,m}}{4}\vspace{.2cm} \\
+    \dfrac{L_{k,n}F_{k,m}-F_{k,n}L_{k,m}}{4} & \dfrac{L_{k,n}L_{k,m}-(k^2+4)F_{k,n}F_{k,m}}{4} \\
+	\end{bmatrix}
+	}.
+\end{align*}		
+But, we have
+$$S^{n-m}={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n-m}}{2} & \dfrac{(k^2+4)F_{k,n-m}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n-m}}{2} & \dfrac{L_{k,n-m}}{2} \\
+	\end{bmatrix}
+	}.$$
+	It gives that
+	\begin{align*}
+	2(-1)^mL_{k,n-m}&=L_{k,n}L_{k,m}-(k^2+4)F_{k,n}F_{k,m},\\
+2(-1)^mF_{k,n-m}&=F_{k,n}L_{k,m}-L_{k,n}F_{k,m}, \text{for all}\quad n,m\in Z.
+	\end{align*}
+\end{proof}
+\begin{lemma}For all $n,m\in Z$\label{3-l-4}
+\begin{align}
+(-1)^mL_{k,n-m}+L_{k,n+m}&=L_{k,n}L_{k,m},\\
+(-1)^mF_{k,n-m}+F_{k,n+m}&=F_{k,n}L_{k,m}.
+\end{align}
+\end{lemma}
+\begin{proof}
+using definition of the matrix $S^n$, it can be seen that 
+$$S^{n+m}+(-1)^mS^{n-m}={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n+m}+(-1)^mL_{k,n-m}}{2} & \dfrac{(k^2+4)[F_{k,n+m}+(-1)^mF_{k,n-m}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n+m}+(-1)^mF_{k,n-m}}{2} & \dfrac{L_{k,n+m}+(-1)^mL_{k,n-m}}{2} \\
+	\end{bmatrix}
+	}.$$
+	On the other hand, we have
+	\begin{align*}
+	S^{n+m}+(-1)^mS^{n-m}&=S^nS^m+(-1)^mS^nS^{-m}\\
+											 &=S^n[S^m+(-1)^mS^{-m}]\\
+											 &={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2} \vspace{.2cm}\\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}\langle{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}}{2} & \dfrac{(k^2+4)F_{k,m}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,m}}{2} & \dfrac{L_{k,m}}{2} \\
+	\end{bmatrix}
+	}\\&+(-1)^m{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}}{2} & \dfrac{-(k^2+4)F_{k,m}}{2} \vspace{.2cm}\\
+    \dfrac{-F_{k,m}}{2} & \dfrac{L_{k,m}}{2} \\
+	\end{bmatrix}
+	}\rangle\\			
+					&={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n}}{2} & \dfrac{L_{k,n}}{2} \\
+	\end{bmatrix}
+	}.
+ \begin{bmatrix}{}
+    L_{k,m} & 0 \vspace{.2cm}\\
+    0 & L_{k,m} \\
+		\end{bmatrix}
+	\\
+		&={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,m}L_{k,n}}{2} & \dfrac{(k^2+4)F_{k,n}L_{k,m}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,n}L_{k,m}}{2} & \dfrac{L_{k,m}L_{k,n}}{2}\\
+	\end{bmatrix}
+	}.
+	\end{align*}
+	It gives that
+\begin{align*}
+(-1)^mL_{k,n-m}+L_{k,n+m}&=L_{k,n}L_{k,m},\\
+(-1)^mF_{k,n-m}+F_{k,n+m}&=F_{k,n}L_{k,m}, \text{for all}\quad n,m\in Z.
+\end{align*}
+\end{proof}
+\begin{lemma}For all $x,y,z\in Z$
+\begin{align}
+8F_{k,x+y+z}&=L_{k,x}L_{k,y}F_{k,z}+F_{k,x}L_{k,y}L_{k,z}+L_{k,x}F_{k,y}L_{k,z}+(k^2+4)F_{k,x}F_{k,y}F_{k,z},\\
+8L_{k,x+y+z}&=L_{k,x}L_{k,y}L_{k,z}+(k^2+4)[L_{k,x}F_{k,y}F_{k,z}+F_{k,x}L_{k,y}F_{k,z}+F_{k,x}F_{k,y}L_{k,z}.
+\end{align}
+\end{lemma}
+\begin{proof}
+Using definition of the matrix $S^n$, it can be seen that 
+$$S^{x+y+z}={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x+y+z}}{2} & \dfrac{(k^2+4)F_{k,x+y+z}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,x+y+z}}{2}& \dfrac{L_{k,x+y+z}}{2} \\
+	\end{bmatrix}
+	}.$$
+	On the other hand, we have
+	\begin{align*}
+	S^{x+y+z}&=S^{x+y}S^z\\
+ &={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x+y}}{2} & \dfrac{(k^2+4)F_{k,x+y}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,x+y}}{2} & \dfrac{L_{k,x+y}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    \frac{L_{k,z}}{2} & \frac{(k^2+4)F_{k,z}}{2}\vspace{.2cm} \\
+    \frac{F_{k,z}}{2} & \frac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	}\\
+ &={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x+y}L_{k,z}+(k^2+4)F_{k,x+y}F_{k,z}}{4} & \dfrac{(k^2+4)[L_{k,x+y}F_{k,z}+F_{k,x+y}L_{k,z}}{4}\vspace{.2cm} \\
+    \dfrac{L_{k,z}F_{k,x+y}+F_{k,z}L_{k,x+y}}{4} & \dfrac{L_{k,x+y}L_{k,z}+(k^2+4)F_{k,x+y}F_{k,z}}{4} \\
+	\end{bmatrix}
+	}
+	\end{align*}
+	Using lemma(\ref{3-l-2}),
+	$$2L_{k,x+y}=L_{k,x}L_{k,y}+(k^2+4)F_{k,x}F_{k,y}$$
+	$$2F_{k,x+y}=L_{k,y}F_{k,x}+(k^2+4)F_{k,y}L_{k,x}.$$
+We get
+\begin{align*}
+&8F_{k,x+y+z}=L_{k,x}L_{k,y}F_{k,z}+F_{k,x}L_{k,y}L_{k,z}+L_{k,x}F_{k,y}L_{k,z}+(k^2+4)F_{k,x}F_{k,y}F_{k,z},\\ 
+&8L_{k,x+y+z}=L_{k,x}L_{k,y}L_{k,z}+(k^2+4)[L_{k,x}F_{k,y}F_{k,z}+F_{k,x}L_{k,y}F_{k,z}+F_{k,x}F_{k,y}L_{k,z}, \\&\text{for all} x,y,z\in Z.
+\end{align*}
+\end{proof}
+\begin{theorem}
+For all $x,y,z\in Z$
+\begin{align*}
+&L^2_{k,x+y}-(k^2+4)(-1)^{x+y+1}F_{k,z-x}L_{k,x+y}F_{k,y+z}-(k^2+4)(-1)^{x+z}F^2_{k,y+z}\\&=(-1)^{y+z}L^2_{k,z-x}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Consider the  matrix multiplication
+ $${
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2} \vspace{.2cm}\\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    L_{k,y} \vspace{.2cm}\\
+    F_{k,y} \\
+	\end{bmatrix}
+	}={
+ \begin{bmatrix}{}
+    L_{k,x+y} \vspace{.2cm}\\
+    F_{k,y+z} \\
+	\end{bmatrix}
+	}.$$
+	Also
+		\begin{align*}
+	det.{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	}&=\dfrac{L_{k,x}L_{k,z}-(k^2+4)F_{k,x}F_{k,z}}{4}\\
+					&=\frac{(-1)^xL_{k,z-x}}{2}\\
+					&=Q\\
+					&\neq0.
+	\end{align*}
+	Hence, we can write
+	\begin{align*}
+	{
+ \begin{bmatrix}{}
+    L_{k,y} \vspace{.2cm}\\
+    F_{k,y} \\
+	\end{bmatrix}
+	}&={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	^{-1}}.{
+ \begin{bmatrix}{}
+    L_{k,x+y} \vspace{.2cm}\\
+    F_{k,y+z} \\
+	\end{bmatrix}
+	}\\
+	&=\dfrac{1}{Q}{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,z}}{2} & \dfrac{-(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{-F_{k,z}}{2} & \dfrac{L_{k,x}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    L_{k,x+y}\vspace{.2cm} \\
+    F_{k,y+z} \\
+	\end{bmatrix}
+	}.	
+	\end{align*}
+	It gives that
+	\begin{align*}
+	L_{k,y}&=\dfrac{(-1)^x[L_{k,z}L_{k,x+y}-(k^2+4)F_{k,x}F_{k,y+z}]}{L_{k,z-x}},\\
+	F_{k,y}&=\dfrac{(-1)^x[L_{k,x}F_{k,z+y}-F_{k,z}L_{k,y+x}]}{L_{k,z-x}}.
+	\end{align*}	
+Since
+$$L^2_{k,y}-(k^2+4)F^2_{k,y}=4(-1)^y.$$
+We get
+$$[L_{k,z}L_{k,x+y}-(k^2+4)F_{k,x}F_{k,y+z}]^2-(k^2+4)^2[L_{k,x}F_{k,z+y}-F_{k,z}L_{k,y+x}]^2=4(-1)^yL^2_{k,z-x}.$$
+Using lemmas(\ref{3-l-3}, \ref{3-l-4}), we get 
+\begin{align*}
+&(L^2_{k,z}L^2_{k,x+y}-2(k^2+4)L_{k,z}F_{k,x+y}F_{k,y+z}+(k^2+4)^2F^2_{k,x}F^2_{k,y+z})\\&-(k^2+4)(L^2_{k,x}F^2_{k,y+z}-2L_{k,x}F_{k,z}F_{k,y+z}L_{k,x+y}+F^2_{k,z}L^2_{k,x+y})=4(-1)^yL^2_{k,z-x}.
+\end{align*}
+It gives that
+\begin{align*}
+&L^2_{k,x+y}-(k^2+4)(-1)^{x+y+1}F_{k,z-x}L_{k,x+y}F_{k,y+z}-(k^2+4)(-1)^{x+z}F^2_{k,y+z}\\&=(-1)^{y+z}L^2_{k,z-x}, \text{for all} x,y,z\in Z.
+\end{align*}
+\end{proof}
+\begin{theorem}For all $x,y,z\in Z $, $x\neq z$
+\begin{align*}
+L^2_{k,x+y}-(-1)^{x+z}L_{k,z-x}L_{k,x+y}L_{k,y+z}+(-1)^{x+z}L^2_{k,y+z}=(-1)^{y+z+1}(k^2+4)F^2_{k,z-x}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Consider matrix multiplication
+$${
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{L_{k,z}}{2} & \dfrac{(k^2+4)F_{k,z}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    L_{k,y} \vspace{.2cm}\\
+    F_{k,y} \\
+	\end{bmatrix}
+	}={
+ \begin{bmatrix}{}
+    L_{k,x+y}\vspace{.2cm} \\
+    L_{k,y+z} \\
+	\end{bmatrix}
+	}.$$
+	Also, we have	
+	\begin{align*}
+	det{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{L_{k,z}}{2} & \dfrac{(k^2+4)F_{k,z}}{2} \\
+	\end{bmatrix}
+	}&=\dfrac{(k^2+4)(-1)^xF_{k,z-x}}{2}\\
+					&=P\\
+					&\neq0,\text{(if $x\neq z$)}.
+	\end{align*}
+	Therefore, for $x\neq z,$ we can write
+	\begin{align*}
+	{
+ \begin{bmatrix}{}
+    L_{k,y}\vspace{.2cm} \\
+    F_{k,y} \\
+	\end{bmatrix}
+	}&={
+ \begin{bmatrix}{}
+    \dfrac{L_{k,x}}{2} & \dfrac{(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{L_{k,z}}{2} & \dfrac{(k^2+4)F_{k,z}}{2} \\
+	\end{bmatrix}
+	^{-1}}.{
+ \begin{bmatrix}{}
+    L_{k,x+y}\vspace{.2cm} \\
+    L_{k,y+z} \\
+	\end{bmatrix}
+	}\\
+	&=\dfrac{1}{P}{
+ \begin{bmatrix}{}
+    \dfrac{(k^2+4)F_{k,z}}{2} & \dfrac{-(k^2+4)F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{-L_{k,z}}{2} & \dfrac{L_{k,x}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    L_{k,x+y}\vspace{.2cm} \\
+    L_{k,y+z} \\
+	\end{bmatrix}
+	}.
+	\end{align*}
+	It gives that
+	\begin{align*}
+	L_{k,y}=\dfrac{(-1)^x[F_{k,z}L_{k,x+y}-F_{k,x}L_{k,y+z}]}{F_{k,z-x}},\\
+	F_{k,y}=\dfrac{(-1)^x[L_{k,x}L_{k,z+y}-L_{k,z}L_{k,y+x}]}{(k^2+4)F_{k,z-x}}.
+	\end{align*}
+Since
+$$L^2_{k,y}-(k^2+4)F^2_{k,y}=4(-1)^y.$$
+We get
+\begin{align*}
+&(k^2+4)[F_{k,z}L_{k,x+y}-F_{k,x}L_{k,y+z}]^2-[L_{k,x}L_{k,z+y}-L_{k,z}L_{k,y+x}]^2\\&=4(k^2+4)(-1)^yF^2_{k,z-x},\\
+&L^2_{k,x+y}-(-1)^{x+z}L_{k,z-x}L_{k,x+y}L_{k,y+z}+(-1)^{x+z}L^2_{k,y+z}\\&=(-1)^{y+z+1}(k^2+4)F^2_{k,z-x}, \text{for all} x,y,z\in Z ,x\neq z.
+\end{align*}
+\end{proof}
+\begin{theorem}For all $x,y,z\in Z $, $x\neq z$
+\begin{align*}
+F^2_{k,x+y}-L_{k,x-z}F_{k,x+y}F_{k,y+z}+(-1)^{x+z}F^2_{k,y+z}=(-1)^{y+z}F^2_{k,z-x}. 
+\end{align*}
+\end{theorem}
+\begin{proof}
+Consider the matrix multiplication
+$${
+ \begin{bmatrix}{}
+    \dfrac{F_{k,x}}{2} & \dfrac{F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	}{
+ \begin{bmatrix}{}
+    L_{k,y}\vspace{.2cm} \\
+    F_{k,y} \\
+	\end{bmatrix}
+	}={
+ \begin{bmatrix}{}
+    F_{k,x+y}\vspace{.2cm} \\
+    F_{k,y+z} \\
+	\end{bmatrix}}.$$
+	Also, we have	
+	\begin{align*}
+	{
+ \begin{vmatrix}{}
+    \dfrac{F_{k,x}}{2} & \dfrac{F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{vmatrix}
+	}&=\dfrac{(-1)^zF_{k,x-z}}{2}\\
+					&=R\\
+					&\neq0, (if x\neq z).
+	\end{align*}
+	Therefore, for $x\neq z$, we get
+	\begin{align*}
+	{
+ \begin{bmatrix}{}
+    L_{k,y}\vspace{.2cm} \\
+    F_{k,y} \\
+	\end{bmatrix}
+	}&={
+ \begin{bmatrix}{}
+    \dfrac{F_{k,x}}{2} & \dfrac{F_{k,x}}{2}\vspace{.2cm} \\
+    \dfrac{F_{k,z}}{2} & \dfrac{L_{k,z}}{2} \\
+	\end{bmatrix}
+	^{-1}}.{
+ \begin{bmatrix}{}
+    F_{k,x+y}\vspace{.2cm} \\
+    F_{k,y+z} \\
+	\end{bmatrix}
+	}\\
+	&=\dfrac{1}{R}{
+ \begin{bmatrix}{}
+    \dfrac{L_{k,z}}{2} & \dfrac{-L_{k,x}}{2} \vspace{.2cm}\\
+    \dfrac{-F_{k,z}}{2} & \dfrac{F_{k,x}}{2} \\
+	\end{bmatrix}
+	}.{
+ \begin{bmatrix}{}
+    F_{k,x+y} \vspace{.2cm}\\
+    F_{k,y+z} \\
+	\end{bmatrix}
+	}.	
+	\end{align*}
+	It gives that
+	\begin{align*}
+	L_{k,y}=\frac{(-1)^z[L_{k,z}F_{k,x+y}-L_{k,x}F_{k,y+z}]}{F_{k,x-z}},\\
+	F_{k,y}=\frac{(-1)^z[F_{k,x}F_{k,z+y}-F_{k,z}F_{k,y+x}]}{F_{k,x-z}}.
+	\end{align*}
+	Now consider
+	\begin{align*}
+	[L_{k,z}F_{k,x+y}-L_{k,x}F_{k,y+z}]^2-(k^2+4)[F_{k,x}F_{k,z+y}-F_{k,z}F_{k,y+x}]^2=4(-1)^yF^2_{k,x-z}.
+	\end{align*}
+Hence, we get 
+\begin{align*}
+&F^2_{k,x+y}-L_{k,x-z}F_{k,x+y}F_{k,y+z}+(-1)^{x+z}F^2_{k,y+z}\\&=(-1)^{y+z}F^2_{k,z-x}, \text{for all} x,y,z\in Z, x\neq z.
+\end{align*}
+
+\end{proof}
+\subsection{Summation Identities for $k$-Fibonacci and $k$-Lucas numbers using matrix methods}
+In this section, we define general matrices $M_{k}(n,m)$, $T_{k,n}$ and $S_{k}{(n,m)}$ for k-Fibonacci number. Using these matrices we find some new summation properties for k-Fibonacci and k-Lucas numbers. 
+\subsubsection{{The Matrix $M_{k}(n,m)$ }}
+First we give a generalization of the matrix $M$ and use it to produce summation identities involving terms of the sequences $F_{k,n}$ and $L_{k,n}$. 
+\begin{definition}\label{a3}
+\begin{align}
+ M_{k}(n,m) =\begin{bmatrix}
+            F_{k,n+m} & (-1)^{m+1}F_{k,n}\bigskip \\
+            F_{k,n} & (-1)^{m+1}F_{k,n-m}
+          \end{bmatrix}, \quad \text{where $m$ and $n$ are integers.}
+        \end{align}
+\end{definition}
+\begin{theorem} Let $M_{k}(n,m)$ be a matrix as in (\ref{a3}) then 
+\begin{align*}
+ M_{k}(n,m)^r = F_{k,m}^{r}{
+          \begin{bmatrix}
+                     F_{k,rn+m} & (-1)^{m+1}F_{k,rn}\bigskip \\
+            F_{k,rn} & (-1)^{m+1}F_{k,rn-m} 
+          \end{bmatrix}}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+We use principle of Mathematical induction (P. M. I.). It is clear that the result is true for $r=1$. Assume that the result is true for $r$. i. e.
+\begin{align*}
+&M_{k}(n,m)^r = F_{k,m}^{r}{
+          \begin{bmatrix}
+            F_{k,rn+m} & (-1)^{m+1}F_{k,rn}\bigskip \\
+            F_{k,rn} & (-1)^{m+1}F_{k,rn-m} 
+          \end{bmatrix}
+     }.\\				
+&\text{Now consider}\\
+&M_{k}(n,m)^{r+1}= M_{k}(n,m)^{r}M_{k}(n,m),\\
+&= F_{k,m}^{r}{
+          \begin{bmatrix}
+            F_{k,rn+m} & (-1)^{m+1}F_{k,rn} \bigskip\\
+            F_{k,rn} & (-1)^{m+1}F_{k,rn-m} 
+          \end{bmatrix}
+        }\cdot {
+          \begin{bmatrix}
+            F_{k,n+m} & (-1)^{m+1}F_{k,n}\bigskip \\
+            F_{k,n} & (-1)^{m+1}F_{k,n-m} 
+          \end{bmatrix}
+        },\\
+& = F_{k,m}^{r}{
+          \begin{bmatrix}
+F_{k,rn+m}F_{k,n+m}+(-1)^{m+1}F_{k,rn}F_{k,n} & (-1)^{m+1}F_{k,rn+m}F_{k,n}+F_{k,rn}F_{k,n-m} \bigskip\\
+F_{k,rn}F_{k,n+m}+(-1)^{m+1}F_{k,rn-m}F_{k,n} & (-1)^{m+1}F_{k,rn}F_{k,n}+F_{k,rn-m}F_{k,n-m} 
+\end{bmatrix}
+},\\
+&= F_{k,m}^{r+1}{
+          \begin{bmatrix}
+            F_{k,(r+1)n+m} & (-1)^{m+1}F_{k,(r+1)n} \bigskip\\
+            F_{k,(r+1)n} & (-1)^{m+1}F_{k,(r+1)n-m} 
+          \end{bmatrix}
+        }.
+\end{align*}				
+Hence proof.
+\end{proof}	
+\begin{align*}	
+&\text{We find that characteristic equation of $M_{k}(n,m)$ is}\quad
+	\lambda^2-F_{k,m}F_{k,n}\lambda+(-1)^nF_{k,m}^2=0,\\	
+	&\text{and by Cauchy-Hamilton theorem}\quad
+	M_{k}(n,m)^2-F_{k,m}F_{k,n}M_{k}(n,m)+(-1)^nF_{k,m}^2I=0.\\
+	&\text{Multiplying both sides of equation (25) by $M_{k}(n,m)^{t}$ gives}\\
+&(F_{k,m}F_{k,n}M_{k}(n,m)-(-1)^nF_{k,m}^2I)^rM_{k}(n,m)^t
+	=M_{k}(n,m)^{2r+t},\\
+ &\text{and expanding gives} 
+	\quad\sum_{i=0}^{i=r}\left(^{r} _{i} \right)(-1)^{(r-1)(n+1)}F_{k,m}^{2r-1}F_{k,n}^{i}M_{k}(n,m)^{i+t}=M_{k}(n,m)^{2r+t}.\\	
+&\text{Using (18) to equate upper left entries gives}\\
+&\sum_{i=0}^{i=r}\left(^{r} _{i} \right)(-1)^{(r-1)(n+1)}L_{k,n}^{i}F_{k,(i+t)n+m}=F_{k,(2r+t)n+m}.\\	
+&\text{In similar way, we can obtain}\\
+&\sum_{i=0}^{i=r}\left(^{r} _{i} \right)(-1)^{n(r-i)}F_{k,2in+m}=L_{k,n}^rF_{k,rn+m},\\
+	&\sum_{i=0}^{i=2r}\left(^{2r} _{i} \right)(-1)^{2nr-i(n-1)}F_{k,2in+m}=\Delta^rF_{k,n}^{2r}F_{k,2rn+m},\\	
+&\sum_{i=0}^{i=2r+1}\left(^{2r+1} _{i} \right)(-1)^{n(2r-i+1)+i+1}F_{k,2in+m}= \Delta^rF_{k,n}^{2r+1}L_{k,(2r+1)n+m},\\
+&\sum_{i=0}^{i=2r}\left(^{2r} _{i} \right)(-1)^{i}2^iL_{k,n}^{2r-i}F_{k,in+m}=\Delta^rF_{k,n}^{2r}F_{k,m}.
+\end{align*}	
+\subsubsection{{The Matrix $T_{k,n}$ }}
+We now give another generalization of the matrix $M$ and use it to produce summation identities involving terms of the sequences $F_{k,n}$ and $L_{k,n}$. 
+\begin{definition}\label{a4}
+\begin{align}
+ T_{k,n} = {\begin{bmatrix}
+            L_{k,n} & F_{k,n}\bigskip \\
+            \Delta F_{k,n} & L_{k,n} 
+          \end{bmatrix}
+     }, \quad \text{where  $n$ is an integer.}
+\end{align}
+\end{definition}
+\begin{theorem} Let $T_{k,n}$ be a matrix as in (\ref{a4}) then 
+\begin{align}
+ T_{k,n}^m = 2^{m-1}{
+          \begin{bmatrix}
+            L_{k,nm} & F_{k,nm} \bigskip\\
+            \Delta F_{k,nm} & L_{k,nm} 
+          \end{bmatrix}
+        }.
+\end{align}
+\end{theorem}
+\begin{proof}:
+We use principle of Mathematical induction on $m$. It is clear that the result is true for $m=1$. Assume that the result is true for $m$.
+\begin{align*}
+&T_{k,n}^m = 2^{m-1}{
+          \begin{bmatrix}
+            L_{k,nm} & F_{k,nm}\bigskip \\
+            \Delta F_{k,nm} & L_{k,nm} 
+          \end{bmatrix}
+        }.\\
+&\text{Now consider}\\
+&T_{k,n}^{m+1}=T_{k,n}^mT_{k,n}=2^{m-1}{
+          \begin{bmatrix}
+            L_{k,nm} & F_{k,nm}\bigskip \\
+            \Delta F_{k,nm} & L_{k,nm} 
+          \end{bmatrix}
+        }\cdot {
+          \begin{bmatrix}
+            L_{k,n} & F_{k,n} \bigskip\\
+            \Delta F_{k,n} & L_{k,n} 
+          \end{bmatrix}
+        }\\
+        &=2^{m-1}{
+          \begin{bmatrix}
+            L_{k,mn}L_{k,n}+\Delta F_{k,nm}F_{k,n} & L_{k,mn}F_{k,n}+F_{k,mn}L_{k,n}\bigskip \\
+						\Delta (L_{k,mn}F_{k,n}+\\F_{k,mn}L_{k,n}) & L_{k,mn}L_{k,n}+\Delta F_{k,nm}F_{k,n} 
+					 \end{bmatrix}
+						}\\			
+					&= 2^m{
+          \begin{bmatrix}
+            L_{k,n(m+1)} & F_{k,n(m+1)}\bigskip \\
+            \Delta F_{k,n(m+1)} & L_{k,n(m+1)} 
+          \end{bmatrix}
+        }.
+        \end{align*}
+Hence proof.
+\end{proof}	
+\noindent The characteristic equation of $T_{k,n}$ is
+	\begin{align*}
+	\lambda^2-2L_{k,n}\lambda+4(-1)^n=0.
+	\end{align*}
+	By Cauchy-Hamilton theorem
+	\begin{align*}
+	T_{k,n}^2-2L_{k,n}T_{k,n}+4(-1)^nI=0.
+	\end{align*}
+It gives that
+\begin{align*}
+ T_{k,n}^mT_{k,t} = 2^{m}{\left[
+          \begin{array}{cc}
+            L_{k,nm+t} & F_{k,nm+t}\bigskip \\
+            \Delta F_{k,nm+t} & L_{k,nm+t} 
+          \end{array}
+        \right]}.
+\end{align*}
+Consider the case $n=1$,
+\begin{align}
+	T_{k,1}^m=2^{m-1}(F_{k,m}T_{k,1}+2F_{k,m-1}I, \quad \text{where $m\geq 2$.}
+	\end{align}
+It produces
+\begin{align}
+	\sum_{i=0}^{i=r}\left(^{r} _{i} \right)F_{k,n-1}^{r-i}F_{k,n}^iF_{k,i+s+t}	=F_{k,nr+s+t}.	
+\end{align}
+The methods applied to $M_{k}(n,m)$ in previous section when applied to $T_{k,n}$ produce most of the summation identities that we have obtained so far.
+\subsubsection{{The Matrix $S_{k}(n,m)$} }
+We now give one more generalization of the matrix $M$ and use it to produce summation identities involving terms of the sequences $F_{k,n}$ and $L_{k,n}$. 
+\begin{definition}
+\begin{align}\label{sknm}
+ S_{k}(n,m) = {\begin{bmatrix}
+            L_{k,n+m} & (-1)^{m+1}L_{k,n} \bigskip\\
+            L_{k,n} & (-1)^{m+1}L_{k,n-m} 
+          \end{bmatrix}
+        }, \quad \text{where  $n$, $m$ are integers.}
+\end{align}
+\end{definition}
+\begin{theorem} Let $S_{k}(n,m)$ be a matrix as in (\ref{sknm}) then for all integer $r$ 
+\begin{align*}
+ &S_{k}(n,m)^{2r}= F_{k,m}^{2r-1}\Delta^r{
+          \begin{bmatrix}
+            F_{k,2rn+m} & (-1)^{m+1}F_{k,2rn}\bigskip \\
+            F_{k,2rn} & (-1)^{m+1}F_{k,2rn-m} 
+          \end{bmatrix}
+      },\\&S_{k}(n,m)^{2r-1}= F_{k,m}^{2r-2}\Delta^{r-1}{\
+          \begin{bmatrix}
+            L_{k,2(r-1)n+m} & (-1)^{m+1}L_{k,2(r-1)n} \bigskip\\
+            L_{k,2(r-1)n} & (-1)^{m+1}L_{k,2(r-1)n-m} 
+          \end{bmatrix}
+      }.
+    \end{align*}    
+\end{theorem}
+\begin{proof}
+Using Principle of Mathematical induction, for $r=1$. 
+\begin{align*}
+&S_{k}(n,m)^2= {
+          \begin{bmatrix}
+            L_{k,n+m} & (-1)^{m+1}L_{k,n} \bigskip\\
+            L_{k,n} & (-1)^{m+1}L_{k,n-m} 
+          \end{bmatrix}
+     }\cdot {
+          \begin{bmatrix}
+            L_{k,n+m} & (-1)^{m+1}L_{k,n}\bigskip \\
+            L_{k,n} & (-1)^{m+1}L_{k,n-m} 
+          \end{bmatrix}
+        }\\&={
+          \begin{bmatrix}
+            L_{k,n+m}^2\\+(-1)^{m+1}L_{k,n}^2 & (-1)^{m+1}L_{k,n+m}L_{k,n}+L_{k,n}L_{k,n-m} \bigskip\\
+            L_{k,n+m}L_{k,n}\\+(-1)^{m+1}L_{k,n}L_{k,n-m} & (-1)^{m+1}L_{k,n+m}^2+L_{k,n}^2 
+          \end{bmatrix}
+        }\\&=F_{k,m}\Delta {
+          \begin{bmatrix}
+            F_{k,2n+m} & (-1)^{m+1}F_{k,2n}\bigskip \\
+            F_{k,2n} & (-1)^{m+1}F_{k,2n-m} 
+          \end{bmatrix}
+        }.\\
+        &\text{The result is true for $r=1$. Assume that the result is true for $r$ (IH)}.\\
+&S_{k}(n,m)^{2r} = F_{k,m}^{2r-1}\Delta^r{
+          \begin{bmatrix}
+            F_{k,2rn+m} & (-1)^{m+1}F_{k,2rn}\bigskip \\
+            F_{k,2rn} & (-1)^{m+1}F_{k,2rn-m} 
+          \end{bmatrix}
+       }.\\
+&\text{Now consider}\\
+&S_{k}(n,m)^{2r+2}=S_{k}(n,m)^{2r}S_{k}(n,m)^2\\&= F_{k,m}^{2r-1}\Delta^r{
+          \begin{bmatrix}
+            F_{k,2rn+m} & (-1)^{m+1}F_{k,2rn} \bigskip\\
+            F_{k,2rn} & (-1)^{m+1}F_{k,2rn-m} 
+          \end{bmatrix}
+       }\cdot F_{k,m}\Delta {\
+          \begin{bmatrix}
+            F_{k,2n+m} & (-1)^{m+1}F_{k,2n}\bigskip \\
+            F_{k,2n} & (-1)^{m+1}F_{k,2n-m} 
+          \end{bmatrix}
+        }\\&= F_{k,m}^{2r}\Delta^{r+1}
+				\cdot{
+          \begin{bmatrix}
+            F_{k,2rn+m}F_{k,2n+m}\\+(-1)^{m+1}F_{k,2rn}F_{k,2n} & (-1)^{m+1}F_{k,2rn+m}F_{k,2n}\\&+F_{k,2rn}F_{k,2rn-m}\bigskip \\
+						F_{k,2rn}F_{k,2n+m}\\+(-1)^{m+1}F_{k,2rn-m}F_{k,2n} & (-1)^{m+1}F_{k,2rn}F_{k,2n}\\&+F_{k,2rn-m}F_{k,2n-m} 
+					 \end{bmatrix}
+						}\\
+&=F_{k,m}^{2r+1}\Delta^{r+1}{
+          \begin{bmatrix}
+            F_{k,2(r+1)n+m} & (-1)^{m+1}F_{k,2(r+1)n}\bigskip \\
+            F_{k,2(r+1)n} & (-1)^{m+1}F_{k,2(r+1)n-m} 
+          \end{bmatrix}
+        }.
+        \end{align*}
+Hence proof.
+\end{proof}
+\noindent The characteristic equation of $S_{k}(n,m)$ is
+	\begin{align*}
+	&\lambda^2-\Delta F_{k,n}F_{k,m}\lambda-\Delta (-1)^nF_{k,n}^2=0\quad\text{and by Cauchy-Hamilton theorem}\\
+		&S_{k}(n,m)^2-\Delta F_{k,n}F_{k,m}S_{k}(n,m)-\Delta (-1)^nF_{k,n}^2I=0.\\
+&\text{Manipulating above equation gives}\\
+		&\Delta F_{k,m}(F_{k,n}S_{k}(n,m)+ (-1)^nF_{k,m}I)=S_{k}(n,m)^2,\\
+		&	(2S_{k}(n,m)-\Delta F_{k,n}F_{k,m}I)=\Delta F_{k,m}^2L_{k,n}^2.\\
+	&\therefore\quad	\Delta^rF_{k,m}^r(F_{k,n}S_{k}(n,m)+(-1)^nF_{k,m}I)^r=S_{k}(n,m)^{2r},\\
+	&(2S_{k}(n,m)-\Delta F_{k,n}F_{k,m}I)^{2r}=\Delta^r F_{k,m}^{2r}L_{k,n}^{2r}I,\\	
+&(2S_{k}(n,m)-\Delta F_{k,n}F_{k,m}I)^{2r+1}=\Delta^r F_{k,m}^{2r}L_{k,n}^{2r}(2S_{k}(n,m)-\Delta F_{k,n}F_{k,m}I).
+\end{align*}
+Now expanding previous four equations and equating upper left entries of the relevant matrices gives respectively to
+\begin{align*}
+&\sum_{i=0,i-even}^{i=r}\left(^{r} _{i}\right)(-1)^{n(r-i)+1}\Delta^{\frac{i-1}{2}}F_{k,n}^{i}L_{k,in+m}+\sum_{i=0,i-odd}^{i=r}\left(^{r}_{i}\right)(-1)^{n(r-i)}\Delta^{\frac{i}{2}}F_{k,n}^{i}F_{k,in+m}\\
+&=F_{k,2nr+m}\sum_{i=0,i-even}^{i=2r}\left(^{2r} _{i}\right)2^i\Delta^{\frac{2r-i}{2}}F_{k,n}^{2r-i}F_{k,in+m}\\&-\sum_{i=0,i-odd}^{i=2r-1}\left(^{2r}_{i}\right)2^i\Delta^{\frac{2r-1-i}{2}}F_{k,n}^{2r-i}L_{k,in+m}\\
+&=L_{k,n}^{2r}F_{k,m}\sum_{i=0,i-odd}^{i=2r+1}\left(^{2r+1} _{i}\right)2^i\Delta^{\frac{2r+3-i}{2}}F_{k,n}^{2r+1-i}F_{k,in+m}\\&-\sum_{i=0,i-even}^{i=2r-1}\left(^{2r+1}_{i}\right)2^i\Delta^{\frac{2r+2-i}{2}}F_{k,n}^{2r+1-i}L_{k,in+m}\\
+&=\Delta L_{k,n}^{2r+1}F_{k,m}.
+\end{align*}
+\begin{theorem} Let $S_{k}(n,m)$ be a matrix as in (\ref{sknm}) then for all integer $r$ 
+\begin{align*}
+S_{k}(n,m)^{2r} = F_{k,m}^{2r-1}\Delta^r{\left[
+          \begin{array}{cc}
+           \bigskip
+            F_{k,2rn+m} & (-1)^{m+1}F_{k,2rn} \\
+             \bigskip
+            F_{k,2rn} & (-1)^{m+1}F_{k,2rn-m} \\
+          \end{array}
+        \right]}\\
+  S_{k}(n,m)^{2r-1} = F_{k,m}^{2r-2}\Delta^{r-1}{\left[
+          \begin{array}{cc}
+           \bigskip
+            L_{k,2(r-1)n+m} & (-1)^{m+1}L_{k,2(r-1)n} \\
+             \bigskip
+            L_{k,2(r-1)n} & (-1)^{m+1}L_{k,2(r-1)n-m} \\
+          \end{array}
+        \right]}
+\end{align*}
+\end{theorem}
+\begin{theorem}
+For $n, m, r \geq 1 $, we have
+\begin{align*}
+&\sum_{i=0,i-even}^{i=r}\left(^{r} _{i}\right)(-1)^{n(r-i)+1}\Delta^{\frac{i-1}{2}}F_{k,n}^{i}L_{k,in+m}+\sum_{i=0,i-odd}^{i=r}\left(^{r}_{i}\right)(-1)^{n(r-i)}\Delta^{\frac{i}{2}}F_{k,n}^{i}F_{k,in+m}\\&= F_{k,2nr+m},\\	
+&\sum_{i=0,i-even}^{i=2r}\left(^{2r} _{i}\right)2^i\Delta^{\frac{2r-i}{2}}F_{k,n}^{2r-i}F_{k,in+m}-\sum_{i=0,i-odd}^{i=2r-1}\left(^{2r}_{i}\right)2^i\Delta^{\frac{2r-1-i}{2}}F_{k,n}^{2r-i}L_{k,in+m}\\&= L_{k,n}^{2r}F_{k,m},\\
+&\sum_{i=0,i-odd}^{i=2r+1}\left(^{2r+1} _{i}\right)2^i\Delta^{\frac{2r+3-i}{2}}F_{k,n}^{2r+1-i}F_{k,in+m}\\&-\sum_{i=0,i-even}^{i=2r-1}\left(^{2r+1}_{i}\right)2^i\Delta^{\frac{2r+2-i}{2}}F_{k,n}^{2r+1-i}L_{k,in+m} = \Delta L_{k,n}^{2r+1}F_{k,m}.	
+\end{align*}	
+\end{theorem}
+\begin{definition}\label{a1}
+Define $3 \times 3$ matrix $A$ as 
+\begin{align*}
+A  = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            k^2+1 & k^2+1& -1 \\
+             \bigskip
+            1 & 0 & 0 \\
+             \bigskip
+            0 & 1 &0\\
+          \end{array}
+        \right]}.
+\end{align*}
+\end{definition}
+\begin{definition}\label{a2}
+Define $3 \times 3$ matrix $ A_{n}$ as 
+\begin{align*}
+ A_{n}  = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \sum_{i=0}^{i=n+1}F_{k,i}^2 & F_{k,n}F_{k,n+2}& - \sum_{i=0}^{i=n}F_{k,i}^2 \\
+            \bigskip
+            \sum_{i=0}^{i=n}F_{k,i}^2 & F_{k,n-1} F_{k,n+1} & - \sum_{i=0}^{i=n-1}F_{k,i}^2 \\
+             \bigskip
+            \sum_{i=0}^{i=n-1}F_{k,i}^2 & F_{k,n-2}F_{k,n} &- \sum_{i=0}^{i=n-2}F_{k,i}^2
+              \end{array}
+        \right]}.
+\end{align*}
+\end{definition}
+where  $n,k$ are integers.
+\begin{theorem} Let the matrices $A$ and $A_{n}$ have the form (\ref{a1}) and (\ref{a2}), respectively. Then for all integer $n > 1$, we have
+\begin{align*}
+  A^n = A_{n}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using principal of Mathematical induction on $n$. If $n = 2$, then
+\begin{align*}
+A^2 &= {\left[
+          \begin{array}{ccc}
+           \bigskip
+            k^4 + 3k^2+1 & k^2(k^2+2)& -k^2 -1 \\
+             \bigskip
+            k^2 + 1 & k^2 + 1 & -1 \\
+             \bigskip
+            1 & 0 &0\\
+          \end{array}
+        \right]}\\
+        \bigskip
+        &= {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \sum_{i=0}^{i=3}F_{k,i}^2 & F_{k,2}F_{k,4}& - \sum_{i=0}^{i=2}F_{k,i}^2 \\
+            \bigskip
+            \sum_{i=0}^{i=2}F_{k,i}^2 & F_{k,1} F_{k,3} & - \sum_{i=0}^{i=1}F_{k,i}^2 \\
+             \bigskip
+            \sum_{i=0}^{i= 1}F_{k,i}^2 & F_{k,0}F_{k,2} &- \sum_{i=0}^{i=0}F_{k,i}^2\\
+          \end{array}
+        \right]}\\
+        \bigskip
+        &=A_{2}.                                                                
+\end{align*}
+Hence result is true for $n = 2$, now suppose that the result is true for $n, (n > 2)$.
+\begin{align*}
+A^n = A_{n}.
+\end{align*}
+Now consider
+\begin{align*}
+A^{n+1} & =  A^n A\\
+& =  {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \sum_{i=0}^{i=n+1}F_{k,i}^2 & F_{k,n}F_{k,n+2}& - \sum_{i=0}^{i=n}F_{k,i}^2 \\
+            \bigskip
+            \sum_{i=0}^{i=n}F_{k,i}^2 & F_{k,n-1} F_{k,n+1} & - \sum_{i=0}^{i=n-1}F_{k,i}^2 \\
+             \bigskip
+            \sum_{i=0}^{i=n-1}F_{k,i}^2 & F_{k,n-2}F_{k,n} &- \sum_{i=0}^{i=n-2}F_{k,i}^2\\
+          \end{array}
+        \right]} {\left[
+          \begin{array}{ccc}
+           \bigskip
+            k^2+1 & k^2+1& -1 \\
+             \bigskip
+            1 & 0 & 0 \\
+             \bigskip
+            0 & 1 &0\\
+          \end{array}
+        \right]}\\
+         \bigskip
+        & = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            (k^2+1)\sum_{i=0}^{i=n+1}F_{k,i}^2+F_{k,n}F_{k,n+2} & (k^+1)\sum_{i=0}^{i=n+1}F_{k,i}^2 - \sum_{i=0}^{i=n}F_{k,i}^2& - \sum_{i=0}^{i=n+1}F_{k,i}^2 \\
+            \bigskip
+            (k^2+1)\sum_{i=0}^{i=n}F_{k,i}^2+F_{k,n -1}F_{k,n+1} & (k^+1)\sum_{i=0}^{i=n}F_{k,i}^2 - \sum_{i=0}^{i=n-1}F_{k,i}^2& - \sum_{i=0}^{i=n}F_{k,i}^2 \\
+             \bigskip
+            (k^2+1)\sum_{i=0}^{i=n-1}F_{k,i}^2+F_{k,n-2}F_{k,n} & (k^+1)\sum_{i=0}^{i=n-1}F_{k,i}^2 - \sum_{i=0}^{i=n-2}F_{k,i}^2& - \sum_{i=0}^{i=n-1}F_{k,i}^2 \\
+          \end{array}
+        \right]}.
+\end{align*}
+Using 
+\begin{align*}
+&(k^2 +1) F_{k,n} F_{k, n+1} + k F_{k, n-1} F_{k, n+1}= k \sum_{i=0}^{i=n+1}F_{k,i}^2, \\
+  &(k^2 +1) F_{k,n} F_{k, n+1} -  F_{k, n-1} F_{k, n}=k F_{k,n} F_{k, n+2}.
+\end{align*}
+\begin{align*}
+A^{n+1} & =   {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \sum_{i=0}^{i=n+2}F_{k,i}^2 & F_{k,n+1}F_{k,n+3}& - \sum_{i=0}^{i=n+1}F_{k,i}^2 \\
+            \bigskip
+            \sum_{i=0}^{i=n+1}F_{k,i}^2 & F_{k,n} F_{k,n+2} & - \sum_{i=0}^{i=n}F_{k,i}^2 \\
+             \bigskip
+            \sum_{i=0}^{i=n}F_{k,i}^2 & F_{k,n-1}F_{k,n+1} &- \sum_{i=0}^{i=n-1}F_{k,i}^2\\
+          \end{array}
+        \right]}\\
+        & =  A_{n+1}.
+        \end{align*}
+\end{proof}
+Let the matrix $A$ have the form (\ref{a1}) then
+\begin{align*}
+A^n = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \dfrac{F_{k,n+1} F_{k, n+2}}{k} & F_{k,n}F_{k, n+2}& - \dfrac{F_{k,n} F_{k, n+1}}{k} \\
+             \bigskip
+           \dfrac{F_{k,n} F_{k, n+1}}{k} & F_{k,n-1}F_{k, n+1}& - \dfrac{F_{k,n-1} F_{k, n}}{k} \\
+             \bigskip
+           \dfrac{F_{k,n-1} F_{k, n}}{k} & F_{k,n-2}F_{k, n}& - \dfrac{F_{k,n-2} F_{k, n-1}}{k} \\
+          \end{array}
+        \right]}.
+\end{align*}
+With $det (A)= -1$. The characteristic equation of the matrix $A$ is  
+\begin{align*}
+\lambda^3 + (-k^2-1)\lambda^2+(-k^2-1)\lambda +1 = 0.
+\end{align*}
+Thus the eigenvalues of the matrix $A$ are 
+\begin{align*}
+\lambda_1 & = & \dfrac{1}{2} k^2 + \dfrac{1}{2} k\sqrt{\Delta}+1,\\
+\lambda_2 & = & \dfrac{11}{2} k^2 - \dfrac{1}{2} k\sqrt{\Delta}+1,\\
+\lambda_3& = & -1.
+\end{align*}
+We can easily obtain
+\begin{align*}
+\lambda_1 & = & r_1^2,\\
+\lambda_2 & = & r_2^2.
+\end{align*}
+\begin{definition}
+Define the $3\times 3$ matrix $B$ as follows
+\begin{align*}
+B = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \lambda_1^2 & \lambda_2^2& \lambda_3^2 \\
+             \bigskip
+            \lambda_1 & \lambda_2 & \lambda_3 \\
+             \bigskip
+            1 & 1 &1\\
+          \end{array}
+        \right]},
+\end{align*}
+\end{definition}
+\begin{align*}
+det B = k(\Delta)^{\frac{3}{2}}.
+\end{align*}
+Let
+\begin{align*}
+C = B^T = {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \lambda_1^2 & \lambda_1& 1 \\
+             \bigskip
+            \lambda_2^2 & \lambda_2 & 1 \\
+             \bigskip
+            \lambda_3^2 & \lambda_3 &1\\
+          \end{array}
+        \right]}
+\end{align*}
+and
+\begin{align*}
+D_i = {\left[
+          \begin{array}{c}
+           \bigskip
+            \lambda_1^{n-i+3}  \\
+             \bigskip
+            \lambda_2^{n-i+3} \\
+             \bigskip
+            \lambda_3^{n-i+3} \\
+          \end{array}
+        \right]}.
+\end{align*}
+\begin{theorem}
+Let the matrix $A_n = (a_{i,j})$ have the form (\ref{a2}). Then for all $i, j$ such that $1 \leq i, j \leq 3$, we have
+\begin{align*}
+a_{i,j} = \dfrac{det(C_j^{(i)})}{det (C)}.
+\end{align*}
+\end{theorem}
+\begin{definition}\label{a5}
+Define $4 \times 4$ matrix $E$ as follows
+\begin{align*}
+E = {\left[
+          \begin{array}{cccc}
+           \bigskip
+            1 & 0&0 & 0 \\
+             \bigskip
+            1 & k^2 + 1 & k^2 + 1 & -1 \\
+             \bigskip
+            0 & 1 & 0 &0\\
+            \bigskip
+            0 & 0 & 1 & 0\\
+          \end{array}
+        \right]}.
+\end{align*}
+where  $n$, $k$ are integers.
+\end{definition}
+\begin{theorem}
+Let the matrix $E$ as in (\ref{a5}), then for $n > 2$
+\begin{align*}
+E^n = {\left[
+          \begin{array}{cccc}
+           \bigskip
+            1 & 0&0 & 0 \\
+             \bigskip
+            \dfrac{1}{k}\sum_{i=0}^{i=n}F_{k,i}F_{k,i+1} & \dfrac{F_{k,n+1}F_{k,n+2}}{k}  & F_{k,n}F_{k,n+2} & -\dfrac{F_{k,n}F_{k,n+1}}{k} \\
+             \bigskip
+            \dfrac{1}{k}\sum_{i=0}^{i=n-1}F_{k,i}F_{k,i+1} & \dfrac{F_{k,n}F_{k,n+1}}{k} & F_{k,n-1}F_{k,n+1} &-\dfrac{F_{k,n-1}F_{k,n}}{k}\\
+            \bigskip
+            \dfrac{1}{k}\sum_{i=0}^{i=n-2}F_{k,i}F_{k,i+1} & \dfrac{F_{k,n-1}F_{k,n}}{k}  & F_{k,n-2}F_{k,n} & -\dfrac{F_{k,n-2}F_{k,n-1}}{k}\\
+          \end{array}
+        \right]}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Theorem can easily proved by using Mathematical induction on $n$.
+\end{proof}
+\begin{theorem}
+For $n > 0$, we have 
+\begin{equation}
+\sum_{i=0}^{i=n}F_{k,i}F_{k,i+1} = \dfrac{F_{k,n+1}^2+ F_{k,n}F_{k,n+2}-1}{2 k^2}.
+\end{equation}
+\end{theorem}
+\begin{definition}
+Define $4 \times 4$ matrix 
+\begin{align*}
+Y_n = {\left[
+          \begin{array}{cccc}
+           \bigskip
+            F_{k,n}^2 & -F_{k,n}F_{k,n+3} & F_{k,n+3}^2& F_{k,n}F_{k,n+3} \\
+             \bigskip
+            -F_{k,n}F_{k,n+3}  & F_{k,n+3}^2 & F_{k,n+3}F_{k,n} & F_{k,n}^2 \\
+             \bigskip
+            F_{k,n+3}^2 & F_{k,n}F_{k,n+3} & F_{k,n}^2& -F_{k,n}F_{k,n+3} \\
+            \bigskip
+            F_{k,n}F_{k,n+3}  & F_{k,n}^2 & - F_{k,n} F_{k,n+3}& F_{k,n+3}^2 \\
+       \end{array}
+        \right]}
+\end{align*}
+Where $n, k$ are integers.
+\end{definition}
+\begin{theorem}
+For any positive integer $n$, we have
+\begin{align*}
+det (Y_n) = -\left[ F_{k,n}^2 + F_{k,n+3}^2\right]^4.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Let
+\begin{align*}
+x= F_{k, n},\\
+y = F_{k, n+3}.
+\end{align*}
+It gives that 
+\begin{align*}
+det (Y_n) = \begin{vmatrix}
+               \bigskip
+           x^2 & -xy & y^2& xy \\
+             \bigskip
+            -xy  & y^2 & xy & x^2 \\
+             \bigskip
+            y^2 & xy & x^2& -xy \\
+            \bigskip
+            xy  & x^2 & - xy& y^2 \\
+       \end{vmatrix}.
+\end{align*}
+By interchanging $C_2$ and $C_4$, $C_3$ and $C_4$, $R_3$ and $R_4$, changing the sign of $C_3$ and $R_4$, we get 
+\begin{align*}
+det (Y_n)= - \begin{vmatrix}
+           \bigskip
+           x^2 & xy & xy& y^2 \\
+             \bigskip
+            -xy  & x^2 & -y^2 & xy \\
+             \bigskip
+            xy &y^2 & -x^2& -xy \\
+            \bigskip
+            -y^2  & xy & xy & -x^2 \\
+      \end{vmatrix}\\
+    = - \left( x^2 + y^2\right)^4 .   
+ \end{align*}
+Finally theorem follows
+\begin{align*}
+det (Y_n) = -\left[ F_{k,n}^2 + F_{k,n+3}^2\right]^4.
+\end{align*}
+\end{proof}
+\begin{definition}\label{a6}
+Define $5 \times 5$ matrix 
+\begin{align*}
+\begin{footnotesize}
+W_n = \begin{bmatrix}
+           \bigskip
+            F_{k,n}F_{k,n+2}+k^2 F_{k,n+1}^2 & F_{k,n}^2& k^2 F_{k,n+1}^2& F_{k,n+2}^2 & -(F_{k,n}F_{k,n+2}\\&&&&+k^2 F_{k,n+1}^2) \\
+             \bigskip
+            F_{k,n}F_{k,n+2}+k^2 F_{k,n+1}^2  & F_{k,n}(k F_{k,n+1}+F_{k,n+2} & -k F_{k,n+1}L_{k,n+1} & (k F_{k,n+1}\\&&&-F_{k,n}) F_{k,n+2}& F_{k,n}F_{k,n+2}\\&&&&+k^2 F_{k,n+1}^2 \\
+             \bigskip
+            0 & 2k F_{k,n+1}F_{k,n+2}& 2 F_{k,n}F_{k,n+2} & -2k F_{k,n}F_{k,n+1}& 0 \\
+            \bigskip
+            F_{k,n}F_{k,n+2}+k^2 F_{k,n+1}^2  & - F_{k,n}(k F_{k,n+1}+F_{k,n+2}) &k F_{k,n+1}L_{k,n+1}& - F_{k,n+2} (kF_{k,n+1}\\&&&- F_{k,n})& F_{k,n}F_{k,n+2}\\&&&&+k^2F_{k,n+1}^2 \\
+     \bigskip
+            -(F_{k,n}F_{k,n+2}+k^2 F_{k,n+1}^2)  &  F_{k,n}^2 & k^2 F_{k,n+1}^2 &  F_{k,n+2}^2& F_{k,n}F_{k,n+2}\\&&&&+k^2F_{k,n+1}^2        
+\end{bmatrix}.
+\end{footnotesize}
+\end{align*}
+where  $n, k$ are integers.
+\end{definition}
+\begin{theorem}
+Let $W_n$ be a $5 \times 5$ matrix as in (\ref{a6}), then
+\begin{equation}
+det(W_n) = -32 \left[ k^2 F_{k, n+1}^2 + F_{k, n}(k F_{k, n+1}+F_{k, n})\right] ^5.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Put
+\begin{align*}
+F_{k,n} = x,\\
+k F_{k,n+1} = y,\\
+F_{k,n+2} = z.
+\end{align*}
+Therefore
+\begin{align*}
+det(W_n) =\begin{vmatrix}
+           \bigskip
+            xz+y^2 & x^2& y^2& z^2 & -(xz+k^2 y^2) \\
+             \bigskip
+            xz+y^2  & x(y+z) & -y(x+z) & (y-x) z& xz+y^2 \\
+             \bigskip
+            0 & 2yz& 2 xz & -2xy & 0 \\
+            \bigskip
+            xz+y^2  & - x(y+z) &y(x+z)& - z (y- x)& xz+y^2 \\
+     \bigskip
+            -(xz+y^2)  &  x^2 & y^2 &  z^2& xz+y^2\\        
+\end{vmatrix}\\
+= (xz+y^2)^2 \begin{vmatrix}
+           \bigskip
+            1 & x^2& y^2& z^2 & -1 \\
+             \bigskip
+            1  & x(y+z) & -y(x+z) & (y-x) z& 1 \\
+             \bigskip
+            0 & 2yz& 2 xz & -2xy & 0 \\
+            \bigskip
+            1  & - x(y+z) &y(x+z)& - z (y- x)& 1 \\
+     \bigskip
+            -1  &  x^2 & y^2 &  z^2& 1\\        
+\end{vmatrix}.
+\end{align*}
+Making the row-column transformations $(C_5+C_1 \rightarrow C_1)$, $(R_2+R_4\rightarrow R_4)$ and $(- R_1 +R_5 \rightarrow R_5)$ yields
+\begin{align*}
+det(W_n) = \left( xz+y^2\right)^2 \begin{vmatrix}
+           \bigskip
+            0 & x^2& y^2& z^2 & -1 \\
+             \bigskip
+            2  & x(y+z) & -y(x+z) & (y-x) z& 1 \\
+             \bigskip
+            0 & 2yz& 2 xz & -2xy & 0 \\
+            \bigskip
+            4  & 0 &0& 0& -2 \\
+     \bigskip
+            0  &  0 & 0 &  0& 2\\        
+\end{vmatrix}\\
+= -16(xz+y^2)^2 \begin{vmatrix}
+           \bigskip
+             x^2& y^2& z^2  \\
+             \bigskip
+             x(y+z) & -y(x+z) & (y-x) z\\
+             \bigskip
+             yz&  xz & -xy  \\
+\end{vmatrix}.
+\end{align*}
+Using $z = y+x $, we have
+\begin{align*}
+det (W_n)= -16(xz+y^2)^2 \begin{vmatrix}
+           \bigskip
+             x^2& y^2& (x+y)^2  \\
+             \bigskip
+             x^2+2xy & -y^2-2xy & (y^2-x^2) z\\
+             \bigskip
+             y^2+xy&  x^2+xy & -xy \\
+\end{vmatrix}.
+\end{align*}
+Making the row transformation $(R_1 + R_3 \rightarrow R_3)$, we obtain
+\begin{align*}
+det (W_n) = -16(x^2+y^2+xy)^3 \begin{vmatrix}
+           \bigskip
+             x^2& y^2& (x+y)^2  \\
+             \bigskip
+             x^2+2xy & -y^2-2xy & (y^2-x^2) z\\
+             \bigskip
+             1&  1 & 1 \\
+\end{vmatrix}\\
+= -32 (x^2+y^2 +xy)^5.
+\end{align*}
+Finally theorem follows
+\begin{align*}
+det(W_n) = -32 \left[ k^2 F_{k, n+1}^2 + F_{k, n}(k F_{k, n+1}+F_{k, n})\right] ^5.
+\end{align*}
+\end{proof}
+\begin{definition}
+Define $n \times n$  super-diagonal matrix $G_n$ as 
+\begin{align*}
+G_n = {\left[
+          \begin{array}{ccccccc}
+           \bigskip
+            k^2+1 & k^2+1  & -1& 0 &0&..........&0 \\
+             \bigskip
+           -1 & k^2+1  & k^2+1& -1 &0&..........&0 \\
+             \bigskip
+           0 & -1  & k^2+1& k^2+1 &-1&..........&0 \\
+           \bigskip
+            .......... & .......... & ..........& .......... &..........&..........&.......... \\
+           \bigskip
+            0 & ..........&..........  & 0& -1 &k^2+1&k^2+1\\
+            \bigskip
+            0 & ..........&..........  & 0& 0 &-1&k^2+1\\
+       \end{array}
+        \right]_{n \times n}}.
+\end{align*}
+where  $n, k$ are integers.
+\end{definition}
+\begin{theorem}\label{a7}
+For $n > 1$, we have
+\begin{align*}
+det(G_n) = \sum_{i=0}^{i=n+1}F_{k,i}^2.
+\end{align*}
+where $$ det (G_1) = \sum_{i=0}^{i=2}F_{k,i}^2 = k^2+1$$
+\end{theorem}
+\begin{proof}
+Using the Laplace expansion of a determinant gives
+\begin{align*}
+det(G_n) &= (k^2+1)det(G_n-1) + (k^2+1)det(G_n-2)- det(G_n-3),\\ 
+det(G_1)& = \sum_{i=0}^{i=2}F_{k,i}^2,\\
+det(G_2) &= \sum_{i=0}^{i=3}F_{k,i}^2,\\
+det(G_3) &= \sum_{i=0}^{i=4}F_{k,i}^2.
+\end{align*}
+These equations gives
+\begin{align*}
+&(k^2+1)\sum_{i=0}^{i=n+1}F_{k,i}^2 +(k^2+1)\sum_{i=0}^{i=n}F_{k,i}^2 - \sum_{i=0}^{i=n-1}F_{k,i}^2  = \sum_{i=0}^{i=n+2}F_{k,i}^2,\\
+&det(G_n) = \sum_{i=0}^{i=n+1}F_{k,i}^2.
+\end{align*}
+\end{proof}
+\begin{definition}
+Define $n \times n$ matrix $H_n$ as 
+\begin{align*}
+H_n = {\left[
+          \begin{array}{ccccccc}
+           \bigskip
+            k^2+1 & k^2+1  & -1& 0 &0&..........&0 \\
+             \bigskip
+           -1 & k^2+1  & k^2+1& -1 &0&..........&0 \\
+             \bigskip
+           0 & -1  & k^2+1& k^2+1 &-1&..........&0 \\
+           \bigskip
+            .......... & .......... & ..........& .......... &..........&..........&.......... \\
+           \bigskip
+            0 & ..........&..........  & 0& -1 &k^2+1&k^2+1\\
+            \bigskip
+            0 & ..........&..........  & 0& 0 &-1&0\\
+       \end{array}
+        \right]_{n \times n}}.
+\end{align*}
+where  $n, k$ are integers.
+\end{definition}
+The matrix $ H_n $ is obtained from matrix $ G_n$ by deleting $(n, n)^{th}$ entry.
+\begin{theorem}
+For $n > 1 $
+\begin{align*}
+det (H_n) =  F_{k, n-1} F_{k, n+1}
+\end{align*}
+Where $ det (H_n) = (k^2+1) $.
+\end{theorem}
+\begin{proof}
+Similar to theorem (\ref{a7}), we obtain
+\begin{align*}
+det(H_n) = (k^2+1)det(H_n-1) + (k^2+1)det(H_n-2)- det(H_n-3). 
+\end{align*}
+We have
+\begin{align*}
+det(H_2) = F_{k, 1} F_{k, 3},\\
+det(H_3) = F_{k, 2} F_{k, 4},\\
+det(H_4) = F_{k, 3} F_{k, 5}.
+\end{align*}
+It gives that
+\begin{align*}
+&(k^2+1)F_{k,n+1} F_{k, n+3}+(k^2+1)F_{k,n} F_{k, n+2}-F_{k,n-1} F_{k, n+1} =  F_{k,n+2} F_{k, n+4},\\
+&det (H_n) =  F_{k, n-1} F_{k, n+1}.
+\end{align*}
+\end{proof}
+\subsection{Identities for $k$-Fibonacci and $k$-Lucas Sequences using determinants of some matrices}
+In this section, some determinantal techniques are used to obtain many $k$-Lucas identities.
+\begin{theorem}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then 
+\begin{align*}
+&det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            L_{k, n+t}^2+4 L_{k, n-i}^2 & L_{k, n+i+j} & L_{k, n+i+j} \\
+             \bigskip
+            L_{k, n+t}& 4 L_{k, n+i}^2+L_{k, n+i+j}^2 & L_{k, n+t} \\
+     \bigskip
+            L_{k, n+i}& 2 L_{k, n+i} & \dfrac{L_{k, n+i+j}^2 + L_{k, n+t}^2}{2L_{k, n+i}} \\       
+          \end{array}
+        \right]}\\& = 8 L_{k, n+i} L_{k, n+t} L_{k, n+i+j}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Let
+\begin{align*}
+\aleph_1 = det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            L_{k, n+t}^2+4 L_{k, n-i}^2 & L_{k, n+i+j} & L_{k, n+i+j} \\
+             \bigskip
+            L_{k, n+t}& 4 L_{k, n+i}^2+L_{k, n+i+j}^2 & L_{k, n+t} \\
+     \bigskip
+            L_{k, n+i}& 2 L_{k, n+i} & \dfrac{L_{k, n+i+j}^2 + L_{k, n+t}^2}{2L_{k, n+i}} \\       
+          \end{array}
+        \right]}. 
+\end{align*}
+Assume that 
+\begin{align*}
+L_{k, n+t} = \phi,\\
+L_{k, n+i} = \varphi.
+\end{align*}
+Then, we have 
+\begin{align*}
+L_{k, n+i+j} = k \varphi+\phi.
+\end{align*}
+Now
+\begin{align*}
+\aleph_1 = det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \dfrac{\phi^2+\varphi^2}{k \varphi+\phi} & k \varphi+\phi & k \varphi+\phi \\
+             \bigskip
+            \phi & \frac{\varphi^2 +(k \varphi+\phi)^2}{\phi} & \phi\\
+     \bigskip
+            \varphi & \varphi & \dfrac{\phi^2 + (k \varphi+\phi)^2}{\varphi} \\       
+          \end{array}
+        \right]}. 
+\end{align*}
+Making the row operations $\dfrac{1}{(k \varphi+\phi)}\left[ (k \varphi+\phi)R_1\right]$, $\dfrac{1}{\phi}\left[ \phi R_2\right] $, $\dfrac{1}{\varphi}\left[ \varphi R_3\right] $, we get
+\begin{align*}
+\aleph_1 = \dfrac{1}{\phi \varphi (k \varphi+\phi)}  det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \phi^2+\varphi^2 &(k \varphi+\phi)^2 & (k \varphi+\phi)^2 \\
+             \bigskip
+            \phi^2 & \varphi^2 +(k \varphi+\phi)^2 & \phi^2\\
+     \bigskip
+            \varphi^2 & \varphi^2 & \phi^2 + (k \varphi+\phi)^2 \\       
+          \end{array}
+        \right]} .
+\end{align*}
+Again making the row operations 
+$R_1 + R_2 + R_3 \rightarrow  R_1$, $R_3 - R_1 \rightarrow R_3$ and $R_2  - R_1 \rightarrow R_2$, gives that
+\begin{align*}
+\aleph_1 = \dfrac{1}{\phi \varphi (k \varphi+\phi)}  det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            \phi^2+\varphi^2 &\varphi^2+(k \varphi+\phi)^2 & \phi^{2} +(k \varphi+\phi)^2 \\
+             \bigskip
+            - \varphi^2& 0  & -(k \varphi+\phi)^2\\
+     \bigskip
+            \phi^2 & -(k \varphi+\phi)^2 & 0\\       
+          \end{array}
+        \right]}. 
+\end{align*}
+Expanding these, we get
+\begin{align*}
+\aleph_1 = 8 \phi\varphi(k \varphi+\phi). 
+\end{align*}
+Putting
+\begin{align*}
+L_{k, n+t} = \phi,
+L_{k, n+i} = \varphi,
+L_{k, n+i+j} = k \varphi+\phi.
+\end{align*}
+It gives that
+\begin{align*}
+\aleph_1 = 8 L_{k, n+i} L_{k, n+t} L_{k, n+i+j}.
+\end{align*}
+\end{proof}
+\begin{theorem}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then
+\begin{align*}
+&\begin{vmatrix}
+            L_{k, n+t}^2 & 2L_{k, n+i}L_{k, n+i+j} & L_{k, n+t}L_{k, n+i+j}+ L_{k, n+i+j} \\
+             \bigskip
+            L_{k, n+t}^2+2 L_{k, n+i}L_{k, n+t}& 4 L_{k, n+i}^2 & L_{k, n+t}L_{k, n+i+j} \\
+     \bigskip
+            2 L_{k, n+i} L_{k, n+t}& 4 L_{k, n+i}^2+2 L_{k, n+i}L_{k, n+i+j} & L_{k, n+i+j}^2\end{vmatrix}
+            \\& = \left[ 4 L_{k, n+i}L_{k, n+i+j}\right]^2.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Let
+\begin{align*}
+&\aleph\\& = \begin{vmatrix}
+L_{k, n+t}^2 & 2L_{k, n+i}L_{k, n+i+j} & L_{k, n+t}L_{k, n+i+j}+ L_{k, n+i+j} \\
+\bigskip
+L_{k, n+t}^2+2 L_{k, n+i}L_{k, n+t}& 4 L_{k, n+i}^2 & L_{k, n+t}L_{k, n+i+j} \\
+\bigskip
+2 L_{k, n+i} L_{k, n+t}& 4 L_{k, n+i}^2+2 L_{k, n+i}L_{k, n+i+j} & L_{k, n+i+j}^2
+\end{vmatrix}. 
+\end{align*}
+Assume that 
+\begin{align*}
+L_{k, n+t} = \phi,
+L_{k, n+i} = \varphi.
+\end{align*}
+Then we have
+\begin{align*}
+\aleph_2 =\begin{vmatrix}
+            \phi^2 & \varphi(k \varphi+\phi) &\phi(k \varphi+\phi)+(k \varphi+\phi)^2 \\
+             \bigskip
+            \phi^2+ \phi\varphi & \varphi^2 & \phi(k \varphi+\phi)\\
+     \bigskip
+            \phi\varphi & \varphi^2+\varphi(k \varphi+\phi) & (k \varphi+\phi)^2
+                    \end{vmatrix}. 
+\end{align*}
+Making the row operations $R_2 \rightarrow  R_2 - (R_1+R_3))$, we get
+\begin{align*}
+\aleph_1 = \dfrac{1}{\phi \varphi (k \varphi+\phi)}  \begin{vmatrix}
+            \phi &(k \varphi+\phi) & \phi+(k \varphi+\phi) \\
+             \bigskip
+            0 & -2(k \varphi+\phi) & -2(k \varphi+\phi)\\
+     \bigskip
+            \varphi& \varphi+(k \varphi+\phi) & (k \varphi+\phi) \end{vmatrix}.
+\end{align*}
+Making the Column operations 
+$C_2 \rightarrow  C_2 - C_3$ and expanding it gives
+\begin{align*}
+\aleph_2 = 4 \left[ 2\phi\varphi(k \varphi+\phi)\right]^2.
+\end{align*}
+Putting
+\begin{align*}
+L_{k, n+t} = \phi,
+L_{k, n+i} = \varphi,
+L_{k, n+i+j} = k \varphi+\phi.
+\end{align*}
+It gives that
+\begin{align*}
+\aleph_2 = \left[ 4 L_{k, n+i}L_{k, n+i+j}\right]^2.
+\end{align*}
+\end{proof}
+\begin{corollary}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then
+\begin{align*}
+&det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            -L_{k, n+t}^2 & 2L_{k, n+i}L_{k, n+t} & L_{k, n+t}L_{k, n+i+j} \\
+             \bigskip
+            2L_{k, n+i}L_{k, n+t} & -  4 L_{k, n+i}^2& 2 L_{k, n+i}L_{k, n+i+j} \\
+     \bigskip
+             L_{k, n+t} L_{k, n+i+j}& 2 L_{k, n+i}L_{k, n+i+j} & - L_{k, n+i+j}^2\\       
+          \end{array}
+        \right]} \\&= \left[ 4 L_{k, n+i}L_{k, n+t}L_{k, n+i+j}\right]^2.
+\end{align*}
+\end{corollary}
+\begin{corollary}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then
+\begin{align*}
+&det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            4L_{k, n+i}^2+L_{k, n+i+j}^2 & 2L_{k, n+i}L_{k, n+t} & L_{k, n+t}L_{k, n+i+j} \\
+             \bigskip
+            2L_{k, n+i}L_{k, n+t} &  L_{k, n+t}^2& 2 L_{k, n+i}L_{k, n+i+j} \\
+     \bigskip
+             L_{k, n+t} L_{k, n+i+j}& 2 L_{k, n+i}L_{k, n+i+j} & 4 L_{k, n+i}^2+L_{k, n+t}^2\\       
+          \end{array}
+        \right]}\\& = \left[ 4 L_{k, n+i}L_{k, n+t}L_{k, n+i+j}\right]^2.
+\end{align*}
+\end{corollary}
+\begin{corollary}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then
+\begin{align*}
+&\begin{vmatrix}
+            (2L_{k, n+i+j}+2L_{k, n+i}\\+L_{k, n+t})& L_{k, n+t} & 2L_{k, n+i} \\
+             \bigskip
+            L_{k, n+i+j}&  2L_{k, n+t}+2 L_{k, n+i}+L_{k, n+i+j}& 2 L_{k, n+i}\\
+     \bigskip
+             L_{k, n+i+j}& 2 L_{k, n+t} & 4 L_{k, n+i}+L_{k, n+t}+L_{k, n+i+j}\\       
+  \end{vmatrix}        \\& =  2\left[ 2 L_{k, n+i}+L_{k, n+t}+L_{k, n+i+j}\right]^3.
+\end{align*}
+\end{corollary}
+\begin{corollary}
+If  $n, i, j, t, m$ are positive integers with $0 < t < i$, $i+1 < m$, $j = 1$, then
+\begin{align*}
+&det {\left[
+          \begin{array}{ccc}
+           \bigskip
+            1+L_{k, n+t}& 1 & 1 \\
+             \bigskip
+           1&  1+2 L_{k, n+i}& 1\\
+     \bigskip
+             1& 1 & 1+L_{k, n+i+j}\\       
+          \end{array}
+        \right]}\\
+        & = \lbrace 2L_{k, n+i}L_{k, n+t}L_{k, n+i+j}\rbrace \lbrace \dfrac{1}{L_{k, n+t}}+ \dfrac{1}{2L_{k, n+i}}+\dfrac{1}{L_{k, n+i+j}}+1\rbrace \\
+        &\lbrace 2L_{k, n+i}L_{k, n+t}L_{k, n+i+j}+2 L_{k, n+i}L_{k, n+i+j}+L_{k, n+t}L_{k, n+t}L_{k, n+i+j}+2L_{k, n+i}L_{k, n+t}\rbrace.
+\end{align*}
+\end{corollary}
+\section{Concluding remark}
+In this chapter, some new identities obtained for the $k-$Fibonacci and $k-$Lucas sequences using matrix methods. Also, we obtained determinantal identities for $k$ Lucas sequence.
+% ------------------------------------------------------------------------
+
+%=========================================================

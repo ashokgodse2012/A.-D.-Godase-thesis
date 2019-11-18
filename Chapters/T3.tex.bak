@@ -1,0 +1,451 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+
+
+\chapter{Fourth Order Nonlinear Elliptic Equations}
+\begin{quote}
+\texttt{...the progress of physics will to a large extent depend on the
+progress of nonlinear mathematics, of methods to solve nonlinear equations
+...and therefore we can learn by comparing different nonlinear problems.}
+\begin{flushright}
+WERNER HEISENBERG
+\end{flushright}
+\end{quote}
+
+
+
+\vfill{\rule{3in}{2pt}\\\begin{small}{The content of this chapter is
+published in following paper.\\
+Maximum Principles for Fourth Order Nonlinear Elliptic Equations with
+Applications, Bol. Soc. Paran. Mat., (3s) V. 32 1(2014): 9-15.}
+\end{small}
+
+\newpage
+\def\baselinestretch{1.80}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Fourth Order Nonlinear Elliptic Equations}
+\chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+\begin{large}
+
+%%% ---------------------------------------------------------------------------
+
+\section{Introduction}
+Fourth order nonlinear elliptic equations have many applications in various
+field of science and engineering. Because of this large number of researchers
+are working on study of existence of solution of second order, nonlinear
+elliptic boundary value problems. It is well known that maximum principle and
+comparison principle are the two sides of the same coin. It is popular that
+maximum principle, comparison principle and existence results go hand in hand
+(cf.\cite{db1}, \cite{dk}, \cite{du1}).\\ \
+
+It is well known method of defining a function on the solution of
+differential equation and obtain various results about the solution of the
+equation by means of the auxiliary function. In \cite{m2} Miranda obtains the
+first such result for biharmonic equation, $ {\Delta}^{2} u = 0$, by proving
+that the function
+\begin{equation}
+P = |\nabla u(x)|^{2}  - u \Delta u \label{e1}
+\end{equation}
+ is subharmonic on its domain. Since, then many researchers have employed this technique on
+various class of fourth order partial differential equations \cite{pp2, ps,
+webb}. Recently Dhaigude and Gosavi \cite{dg} extend a maximum principle due
+to Schaefer \cite{s1} for a class of fourth order semilinear elliptic
+equations to a more general fourth order semilinear elliptic equation of the
+form
+$$ {\Delta}^{2} u + a(x,y) \Delta u + b(x, y) f(u) = 0. $$\
+
+In this chapter, we study the existence problem for fourth order nonlinear
+elliptic equation of the form
+$$ {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0. $$
+
+We plan this chapter as follows. In section 3.2 we mentioned useful result
+and notation. We develop a maximum principle for a class of fourth order
+nonlinear elliptic equations in section 3.3. In section 3.4 we discuss the
+non-existence of non-trivial solutions of the boundary value problem under
+consideration.
+\section{Prerequisites}
+ Consider $ \Omega $ is a plane domain bounded with smooth boundary $\partial \Omega $.
+For simplicity, we use the summation convention and denote partial
+derivatives $ \dfrac{\partial u }{\partial x_{i}} \,\,\, \text{by}
+\,\,\,u_{,i} $ and $ \dfrac{ \partial^{2}u}{ \partial x^{2}_{i}} \,\,\,
+\text{by}\,\,\,u_{,ii}$.\\
+  The following Lemma \cite{sp3} is useful to prove our results.
+\begin{lemma}\label{l1}
+For a sufficiently smooth function v the inequality
+$$ N v_{,ik}v_{,ik} \geq  (\Delta v)^{2}$$
+satisfied in some domain $\Omega \subset R^{N} $.
+\end{lemma}\
+
+\section{Maximum Principles}
+In this section, we proved some important theorems.\\
+ Now, we prove maximum principles for the function P such that
+\begin{equation*}
+ P = |\nabla u(x)|^{2} - u \Delta u,
+\end{equation*}
+which is the main result of this chapter.
+\begin{theorem}\label{c3th1}
+Let $ u \in C^{4}(\Omega)\bigcap C^{2}(\bar{\Omega})  $ be a solution of
+\begin{equation}\label{e2.1}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0
+\end{equation}
+where $ a(x, y), b(x, y) $  are bounded in $\Omega$ and
+\begin{equation}\label{e2.2}
+ b(x, y) u(x, y) f(u) + a(x,y) u(x, y) g(\Delta u) \geq 0 \quad in \quad \Omega.
+\end{equation}
+
+Then the function
+\begin{equation}\label{e2.3}
+P = |\nabla u(x)|^{2}  - u \Delta u
+\end{equation}
+assume its maximum on $\partial \Omega.$
+\end{theorem}
+
+\textbf{Proof:} Define
+\begin{equation}\nonumber
+P = |\nabla u(x)|^{2}  - u \Delta u
+\end{equation}
+
+Differentiate with respect to $x_{k}$, we get
+
+\begin{equation}\label{e2.4}
+ P_{,k} = 2 u_{,i} u_{,ik} - u_{,k} \Delta u - u (\Delta u)_{,k}
+\end{equation}
+Again differentiate equation $\eqref{e2.4}$ with respect to $x_{k}$, we get
+\begin{equation}\label{e2.41}
+ P_{,kk} = 2 u_{,ik} u_{,ik}  +  2  u_{,i} u_{,ikk}  -  u_{,kk} \Delta u  - u_{,k} (\Delta u)_{,k}  -  u_{,k} (\Delta u)_{,k} -  u  (\Delta u)_{,kk}.
+\end{equation}
+Using well known identities in differential geometry
+\begin{align}\nonumber
+i)& P_{,kk} = \Delta P ,  \,\,\, u_{,kk}  =  \Delta u \\ \nonumber
+ii)& u_{,ikk}  =   u_{,kki}  =  (\Delta u)_{,i} \\ \nonumber
+iii)& (\Delta u)_{,kk}  =  {\Delta}^{2} u \nonumber
+\end{align}
+
+Using (i, ii, iii) in equation \eqref{e2.41}, we obtain
+\begin{align}\label{e2.42}
+\Delta P &= 2 u_{,ik} u_{,ik}  +  2  u_{,i} (\Delta u)_{,i}  -  \Delta u  \Delta u  -  2 u_{,k} (\Delta u)_{,k}  -  u {\Delta}^{2} u. \\
+\Delta P &= 2 u_{,ik} u_{,ik}  +  2  u_{,i} (\Delta u)_{,i}  - (\Delta u)^{2} -  2 u_{,i} (\Delta u)_{,i}  -  u {\Delta}^{2} u. \label{e2.43}
+\end{align}
+
+\begin{flushright}
+ [ By knowledge of differential geometry \\
+  $ u_{,k}  =  u_{,i} $ and $ (\Delta u)_{,i}  =  (\Delta u)_{,k}$. ]
+\end{flushright}
+
+\begin{equation}\label{e2.5}
+ \Delta P = 2 u_{,ik} u_{,ik}  - (\Delta u)^{2} - u {\Delta}^{2} u.
+\end{equation}
+
+Using equation \eqref{e2.1} in equation \eqref{e2.5}, which yields
+\begin{align}\label{e2.51}
+\Delta P &= 2 u_{,ik} u_{,ik}  -  (\Delta u)^{2}  -  u [ -  a   g ( \Delta u )  -  b  f ].\\
+\Delta P &= 2 u_{,ik} u_{,ik}  -  (\Delta u)^{2}  +   a  u g ( \Delta u )  +   b u f . \label{e2.52}
+\end{align}
+
+
+Using Lemma \ref{l1} and assumption \eqref{e2.2}, we observe that the right hand side of equation \eqref{e2.52} is non-negative.\\
+Hence
+$$ \Delta P \geq 0 \,\,\,\quad in \quad \Omega .$$
+By maximum principle, the result follows.
+
+\begin{remark}\label{r1}
+ If $ a = 0 $ and $ b = 0 $ in equation \eqref{e2.1} then it gives the maximum principle due to Miranda \cite{m2}.
+\end{remark}
+\begin{remark}\label{r2}
+ If $ g(\Delta u ) = \Delta u $ in \eqref{e2.1} then it reduces to maximum principle due to Dhaigude and Gosavi \cite{dg}.
+\end{remark}
+Thus, we claim that our results are more general.
+\\We now state and prove another maximum principle for different function.
+
+\begin{theorem}\label{c3th2}
+Suppose that $ u \in C^{4}(\Omega)\bigcap C^{2}(\bar{\Omega})  $ be a
+solution of
+\begin{equation}\label{e2.7}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0
+\end{equation}
+i) $ a(x, y), b(x, y) $ are bounded with $b > 0$  in $\Omega$ and
+\begin{equation}\label{e2.8}
+ b(x, y) u(x, y) f(u) + a(x,y) u(x, y) g(\Delta u) \geq 0 \quad  in \quad \Omega.
+\end{equation}
+ii) $ \nabla (\frac{1}{b})$ is bounded and $ \Delta b \leq 0.$ Then the
+function
+\begin{equation}\label{e2.9}
+ R = \frac{1}{b}[ |\nabla u(x)|^{2}- u \Delta u ]
+\end{equation}
+assumes its nonnegative maximum on $ \partial \Omega $ unless $ R < 0 $ in $
+\Omega.$
+\end{theorem}
+\textbf{Proof:} We have, the function
+\begin{equation}\nonumber
+ R = \frac{1}{b}[ |\nabla u(x)|^{2}- u \Delta u ].
+\end{equation}
+Differentiate with respect to $x_{k}$, we get
+\begin{equation}\label{e2.10}
+ R_{,k} = \frac{1}{b}[ \nabla (|\nabla u(x)|^{2}- u \Delta u )] - \frac{b_{,k}}{b^{2}}( |\nabla u(x)|^{2}  - u \Delta u )
+\end{equation}
+Differentiating equation $\eqref{e2.10}$ with respect to $x_{k}$, we have
+\begin{align}\label{e2.11}\nonumber
+R_{,kk} &=  \frac{1}{b}[ \Delta (|\nabla u(x)|^{2}  - u \Delta u ) ] - \frac{b_{,k}}{{b}^{2}}[ \nabla( |\nabla u(x)|^{2}  - u \Delta u )] \\
+\nonumber &- \frac{b_{,k}}{{b}^{2}}[ \nabla( |\nabla u(x)|^{2}  - u \Delta u )] - \frac{b_{,kk}}{b^{2}}( |\nabla u(x)|^{2}  - u \Delta u ) \\
+&+ \frac{2 b_{,k}b_{,k}}{b^{3}}( |\nabla u(x)|^{2}  - u \Delta u ).
+\end{align}
+By making use of following notations
+\begin{align}\nonumber
+i)&  b_{,k}  =  \nabla b ,  \,\,  b_{,k}b_{,k} = |\nabla b |^{2}  \\ \nonumber
+ii)&  R_{,kk}  =  \Delta R , \,\,  b_{,kk}  =  \Delta b
+\end{align}
+in equation \eqref{e2.7} and simplify, we get
+\begin{align*}
+\Delta R &=  \frac{1}{b}[ \Delta (|\nabla u(x)|^{2}  - u \Delta u ) ] -  2 \frac{b_{,k}}{{b}^{2}}[ \nabla( |\nabla u(x)|^{2}  - u \Delta u )] \\
+&- \frac{\Delta b}{b^{2}}( |\nabla u(x)|^{2}  - u \Delta u )  + \frac{2|\nabla b|^{2} }{b^{3}}( |\nabla u(x)|^{2}  - u \Delta u ).
+\end{align*}
+On simplifying, we obtain
+
+\begin{align}\nonumber
+\Delta R &=  \frac{1}{b}[ \Delta(|\nabla u(x)|^{2}-u \Delta u)]- \frac{\Delta b}{b^{2}}( |\nabla u(x)|^{2}-u \Delta u ) \\\label{t2.11}
+&- 2 \frac{\nabla b}{b}\bigg\{ - \frac{ \nabla b }{b^{2}}[ |\nabla u(x)|^{2}- u \Delta u]+\frac{1}{b}[ \nabla(|\nabla u(x)|^{2}- u \Delta u )]\bigg\}
+\end{align}
+
+Substituting equation \eqref{e2.9} and equation \eqref{e2.10} in
+equation\eqref{t2.11}, we have
+\begin{equation}\label{e2.12a}
+\Delta R  =  \frac{1}{b}[ \Delta (|\nabla u(x)|^{2}  - u \Delta u ) ] -  \frac{\Delta b}{b} R  -  2 \frac{ \nabla b }{b} R_{,k}.
+\end{equation}
+\begin{equation}\label{e2.12b}
+\Delta R  =  \frac{1}{b}[ \Delta (|\nabla u(x)|^{2}  - u \Delta u ) ]  +  2 b \nabla \bigg(\frac{1}{b}\bigg). \nabla R  -  \frac{\Delta b}{b} R.
+\end{equation}
+\begin{equation}\nonumber
+ \bigg[  \because  -  \frac{ \nabla b }{b}  =  -  \frac{ b_{,k} }{b}  =  b \bigg( -  \frac{ b_{,k} }{b^{2}}\bigg)   =  b  \nabla \bigg(\frac{1}{b}\bigg) \bigg]
+\end{equation}
+Thus, we get
+\begin{equation}\label{e2.12}
+\Delta R - 2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  = \frac{1}{b} \bigg[ \Delta (|\nabla u(x)|^{2}  - u \Delta u )\bigg].
+\end{equation}
+By using equation \eqref{e2.5},
+\begin{equation}\label{e2.12c}
+\Delta R - 2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  = \frac{1}{b} [ 2 u_{,ik} u{,ik} -  (\Delta u)^{2}  -  u \Delta^{2} u.]
+\end{equation}
+Using \eqref{e2.7}, we have
+\begin{align}\nonumber
+\Delta R - &2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  \\  &= \frac{1}{b} \bigg[ 2 u_{,ik} u{,ik} -  (\Delta u)^{2}  -  u  \bigg( - a g (\Delta u)  - bf  \bigg) \bigg].
+\end{align}\label{e2.12d}
+\begin{align}\nonumber
+\Delta R - &2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  \\  &= \frac{1}{b} [ 2 u_{,ik} u{,ik} -  (\Delta u)^{2}  + a  u g (\Delta u)  +  b f u ].
+\end{align}\label{e2.12e}
+ by  Lemma \ref{l1},
+\begin{align}\nonumber
+\Delta R - &2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R \\  & \geq \frac{1}{b} [ (\Delta u)^{2}  -  (\Delta u)^{2}  + a  u g (\Delta u)  +  b f u ].
+\end{align}\label{e2.12f}
+\begin{equation}\label{e2.12g}
+\Delta R - 2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  \geq \frac{1}{b} [ a  u g (\Delta u)  +  b f u ].
+\end{equation}
+
+Therefore
+\begin{equation}\label{e2.13a}
+\Delta R - 2 b \nabla \bigg( \frac{1}{b} \bigg) \nabla R + \frac{ \Delta b}{b} R  \geq 0.
+\end{equation}
+
+
+%\begin{equation}\label{e2.13a}
+%b \Delta R - 2 b^{2} \nabla \bigg( \frac{1}{b} \bigg) \cdot \nabla R +  \Delta b  R  \geq  0.
+%\end{equation}
+
+%\begin{equation}\label{e2.13b}
+%b \Delta R +  2 \nabla b \cdot \nabla R  +  \Delta b  R  \geq  0.
+%\end{equation}
+%\begin{equation}\label{e2.13c}
+%\Delta \bigg( b R \bigg) \geq  0.
+%\end{equation}
+
+
+By Hopf's maximum principle \cite{pw2}, the result follows. \\
+Here we state some important remarks.
+\begin{remark}\label{r3}
+ If $ a = 0 $ in equation \eqref{e2.7} then we get the maximum principle due to Sperb \cite{sp3}.\\
+\end{remark}
+
+\begin{remark}\label{r4}
+ If $ b \equiv constant $, then the condition "unless $ R < 0 $ in $ \Omega $" in Theorem $ \ref{c3th2}$ can be omitted.\\
+\end{remark}
+
+\begin{remark}\label{r5}
+ If $ g(\Delta u ) = \Delta u $ in equation \eqref{e2.7} then yields the maximum principle due to Dhaigude and Gosavi \cite{dg}.
+\end{remark}
+
+
+
+
+
+\section{Applications}
+In this section, we prove non-existence of nontrivial solutions $ u(x) $ of
+the following boundary value problems by using our maximum principle.
+
+Problem- I:  Consider the equation
+\begin{align}\label{e2.17}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0, \quad \text{in} \quad \Omega\\\label{e2.18}
+  \text{with boundary conditions} \quad u(x, y) = 0,\quad \frac{\partial u}{\partial n} = 0 \quad  \text{on} \quad  \partial \Omega.
+\end{align}
+
+Problem- II: Consider the equation
+\begin{align}\label{e2.19}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0, \quad \text{in} \quad \Omega\\ \label{e2.20}
+  \text{with boundary conditions} \quad u(x, y) = 0,\quad \Delta u = 0 \quad  \text{on} \quad  \partial \Omega.
+\end{align}
+
+The following Lemma is useful to prove the non-existence result.
+\begin{lemma}\label{l2} \cite{s1}
+Suppose that\\
+i) $ u \in C^{4}(\Omega)\bigcap C^{2}(\bar{\Omega})  $ is a solution of
+fourth order nonlinear elliptic equation
+\begin{equation}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0 \,\,\text{in} \,\, \Omega,
+\end{equation}
+
+ii) $u(x, y)$ satisfy
+\begin{equation}\label{e2.8}
+ b(x, y) u(x, y) f(u) + a(x,y) u(x, y) g(\Delta u) \geq 0 \quad  in \quad \Omega, \,and
+\end{equation}
+
+iii) $u(x, y)$  vanishes on the boundary $ \partial \Omega.$\\
+ Then
+$$\int _{\Omega} |\nabla u(x)|^{2} dx dy \leq  \frac{1}{2} A |\nabla u(x)|^{2}_{M}$$
+where  $ |\nabla u|^{2}_{M} = max |\nabla u|^{2}$ and $A $ is the area of $
+\Omega.$
+\end{lemma}
+
+%\textbf{Proof:} From Theorem \ref{c3th2} we know that $P$ attains its maximum
+%on the boundary. Also we know that $ u = 0 $ on $ \partial \Omega. $ Let $
+%|\nabla u|^{2}_{M} = max |\nabla u|^{2}$ on $ \partial \Omega .$ We have
+%\begin{equation}\label{e2.14}
+ %|\nabla u |^{2}  - u \Delta u \leq |\nabla u(x)|^{2}_{M}.
+ %\end{equation}
+%Integrating \eqref{e2.14} over $ \Omega ,$ we get
+%\begin{equation}\label{e2.15}
+%\int_{\Omega}|\nabla u |^{2} dx dy  -  \int_{\Omega} u \Delta u dx dy \leq \int_{\Omega}|\nabla u(x)|^{2}_{M} dx dy.
+%\end{equation}
+%Using Green's first identity
+%\begin{equation}\label{e2.16}
+% \int_{\Omega} \bigg[ v \Delta u + \nabla v \cdot \nabla u \bigg] dx dy  =  \int_{\partial\Omega} v \frac{\partial u}{\partial n} d\sigma, \quad  \text{with} \quad v = u
+%\end{equation}
+%And using $ u = 0$ on the boundary in \eqref{e2.16}, we obtain
+%\begin{equation}\nonumber
+%\int_{\Omega}|\nabla u |^{2} dx dy   \leq \frac{1}{2} A |\nabla u|^{2}_{M} .
+%\end{equation}
+\newpage
+\begin{flushleft}
+\textbf{NONEXISTENCE THEOREM:}
+\end{flushleft}
+\begin{theorem}\label{c3th3}
+If \eqref{e2.2} is satisfied in a convex domain $\Omega$ then no non-trivial
+solution of
+\begin{align}\label{e2.17}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0, \quad \text{in} \quad \Omega\\\label{e2.18}
+  u(x, y) = 0,\quad \frac{\partial u}{\partial n} = 0 \quad  \text{on} \quad  \partial \Omega.
+\end{align}
+exists.
+\end{theorem}
+
+\textbf{Proof:} We prove this theorem by contradiction method. Suppose that
+there exist a nontrivial solution $u$ of the given BVP \eqref{e2.17} -
+\eqref{e2.18} . From equation \eqref{e2.3}, we have
+\begin{equation}\nonumber
+P = |\nabla u(x)|^{2}  - u \Delta u
+\end{equation}
+
+Using Theorem \ref{c3th1} and boundary condition \eqref{e2.18}, we get
+\begin{equation}\label{e2.21}
+u_{,i} u_{,i} - u \Delta u \leq 0.
+\end{equation}
+Integrate equation \eqref{e2.21} over $\Omega$,
+\begin{equation}\label{e2.22}
+\int_{\Omega} \bigg[ u_{,i} u_{,i} - u \Delta u \bigg] dx dy \leq 0.
+\end{equation}
+
+Using Green's first identity
+\begin{equation}\label{e2.23}
+ \int_{\Omega} \bigg[ v \Delta u + \nabla v \cdot \nabla u \bigg] dx dy  =  \int_{\partial\Omega} v \frac{\partial u}{\partial n} d\sigma, \quad  \text{with} \quad v = u
+\end{equation}
+ and boundary condition \eqref{e2.18} in equation \eqref{e2.23}, we obtain
+\begin{equation}\label{e2.23}
+\int_{\Omega} | \nabla u |^{2} dx dy \leq 0.
+\end{equation}
+Consequently $ | \nabla u | = 0$ in $ \Omega$ and by continuity $ u \equiv 0
+$ in $ \Omega \cup \partial \Omega .$ Thus it is a contradiction. Therefore
+there is no nontrivial solution of BVP \eqref{e2.17} - \eqref{e2.18} exists.
+
+
+\begin{theorem}\label{th4}
+If equation \eqref{e2.2} is satisfied in a convex domain $\Omega$ then no
+nontrivial solution of
+\begin{align}\label{e2.19}
+  {\Delta}^{2} u + a(x,y) g(\Delta u) + b(x, y) f(u) = 0, \quad \text{in} \quad \Omega\\ \label{e2.20}
+  u(x, y) = 0,\quad \Delta u = 0 \quad  \text{on} \quad  \partial \Omega.
+\end{align}
+exists.
+\end{theorem}
+\textbf{Proof:} We prove this theorem by contradiction method. Suppose that a
+nontrivial solution $u$ of the given BVP \eqref{e2.19} - \eqref{e2.20}
+exists.\\
+ From equation \eqref{e2.3},
+\begin{equation}\nonumber
+P = |\nabla u(x)|^{2}  - u \Delta u
+\end{equation}
+
+ Then by Theorem \ref{c3th1}, $P$ takes its maximum on the
+boundary $ \partial \Omega $ at a point, say $Q$. Using Hopf's second maximum
+principle, we see that either $ \frac{\partial P}{\partial n}(Q) > 0 $ or $P$
+is constant in $\Omega \cup \partial \Omega.$\
+
+\textbf{Case I}. Assume that $ \frac{\partial P}{\partial n}(Q) > 0 $. First
+we differentiate $P$ partially in the normal direction and use boundary
+condition \eqref{e2.20} to get
+\begin{equation}\label{e2.24}
+ \frac{\partial P}{\partial n}(Q) = 2 \frac{\partial u}{\partial n} \frac{\partial^{2} u}{\partial n^{2}}.
+\end{equation}
+We have well known identity in the differential geometry \cite{sp3} for
+curvature $k$,
+\begin{equation}\label{e2.25}
+\frac{\partial^{2} u}{\partial n^{2}} + k \frac{\partial u}{\partial n} + \frac{\partial^{2} u}{\partial s^{2}} =  u_{,ii}  =  \Delta u
+\end{equation}
+where $ \frac{\partial }{\partial n} $ and $ \frac{\partial }{\partial s} $
+are normal and tangential derivatives respectively. The tangential component
+$ \frac{\partial^{2} u}{\partial s^{2}} $ is zero. Therefore equation
+\eqref{e2.25} becomes
+\begin{equation}\label{e2.26}
+\frac{\partial^{2} u}{\partial n^{2}} =  \Delta u - k \frac{\partial u}{\partial n}.
+\end{equation}
+By using equation \eqref{e2.26} and boundary condition \eqref{e2.20} in
+equation \eqref{e2.24}, we get
+\begin{equation}\label{e2.27}
+\frac{\partial P}{\partial n} (Q)=   - 2 k \bigg( \frac{\partial u}{\partial n} \bigg)^{2}.
+\end{equation}
+Since $\Omega$ is convex, $ k> 0 .$  Thus $ \frac{\partial P}{\partial n} (Q)
+< 0 $ is not possible. Thus we see that no nontrivial solution exists.\
+
+\textbf{Case II}.  Assume that  $ P $ is constant say $c$ in $ \Omega \cup
+\partial \Omega. $ Therefore
+\begin{equation}\label{e2.28}
+| \nabla u |^{2}  =  \bigg( \frac{\partial u}{\partial n} \bigg)^{2}  =  c  \quad \text{on}  \quad \partial \Omega.
+\end{equation}
+Now as $P = c $  in $ \Omega \cup \partial \Omega $, we have $ \frac{\partial
+P}{\partial n} = 0 $  on $ \partial \Omega .$  But from equation
+\eqref{e2.27}, we have
+$$  \frac{\partial P}{\partial n} (Q)=   - 2 k c.$$
+For a bounded convex domain with a continuously turning tangent on the
+boundary, $ k \neq 0. $ Moreover $ c \neq 0, $  if $ c = 0 ,$ then $ | \nabla
+u |_{M} = 0  $ and by Lemma \ref{l2} and Theorem \ref{c3th1} we can conclude
+that $ u \equiv  0 $  in $ \Omega .$ Therefore $ P  = c $ is not possible.
+This is contradiction to $P$ is constant. Thus there is no nontrivial
+solution exists.
+
+\end{large}
+%%% ---------------------------------------------------------------------------

@@ -1,0 +1,607 @@
+
+%\def\baselinestretch{1}
+
+
+\chapter{Parabolic Differential Inequalities and Applications}
+\begin{quote}
+\texttt{It seems to be one of the fundamental features of nature that
+fundamental physics laws are described in terms of great
+beauty and power.
+As time goes on, it becomes increasingly evident that the
+rules that the mathematician finds interesting are the same as
+those that nature has chosen.}
+\begin{flushright}
+PAUL DIRAC.
+\end{flushright}
+\end{quote}
+
+
+\vfill{\rule{3in}{2pt}\\\begin{small}{The content of this chapter is accepted in following paper.
+
+Maximum principles for diffusion-reaction problems with
+applications, (Accepted).}
+\end{small}
+
+
+\newpage
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Parabolic Differential Inequalities and Applications}
+\chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+\def\baselinestretch{1.80}
+\begin{large}
+
+
+\section{Introduction}
+\hspace{0.1in} The parabolic differential equations arises in modelling of number of phenomenons also it is applicable in several branches of science and engineering. The study of maximum principles for parabolic equations gives great pleasure to researchers. Several maximum principles for parabolic equation are obtained by many researchers ( \cite{dk}, \cite{n}, \cite{sp1}  etc.). An excellent account of such principles their variants and applications are given in elegant books by Protter and Weinberger \cite{pw2}, Sperb \cite{sp3} and Fraenkel \cite{fn}.\\
+In chemical engineering there is an increasing interest in the influence of diffusion processes on the course of chemical reactions. Such reaction-diffusion processes are mostly modeled by a system of the form
+\begin{equation}\label{c5e1}
+u_{,t}  =  D \Delta u  -  f(u)
+\end{equation}
+where $u  =  (u_{1}, u_{2},...,u_{n})$ gives the concentrations of the reactant measured in appropriate units. Sperb \cite{sp5} discussed some comparison result for such reaction diffusion problems.
+\hspace{0.1in} In \cite{sp2} Sperb deals with the problem
+\begin{align*}
+u_{,t}  &=  \Delta u + f(u)     \quad \text{in} \quad \Omega \times ( 0, T )\\
+u(x, t) &= 0 \hspace{.8in} \text{on}\,\, \partial\Omega \times ( 0, T )\\
+u (x, 0) &=  u_{0}
+\end{align*}
+which arises in the mathematical modelling of an auto-catalytic chemical reaction coupled with diffusion.
+Here we extend these results of Sperb \cite{sp2} for the nonlinear diffusion-reaction equation of the form
+\begin{equation}\nonumber
+C( x, t )  u_{,t}  =  D(t) \Delta u + f(u)     \quad  in \quad \Omega \times ( 0, T ).
+\end{equation}
+
+ The plan of this chapter as follows. In section 6.2 we study maximum principle for nonlinear reaction-diffusion equation. We prove maximum principles for initial boundary value problems with different types of boundary conditions. Then different bounds for $u_{,t}$ are obtained in section 6.3.
+
+
+\section{Maximum Principles}
+\hspace{0.1in} Throughout this chapter, $ \Omega $ is a finite domain in the Euclidean space $ E^{N} $ with boundary $ \partial \Omega $. Also derivative with respect to $t$ denoted by dot and prime represent derivative with respect to $u$.
+\begin{theorem}\label{c6th1}
+Suppose that
+
+i) u is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem
+\begin{align}\label{p2.1}
+C( x, t )  u_{,t} &=  D(t) \Delta u + f(u)     \quad  \text{in} \quad \Omega \times ( 0, T )\\
+ u(x, t) &= 0 \hspace{.8in}  \text{on} \quad \partial\Omega \times ( 0, T )\label{p2.2}\\
+u (x, 0) &=  u_{0}\label{p2.3}
+\end{align}
+with $ f(u) \in C^{1} ( \mathbb{R}^{+}),$ $g(u)$, $h(u)  \in C^{2} (\mathbb{R}^{+}) $ and $C(x, t) \geq 0, D(t) > 0 $,
+
+ii) $g(\frac{h}{g})'' \geq 0, \,\, \frac{h}{g}(fg)' - h'f - h C_{,t} \geq 0   $ for positive argument,
+
+iii) $ 2 \frac{\dot{D}}{D} C  h  +  \dot{D} g f   \geq  0,$
+
+iv) $g(\frac{1}{g})'' \leq 0, \,\, \frac{1}{g}(fg)' -  C_{,t}  +  2  \frac{\dot{D}}{D} C \leq  0   $ for positive argument,and
+
+v) $M = \max ( M_{0}, M_{1} )$ where
+\begin{align*}
+M_{0}  &=  \max_{\Omega} \{ D(t) g(u_{0}) ( D(t) \Delta u_{0}  +  f(u_{0}) )  + h(u_{0}) \}  \geq 0 \\
+M_{1}  &=  h(0)  \geq 0.
+\end{align*}
+Then
+\begin{equation}\label{p2.4}
+g(u) D(t) u_{,t}  +  h(u) \leq  M  \quad in  \quad \Omega \times ( 0, T ).
+\end{equation}
+Assume $ M = 0$  if conditions in (iv) for g(u) are not satisfied then the inequality \eqref{p2.4} holds.
+\end{theorem}
+
+\textbf{Proof :} Consider the function
+\begin{equation}\label{p2.5}
+V(x, t) =  D(t) g(u) u_{,t} +  h(u)
+\end{equation}
+multiply equation \eqref{p2.5} by $C(x, t)$, we have
+\begin{equation}\label{p2.51}
+C(x, t)V(x, t) =  C(x, t) D(t) g(u) u_{,t} +  C(x, t) h(u)
+\end{equation}
+Using equation \eqref{p2.1}, we have
+\begin{equation*}
+C(x, t)V(x, t) =  D(t) g(u) [ D(t) \Delta u  +  f (u) ] +  C(x, t) h(u)
+\end{equation*}
+\begin{equation}\label{p2.51.1}
+C(x, t)V(x, t) =  D^{2}(t) g(u) \Delta u  +  D(t) g(u) f (u)  +  C(x, t) h(u)
+\end{equation}
+
+Differentiate equation \eqref{p2.51.1} with respect to t, we get
+\begin{align}\label{p2.52}
+C_{,t} V  +  C V_{,t}  -   2 D \dot{D} g \Delta u  &-  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h  \\ \nonumber
+ &=  C D g' u^{2}_{,t} +  D^{2} g (\Delta u )_{,t}  +  C h' u_{,t}
+\end{align}
+Differentiate \eqref{p2.5} with respect to $x_{k}$, we have
+\begin{equation}\label{p2.52.1}
+V_{,k} =  D g' u_{,k} \, u_{,t} +  D g \, u_{,tk}  +  h' u_{,k}
+\end{equation}
+\begin{equation}\label{p2.6}
+\nabla V =  D g' \nabla u \, u_{,t} +  D g \, \nabla u_{,t}  +  h' \nabla u
+\end{equation}
+\begin{equation*}
+\nabla V =   D g \, \nabla u_{,t}  +  \bigg[ D g' \nabla u \, u_{,t}   +  h' \nabla u \bigg]
+\end{equation*}
+\begin{equation}\label{p2.6a1}
+\nabla u_{,t}  =  \frac{\nabla V  -  D g' \nabla u \, u_{,t}  - h' \nabla u }{D g}
+\end{equation}
+Again differentiating equation \eqref{p2.52.1} with respect to $x_{k}$, we get
+\begin{equation*}
+V_{,kk} =  D g'' u_{,k} u_{,k} \, u_{,t} +  D g' u_{,kk} \, u_{,t}  +  2 D g' u_{,k} \, u_{,tk}  +  D g \, u_{,tkk}  +  h'' u_{,k} u_{,k}  + h' u_{,kk}
+\end{equation*}
+\begin{equation}\label{p2.7}
+\Delta V =  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \nabla u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{equation}
+Using equation \eqref{p2.6a1} in equation \eqref{p2.7}, we have
+\begin{align}\nonumber
+\Delta V &=  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \bigg[  \frac{\nabla V  -  D g' \nabla u \, u_{,t}  - h' \nabla u }{D g}\bigg]\\ \nonumber &+  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{align}
+\begin{align}\label{p2.8}\nonumber
+ &= D g'' | \nabla u |^{2} u_{,t}  +  D g' \Delta u \, u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u  +  \frac{2 g' \nabla u \, \nabla V}{g}  \\  &-  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}.
+\end{align}
+\begin{align}\label{p2.9}\nonumber
+ &= D g'' | \nabla u |^{2} u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  \\  &-  \frac{2 g' h' | \nabla u |^{2}}{g}  +  g' u_{,t} [ C u_{,t}  - f ]  +  \frac{h'}{D} [C u_{,t}  -  f ].   \,\,\ [ \because Using \eqref{p2.1} ]
+\end{align}
+\begin{align}\nonumber
+ &= D g'' | \nabla u |^{2} u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  \\  \nonumber &-  \frac{2 g' h' | \nabla u |^{2}}{g}  +  g' C u^{2}_{,t}  -  g' u_{,t} f   +  \frac{h'}{D} C u_{,t}  -  \frac{h' f}{D}.
+\end{align}
+\begin{align}\nonumber
+ &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}   -  \frac{2 g' h' | \nabla u |^{2}}{g}  \\  &-  f g' u_{,t}  - \frac{fh'}{D}  +  \frac{1}{D} \bigg[  D^{2} g \Delta u_{,t}  +  D g' C u^{2}_{,t}  +  C h' u_{,t} \bigg].
+\end{align}\label{p2.10}
+Using equation \eqref{p2.52}, we have
+\begin{align}\nonumber
+ \Delta V  &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u  \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}   -  \frac{2 g' h' | \nabla u |^{2}}{g} \\&-  f g' u_{,t}   - \frac{fh'}{D}  +  \frac{1}{D} [ C_{,t} V  +  C V_{,t}  -   2 D \dot{D} g \Delta u  -  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h ].   \label{p2.11}
+\end{align}
+\begin{align}\nonumber
+ &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u  \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}   -  \frac{2 g' h' | \nabla u |^{2}}{g} \\&-  f g' u_{,t}   - \frac{fh'}{D}  +  \frac{C_{,t} V}{D}  +  \frac{C V_{,t}}{D}  -   2  \dot{D} g \Delta u  -  \frac{\dot{D}}{D} g f  -   g f' u_{,t}  -  \frac{C_{,t} h}{D} . \label{p2.11.a1}
+\end{align}
+After rearranging the terms of equation \eqref{p2.11.a1},  we obtain
+\begin{align}\label{p2.12}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    +  \frac{C V_{,t}}{D}  -   2 \dot{D} g \Delta u \\ &-  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} + \bigg\{ D g'' | \nabla u |^{2} u_{,t}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  -  f g' u_{,t}  -  g f' u_{,t} \bigg\}.
+\end{align}
+From equation \eqref{p2.5}, we have
+\begin{align}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    +  \frac{C V_{,t}}{D}  \\ \nonumber &-   2 \dot{D} g \Delta u -  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} + \bigg\{ D g'' | \nabla u |^{2} \bigg( \frac{V  -  h}{D g} \bigg) \\ \nonumber &-  \frac{2 D g'^{2} | \nabla u |^{2} }{g} \bigg( \frac{V  -  h}{D g} \bigg)  -  f g' \bigg( \frac{V  -  h}{D g} \bigg)  -  g f' \bigg( \frac{V  -  h}{D g} \bigg) \bigg\}.
+\end{align}
+\begin{align}\label{p2.13}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    +  \frac{C V_{,t}}{D} \\ \nonumber  & -   2 \dot{D} g \Delta u  -  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} +   \frac{ g'' | \nabla u |^{2} V }{g} -  \frac{ g'' | \nabla u |^{2} h }{g}  -  \frac{2 g'^{2} | \nabla u |^{2} V }{g^{2}}   \\ &+  \frac{2 g'^{2} | \nabla u |^{2} h }{g^{2}}  -  \frac{f g' V}{D g}  +  \frac{f g' h}{D g}  -   \frac{f' V}{D}  +  \frac{f' h}{D}.
+\end{align}
+Putting all the terms containing $V$ on left hand side and rest of the terms keep on the right side of equation \eqref{p2.13},we obtain following equation
+\begin{align}\nonumber
+\Delta V - \frac{2 g' \nabla u \, \nabla V }{g}  &- \frac{C_{,t} V}{D}  -  \frac{C V_{,t}}{D}  -  \frac{g'' |\nabla u |^{2} V}{g}  + \frac{2 g'^{2} |\nabla u|^{2} V }{g^{2}}  +  \frac{g' f V }{g D}  +  \frac{f' V}{D}  \\ \nonumber &=  h'' | \nabla u |^{2}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -  \frac{ \dot{D} g f}{D}  \\ &-  \frac{C_{,t} h}{D}  -  \frac{ g'' | \nabla u |^{2} h }{g}  +  \frac{2  g'^{2} | \nabla u |^{2} h }{g^{2}}  +  \frac{f g' h}{D g}  + \frac{f' h}{D}.
+\end{align}\label{p2.14}
+After some rearrangement and simplification, we get
+\begin{align}\nonumber
+\Delta V - \frac{2 g' \nabla u \, \nabla V }{g}  & +   \bigg[  -  \frac{g'' |\nabla u |^{2}}{g}  + \frac{2 g'^{2} |\nabla u|^{2} }{g^{2}}  +  \frac{g' f  }{g D}  +  \frac{f'}{D}   - \frac{C_{,t} }{D} \bigg] V  -  \frac{C V_{,t}}{D}     \\ \nonumber &=  h'' | \nabla u |^{2}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -  \frac{ \dot{D} g f}{D}  \\ \nonumber &-  \frac{C_{,t} h}{D}  -  \frac{ g'' | \nabla u |^{2} h }{g}  +  \frac{2  g'^{2} | \nabla u |^{2} h }{g^{2}}  +  \frac{f g' h}{D g}  +  \frac{f' h}{D}.
+\end{align}
+Therefore,
+\begin{align}\nonumber
+ \Delta V  - 2  ( \log g)'  \nabla u \, \nabla V &+   \bigg[   g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{D g}  (f g)'  -  \frac{C_{,t}}{D}  \bigg]  V  -  \frac{C V_{,t}}{D} \\ \nonumber &=  \bigg[ h''  -   \frac{ g'' h }{g}   -  \frac{2 g' h' }{g}  +  \frac{2  g'^{2}  h }{g^{2}}  \bigg] | \nabla u |^{2}   \\ \nonumber &+  \frac{f g' h}{D g}  +  \frac{f' h}{D}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -   \frac{ \dot{D} g f}{D}   -  \frac{C_{,t} h}{D}.
+\end{align}
+\begin{align}\nonumber
+ \Delta V  - 2  ( \log g)'  \nabla u \, \nabla V &+   \bigg[   g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{D g}  (f g)'  -  \frac{C_{,t}}{D}  \bigg]  V  -  \frac{C V_{,t}}{D} \\ \nonumber &=  g \bigg( \frac{h}{g} \bigg)'' | \nabla u |^{2}  +  \frac{f g' h}{D g}  +  \frac{f' h}{D}  \\ \nonumber &-  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -   \frac{ \dot{D} g f}{D}   -  \frac{C_{,t} h}{D}.
+\end{align}
+\begin{align}\label{p2.15}\nonumber
+D \Delta V  -& 2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t} ]  V  -  C V_{,t} \\ &=  D g (\frac{h}{g})'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h -  2 D \dot{D} g \Delta u  -  \dot{D} g f.
+\end{align}
+Since $ D  \Delta V  =  C u_{,t}  -  f $  and  $ u_{,t}  =  \frac{ V \, -  \,h }{D \, g}   ,$ by rearranging we can rewrite equation \eqref{p2.15} as
+\begin{align}\label{p2.151}\nonumber
+D \Delta V  -&  2 D ( \log g)'  \nabla u \, \nabla V  +   \bigg[ D  g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C h \bigg]  V  -  C V_{,t} \\ &=  D g (\frac{h}{g})'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h  +   2  \frac{\dot{D}}{D} C h  +  \dot{D} g f.
+\end{align}
+
+ As per assumptions of the theorem, right hand side of \eqref{p2.151} is nonnegative.
+\begin{equation}\label{p2.15a}
+D \Delta V  -  2 D ( \log g)'  \nabla u \, \nabla V  +   \bigg[ D  g \big( \frac{1}{g} \big)''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C \bigg]  V  -  C V_{,t}  \geq  0.
+\end{equation}
+Therefore by maximum principle \cite{w}, we can conclude that
+$$V( x, t )  \leq  M    \quad \text{in}  \quad \Omega \times (0, T).$$
+Suppose conditions (iv) are not satisfied then assume $ M  =  0 .$ \\
+But $ M  =  \max (M_{0}, M_{1}) $ where $ M_{0}  \geq  0,  M_{1} =  h(0) \geq  0.$\\
+Also from boundary condition \eqref{p2.2}, we have
+$$ u_{,t}  =  0   \quad  \text{on} \quad \partial\Omega \times (0, T). $$
+So $ V(x, t)  =  h(0)  = 0  \quad \text{on} \quad \partial \Omega \times (0, T)$.\\
+Thus $V \leq 0 .$ Hence the proof.
+
+\begin{remark}\label{R1}
+If we put C  = 1, D  =  1, g  =  1 and h = 0 in Theorem \ref{c6th1} the we get result due to Sattinger \cite{st}.
+\end{remark}
+
+\begin{remark}\label{R2}
+If  C  = 1, D  =  1 in Theorem \ref{c6th1} then we get result due to Sperb \cite{sp3}.
+\end{remark}
+\begin{remark}\label{R21}
+If we take D  =  1 in Theorem \ref{c6th1} then we get result due to Gosavi \cite{go}.
+\end{remark}
+
+\begin{theorem}\label{c6th2}\textbf{( Minimum Principle )}
+Suppose that
+
+i) u is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem
+\begin{align}\label{p2.1p}
+C( x, t )  u_{,t}  &=  D(t) \Delta u + f(u)     \quad  in \quad \Omega \times ( 0, T )\\
+ u(x, t) &= 0 \quad on \quad \partial\Omega \times ( 0, T )\label{p2.2p}\\
+u (x, 0) &=  u_{0}\label{p2.3p}
+\end{align}
+with $ f(u) \in C^{1} ( \mathbb{R}^{+}),$ $g(u)$, $h(u)  \in C^{2} (\mathbb{R}^{+}) $ and $ C(x, t) \geq 0, D(t) > 0 $,
+
+ii) $g(\frac{h}{g})'' \leq 0, \,\, \frac{h}{g}(fg)' - h'f - h C_{,t} \leq 0   $ for positive argument,
+
+iii) $ 2 \frac{\dot{D}}{D}  C h   +   \dot{D}  g  f   \leq    0$
+
+iv) $ g(\frac{1}{g})'' \leq 0, \,\, \frac{1}{g}(fg)' -  C_{,t}  +  2 \frac{\dot{D}}{D} C  \leq  0   $ for positive argument,and
+
+v) $ m = \min ( m_{0}, m_{1} )$ where
+\begin{align*}
+m_{0}  &=   \min_{\Omega} \{ D(t) g(u_{0}) ( D(t) \Delta u_{0}  +  f(u_{0}) )  + h(u_{0}) \}  \leq 0 \\
+m_{1}  &=  h(0)  \leq 0.
+\end{align*}
+Then
+\begin{equation}\label{p2.4p}
+g(u) D(t) u_{,t}  +  h(u) \geq  m  \quad \text{in}  \quad \Omega \times ( 0, T ).
+\end{equation}
+
+Assume $ m = 0$  if conditions in (iv) for g(u) are not satisfied then the inequality \eqref{p2.4p} holds.
+
+\end{theorem}
+\textbf{Proof:} Consider the function
+\begin{equation}\label{p2.5m}
+V(x, t) =  D(t) g(u) u_{,t} +  h(u)
+\end{equation}
+multiply equation \eqref{p2.5m} by $C(x, t)$, we have
+\begin{equation}\label{p2.51m}
+C(x, t)V(x, t) =  C(x, t) D(t) g(u) u_{,t} +  C(x, t) h(u)
+\end{equation}
+Using equation \eqref{p2.1p}, we have
+\begin{equation*}
+C(x, t)V(x, t) =  D(t) g(u) [ D(t) \Delta u  +  f (u) ] +  C(x, t) h(u)
+\end{equation*}
+\begin{equation}\label{p2.51.1m}
+C(x, t)V(x, t) =  D^{2}(t) g(u) \Delta u  +  D(t) g(u) f (u)  +  C(x, t) h(u)
+\end{equation}
+Differentiate equation \eqref{p2.51.1m} with respect to t, we get
+\begin{align}\nonumber
+C_{,t} V  +  C V_{,t}  -   2 D \dot{D} g \Delta u  &-  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h  \\
+ &=  C D g' u^{2}_{,t} +  D^{2} g (\Delta u )_{,t}  +  C h' u_{,t}. \label{p2.52m}
+\end{align}
+Differentiate \eqref{p2.5m} with respect to $x_{k}$, we have
+\begin{equation}\label{p2.52.1m}
+V_{,k} =  D g' u_{,k} \, u_{,t} +  D g \, u_{,tk}  +  h' u_{,k}
+\end{equation}
+\begin{equation}\label{p2.6m}
+\nabla V =  D g' \nabla u \, u_{,t} +  D g \, \nabla u_{,t}  +  h' \nabla u
+\end{equation}
+\begin{equation*}
+\nabla V =   D g \, \nabla u_{,t}  +  \bigg[ D g' \nabla u \, u_{,t}   +  h' \nabla u \bigg]
+\end{equation*}
+\begin{equation}\label{p2.6a1m}
+\nabla u_{,t}  =  \frac{\nabla V  -  D g' \nabla u \, u_{,t}  - h' \nabla u }{D g}
+\end{equation}
+Again differentiating equation \eqref{p2.52.1m} with respect to $x_{k}$, we get
+\begin{equation*}
+V_{,kk} =  D g'' u_{,k} u_{,k} \, u_{,t} +  D g' u_{,kk} \, u_{,t}  +  2 D g' u_{,k} \, u_{,tk}  +  D g \, u_{,tkk}  +  h'' u_{,k} u_{,k}  + h' u_{,kk}
+\end{equation*}
+\begin{equation}\label{p2.7m}
+\Delta V =  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \nabla u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{equation}
+Using equation \eqref{p2.6a1m} in equation \eqref{p2.7m}, we have
+\begin{align}\nonumber
+\Delta V &=  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \bigg[  \frac{\nabla V  -  D g' \nabla u \, u_{,t}  - h' \nabla u }{D g}\bigg]\\ \nonumber &+  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{align}
+\begin{align}\label{p2.8m}\nonumber
+ \Delta V &= D g'' | \nabla u |^{2} u_{,t}  +  D g' \Delta u \, u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u  +  \frac{2 g' \nabla u \, \nabla V}{g}  \\  &-  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}.
+\end{align}
+\begin{align}\nonumber
+ \Delta V &= D g'' | \nabla u |^{2} u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  \\   &-  \frac{2 g' h' | \nabla u |^{2}}{g}  +  g' u_{,t} [ C u_{,t}  - f ]  +  \frac{h'}{D} [C u_{,t}  -  f ].   \,\,\ [ \because Using \eqref{p2.1p} ]
+\end{align}\label{p2.9m}
+\begin{align}\nonumber
+ \Delta V &= D g'' | \nabla u |^{2} u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  \\  \nonumber &-  \frac{2 g' h' | \nabla u |^{2}}{g}  +  g' C u^{2}_{,t}  -  g' u_{,t} f   +  \frac{h'}{D} C u_{,t}  -  \frac{h' f}{D}.
+\end{align}
+\begin{align}\nonumber
+\Delta V &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}   -  \frac{2 g' h' | \nabla u |^{2}}{g}  \\ \nonumber  &-  f g' u_{,t}  - \frac{fh'}{D}  +  \frac{1}{D} \bigg[  D^{2} g \Delta u_{,t}  +  D g' C u^{2}_{,t}  +  C h' u_{,t} \bigg].
+\end{align}\label{p2.10m}
+\begin{align}\nonumber
+ \Delta V &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u  \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}  \\  \nonumber & -  \frac{2 g' h' | \nabla u |^{2}}{g} -  f g' u_{,t}   - \frac{fh'}{D}  +  \frac{1}{D} \bigg[ C_{,t} V  +  C V_{,t} \\  &-   2 D \dot{D} g \Delta u  -  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h \bigg].  \,\, [ \because Using \eqref{p2.52m} ] \label{p2.11m}
+\end{align}
+\begin{align}\nonumber
+ \Delta V &= D g'' | \nabla u |^{2} u_{,t} +  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u  \nabla V}{g}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g}   \\ \nonumber &-  \frac{2 g' h' | \nabla u |^{2}}{g} -  f g' u_{,t}   - \frac{fh'}{D}  +  \frac{C_{,t} V}{D}  +  \frac{C V_{,t}}{D}  -   2  \dot{D} g \Delta u  -  \frac{\dot{D}}{D} g f \\&-   g f' u_{,t}  -  \frac{C_{,t} h}{D} . \label{p2.11.a1m}
+\end{align}
+After rearranging the terms of equation \eqref{p2.11.a1m},  we obtain
+\begin{align}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    \\ \nonumber &+  \frac{C V_{,t}}{D}  -   2 \dot{D} g \Delta u -  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} + \bigg\{ D g'' | \nabla u |^{2} u_{,t}  -  \frac{2 D g'^{2} | \nabla u |^{2} u_{,t}}{g} \\ & -  f g' u_{,t}  -  g f' u_{,t} \bigg\}. \label{p2.12m}
+\end{align}
+From equation \eqref{p2.5m}, we have
+\begin{align}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    +  \frac{C V_{,t}}{D}  \\ \nonumber &-   2 \dot{D} g \Delta u -  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} + \bigg\{ D g'' | \nabla u |^{2} \bigg( \frac{V  -  h}{D g} \bigg) \\ \nonumber &-  \frac{2 D g'^{2} | \nabla u |^{2} }{g} \bigg( \frac{V  -  h}{D g} \bigg)  -  f g' \bigg( \frac{V  -  h}{D g} \bigg)  -  g f' \bigg( \frac{V  -  h}{D g} \bigg) \bigg\}.
+\end{align}
+\begin{align}\nonumber
+\Delta V  &=  h'' | \nabla u |^{2}  +  \frac{2 g' \nabla u \, \nabla V}{g}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  - \frac{fh'}{D}  +  \frac{ C_{,t} V}{D}    +  \frac{C V_{,t}}{D} \\ \nonumber  & -   2 \dot{D} g \Delta u  -  \frac{\dot{D} g f}{D} -  \frac{C_{,t} h}{D} +   \frac{ g'' | \nabla u |^{2} V }{g} -  \frac{ g'' | \nabla u |^{2} h }{g}  -  \frac{2 g'^{2} | \nabla u |^{2} V }{g^{2}}   \\ &+  \frac{2 g'^{2} | \nabla u |^{2} h }{g^{2}}  -  \frac{f g' V}{D g}  +  \frac{f g' h}{D g}  -   \frac{f' V}{D}  +  \frac{f' h}{D}.\label{p2.13m}
+\end{align}
+Putting all the terms containing $V$ on left hand side and rest of the terms keep on the right side of equation \eqref{p2.13m},we obtain following equation
+\begin{align}\nonumber
+\Delta V - \frac{2 g' \nabla u \, \nabla V }{g}  &- \frac{C_{,t} V}{D}  -  \frac{C V_{,t}}{D}  -  \frac{g'' |\nabla u |^{2} V}{g}  + \frac{2 g'^{2} |\nabla u|^{2} V }{g^{2}}  +  \frac{g' f V }{g D}  +  \frac{f' V}{D}  \\ \nonumber &=  h'' | \nabla u |^{2}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -  \frac{ \dot{D} g f}{D}  \\ &-  \frac{C_{,t} h}{D}  -  \frac{ g'' | \nabla u |^{2} h }{g}  +  \frac{2  g'^{2} | \nabla u |^{2} h }{g^{2}}  +  \frac{f g' h}{D g}  + \frac{f' h}{D}.
+\end{align}\label{p2.14m}
+After some rearrangement and simplifications, we get
+\begin{align}\nonumber
+\Delta V - \frac{2 g' \nabla u \, \nabla V }{g}  & +   \bigg[  -  \frac{g'' |\nabla u |^{2}}{g}  + \frac{2 g'^{2} |\nabla u|^{2} }{g^{2}}  +  \frac{g' f  }{g D}  +  \frac{f'}{D}   - \frac{C_{,t} }{D} \bigg] V  -  \frac{C V_{,t}}{D}     \\ \nonumber &=  h'' | \nabla u |^{2}  -  \frac{2 g' h' | \nabla u |^{2}}{g}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -  \frac{ \dot{D} g f}{D}  \\ \nonumber &-  \frac{C_{,t} h}{D}  -  \frac{ g'' | \nabla u |^{2} h }{g}  +  \frac{2  g'^{2} | \nabla u |^{2} h }{g^{2}}  +  \frac{f g' h}{D g}  +  \frac{f' h}{D}.
+\end{align}
+Therefore,
+\begin{align}\nonumber
+ \Delta V  - 2  ( \log g)'  \nabla u \, \nabla V &+   \bigg[   g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{D g}  (f g)'  -  \frac{C_{,t}}{D}  \bigg]  V  -  \frac{C V_{,t}}{D} \\ \nonumber &=  \bigg[ h''  -   \frac{ g'' h }{g}   -  \frac{2 g' h' }{g}  +  \frac{2  g'^{2}  h }{g^{2}}  \bigg] | \nabla u |^{2}   \\ \nonumber &+  \frac{f g' h}{D g}  +  \frac{f' h}{D}  -  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -   \frac{ \dot{D} g f}{D}   -  \frac{C_{,t} h}{D}.
+\end{align}
+\begin{align}\nonumber
+ \Delta V  - 2  ( \log g)'  \nabla u \, \nabla V &+   \bigg[   g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{D g}  (f g)'  -  \frac{C_{,t}}{D}  \bigg]  V  -  \frac{C V_{,t}}{D} \\ \nonumber &=  g \bigg( \frac{h}{g} \bigg)'' | \nabla u |^{2}  +  \frac{f g' h}{D g}  +  \frac{f' h}{D}  \\ \nonumber &-  \frac{fh'}{D}  -  2 \dot{D} g \Delta u  -   \frac{ \dot{D} g f}{D}   -  \frac{C_{,t} h}{D}.
+\end{align}
+\begin{align}\nonumber
+D \Delta V  -& 2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g \bigg( \frac{1}{g} \bigg)''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t} ]  V  -  C V_{,t} \\  &=  D g \bigg( \frac{h}{g} \bigg)'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h -  2 D \dot{D} g \Delta u  -  \dot{D} g f.\label{p2.15m}
+\end{align}
+Since $ D  \Delta V  =  C u_{,t}  -  f $  and  $ u_{,t}  =  \frac{ V \, -  \,h }{D \, g}   ,$ by rearranging we can rewrite \eqref{p2.15m} as
+\begin{align}\label{p2.151m}\nonumber
+D \Delta V  -&  2 D ( \log g)'  \nabla u \, \nabla V  +   \bigg[ D  g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C h \bigg]  V  -  C V_{,t} \\ &=  D g \bigg( \frac{h}{g} \bigg)'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h  +   2  \frac{\dot{D}}{D} C h  +  \dot{D} g f.
+\end{align}
+
+ As per assumptions of the theorem, right hand side of \eqref{p2.151m} is nonpositive.
+\begin{equation}\label{p2.15am}
+D \Delta V  -  2 D ( \log g)'  \nabla u \, \nabla V  +   \bigg[ D  g \big( \frac{1}{g} \big)''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C \bigg]  V  -  C V_{,t}  \leq  0.
+\end{equation}
+By parabolic minimum principle \cite{w}, we can conclude that
+$$V( x, t )  \geq  m    \quad \text{in}  \quad \Omega \times (0, T).$$
+Suppose conditions (iv) are not satisfied then assume $ m  =  0 .$ \\
+But $ m  =  \max (m_{0}, m_{1}) $ where $ m_{0}  \geq  0,  m_{1}  \geq  0.$\\
+Also from boundary condition \eqref{p2.2p}, we have
+$$ u_{,t}  =  0   \quad  \text{on} \quad \partial\Omega \times (0, T). $$
+So $ V(x, t)  =  h(0)  = 0  \quad \text{on} \quad \partial \Omega \times (0, T)$.\\
+Thus $V \geq 0 .$ Hence the proof.\
+
+Now we prove following result for Neumann boundary condition.
+\begin{theorem}\label{c6th3}
+Suppose that\\
+i) u is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem
+\begin{align}\label{p2.21}
+C( x, t )  u_{,t}  &=  D(t) \Delta u + f(u)     \quad  in \quad \Omega \times ( 0, T )\\
+\frac{\partial u}{ \partial n}  &=  0 \quad \text{on} \quad \partial\Omega \times ( 0, T )\label{p2.22}\\
+u (x, 0) &=  u_{0}\label{p2.23}
+\end{align}
+with $ f(u) \in C^{1} ( \mathbb{R}^{+}),$ $g(u)$, $h(u)  \in C^{2} (\mathbb{R}^{+}) $ and $ C(x, t) \geq 0, D(t) > 0 $ ,
+
+ii) $g(\frac{h}{g})'' \geq 0, \,\, \frac{h}{g}(fg)' - h'f - h C_{,t} \geq 0   $ for positive argument,
+
+iii) $ 2 \frac{\dot{D}}{D} C  h  +  \dot{D} g f   \geq  0,$
+
+iv) $g(\frac{1}{g})'' \leq 0, \,\, \frac{1}{g}(fg)' -  C_{,t}  +  2  \frac{\dot{D}}{D} C \geq  0   $ for positive argument,and
+
+v) $ M = M_{0}$ where
+
+$$ M_{0}   =   \max_{\Omega} \{ D(t) g(u_{0}) ( D(t) \Delta u_{0}  +  f(u_{0}) )  + h(u_{0}) \}  \geq 0 .$$
+Then
+\begin{equation}\label{p2.24}
+g(u) D(t) u_{,t}  +  h(u) \leq  M  \quad \text{in}  \quad \Omega \times ( 0, T ).
+\end{equation}
+
+Assume $ M = 0 $  if conditions in (iv) for g(u) are not satisfied then the inequality
+\begin{equation*}
+g(u) D(t) u_{,t}  +  h(u) \leq  0  \quad \text{in}  \quad \Omega \times ( 0, T )
+\end{equation*}
+holds.
+\end{theorem}
+
+\textbf{Proof :} Consider the function
+\begin{equation*}
+V(x, t) =  D(t) g(u) u_{,t} +  h(u).
+\end{equation*}
+By straightforward calculations, we have
+\begin{align}\nonumber
+C_{,t} V  +  C V_{,t}  -   2 D \dot{D} g \Delta u  &-  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h  \\ \nonumber
+ &=  C D g' u^{2}_{,t} +  D^{2} g (\Delta u )_{,t}  +  C h' u_{,t}
+\end{align}
+and
+\begin{equation*}
+\nabla V =  D g' \nabla u \, u_{,t} +  D g \, \nabla u_{,t}  +  h' \nabla u
+\end{equation*}
+then
+\begin{equation*}
+\Delta V =  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \nabla u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{equation*}
+As similar to the proof of Theorem \ref{c6th1} finally we get
+\begin{align}\nonumber
+D \Delta V  -&  2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C h]  V  -  C V_{,t} \\  &=  D g (\frac{h}{g})'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h  +   2  \frac{\dot{D}}{D} C h  +  \dot{D} g f. \label{p2.151.1}
+\end{align}
+
+ By assumptions of the theorem, right hand side of \eqref{p2.151.1} is nonnegative.
+\begin{equation}
+D \Delta u  -  2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g \big( \frac{1}{g} \big)''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C ]  V  -  C V_{,t}  \geq  0.
+\end{equation}
+ Thus $ V(x, t)$ can not attain a nonnegative maximum $M$ in the interior of $ \Omega \times ( 0, T ) $.
+Suppose that $ M = 0 $ and using boundary condition \eqref{p2.22}, we have
+\begin{equation}\label{p2.25}
+ \frac{\partial V}{\partial n} =  D g' \frac{\partial u}{\partial n} u_{,t}  +  D g \big( \frac{\partial u}{\partial n} \big)_{,t}  +  h' \big( \frac{\partial u}{\partial n} \big)  =  0.
+\end{equation}
+Since $ \frac{\partial V}{\partial n}  \ngtr  0 $. \\
+Hence $V$ can not achieve its maximum on $ \partial \Omega$. \\Thus by strong maximum principle, $V$ must attains it maximum for $ t  =  0 $. Thus the result follows.
+
+\begin{remark}\label{R3}
+If we consider C  = 1, D  =  1 in Theorem \ref{c6th3} then we obtain result due to Sperb \cite{sp3}.
+\end{remark}
+Now we see the following result for mixed boundary condition.
+
+\begin{theorem}\label{c6th4}
+Suppose that
+
+i) $u(x, t)$ is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem
+\begin{align}\label{p2.26}
+C(x, t)u_{,t}  &=  D(t) \Delta u + f(u)     \quad  \text{in} \quad \Omega \times ( 0, T )\\
+\frac{\partial u}{\partial n}  +  \sigma (u)  &=  0 \quad \text{on} \quad \partial\Omega \times ( 0, T )\label{p2.27}\\
+u (x, 0) &=  u_{0} \label{p2.28}
+\end{align}
+with $ f(u) \in C^{1} (\mathbb{R}^{+}),$ $g(u)$, $h(u)  \in C^{2} (\mathbb{R}^{+}) $ and $ D(t) > 0 ,  C(x, t)  \geq  0, $
+
+ii) $g(\frac{h}{g})'' \geq 0, \,\, \frac{h}{g}(fg)' - h'f - h C_{,t} \geq 0   $ for positive argument,
+
+iii) $ 2 \frac{\dot{D}}{D} C  h  +  \dot{D} g f   \geq  0,$
+
+iv) $g(\frac{1}{g})'' \leq 0, \,\, \frac{1}{g}(fg)' -  C_{,t}  +  2  \frac{\dot{D}}{D} C \geq  0   $ for positive argument,
+
+v) for positive argument, we have $ g(u), \sigma (u) >  0,  \sigma'  +  \sigma ( \log g )'  \geq  0 $ and
+$$  \sigma \, h ( \log g )'  +  \sigma'  \, h  -  \sigma \, h'  \leq  0.$$
+Then
+\begin{equation}\label{p2.29}
+g(u) D(t) u_{,t}  +  h(u) \leq  M  \quad \text{in}  \quad \Omega \times ( 0, T ).
+\end{equation}
+Here  $M =  M_{0} $ and
+$$ M_{0}   =  \max_{\Omega} \{ D(t) g(u_{0}) ( D(t) \Delta u_{0}  +  f(u_{0}) )  + h(u_{0}) \}  \geq 0 .$$
+Also suppose that $ M = 0$  if conditions in (iv) for $g(u)$ is not satisfied then the inequality \eqref{p2.29} holds.
+\end{theorem}
+\textbf{Proof :}
+We have
+\begin{equation*}
+V(x, t) =  D(t) g(u) u_{,t} +  h(u).
+\end{equation*}
+By straightforward calculation, we obtain
+\begin{align}\nonumber
+C_{,t} V  +  C V_{,t}  -   2 D \dot{D} g \Delta u  &-  \dot{D} g f  -  D g f' u_{,t}  -  C_{,t} h  \\ \nonumber
+ &=  C D g' u^{2}_{,t} +  D^{2} g (\Delta u )_{,t}  +  C h' u_{,t}
+\end{align}
+and
+\begin{equation*}
+\nabla V =  D g' \nabla u \, u_{,t} +  D g \, \nabla u_{,t}  +  h' \nabla u
+\end{equation*}
+also
+\begin{equation*}
+\Delta V =  D g'' | \nabla u |^{2} u_{,t} +  D g' \Delta u \, u_{,t}  +  2 D g' \nabla u \, \nabla u_{,t}  +  D g \Delta u_{,t}  +  h'' | \nabla u |^{2}  +  h' \Delta u.
+\end{equation*}
+After simplify as similar to the proof of Theorem \ref{c6th1}, finally we obtain
+\begin{align}\nonumber
+D \Delta V  -&  2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g(\frac{1}{g})''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C h]  V  -  C V_{,t} \\  &=  D g (\frac{h}{g})'' |\nabla u|^{2}  +  \frac{h}{g}(fg)'  -  h' f    -  C_{,t} h  +   2  \frac{\dot{D}}{D} C h  +  \dot{D} g f. \label{p2.151.1z}
+\end{align}
+
+ By assumptions of the theorem, right hand side of \eqref{p2.151.1z} is nonnegative.
+\begin{equation}
+D \Delta u  -  2 D ( \log g)'  \nabla u \, \nabla V  +   [ D  g \big( \frac{1}{g} \big)''  | \nabla u |^{2}  +  \frac{1}{g}  (f g)'  -  C_{,t}  +  2 \frac{\dot{D}}{D} C ]  V  -  C V_{,t}  \geq  0.
+\end{equation}
+ Hence $ V(x, t)$ can not attain a nonnegative maximum $M$ in the interior of $ \Omega \times ( 0, T ) $.
+
+We have
+\begin{equation}\label{p2.30}
+ \frac{\partial V}{\partial n} =  D g' \frac{\partial u}{\partial n} u_{,t}  +  D g ( \frac{\partial u}{\partial n} )_{,t}  +  h' ( \frac{\partial u}{\partial n} ).
+\end{equation}
+From boundary condition \eqref{p2.27}, we get
+\begin{equation}\label{p2.31}
+ \frac{\partial u_{,t}}{\partial n}  =  - \sigma'  u_{,t}.
+\end{equation}
+Using boundary condition \eqref{p2.27} and equation \eqref{p2.31} in equation \eqref{p2.30}, we obtain
+\begin{equation}\label{p2.32}
+ \frac{\partial V}{\partial n} =  - D g' \sigma u_{,t}  -  D g \sigma' u_{,t}  -  h' \sigma.
+\end{equation}
+\begin{equation}\nonumber
+ \frac{\partial V}{\partial n} =  -  \frac{ \sigma  g' V }{g}  +  \frac{ \sigma  g' h }{g}  -  \sigma' V  +    \sigma' h  -  h' \sigma.  \quad \,\,\, [ \because Using \eqref{p2.5} ]
+\end{equation}
+\begin{equation}\label{p2.33}
+ \frac{\partial V}{\partial n} =  -  [ \sigma'  +  \sigma ( \log g )'  ]V  +   \sigma  h ( \log g )'  +    \sigma' h  -  h' \sigma.
+\end{equation}
+After rearranging the terms and using assumptions (v), we have
+\begin{equation}\nonumber
+ \frac{\partial V}{\partial n}  +  [ \sigma'  +  \sigma ( \log g )'  ]V  =   \sigma  h ( \log g )'  +    \sigma' h  -  h' \sigma  \leq  0.
+\end{equation}
+\begin{equation}\nonumber
+ \frac{\partial V}{\partial n}  \leq  0.
+\end{equation}
+Hence $ \frac{\partial V}{\partial n}  \ngtr  0 $. By using strong maximum principle, $V$ can not attains its maximum on $\partial \Omega.$ Thus $V$ achieve its maximum on $ t  =  0 $. This completes the proof.
+
+\begin{remark}\label{R4}
+If we consider C  = 1, D  =  1 in Theorem \ref{c6th4} we get result due to Sperb \cite{sp3}.
+\end{remark}
+
+\begin{remark}\label{R5}
+If all inequality signs are reversed and take C  = 1, D  =  1 we get results due to Sperb \cite{sp3} for minimum principle cases.
+\end{remark}
+
+\section{Applications}
+ In this section as an  application of our maximum principle we find some bounds for $u_{,t}$. We obtain some important results by choosing the functions $g(u)$ and $h(u)$ in different ways.
+
+\begin{cor}\label{cor1}
+Suppose that
+
+i) $u(x, t)$ is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem \eqref{p2.1}-\eqref{p2.3},
+
+ii) $ f(u) \in C^{1} (\mathbb{R}^{+}),  C(x, t)  \geq  0 ,  D(t) > 0 $ ,
+
+iii)$ D(t)  \Delta u_{0}  +  f(u_{0})  \geq  0 \quad \text{in} \quad \Omega $.
+
+Then
+\begin{equation}\label{p2.34}
+u_{,t}  \geq  0  \quad \text{in}  \quad \Omega \times ( 0, T ).
+\end{equation}
+\end{cor}
+\textbf{Proof:}  We consider $ g(u)  =  1 $ and $ h(u)  =  0 $. We observe that all the conditions of Theorem \ref{c6th1} with $ M = 0 $  are satisfied. From \eqref{p2.5}, we have
+ $$V (x, t)  =  D(t) u_{,t}  \geq  M  =  0.$$
+Thus $u_{,t} \geq  0$. Hence the result.
+
+Next result is
+
+\begin{cor}\label{cor2}
+Suppose that
+
+i) $u(x, t)$ is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem \eqref{p2.1}-\eqref{p2.3},
+
+ii) $ f(u) \in C^{1} (\mathbb{R}^{+}),  C(x, t)  \geq  0,  D(t) > 0 $  and $ f(0) =  0 $
+
+iii) for any $u  \geq  0, f'(u)  \geq  0, f''(u) \geq  0 $ \, and
+
+iv) for some positive $a$ we have
+$$ D(t)  \Delta u_{0}  +  f(u_{0})  \geq  a f(u_{0}) \quad  \text{in} \quad \Omega .$$
+
+Then
+\begin{equation}\label{p2.35}
+u_{,t}  \geq  \frac{a f(u)}{D}  \quad \text{in}  \quad \Omega \times ( 0, T ).
+\end{equation}
+\end{cor}
+
+\textbf{Proof :} We choose $ g(u)  =  1 $ and $ h(u)  =  -  a  f(u) $. We see that all conditions of Theorem \ref{c6th1} with $ M  =  0 $ holds.
+
+Thus
+\begin{equation}\label{p2.36}
+V (x, t)  =  D(t) u_{,t} - a f(u)  \geq  0.
+\end{equation}
+This implies
+\begin{equation}\nonumber
+u_{,t}  \geq  \frac{a f(u)}{D}.
+\end{equation}
+Hence the result.\\
+We prove next corollary by using Theorem \ref{c6th1} and Theorem \ref{c6th2}.
+
+\begin{cor}\label{cor3}
+Suppose that
+
+i) $u(x, t)$ is a $ C^{4}( \Omega \times ( 0, T )) \bigcap C^{2}( \bar{\Omega} \times ( 0, T )) $ positive solution of the initial boundary value problem \eqref{p2.1}-\eqref{p2.3},
+
+ii) $ f(u) \in C^{1} (R^{+}),  C(x, t) \geq 0, D(t) > 0 $
+
+iii) $ f(0) >  0 $ for  some $ u \geq 0 , f'(u)  \geq  0, f''(u)  \leq  0 $ and
+
+\begin{align*}
+iv) M  &=  \max_{\Omega} \{\frac{[ D(t) \Delta u_{0}  +  f(u_{0}) ]}{ f(u_{0})} \}  >  0,\\
+m  &= \min_{\Omega} \{\frac{[ D(t) \Delta u_{0}  +  f(u_{0}) ]}{ f(u_{0})} \}  <  0 .
+\end{align*}
+Then
+\begin{equation}\label{p2.36}
+\frac{m f(u)}{D}  \leq  u_{,t} \, \leq \, \frac{M f(u)}{D}.
+\end{equation}
+\end{cor}
+\textbf{Proof :} Suppose $ g(u)  =  [f(u)]^{-1} $ and $ h(u) = 0.$
+We see that all assumptions of Theorem \ref{c6th1} and Theorem \ref{c6th2} hold. Therefore
+\begin{equation}\label{p2.37}
+V (x, t)  =   \frac{ D(t) u_{,t}}{f(u)}.
+\end{equation}
+By Theorem \ref{c6th1}, we have
+\begin{equation}\label{p2.38}
+\frac{ D(t) u_{,t}}{f(u)}  \leq  M.
+\end{equation}
+From Theorem \ref{c6th2},we get
+\begin{equation}\label{p2.39}
+\frac{ D(t) u_{,t}}{f(u)}  \geq  m.
+\end{equation}
+From \eqref{p2.38} and \eqref{p2.39} we conclude that \eqref{p2.36} holds.
+This completes the proof.
+
+
+
+\end{large}

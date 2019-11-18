@@ -1,0 +1,279 @@
+
+%% ----------------------------------------------------------------
+%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% ----------------------------------------------------------------
+
+% Set up the document
+\documentclass[a4paper, 12pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve
+%\usepackage{graphicx}
+\allowdisplaybreaks
+\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+
+% Include any extra LaTeX packages required
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{color}
+\usepackage[colorlinks]{hyperref}
+\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb,graphicx,enumerate}
+\usepackage{longtable,mathrsfs}
+\usepackage{memhfixc}					%Must be used on memoir document 
+									%class after hyperref
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{enumerate}					%For enumeration counter
+\usepackage{footnote}					%For footnotes
+\usepackage{microtype}					%Makes pdf look better.
+\usepackage{rotfloat}					%For rotating and float environments as tables, 
+									%figures, etc. 
+\usepackage{alltt}						%LaTeX commands are not disabled in 
+									%verbatim-like environment
+\usepackage[version=0.96]{pgf}			%PGF/TikZ is a tandem of languages for producing vector graphics from a 
+\usepackage{tikz}						%geometric/algebraic description.
+\usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri,topaths}				%To use diverse features from tikz		
+%							
+\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+%\usetikzlibrary{arrows}
+%
+%An initial of the very first character of the content
+\usepackage{lettrine}
+\newcommand{\initial}[1]{%
+	\lettrine[lines=3,lhang=0.33,nindent=0em]{
+		\color{gray}
+     		{\textsc{#1}}}{}}
+%
+% Theorem styles used in my thesis
+\usepackage{amsmath, amsthm, amscd, amsfonts, amssymb, graphicx, color,float,pgf,tikz}
+%\usepackage[left=2.5cm, right=2cm, top=2cm, bottom=1.5cm]{geometry}
+\usepackage{amssymb,fontenc}
+\usepackage{latexsym,wasysym,mathrsfs}
+\usepackage{hyperref}
+\usetikzlibrary{arrows}
+\usepackage{chngcntr}
+%\counterwithout{footnote}{chapter}
+%
+
+%
+% Hyphenation for some words
+%
+\hyphenation{res-pec-tively}
+\hyphenation{mono-ti-ca-lly}
+\hyphenation{hypo-the-sis}
+\hyphenation{para-me-ters}
+\hyphenation{sol-va-bi-li-ty}
+%
+\newcommand{\F}{Fibonacci}%
+\newcommand{\LU}{Lucas}%
+\newcommand{\M}{$\mathcal{M}_{k,n}$}%
+\newcommand{\m}{\mathcal{M}}%
+\newcommand{\N}{$\mathcal{N}_{k,n}$}%
+\newcommand{\n}{\mathcal{N}}%
+\newcommand{\fb}{\mathcal{F}}%
+\newcommand{\lu}{\mathcal{L}}%
+\newcommand{\K}{$\mathit{k}$}%
+\newcommand{\kF}{\K -\F }%
+\newcommand{\kL}{\K -\LU }%
+\newcommand{\kM}{\K -\M }%
+\newcommand{\hf}{\bar{{\mathcal{H^F}}}}%
+\newcommand{\hl}{\bar{{\mathcal{H^L}}}}%
+\newcommand{\kh}{\K -\h }%
+\newcommand{\hp}{{{\mathcal{O^F}}}}%
+\newcommand{\hq}{{{\mathcal{O^L}}}}%
+\newcommand{\ho}{{{\mathcal{O}}}}%
+\newcommand{\qf}{{{\mathcal{Q^F}}}}%
+\newcommand{\ql}{{{\mathcal{Q^L}}}}%
+%
+%\usepackage{latexsym,wasysym,mathrsfs}
+%
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+% Fuzz --------------------------------------------------------------------
+\hfuzz2pt % Don't bother to report over-full boxes if over-edge is < 2pt
+% Line spacing ------------------------------------------------------------
+\newlength{\defbaselineskip}
+\setlength{\defbaselineskip}{\baselineskip}
+\newcommand{\setlinespacing}[1]%
+           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+ %                          {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+\allowdisplaybreaks
+\setcounter{page}{1}
+%% ----------------------------------------------------------------
+\begin{document}
+
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+
+% Set up the Title Page
+\title  {\textcolor[rgb]{0.50,0.00,0.00}{Study of Generalized Fibonacci Sequences}}
+\authors  {\texorpdfstring
+            {\href{ashokgodse2012@gmail.com}{Ashok Dnyandeo Godase}}
+            {Ashok Dnyandeo Godase}
+            }
+\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\date       {\today}
+\subject    {}
+\keywords   {}
+
+\maketitle
+%% ----------------------------------------------------------------
+
+\setstretch{1.5}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+\rhead{\thepage}  % Sets the right side header to show the page number
+\lhead{}  % Clears the left side page header
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+%% ----------------------------------------------------------------
+% Declaration Page required for the Thesis, your institution may give you a different text to place here
+\Declaration{
+
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+I, \textcolor[rgb]{1.00,0.00,0.00}{Ashok Dnyandeo Godase} hereby declare that the thesis entitled \textcolor[rgb]{1.00,0.00,0.00}{\lq\lq{A Study of Generalized Fibonacci Sequences\rq\rq}} submitted by me for the award of Degree of Doctor of Philosophy in Mathematics in the faculty of science to Dr. Babasaheb Ambedkar Marathwada University, Aurangabad (M.S.), India, is the original work carried out by me and has not been submitted to any other university, in any form for the fulfilment of any other diploma, degree, fellowship or other similar title by me.\\
+
+
+Date: {$06^{th}$ November 2019}. \hskip 5.5cm{Research Scholar}\\
+Place: Aurangabad. \hfill{\textcolor[rgb]{1.00,0.00,0.00}{Ashok Dnyandeo Godase}}
+}
+\clearpage  % Declaration ended, now start a new page
+%%%%%%%%%%%%%%%%---------------Certificate-----------------------------
+% Certificate Page required for the Thesis, your institution may give you a different text to place here
+\Certificate{
+
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+\par This is to certify that the thesis entitled, \textcolor[rgb]{0.98,0.00,0.00}{\lq \lq{A Study of Generalized Fibonacci Sequences}\rq\rq} which is being submitted by \textcolor[rgb]{1.00,0.00,0.00}{Ashok Dnyandeo Godase} for the award of the degree of Doctor of Philosophy in Mathematics, Under the Faculty of Science to \textcolor[rgb]{0.00,0.00,1.00}{Dr. Babasaheb Ambedkar Marathwada University, Aurangabad}, is a record of bonafied research work carried out by him under my supervision, guidance and the same has not been submitted elsewhere for any other degree.
+
+\vskip 1.4cm
+Place: Aurangabad. \hskip 6.65cm \facname \\
+Date : $06^{th}$ November 2019.  \hskip 4.8cm \textcolor[rgb]{0.00,0.00,1.00}{Former Professor and Head}\\
+. \hskip 9.35cm \textcolor[rgb]{0.00,0.00,1.00}{Department of Mathematics,}\\
+. \hskip 9.7cm \textcolor[rgb]{0.00,0.00,1.00}{Dr. Babasaheb Ambedkar}\\
+. \hskip 9.7cm \textcolor[rgb]{0.00,0.00,1.00}{Marathwada University,}\\
+. \hskip 9.5cm \textcolor[rgb]{0.00,0.00,1.00}{Aurangabad (M.S.), India.}
+
+}
+
+\clearpage  % Declaration ended, now start a new page
+%% ----------------------------------------------------------------
+
+
+\clearpage  % Abstract ended, start a new page
+%% ----------------------------------------------------------------
+
+  % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+% The Acknowledgements page, for thanking everyone
+\setstretch{1.66}
+\acknowledgements{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+With extreme pleasure, I would like to express my sincere and deep sense of gratitude to my honorable guide \textcolor[rgb]{0,0,01}{Dr. M. B. Dhakne}, Former Professor and Head, Department of Mathematics, Dr. Babasaheb Ambedkar Marathwada University, Aurangabad (M.S.), India for his valuable guidance, constant encouragement and timely suggestions  throughout my research period. I also express my deep sense of gratitude for his excellent guidance, competent advice, keen observations and persistent encouragement as well as personal attention given to me during the entire course of work,  without which the successful completion of this work would not have been possible. I am deeply indebted to him for his kindness, constant encouragement and support.
+
+\noindent I express my sincere thank to Professor and Head, Department of Mathematics, Dr. Babasaheb Ambedkar Marathwada University, Aurangabad (M.S.), India for extending all research facilities to me during the tenure of my research work. I am thankful to all faculty members and non-teaching staff members of the department of Mathematics for their kind co-operation.
+
+\noindent It would like to express my sincere appreciation to my research colleagues and friends for their pleasant company, technical discussion, cooperation and all the help they had extended during the years of sustained pressure required to complete this work.
+
+\noindent It would be great pleasure for me to remember and to acknowledge my late paternal grand father \textcolor[rgb]{0,0,1}{Sukhram Godase} and for their support, which is of immense value for me, of course, I am grateful to my wife \textcolor[rgb]{0,0,1}{Sarika A. Godase} without whom this work would never have come into existence and my daughter \textcolor[rgb]{0,0,01}{Eshwari A. Godase} for understanding and patience during the study of this thesis.
+
+\noindent I take this opportunity to express my gratitude towards Director of Marathwada Shikshan Prasarak Mandal, \textcolor[rgb]{0,0,1}{Shri. Appasaheb Patil}, Principal, faculty members and non-teaching staff of Vinayakrao Patil Mahavidyalaya, Vaijapur. I conclude my endless thanks to all those whom I am not able to recall. Thanking for their best wishers:
+
+
+\vskip 1 cm
+\hskip 8cm \textcolor[rgb]{1.00,0.50,0.25}{\textbf{Ashok Dnyandeo Godase}}
+}
+\clearpage  % End of the Acknowledgements
+%% ----------------------------------------------------------------
+
+\pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+%% ----------------------------------------------------------------
+\lhead{\emph{Contents}}  % Set the left side page header to "Contents"
+\tableofcontents  % Write out the Table of Contents
+%% ----------------------------------------------------------------
+%\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+%\listoftables  % Write out the List of Tables
+%% ----------------------------------------------------------------
+%\sets tretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+%\clearpage  % Start a new page
+%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+%\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+%{
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+%\textbf{TSA} & \textbf{T}hermal \textbf{S}tress \textbf{A}nalysis \\
+%}
+%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%\clearpage  %Start a new page
+%\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
+%\listofnomenclature{lll}  % Include a list of Symbols (a three column table)
+%{
+% symbol & name & unit \\
+%$a$ & distance & m \\
+%$P$ & power & W (Js$^{-1}$) \\
+%& & \\ % Gap to separate the Roman symbols from the Greek
+%$\omega$ & angular frequency & rads$^{-1}$ \\
+%}L
+%% ----------------------------------------------------------------
+% End of the pre-able, contents and lists of things
+% Begin the Dedication page
+\setstretch{2}  % Return the line spacing back to 1.3
+\pagestyle{empty}
+%Page style needs to be empty for this page
+\dedicatory{\textcolor[rgb]{1.00,0.00,0.00}{Dedicated to}\\
+\LARGE{\textcolor[rgb]{0.50,0.00,0.51}{\textbf{My Family and My Students}}}}
+\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+
+%% ----------------------------------------------------------------
+\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+\renewcommand{\headrulewidth}{0.01pt}
+
+\setstretch{1.8}
+\large
+
+\input{./Chapters/chap01}
+\input{./Chapters/chap02}
+\input{./Chapters/chap04}
+\input{./Chapters/chap03}
+\input{./Chapters/chap05}
+%\input{./Chapters/chap06}
+\input{./Chapters/chap07}
+ ----------------------------------------------------------------
+% Now begin the Appendices, including them as separate filesl
+
+%\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+%\input{./Appendices/AppendixA}	% Appendix Title
+
+%\input{./Appendices/AppendixB} % Appendix Title
+
+%\input{./Appendices/AppendixC} % Appendix Title
+
+%\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\label{Bibliography}
+
+\input{./Chapters/bibliography}
+\input{./Chapters/Publications}
+
+
+\end{document} 

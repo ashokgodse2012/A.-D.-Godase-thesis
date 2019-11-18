@@ -1,0 +1,239 @@
+% Chapter 1
+% these lines in down used to write header and footer.
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Diffusion-Reaction Phenomena:}
+\chead{}
+\rfoot{\scriptsize\medskip\itshape Gunvant A. Birajdar}
+\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+\chapter{Introduction} % Write in your own chapter title
+%\label{Chapter1}
+%\lhead{Chapter 1. \emph{Introduction}} % Write in your own chapter title to set the page header
+%\lfoot{ \emph{Gunvant A. Birajdar}}
+
+\begin{quote}
+{\em "However varied may be the imagination of man, nature is a thousand times richer,...Each of the theories of physics...
+presents partial differential equations under a new aspect...without these theories, we should not know partial differential equations" }
+\end{quote}
+ \hfill{{\em HENRI POINCARE}.}
+
+\medskip
+
+During the second half of nineteenth century, a large number of mathematicians become actively involved
+in the investigation of numerous problem presented by partial differential equations.
+The primary reason for this research was that partial differential equations both
+express many fundamental laws of nature and frequently arise in the mathematical
+analysis of diverse problems in science and engineering. The next phase of the
+development of linear partial differential equations is characterized by the efforts
+to develop the general theory and various methods of solutions of these liner equations.\
+
+In fact, partial differential equations have been found to be essential to develop the
+theory of surfaces on the one hand and to the solution of physical problems on the other.
+These two areas of mathematics can be seen as linked by the bridge of Numerical analysis.
+With the discovery of the basic concept and properties of distributions, the modern theory
+of the linear partial differential equations is now well established. The subject plays a
+central role in modern mathematics, especially in physics, geometry, and analysis.\
+
+Although the origin of nonlinear partial differential equations is very old,they have undergone
+remarkable new developments during the last half of the twentieth century. One of the main impulses
+for developing nonlinear partial differential equations has been the study of nonlinear wave propagation
+problems. These problems arise in different areas of applied mathematics, physics, and engineering including
+fluid dynamics, nonlinear optics, solid mechanics, plasma physics, quantum field theory, and condensed-matter physics.
+Many remarkable and unexpected phenomena have also been observed in physical, chemical, and biological systems. Other
+major achievements of twentieth  century applied mathematics include the discovery of soliton interactions, the inverse
+scattering transform method, numerical method for finding the explicit solution for several partial differential equations.\
+
+Many problems of physics interest are described by partial differential equations with appropriate initial and/ or boundary conditions.
+These problems, are usually formulated as IVPs , BVP or IBVPs. In order to prepare the reader for study and research in nonlinear partial
+differential equations, a brad converge of the essential standard material on linear partial differential equations and their applications
+in required.\
+
+Numerical methods are useful for solving fluid dynamics, heat and mass transfer problems and other partial differential equations of mathematical
+physics when such problems cannot be handled by the exact analysis technique because of nonlinearity, complex geometries and complicated boundary
+conditions. The development of the high speed digital computers significantly enhanced the use of numerical methods in various branches of sciences
+and engineering. Many complicated problems can now be solved short time with the available computing power.
+
+\section{Diffusion-Reaction Phenomena: }
+Many physical phenomena are described by the interaction of convection and diffusion and also by the interaction of diffusion and reaction.
+From a physical point of view, the convection-diffusion process are quite fundamental in describing a wide variety of problems in physical,
+chemical, biological, and engineering sciences. Some nonlinear partial differential equations that model these processes provide many insights
+into the question of interaction of nonlinearity and diffusion. It is well known that the Burger's equation is the simplest nonlinear model
+equation representing phenomena described by a balance between convection and diffusion. The Fisher equation is another simplest nonlinear
+model equation which arises in a wide variety of problems involving diffusion and reaction.
+
+"Nonlinear Partial Differential Equations for Scientists and Engineers" by Lokenath Debnath, Birkhauser, Baston, II nd ed, 2005.\\
+
+
+Mathematical physics deals with physical phenomena by modeling the phenomena of interest, generally in the form of nonlinear partial
+differential equations. It then requires an effective analysis of the mathematical model,such that the processes of modelling and of
+analysis yield results in accordance with observation and experiment. By this, we mean that the mathematical solution must conform to
+physical reality, i.e. to the real world of physics. Therefore, we must be able to solve differential equations,in space and time, which
+may be nonlinear and often stochastic as well, without the concessions to tractability which have been customary both in graduate training
+and in research in physics and mathematics. Nonlinear partial differential equations are very difficult to solve analytically, so methods
+such as linearization, statistical linearization, perturbation, quasi-monochromatic approximations, white noise representation of actual
+stochastic processes etc. have been customary resorts. Exact solutions in closed form are not a necessity. In fact, for the world of physics
+only a sufficiently accurate solution matters. All modelling is approximations, so finding an improved general method of analysis of models
+also contributes to allowing development of more sophisticated modelling [1,2].
+
+
+Our objective in this chapter is to see how to use the decomposition method for partial differential equations. These methods are applicable in
+problems of interest to theoretical physicists, applied mathematicians, engineers, and other disciplines and suggest developments in pure mathematics.
+
+1) G.Adomian. Stochastic Systems, Academic Press(1983). 2) G.Adomian.
+Nonlinear Stochastic Operator Equations, Academic Press(1986).
+
+\medskip
+A NUMERICAL ANALYSIS I Lecture 1: Introduction to Numerical Analysis We model our world with continuous mathematics.
+Whether our interest is natural science, engineering, even finance and economics, the models we most often employ are
+functions of real variables. The equations can be linear or nonlinear, involve derivatives, integrals, combinations of
+these and beyond. The tricks and techniques one learns in algebra and calculus for solving such systems exactly cannot
+tackle the complexities that arise in serious applications. Exact solution may require an intractable amount of work;
+worse, for many problems, it is impossible to write down an exact solution using elementary functions like polynomials,
+roots, trig functions, and logarithms. This course tells a marvelous success story. Through the use of clever algorithms,
+careful analysis, and speedy computers, we are able to construct approximate solutions to these otherwise intractable problems
+with remarkable speed. Trefethen defines numerical analysis to be `the study of algorithms for the problems of continuous mathematics's.
+This course takes a tour through many such algorithms, sampling a variety of techniques suitable across many applications. We aim to
+assess alternative methods based on both accuracy and efficiency, to discern well-posed problems from ill-posed ones, and to see these
+methods in action through computer implementation. Perhaps the importance of numerical analysis can be best appreciated by realizing the
+impact its disappearance would have on our world. The space program would evaporate; aircraft design would be hobbled; weather forecasting
+would again become the stuff of soothsaying and almanacs. The ultrasound technology that uncovers cancer and illuminates the womb would vanish.
+Google couldn't rank web pages. Even the letters you are reading, whose shapes are specified by polynomial curves, would surer.
+(Several important exceptions involve discrete, not continuous, mathematics: combinatorial optimization, cryptography and gene sequencing.)
+On one hand, we are interested in complexity: we want algorithms that minimize the number of calculations required to compute a solution.
+But we are also interested in the quality of our approximation: since we do not obtain exact solutions, we must understand the accuracy of our
+answers. Discrepancies arise from approximating a complicated function by a polynomial, a continuum by a discrete grid of points, or the real
+numbers by a finite set of floating point numbers. Different algorithms for the same problem will differ in the quality of their answers and the
+labor required to obtain those answers; we will learn how to evaluate algorithms according to these criteria. Numerical analysis forms the heart of `
+scientific computing' or `computational science and engineering,' fields that also encompass the high-performance computing technology that makes our
+algorithms practical for problems with millions of variables, visualization techniques that illuminate the data sets that emerge from these computations,
+and the applications that motivate them. Though numerical analysis has flourished in the past sixty years, its roots go back centuries, where numerical approximations were necessary for foundational work in celestial mechanics and, more generally, `natural philosophy'. Science, commerce, and warfare
+magnified the need for numerical analysis, so much so that the early twentieth century spawned the profession of `computers,' people (often women) who
+conducted computations with hand-crank desk calculators. But numerical analysis has always been more than mere number-crunching, as observed by Alston Householder in the introduction to his Principles of Numerical Analysis, published in 1953, the end of the human computer era: We highly recommend L. N. Trefethen's essay, `The Definition of Numerical Analysis', (reprinted on pages 321-327 of Trefethen and Bau, Numerical Linear Algebra), which inspires our present definition.\
+
+The material was assembled with high-speed digital computation always in mind, though many techniques appropriate only to "hand" computation are discussed... . How otherwise the continued use of these machines will transform the computer's art remains to be seen. But this much can surely be said, that their effective use demands a more profound understanding of the mathematics of the problem, and a more detailed acquaintance with the potential sources of error, than is ever required by a computation whose development can be watched, step by step, as it proceeds. Thus the analysis component of `numerical analysis' is essential. We rely on tools of classical real analysis, such as the notions of continuity, differentiability, Taylor expansion, and convergence of sequences and series. Should you need to improve your analysis background, we recommend  Walter Rudin, Principles of Mathematical Analysis, 3rd ed., McGraw{Hill, New York, 1976. The methods we study typically require continuous variables to be approximated at finitely many points, that is, discretized. Nonlinearities are often finessed by linearization. These two compromises reduce a wide range of equations to familiar finite-dimensional, linear algebra problems, and thus we organize our study around a set of fundamental matrix algorithms that we revisit and refine as the semester progresses. Use the following wonderful books to hone your matrix analysis skills:
+
+Peter Lax, Linear Algebra, Wiley, New York,1997; Carl Meyer, Applied Matrix Analysis and Linear Algebra, SIAM, Philadelphia, 2000; Gilbert Strang,Linear Algebra and Its Applications, 3rd Ed., Harcourt, 1988. These lecture notes were developed for a course that was supplemented by two texts: Numerical Linear Algebra by Trefethen and Bau, and either Numerical Analysis by Kincaid and Cheney, or An Introduction to Numerical Analysis by Suli and Mayers. These notes have benefited from this pedigree, and thus re ect certain hallmarks of these books. We have also been significantly in influenced by G.W. Stewart's inspiring volumes, Afternotes on Numerical Analysis and Afternotes Goes to Graduate School. I am grateful for comments and
+corrections from past students, and welcome suggestions for further repair and amendment.
+
+%%% ----------------------------------------------------------------------
+\medskip
+\lhead{\scriptsize\itshape\medskip Background:}
+\chead{}
+\section{Background:}
+The concept of fractional calculus(that is, calculus of integral and derivatives of arbitrary order) may be considered an old and yet novel topic. In fact, the concepts are almost as old as their more familiar integer-order counterparts. As early as 1695, when Leibniz and Newton had just been establishing standard calculus, Leibniz and L'Hopital had correspondence where they discussed the meaning of the derivative of order one half. Since then, many famous mathematicians have worked on this and related questions, creating the field which known today as \emph{fractional calculus}. As list of mathematicians who have provided important contributions up to the middle of last century, includes Laplace, Fourier, Abel, Liouville, Riemann,Grunwald, Letnikov, Levy, Marchaud, Erdelyi, and Riesz. However, for three centuries, the theory of fractional calculus was developed mainly as a purely theoretical field of mathematics.\
+
+The fractional calculus is also considered a novel topic, since it is only during the last three decades that it has been the subject of specialized conference and treatises. This was stimulated by the fact that many important applications of fractional calculus have been found in numerous diverse and widespread fields in science, engineering and finance. Many authors have pointed out that fractional derivatives and integral are very suitable for modelling the memory and hereditary properties of various materials and processes that are governed by anomalous diffusion. This is the main advantage of fractional derivatives in comparison with classical integer-order models, in which such effects are neglected.\
+
+It was Ross who organized the first conference on fractional calculus and its applications at
+the University of New Haven in June 1974, and edited the proceeding [123]. For the first monograph on this subject, the merit is ascribed on Oldham and Spanier [114], who after a joint collaboration started in 1968, published book devoted to fractional calculus in 1974. One of the most widely used works on the subject of fractional calculus is the book of Podlubny[116] published in 1999, which provides an overview of the basic theory of fractional differentiation, fractional-order differential equations, methods of their solution and applications. Some of the latest works especially on fractional models of anomalous kinetics of complex processes are the volumes edited by Carpinteri and Mainardi[19]in 1997 and by
+Hilfer [55]in 2000, the book by Sabatier, Agrawal, Tenreiro Machado [127]in 2007. Indeed, in the mean time, numerous other works(book, edited volumes, and conference proceeding) have also appeared.These include(for example) the remarkably comprehensive encyclopaedic-type monograph by Samko, Kilbas and Marichev[129], which was published in Russian in 1987 and in English in 1993, and the book devoted substantially to fractional differential equations by Miller and Ross[111], which was published in 1993.\
+
+Transport phenomena in complex systems, such as random fractal structures, exhibit many anomalous features that are qualitatively different from the standard behaviour characteristics of regular systems[18], and hence the traditional partial differential equations may not be adequate for describing the underlying phenomena. Anomalous diffusion is a phenomenon strongly connected with the interactions within complex and non-homogeneous
+background. This phenomenon is observed in transport of fluid in pours media, in chaotic heat baths, amorphous semiconductors, particle dynamics inside polymer networks, two-dimensional rotating flows and also in econophysics [26]. In the case of fractals, such anomalies are due to the spatial complexity of the substrate, which imposes geometrical constraints on the transport process on all length scales. These constraints may be also seen as temporal
+correlations existing on all time scales. Intensive analytical and numerical works has been performed in recent years to elucidate unusual transport  properties on fractal structures[44]. Much interest has been focused on understanding diffusion process on such spatially correlated media. The nonhomogeneous of the medium may alter the laws of Markov diffusion in a fundamental way. In particular, the corresponding probability density of the concentration field may have a heavier tail than the usual exponential rate of Markov diffusion, resulting in long-range dependence. This phenomenon is known as anomalous diffusion[110].\
+
+A major approach to anomalous diffusion is that of a continuous time random walk(CTRW),
+which has a long history of development. In the CTRW approach, the random motion is performed on a regular lattice, but the length of a jump and waiting time between two successive jumps are assumed to be random and drawn from a probability density function. Different assumptions on this probability density function lead to a variety of fractional differential equations(FDE) such as the fractional heat equation[5], the fractional advection-dispersion equation[79], the fractional kinetic equation[160], the fractional Fokker-Planck equation(FFPE)[78], and the Riesz fractional kinetic equation[26].\
+
+In recent years, considerable interest in fractional differential equations has been stimulated by the applications that it finds in numerical analysis and in the different areas of physical and chemical process and engineering, including fractal phenomena[110]. A physical-mathematical approach to anomalous diffusion[110] may be based on a generalized diffusion equation containing derivatives of fractional order in space, or time, or space-time. Such evolution equations imply for the flux a fractional Fick's law that accounts for spatial and temporal non-locality. Fractional-order derivatives and integrals provide a powerful instrument for the description of memory and hereditary properties of different substances[116].\
+
+Fractional differential equations have been recently treated by a number of authors. The development and implementation of efficient and accurate numerical methods, and the rigorous theoretical analysis of fractional differential equations are both very difficult tasks, in particular for the cases of high dimensions, because the fractional differential equations involve a fractional-order derivative. Although some numerical methods for solving the space, or time, or time-space fractional partial differential equations have been proposed, many questions are open, especially for the cases of higher dimensions. A need therefore arises for developing new numerical methods and analysis techniques, in particular, for higher dimensional computational models.
+
+\lhead{\scriptsize\itshape\medskip Literature Review:}
+\chead{}
+\section{Literature Review:}
+
+In this section, the current state of knowledge in the application of fractional derivatives and the analytical and numerical approaches for solving fractional partial differential equations(FPDE) is explored.
+
+\subsection{Applications of fractional derivatives}
+The concept of fractional derivatives is by no means new. In fact, they are almost as old as their more familiar integer-order counterparts [111,114,116,129]. Fractional derivatives have recently been successfully applied to problems in system biology[159], physics [11,108,110,128,160], chemistry and biochemistry[156], hydrology[13,78,79], medicine [69,70] [130,54,99,53], and finance [51,120,132,148,107].\
+
+In the area of physics, fractional kinetic equations of the diffusion, diffusion-advection, and Fokker-Plank type are presented as a useful approach for the description of transport dynamics in complex systems that are governed by anomalous diffusion and non-exponential relaxation patterns[110], Metzler and Kalfter[110] derived these fractional equations asymptotically from basic random walk models, and from a generalised master equation. They presented an integral transformation between the Brownian solution and its fractional counterpart. Moreover, a phase space model was presented to explain the genesis of fractional dynamics in trapping systems. These issues make the fractional equation approach powerful. Their work demonstrate that fractional equations have come of age as a complementary tool in the description of anomalous transport processes.\
+
+Zaslavsky[160] reviewed a new concept of fractional kinetics for system with Hamiltonian chaos. New characteristics of the kinetics are extended to fractional kinetics and the most important are anomalous transport, superdiffusion and weak mixing, amongst other. Different important physical phenomena, including the cooling of particles and signals, particle and wave traps, and Maxwell's Demon, for example, represent some domains where fractional kinetics prove to be valuable.\
+
+In the area of financial markets, fractional order models have been recently used to describe the probability distributions of log-prices in the long-time limit, which is useful to characterise the natural variability in prices in the long term. Meerschaert and Scalas[104] introduced a time-space fractional diffusion equation model the CTRW scaling limit process densities when the waiting time and the log-returns are uncoupled (independent), and a coupled fractional diffusion equation if the waiting times and the log-returns are coupled(dependent).\
+
+In the area of medical imaging analysis. Hall and Barrick[53] recently pointed out that the model of restricted diffusion commonly employed in the analysis of diffusion MR images, data is not valid in complex environments, such as human brain tissue. They described an imaging method based on the theory of anomalous diffusion and showed that images based on environmental complexity may be constructed from diffusion-weighted MR images, where the anomalous exponent $\gamma <1$ and fractal dimension d\emph{w} are measured from diffusion-weighted MRI data.\
+
+In medicine, some authors have suggested that fractional models may be appropriate for modelling neuronal dynamics. If the ions are undergoing anomalous subdiffusion, it is suggested that comparison with models that assume standard or normal diffusion will likely lead to incorrect or misleading diffusion coefficient values[131]. A recent study on spiny Purkinje cell dendrites showed that spines trap and release diffusing molecules resulting in anomalously slow molecular diffusion along the dendrite[130]. Henry et al.[54] derived a fractional cable equation from the fractional Nernst-Planck equations to model anomalous electrodiffusion of ions in spiny dendrites. They subsequently found a fractional cable equation by treating the neuron and its membrane as two separate materials governed by separate fractional Nernst-Planck equations and employed a small ionic concentration gradient assumption[69,70].\
+
+As per the geometric and physical interpretations of fractional integration and differentiation are concerned, Podlubny[117] has devised a novel interpretation. In particular, he proposes a physical interpretation based on two kinds of time-cosmic time and individual time and relates this interpretation to similar ideas used in the theory of relativity.\
+
+Fractional dynamical systems provide a powerful framework for the modelling of many dynamical processes. Therefore, it is important to identify their solution behaviours to enable their applications to be explored. In the next section, analytical solutions of FPDE are reviewed.
+
+\lhead{\scriptsize\itshape\medskip Existing analytical solution method for FPDE}
+\chead{}
+\subsection{Existing analytical solution method for FPDE}
+Fractional differential equations have been recently analysed by a number of authors, for example, Wyss[147] considered the time fractional diffusion equation and the solution is given in closed from in terms of Fox functions, and Schneider and Wyss[133] considered the time fractional diffusion and wave equations. The corresponding Green functions are obtained in closed form for arbitrary space dimensions in term of Fox functions and their properties are exhibited. \
+
+Using the similarity method and the method of Laplace transform, Gorenflo et at.[47] proved that the scale-invariant solutions of the mixed problem of signaling type for the time-fractional diffusion-wave equation are given in terms of the Wright function in the case $0< \alpha < 1$ and in terms of the generalised Wright function in the case $1< \alpha <2$. The reduced equation for the scale-invariant solutions is given in terms of the Caputo-type modification of the Erdelyi-Kober fractional differential operator.\
+
+Agrawal[1] considered a time fractional diffusion-wave equation in bounded space domain. The fractional time derivative is described in the Caputo sense. Using the finite sine transform technique and the Laplace transform, the solution is expressed in terms of the Mittag-Leffler functions. Results showed that for fractional time derivatives of order 1/2 and 3/2, the system exhibits, respectively, slow diffusion and mixed diffusion-wave behaviours.\
+
+Liu et at.[79] considered the time-fractional advection-dispersion equation and derived the complete solution using variable transformation, Millin and Laplace transforms, and properties of the H-function. Gorenflo et al[50] derived the fundamental solution for the time fractional diffusion equation, and interpreted it as a probability density of self-similar non-Markovian stochastic process related to the phenomenon of slow anomalous diffusion. Duan[33] derived the fundamental solution for time and space fractional partial differential equations in terms of Fox's H-function.\
+
+Anh and Leonenko[6] considered scaling laws for fractional diffusion-wave equations with singular data. The Gaussian and non-Gaussin limiting distributions of the rescaled solutions of the fractional(in time) diffusion-wave equation for Gaussian and non-Gaussian initial data with long-range dependence are described in terms of multiple Wiener-Ito integrals. Anh and Leonenko[7]presented a spectral representation of the mean-square solution of fractional diffusion equation with a random initial condition. Gaussian and non-Gaussian limiting distributions of the renormalised solution of the fractional-in-time and space kinetic equation are described in terms of multiple stochastic integral representations.\
+
+Orsingher and Beghin[12]considered and proved that the solutions of the Cauchy problem of the fractional telegraph equation can be expressed as the distribution of a suitable composition of different process. Beghin and Orsingher[115] studied the fundamental solutions to time-fractional telegraph equations. They obtained the Fourier transform of the solution for any $\alpha$ and gave a representation of their inverse, in terms of stable densities. For the special case $\alpha=1/2$, they showed that the fundamental solution is the distribution of a telegraph process with Brownian time.\
+
+Huang and Liu[59] considered the time fractional diffusion equation with appropriate initial and boundary conditions in an n-dimensional whole-space and a half-space. Its solution has been obtained in terms of Green functions by Schneider and Wyss[133]. For the problem in whole-space, an explicit representation of the Green functions can be obtained.
+Huang and Liu[59] considered the space-time fractional advection-dispersion equation in which the first-order time derivative is replaced with a Caputo derivative of order $\al \in (0,1],$ and the second-order space derivative is replaced with a Riesz-Feller derivative of order $\beta \in(0,2]$ Luchko and Gorenflo[97] developed an operational method for solving fractional differential equations with Caputo derivatives and the obtained solutions are expressed through Mittag-Leffler type functions.\
+
+However, the analytic solutions of most fractional differential equations are not usually expressed explicitly. As a consequence, many authors have discussed approximate solutions of FPDE, which are reviewed in the next section.\
+
+\lhead{\scriptsize\itshape\medskip Existing numerical methods for solving FPDE}
+\chead{}
+\subsection{Existing numerical methods for solving FPDE}
+To date most existing numerical solution techniques for equations involving fractional differential operators are based on random walk models [48,49,50,52,84,91], the finite difference method [78,106,107,135] [163,142,45,164,71,157][90,26,22,76,89,165,169][136,24,149,151,150,88], the finite element method [122,41,38,39,153], numerical quadrature [2,67,155], the method of Adomian decomposition [65,112], Monte Carlo simulation [42,102] or the newly proposed matrix transform method [60,61,62,63,152,150,149,153].\
+
+Examples of random walk model methods include the work done by Grorenflo and Mainardi, who constructed random walk models for the space fractional diffusion processes[48] and the Levy-Feller diffusion processes [49], based on the Grunwald-Letnikov discretisation of the fractional derivatives occurring in the spatial pseudo-differential operator. More recently, Gorenflo et al. [50,52] considered the discrete random walk models for time, and time-space fractional diffusion equations.\
+
+Liu.et al. [84] proposed an explicit finite-difference scheme for the time fractional diffusion equation (TFDE). They derived the scaling restriction of the stability and convergence of the discrete non-Markovian random walk approximation for TFDE in a bounded domain. Liu et al.[91] presented a random walk model for approximating a Levy-Feller advection-dispersion process, governed by the Levy-Feller advection-dispersion differential equation(LFADE). They showed that the random walk model converges to LFADE by use of a properly scaled transition to vanishing space and time steps. They proposed an explicit finite difference approximation(EFDA) for LFADE, resulting from the Frunwald-Letnikov discretisation of fractional derivatives. As a result of the interpretation of the random walk model, the stability and convergence of EFDA for LFADE in a bounded domain were discussed.\
+
+Finite difference schemes have tended to dominate the literature with regards to numerical methods. For space FPDEs, the use of finite different method to discretise in space leads naturally to a method of lines approach for advancing the solution in time. Liu, Anh and Turner[78] proposed a computationally effective method of lines technique for solving space fractional partial differential equations. They transformed the space FPDE into a system of ordinary differential equations that was then solved using backward differentiation formulas. Meerschaert and Tadjeran [106] developed practical numerical methods for solving the one dimensional space fractional advection-dispersion equation with variable coefficients on a finite domain. The application of their results was illustrated by modelling a radial flow problem. The use of the fractional derivative allowed the model equations to capture the early arrival of a tracer observed at a field site. Zhang et al. [63] investigated a numerical approximation of the Levy-Feller diffusion equation and gave its probabilistic interpretation. Ciesielski and Leszczynski [26] presented a numerical solution of the anomalous diffusion equation with the Riesz fractional derivative(ADE-RFD). Meerschaert and Tadjeran [107] examined some practical numerical
+methods to solve the case when a left-handed, or right-handed fractional spatial derivative may be present in the partial differential methods to solve the case when a left-handed fractional spatial derivative may be present in the partial differential equation and discussed the stability, consistency and convergence of the method.\
+
+Other authors to have formally analysed the error properties of finite difference methods include Shen and Liu [135], who discussed an error analysis of an explicit finite difference approximation for the space fractional diffusion equation with insulated ends. Tadjeran et al[142] examined a practical numerical method that is second order accurate in time and space to solve a class of initial-boundary value fractional diffusion equations with variable coefficients on a finite domain. An approach based on the classical Crank-Nicolson method combined with spatial extrapolation was used to obtain temporally and spatially second-order accurate numerical estimates. Stability, consistency, and convergence of the method were also examined. Shen et al.[136] presented explicit and implicit difference approximations for the Riez FADE with initial and boundary conditions on a finite domain, and derived the stability and convergence of their proposed numerical methods.\
+
+Finite difference methods are also applicable in the numerical solution of time FPDEs. Zhuang and Liu[164] analysed an implicit difference approximation for the time fractional diffusion equation, and discussed the stability and convergence of the method. Langlands and Henry [71] investigated the accuracy and stability of an implicit numerical scheme for solving the fractional sub-diffusion equation. However, the global accuracy of the implicit numerical scheme has not been derived and it seems that the unconditional stability for all $\gamma$ in the range $0<\gamma \leq 1$ has not been established.\
+
+Yuste and Acedo [158] proposed an explicit finite difference method and new von Neumann type stability analysis for the fractional subdiffusion equation. However, they did not give the convergence analysis and pointed out that it is not such an easy task when implicit methods are considered. Yuste [157] proposed a weighted average finite difference method for fractional diffusion equations. Its stability is analysed by means of a recently proposed akin to the standard von Neumann stability analysis.\
+
+Chen et al.[22] considered a fractional partial differential equation (FPDE) describing sub-diffusion. An implicit difference approximation scheme (IDAS) for solving a FPDE was presented. They proposed a Fourier method for analysing the stability and convergence of IDAS, derived the global accuracy of the IDAS, and discussed its solvability. Numerical examples were given to compare with the exact solution for the order of convergence, and to simulate the fractional dynamical systems. Chen et al.[24] also proposed three different implicit approximations for the time fractional Fokker-Planck equation and proved these approximations are unconditionally stable and convergent.\
+
+Diethelm, Ford and Freed [29] presented an Admas-type predictor-corrector method for the time FPDE. They also discussed several modifications of the basic algorithm designed to improve the performance of the method. In their later work[30], the authors presented a detailed error analysis, including error bounds under various assumptions on the equation.\
+
+Authors to have applied finite difference methods to solve time-space FPDEs include Liu et al.[89] who investigated a fractional order implicit finite difference approximation for the space-time fractional diffusion equation with initial boundary values. Liu.et al.[90] also investigated the stability and convergence of the difference method for the space-time fractional advection-diffusion equation.\
+
+Gorenflo and Abdel-Rehim[45] discussed the convergence of the Grunwald-Letnikov scheme for a time-fractional diffusion equation in one spatial dimension. These difference schemes can also be interpreted as discrete random walks. Lin and Xu [76] constructed a stable and high order scheme to efficiently solve the time-fractional diffusion equation. The proposed method is based on a finite difference scheme in time and Legendre spectral methods in space. Stability and convergence of the method were rigorously established. Zhuang et al.[169] presented an implicit numerical method for the time-space fractional Fokker-Planck equation and discussed its stability and convergence.\
+
+Podlubny et al[118] presented a matrix approach for the solution of time and space-fractional partial differential equations. The method is based on the idea of a net of discretisation nodes, partial differential equations. The method is based on the idea of a net of discretisation nodes, where solutions at every desired point in time and space are found simultaneously by the solution of an appropriate linear system. The structure of the linear system, involving triangular strip matrices, is exploited in the numerical solution algorithm. Implementations in MATLAB are provided.\
+
+Applications of fractional-order models to control theory were considered by Vinagere et al. in [146]. The authors presented both continuous and discrete integer-order approximations. In the continuous case, they utilized continued fraction expansions and interpolation techniques as well as curve-fitting techniques. In the discrete case, they utilised numerical integration combined with either power series expansion or continued fraction expansion.\
+
+Kumar and Agrwal [67]presented a numerical method for the solution of a class of FDEs for which there is a link between the FDE and a Volterra type integral equation. The FDEs are expressed as initial value problems involving the Caputo fractional derivative, and this allows the reduction to the Volterra type integral equation. The authors proposed using quadratic interpolation functions over three successive grid points, which allows the integrals to be computed, thereby yielding a system of algebraic equations to be solved. The scheme handles both linear and nonlinear problems.\
+
+Jafari and Daftardar-Gejji [65]proposed an Adomian decomposition method for solving the linear and nonlinear fractional diffusion and wave equations. Momani and Odibat[112] developed two reliable algorithms, the Adomian decomposition method and variational iteration method, to construct numerical solutions of the space-time FADE in the form of rapidly convergent series with easily computable components. However, they did not give its theoretical analysis.\
+
+Al-Khaled and Momani[3] gave an approximate solution for a fractional diffusion-wave equation using the decomposition method. Ilic et al[60.61] considered a fractional in space diffusion equation with homogeneous and nonhomogeneous boundary conditions in one dimension, respectively.\
+
+Research on numerical methods for higher dimensional FPDEs has been limited to date. Roop [122] investigated the computational aspects of the Galerkin approximation using continuous piecewise polynomial basis functions on a regular triangulation of the bounded domain in $\Re^{2}$. Meerschaert et al[105] derived practical numerical methods to solve two-dimensional fractional dispersion equations with variable coefficients on a finite domain and obtained first order accuracy in space and time. Zhuang and Liu[165] proposed a finite difference approximation for the two-dimensional time fractional diffusion equation and discussed the convergence and stability of the numerical method. Tadjeran and Meerschaert[141] presented a second-order accurate numerical method for the two-dimensional superdiffusive differential equation. This numerical method combined the alternating direction implicit(ADI) approach with a Crank-Nicolson discretisation and Richardson extrapolation to obtained an unconditionally stable second-order accurate finite difference method. The stability and consistency of the method were established. We are not aware of any other papers in the literature that investigate the numerical solution and associated error analysis for the FPDE in higher dimensions.
+
+\section{Finite Difference Method:}
+The finite difference method is a universal and efficient numerical method for solving differential equations. It's intensive development, which began at the end of 1940s and  the beginning of 1950s, was stimulated by the need to cope with a number of complex problems of science and technology. Powerful computers provided an impetus of paramount importance for the development and application of the finite difference method which in itself is sufficiently simple in utilization and can be conveniently realized using computers of different architecture. A large number of complicated multidimensional problems in electrodynamics, elasticity theory, fluid mechanics, gas dynamics, theory of particle and radiation transfer, atmosphere and ocean dynamics, and plasma physics were solved employing the finite difference techniques.\
+
+In partial differential equations, the achievements of the finite difference method are even more impressive. Finite difference counterparts of the main differential operators of mathematical physics were constructed, including those with conservation properties, that is those obeying the discrete counterparts of the law of conservation. An elegant theory of approximation, stability, and convergence of the finite difference method was constructed.\
+
+The finite difference method for partial differential equations has a relatively short history. After the fundamental theoretical paper by COURANT, FRIEDRICHS and LEWY [1928] on the solution of the problems of mathematical physics by means of finite differences, the subject lay dormant till the period of, and immediately following, the Second World War, when considerable theoretical progress was made, and large scale practical applications became possible with the aid of computers. In this context a major role was played by the work of von Neumann, partly reported in O'BRIAN, HYMAN and KAPLAN [1952], which had a great influence on the subsequent research. The field then had its golden age during the 1950s and 1960s, and major contributions were given by Douglas, Kreiss, Lees, Samarskii, Widlund and others.\
+
+A
+
+
+
+
+

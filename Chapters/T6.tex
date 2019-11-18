@@ -1,0 +1,1174 @@
+
+%\def\baselinestretch{1}
+\chapter{Applications of Natural Transform and Sumudu Transform}
+In this chapter, we have presented some applications of new integral transforms the Natural transform and the Sumudu transform to solve various integral equations, nonlinear equations, Burgers equations etc. In which we can see the combine Natural transform and Adomian decomposition method to solve nonlinear voltera integro-differential equations, Sumudu transform and Homotopy perturbation method to Solve nonlinear differential equations, Natural transform Adomian decomposition method For Solving Burger's Equations, nonlinear fractional heat like equations. All these methods are supported by illustrative examples. The details study about these methods are given as below.
+\section{The Combine Natural Transform and Adomian Decomposition Method}  
+The combine Natural transform and Adomian decomposition method is developed to solve the nonlinear voltera integro-differential equations of first kind and second kind. From the illustrative examples we can conclude that this method gives the results as accurate as the exact solutions. Various methods such as combine Laplace transform Adomian decomposition method, iteration method, series solution method, combine Sumudu transform-Adomian decomposition methods are used to solve such problems. The advantage of this method is its capability of combining the two powerful methods for having the exact solution of such examples. The Volterra Integro-differential equations appeared in many physical application such as Newtons Diffusion and biological species coexisting together with increasing and decreasing rates of generating \cite{R92}.
+\lhead{\scriptsize\itshape\medskip Nonlinear volterra integro -differential equation of second kind}
+\subsection{Part-I}
+The standard form of nonlinear volterra integro -differential equation of second kind is given by\cite{R92}
+\begin{equation}
+{u^{(n)}(x)=f(x)+\int_{0}^{x}K(x,t)F(u(t))dt }
+\end{equation}
+Here we consider the  kernel $K(x,t)$ as the difference kernel of the form $(x-t),e^{x-t}$ , $sin(x-t)$ etc.
+\begin{equation}
+{u^{(n)}(x)=f(x)+\int_{0}^{x}K(x-t)F(u(t))dt }
+\end{equation}
+Apply Natural transform on both sides of the above equation  and using the convolution theorem , we get
+\begin{equation}
+{\mathbb{N}[u^{(n)}(x)]= \mathbb{N}[f(x)] + u.\mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))]}
+\end{equation}
+\begin{equation*}
+{ \frac{s^{n}}{u^{n}}.R(s,u) - { \sum_{n=0}^{\infty} \frac{s^{n-(k+1)}}{u^{n-k}}.u^{(k)}(0)}= \mathbb{N}[f(x)] + u.\mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))]}
+\end{equation*}
+\begin{align*}
+ \frac{s^{n}}{u^{n}}.R(s,u) - \frac{s^{n-1}}{u^{n}}.u(0) - \frac{s^{n-2}}{u^{n-1}}u'(0)
+ - \frac{s^{n-3}}{u^{n-2}}.u^{\prime\prime}(0) 
+ &-...-&\frac{u^{(n-1)}(0)}{u}\\
+ =\mathbb{N}[f(x)]+ u.\mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))]
+\end{align*}
+\begin{eqnarray*}
+\frac{s^{n}}{u^{n}}.R(s,u)& =& \frac{s^{n-1}}{u^{n}}.u(0) + \frac{s^{n-2}}{u^{n-1}}u'(0) + \frac{s^{n-3}}{u^{n-2}}.u^{\prime\prime}(0) + ..........+ \frac{u^{(n-1)}(0)}{u} \\
+&+& \mathbb{N}[f(x)] + u.\mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))] 
+\end{eqnarray*}
+\begin{eqnarray*}
+R(s,u)& = &\frac{u(0)}{s} + \frac{u}{s^2}u'(0) + \frac{u^2}{s^3}u^{\prime\prime}(0) + ....... +\frac{u^{(n-1)}}{s^n}u^{(n-1)}(0) \\
+&+ &\frac{u^n}{s^n} \mathbb{N}[f(x)] + \frac{u^{n+1}}{s^n}\mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))] 
+\end{eqnarray*}
+Apply inverse Natural transform on both sides, we have
+\begin{align}
+u(x)& = u(0) + x u'(0) + ........+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) + \mathbb{N}^{-1}[\frac{u^n}{s^n} \mathbb{N}[f(x)]]\nonumber \\
+&\qquad + \mathbb{N}^{-1}[\frac{u^{n+1}}{s^n} \mathbb{N}[k(x-t)].\mathbb{N}[F(u(x))]] 
+\end{align}
+Now to find the exact solution u(x), we apply adomian decomposition method for which consider
+\begin{equation}
+{u(x) = \sum_{n=0}^{\infty} u_{n}(x)}
+\end{equation}
+where the components $u_{n}(x)$ can be calculated by using recursive relation. However the nonlinear terms $F((x))$ can be calculated by the adomian polynomials $A_{n}$ in the form
+\begin{equation}
+ F(u(x)) = \sum_{n=0}^{\infty} A_{n}(x)\\
+ \end{equation}
+ \begin{equation}
+{ where{\hspace{0.5cm}} A_{n} = \frac{1}{n!}\frac{d^n}{d\lambda^n}(F(\sum_{n=0}^{\infty} \lambda^nU_{n}(x)))}      n = 0,1,2...
+ \end{equation}    
+ $\therefore$    equation (6.1.4) becomes
+ \begin{eqnarray*}
+ \sum_{n=0}^{\infty} u_{n}(x) &=& u(0) + x u'(0) + ........+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) + \mathbb{N}^{-1}[\frac{u^n}{s^n}\mathbb{N}[f(x)]]\\ 
+ &+& \mathbb{N}^{-1}[\frac{u^{n+1}}{s^n}\mathbb{N}[k(x-t)].\mathbb{N}[\sum_{n=0}^{\infty} A_{n}(x)]
+ \end{eqnarray*}
+ from this last equation we have the recursive relation as
+ \begin{equation}
+{  u_{0}(x) = u(0) + x u'(0) + ........+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) + \mathbb{N}^{-1}[\frac{u^n}{s^n}\mathbb{N}[f(x)]]}
+ \end{equation}\\
+ \begin{equation}
+ {u_{k+1}(x) = \mathbb{N}^{-1}[\frac{u^{n+1}}{s^n}\mathbb{N}[k(x-t)].\mathbb{N}[\sum_{n=0}^{\infty} A_{n}(x)]}  ,\hspace{1cm} k \geq 0\\ 
+ \end{equation}
+ Now the equation (6.1.8) gives the value of $u_{0}$ which when substituted in equation (6.1.7) gives us the $A_{0}$ and from this value of $ A_{0}$ we can easily calculate $u_{1}(x)$ using equation (6.1.9). In similar manner we can calculate $u_{2}(x)$, $u_{3}(x)$ and so on.\\
+  This gives us the series solution of given nonlinear integro-differential equation which may converges to exact solution provided that solution exists.
+  \lhead{\scriptsize\itshape\medskip Illustrative Examples}
+ \subsection{Illustrative Examples} 
+ \textbf{Example (1):} Solve the nonlinear volterra integro-differential equation by using the combine Natural transform and Adomian Decomposition Method.
+ \begin{equation*}
+ {u'(x) = 1 - \frac{1}{3}e^{x} + \frac{1}{3}e^{-2x} + \int_{0}^{x}e^{(x-t)}u^2(t) dt {\hspace{1 cm}} u(0) = 0}
+ \end{equation*}
+here the kernel k(x,t) =  $e^{(x-t)}$ = difference kernel.\\
+
+\textbf{Solution:}\\
+Apply Natural transform on both sides of the given equation 
+\begin{equation*}
+\mathbb{N}[u'(x)] = \mathbb{N}[1 - \frac{1}{3}e^{x} + \frac{1}{3}e^{-2x}] + \mathbb{N}[e^{(x-t)} * u^2(t)]
+\end{equation*}
+\begin{equation*}
+\frac{s}{u}R(s,u) - \frac{u(0)}{u} = \frac{1}{s} - \frac{1}{3}\frac{1}{s-u} + \frac{1}{3}\frac{1}{s+2u} + u.\frac{1}{s-u}\mathbb{N}[u^2(x)]
+\end{equation*}
+since u(0) = 0 we have
+\begin{equation*}
+\frac{s}{u}R(s,u) = \frac{1}{s} - \frac{1}{3}\frac{1}{s-u} + \frac{1}{3}\frac{1}{s+2u} + u.\frac{1}{s-u}\mathbb{N}[u^2(x)]
+\end{equation*}
+\begin{equation}
+\therefore R(s,u) = \frac{u}{s^2} - \frac{1}{3}\frac{u}{s(s-u)} + \frac{1}{3}\frac{u}{s(s+2u)} + \frac{u^2}{s(s-u)} \mathbb{N}[u^2(x)]
+\end{equation}
+Apply inverse Natural transform on both sides of above equation, we get
+\begin{equation*}
+u(x) = x - \frac{1}{3} - \frac{1}{3}e^{x} + \frac{1}{6} - \frac{1}{6}e^{-2x} + \mathbb{N}^{-1}[\frac{u^2}{s(s-u)} \mathbb{N}[u^2(x)]]
+\end{equation*}
+\begin{equation}
+\therefore u(x) = x - \frac{1}{2}x^2 + \frac{1}{6}x^3 - \frac{1}{8}x^4 + ... + \mathbb{N}^{-1}[\frac{u^2}{s(s-u)}\mathbb{N}[u^2(x)]]
+\end{equation}
+Now apply the adomian decomposition method and using equations (1.6.7),(1.6.8),(1.6.9) we get
+\begin{equation}
+u_{0}(x) = x - \frac{1}{2}x^2 + \frac{1}{6}x^3 - \frac{1}{8}x^4 + ...
+\end{equation}
+\begin{equation}
+  { u_{k+1}(x) = \mathbb{N}^{-1}[\frac{u^2}{s(s-u)}\mathbb{N}[A_{k}(x)]] ,  {\hspace{1 cm}}for  {\hspace{0.5cm}} k\geq 0}
+   \end{equation}
+Now the adomian polynomials for $ F(x)$ =$ u^2(x)$ are given by\\
+$A_{0}$(x) =$ u_{0}$$^2$,$A_{1}$(x) = 2 $u_{0}$$u_{1}$  and so on...\\
+Substituting these values in the above recursive relation  gives us
+\begin{equation}
+u_{0}(x) = x - \frac{1}{2}x^2 + \frac{1}{6}x^3 - \frac{1}{8}x^4 + ...   
+\end{equation}
+\begin{equation}
+u_{1}(x) = \frac{1}{12}x^4 - \frac{1}{30}x^5 + \frac{1}{360}x^6 - \frac{1}{280}x^7...    
+\end{equation}
+and so on...\\
+Hence the series solution of given nonlinear integro-differential equation is given by
+\begin{equation}
+u(x) = x - \frac{1}{2!}x^2 + \frac{1}{3!}x^3 - \frac{1}{4!}x^4 + ...
+\end{equation}
+which converges to the exact solution $u(x) = 1 -  e^x.$\\
+\textbf{Example (2):}Solve the nonlinear volterra integro-differential equation by using the combine Natural transform and Adomian Decomposition Method.
+ \begin{equation*}
+ {u^{\prime\prime}(x) = - \frac{5}{3}sin{x} + \frac{1}{3}sin{2x} + \int_{0}^{x}cos{(x-t)}u^2(t) dt {\hspace{1 cm}} u(0) = 0 , u'(0) = 1}
+ \end{equation*}
+ \textbf{Solution :}\\
+ Apply Natural transform on both sides of equation 
+ \begin{equation*}
+\mathbb{N}[u^{\prime\prime}(x)] = \mathbb{N}[- \frac{5}{3}sin{x} + \frac{1}{3}sin{2x} ] + \mathbb{N}[cos{(x-t)} * u^2(t)]
+\end{equation*}
+\begin{equation*}
+\frac{s^2}{u^2}R(s,u) - \frac{s}{u^2}u(0) - \frac{1}{u}u'(0) = - \frac{5}{3}\frac{u}{s^2+u^2} + \frac{1}{3}\frac{2u}{s^2+4u^2} + u.\frac{s}{s^2+u^2}\mathbb{N}[u^2(x)]
+\end{equation*}
+since u(0) = 0 u'(0) = 1 we have
+\begin{equation}
+\therefore R(s,u) = \frac{u}{s^2} - \frac{5}{3}\frac{u^3}{s^2(s^2+u^2)} + \frac{1}{3}\frac{2u^3}{s^2(s^2+4u^2)} + \frac{u^3}{s(s^2+u^2)}\mathbb{N}[u^2(x)]
+\end{equation}
+Now apply inverse Natural transform on both sides we get
+\begin{equation*}
+u(x) = x - \frac{5}{3}(x - sinx) + \frac{1}{3}(\frac{1}{2}x - \frac{1}{4}sin(2x)) + \mathbb{N}^{-1}[\frac{u^3}{s(s^2+u^2)}\mathbb{N}[u^2(x)]]
+\end{equation*}
+\begin{equation*}
+u(x) = \frac{-1}{2}x + \frac{5}{3}sinx - \frac{1}{12}sin(2x) + \mathbb{N}^{-1}[\frac{u^3}{s(s^2+u^2)} \mathbb{N}[u^2(x)]]
+\end{equation*}
+on simplification of last equation, we have
+\begin{equation}
+{u(x) = x - \frac{1}{6}x^3 - \frac{1}{120}x^5 + \frac{1}{560}x^7 - ... +\mathbb{N}^{-1}[\frac{u^3}{s(s^2+u^2)}\mathbb{N}[u^2(x)]] }
+\end{equation}
+Now apply the adomian decomposition method and using equations (1.6.7),(1.6.8),(1.6.9) we get
+\begin{equation}
+u_{0}(x) = x - \frac{1}{6}x^3 - \frac{1}{120}x^5 + \frac{1}{560}x^7 + ...    
+\end{equation}
+\begin{equation}
+  { u_{k+1}(x) = \mathbb{N}^{-1}[\frac{u^3}{s(s^2+u^2)}\mathbb{N}[A_{k}(x)]] , {\hspace{1 cm}} for{\hspace{0.5 cm}} k\geq 0}
+   \end{equation}
+   let the adomian polynomials are\\
+ $ A_{0} = u_{0}^2  ,{\hspace{0.5 cm}} A_{1} = 2 u_{0}u_{1} $ and so on we get
+\begin{equation}
+u_{0}(x) = x - \frac{1}{6}x^3 - \frac{1}{120}x^5 + \frac{1}{560}x^7 + ...    
+\end{equation}
+\begin{equation}
+u_{1}(x) =  \frac{1}{60}x^5 - \frac{1}{504}x^7 + \frac{1}{12096}x^9 + \frac{41}{19958400}x^{11} + ...    
+\end{equation}
+and so on...\\
+Hence the series solution of given nonlinear integro-differential equation is given by
+\begin{equation}
+u(x) = x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 - \frac{1}{7!}x^7 + ...
+\end{equation}
+which converges to the exact solution $ u(x) = sinx $.
+\lhead{\scriptsize\itshape\medskip Non-linear voltera integro-differential equation of first kind}
+
+\subsection{Part-II}
+        In this section we solve the non-linear voltera integro-differential equation of first kind by using the Combine Natural Transform and Adomian Decomposition Method.\\        
+The standard form of non-linear voltera integro-differential equation of first kind is given by\cite{R92}
+\begin{equation}
+{\int_{0}^{x}K_{1}(x,t)F(u(t))dt + \int_{0}^{x}K_{2}(x,t)u^{(i)}(t)dt = f(x) }
+\end{equation}\\
+where  $u^{(i)}$($x$) is the $ i^{th}$ derivative of u(x), $K_{1}(x,t)$, $K_{2}(x,t)$ are the given kernels, $f(x)$ is real valued function and $F(u(x))$ is non-linear function of $u(x)$. To determine the exact solution of given integro-differential equation the initial conditions should be given.\\
+Now, to solve such first kind equations consider the  kernel K(x,t)as the difference kernel of the form $(x-t),e^{x-t}$, $sin(x-t)$ etc. so the given nonlinear volterra integro-differential equation is of the form
+\begin{equation}
+{\int_{0}^{x}K_{1}(x-t)F(u(t))dt + \int_{0}^{x}K_{2}(x-t)u^{(n)}(t)dt = f(x) }
+\end{equation}
+Apply the Natural transform on both sides of the above equation and using the convolution theorem we have
+\begin{equation*}
+u.\mathbb{N}[K_{1}(x-t)] \mathbb{N}[F(u(x))] + u.\mathbb{N}[K_{2}(x-t)]\mathbb{N}[u^{(n)}(t)] = \mathbb{N}[f(x)]
+\end{equation*}
+Let $ \mathbb{N}[K_{1}(x-t)]=K_{1}(s,u)$, $\mathbb{N}[K_{2}(x-t)] = K_{2}(s,u)$, $\mathbb{N}[f(x)] = f(s,u)$
+\begin{eqnarray*}
+f(s,u) - u. K_{1}(s,u).\mathbb{N}[F(u(x))]&=& u.K_{2}(s,u).[\frac{s^{n}}{u^{n}}.R(s,u) - \frac{s^{n-1}}{u^{n}}.u(0) \\
+&-&\frac{s^{n-2}}{u^{n-1}}u'(0)
+-\frac{s^{n-3}}{u^{n-2}}.u^{\prime\prime}(0)
+-...\frac{u^{(n-1)}(0)}{u}] 
+\end{eqnarray*}
+\begin{eqnarray*}
+ R(s,u)& = &\frac{u(0)}{s} + \frac{u}{s^2}u'(0) + \frac{u^2}{s^3}u^{\prime\prime}(0) + ... +\frac{u^{n-1}}{s^n}u^{(n-1)}(0) + \frac{u^{n-1}}{s^n} \frac{f(s,u)}{K_{2}(s,u)}\\
+&-&\frac{u^{n}}{s^n}\frac{K_{1}(s,u)}{K_{2}(s,u)}.\mathbb{N}[F(u(x))]
+\end{eqnarray*}
+Now apply inverse Natural transform on both sides ,we get
+\begin{align}
+u(x)& = u(0) + x u'(0) + ........+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) + \mathbb{N}^{-1}[\frac{u^{n-1}}{s^n} \frac{f(s,u)}{K_{2}(s,u)}] \nonumber\\
+&- \mathbb{N}^{-1}[\frac{u^{n}}{s^n}\frac{K_{1}(s,u)}{K_{2}(s,u)}.\mathbb{N}[F(u(x))]] 
+\end{align}
+Now to find the exact solution $u(x)$, we apply adomian decomposition method for which consider
+\begin{equation}
+{u(x) = \sum_{n=0}^{\infty} u_{n}(x)}
+\end{equation}
+where the components $u_{n}(x)$ can be calculated by using recursive relation. However the nonlinear terms $F((x))$ can be calculated by the adomian polynomials $A_{n}$ in the form
+\begin{equation*}
+ F(u(x)) = \sum_{n=0}^{\infty} A_{n}(x)
+ \end{equation*}
+ where $A_{n}$ have the usual definition as
+ \begin{equation}
+ A_{n} = \frac{1}{n!}\frac{d^n}{d\lambda^n}(F(\sum_{n=0}^{\infty} \lambda^nU_{n}(x)))   {\hspace{0.5 cm}}   n = 0,1,2...
+ \end{equation}    
+ $\therefore$ equation (6.1.26) becomes
+ \begin{align*}
+ \sum_{n=0}^{\infty} u_{n}(x)& = u(0) + x u'(0) +...+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) +  \mathbb{N}^{-1}[\frac{u^{n-1}}{s^n} \frac{f(s,u)}{K_{2}(s,u)}] \nonumber\\
+&-  \mathbb{N}^{-1}[\frac{u^{n}}{s^n}\frac{K_{1}(s,u)}{K_{2}(s,u)}.\mathbb{N}[\sum_{n=0}^{\infty} A_{n}(x)]]
+ \end{align*}
+ from this last equation we have the recursive relation as
+ \begin{equation}
+{  u_{0}(x) = u(0) + x u'(0) + ........+ \frac{x^{n-1}}{(n-1)!}u^{(n-1)}(0) + \mathbb{N}^{-1}[\frac{u^{n-1}}{s^n} \frac{f(s,u)}{K_{2}(s,u)}]}
+ \end{equation}
+ \begin{equation}
+ u_{k+1}(x) = -  \mathbb{N}^{-1}[\frac{u^{n}}{s^n}\frac{K_{1}(s,u)}{K_{2}(s,u)}.\mathbb{N}[\sum_{n=0}^{\infty} A_{k}(x)]]  ,{\hspace{0.5 cm}} k \geq 0 \end{equation}
+ Now the equation (6.1.29) gives the value of $u_{0}$ which when substituted in equation (6.1.28) gives us the $A_{0}$ and from this value of $ A_{0}$ we can easily calculate $u_{1}(x)$ using equation (6.1.30). In similar manner we can calculate $u_{2}(x)$, $u_{3}(x)$ and so on.\\
+    This gives us the series solution of given nonlinear integro-differential equation which may converges to exact solution provided that solution exists.
+    \lhead{\scriptsize\itshape\medskip Illustrative Examples}
+ \subsection{Illustrative Examples} 
+ \textbf{Example(1):} Solve the nonlinear volterra integro-differential equation by using the combine Natural transform and Adomian Decomposition Method.
+ \begin{equation*}
+ \int_{0}^{x}e^{(x-t)}u^2(t)dt + \int_{0}^{x}e^{(x-t)}u'(t)dt = -1 + 3x.e^{x} + e^{2x}   \hspace{0.5 cm} u(0) = 2
+ \end{equation*}
+ \textbf{Solution:}\\
+ Apply the Natural transform on both sides of the equation and using the convolution theorem we have
+\begin{equation*}
+u.\frac{1}{s-u} \mathbb{N}[u^2(x)] + u.\frac{1}{s-u}\mathbb{N}[u'(t)] = \mathbb{N}[-1 + 3x.e^{x} + e^{2x}]
+\end{equation*}
+\begin{equation*}
+\frac{u}{s-u}\mathbb{N}[u^2(x)] + \frac{u}{s-u}[\frac{s}{u}R(s,u) - \frac{u(0)}{u}] = -\frac{1}{s} + 3\frac{u}{(s-u)^2} + \frac{1}{s-2u} 
+\end{equation*}
+since u(0) = 2 we have
+\begin{equation*}
+R(s,u) = -\frac{3}{2}\frac{1}{s} + \frac{u}{s^2} + 3\frac{1}{s-u} + \frac{1}{2}\frac{1}{s-2u} - \frac{u}{s}\mathbb{N}[u^2(x)]
+\end{equation*}
+Apply inverse Natural transform on both sides, we get
+\begin{equation*}
+u(x) =  - \frac{3}{2} + x + 3e^{x} + \frac{1}{2}e^{2x} + \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[u^2(x)]]
+\end{equation*}
+which on simplification gives,
+\begin{equation*}
+u(x) =  2 + 5x + \frac{5}{2}x^2 + \frac{7}{6}x^3 +... - \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[u^2(x)]]
+\end{equation*}
+Now apply the adomian decomposition method and using equations (6.1.28),(6.1.29),(6.1.30) we get
+\begin{equation*}
+u_{0}(x) = 2 + 5x + \frac{5}{2}x^2 + \frac{7}{6}x^3 +...
+\end{equation*}
+\begin{equation*}
+   { u_{k+1}(x) = - \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[A_{k}(x)]] , {\hspace{0.5 cm}} for{\hspace{0.5 cm}} k\geq 0}
+\end{equation*}
+let the adomian polynomials are\\
+$  A_{0} = u_{0}^2, {\hspace{0.2 cm}} A_{1} = 2 u_{0}u_{1} $ {\hspace{0.2 cm}} and so on we get
+\begin{equation*}
+u_{0}(x) = 2 + 5x + \frac{5}{2}x^2 + \frac{7}{6}x^3 +...
+\end{equation*}
+\begin{equation*}
+u_{1}(x) =  -4x - 10x^2 - \frac{25}{3}x^3 - \frac{25}{4}x^4 - ...    
+\end{equation*}
+\begin{equation*}
+u_{2}(x) =  8x^2 + \frac{80}{3}x^3 + \frac{65}{3}x^4 + ...    
+\end{equation*}
+and so on...\\
+Hence the series solution of given nonlinear integro-differential equation  is given by
+\begin{equation*}
+u(x) = 2 + x + \frac{1}{2!}x^2 + ...
+\end{equation*}
+\begin{equation*}
+u(x) = 1 + [1 + x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3.....]
+\end{equation*}
+which converges to the exact solution  $ u(x) = 1 + e^{x}$.\\
+\textbf{Example (2):} Solve the nonlinear volterra integro-differential equation by using the combine Natural transform and Adomian Decomposition Method.
+ \begin{equation*}
+ \int_{0}^{x}(x-t)u^3(t)dt + \int_{0}^{x}(x-t)u^{\prime\prime}(t)dt = -\frac{10}{9} - \frac{4}{3}x + e^{x} + \frac{1}{9}e^{3x} {\hspace{0.5 cm}} u(0) = 1, u'(0) = 1.
+ \end{equation*}
+ \textbf{Solution:}\\
+ Apply the Natural transform on both sides of the above equation and using the convolution theorem we have
+ \begin{equation*}
+u.\mathbb{N}[(x-t)]*u^3(x)] + u.\mathbb{N}[(x-t)*u^{\prime\prime}(t)] = \mathbb{N}[-\frac{10}{9} - \frac{4}{3}x + e^{x} + \frac{1}{9}e^{3x}]
+\end{equation*}
+ \begin{equation*}
+u.\frac{u}{s^2} \mathbb{N}[u^3(x)] + u.\frac{u}{s^2}[\frac{s^2}{u^2}R(s,u) - \frac{s}{u^2}u(0) - \frac{1}{u}u'(0) ] = -\frac{10}{9}\frac{1}{s} - \frac{4}{3}\frac{u}{s^2} + \frac{1}{s-u} + \frac{1}{9}\frac{1}{s-3u}
+\end{equation*}
+since u(0) = 1 ,  u'(0) = 1 we have
+\begin{equation*}
+R(s,u) = -\frac{1}{9}\frac{1}{s} -\frac{1}{3} \frac{u}{s^2} + \frac{1}{s-u} + \frac{1}{9}\frac{1}{s-3u} - \frac{u^2}{s^2}\mathbb{N}[u^3(x)]
+\end{equation*}
+Apply inverse Natural transform on both sides, we get
+\begin{equation*}
+u(x) =  - \frac{1}{9} - \frac{1}{3}x + e^{x} + \frac{1}{9}e^{3x} - \mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[u^3(x)]]
+\end{equation*}
+which on simplification gives
+\begin{equation*}
+u(x) =  1 + x + x^2 + \frac{2}{3}x^3 + \frac{5}{12}x^4 + \frac{7}{30}x^5 + ...- \mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[u^3(x)]]
+\end{equation*}
+Now apply the adomian decomposition method and using equations (6.1.28),(6.1.29),(6.1.30) we get
+\begin{equation*}
+u_{0}(x) = 1 + x + x^2 + \frac{2}{3}x^3 + \frac{5}{12}x^4 + \frac{7}{30}x^5 + ...
+\end{equation*}
+\begin{equation*}
+   { u_{k+1}(x) = - \mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[A_{k}(x)]] , {\hspace{0.5 cm}} for{\hspace{0.5 cm}} k\geq 0}
+ \end{equation*}
+   let the adomian polynomials are
+ $ A_{0} = u_{0}^3  ,{\hspace{0.5 cm}} A_{1} = 3 u_{0}^2u_{1} $  and so on we get
+\begin{equation*}
+u_{0}(x) = 1 + x + x^2 + \frac{2}{3}x^3 + \frac{5}{12}x^4 + \frac{7}{30}x^5 + ...
+\end{equation*}
+\begin{equation*}
+u_{1}(x) =  - \frac{1}{2}x^2 - \frac{1}{2}x^3 - \frac{1}{2}x^4 - \frac{7}{20}x^5 - ...   
+\end{equation*}
+\begin{equation*}
+u_{2}(x) =  \frac{1}{8}x^4 + \frac{9}{40}x^5 + \frac{1}{15}x^4 + ...    
+\end{equation*}
+and so on...
+Hence the series solution of given nonlinear integro-differential equation  is given by
+\begin{equation*}
+u(x) = 1 + x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3...
+\end{equation*}
+
+which converges to the exact solution  $ u(x) = e^{x}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\lhead{\scriptsize\itshape\medskip Application of Sumudu Transform}
+\section{Application of Sumudu Transform and  Homotopy Perturbation Method to Solve Nonlinear Differential Equations}
+In the literature survey we can observed that the nonlinear phenomenon is present in many scientific and engineering applications which are in the form of ordinary differential equations and partial differential equations. The several techniques have been found to solve such nonlinear ordinary differential equations and partial differential equations. However such techniques needs large number of numerical computations. To overcome that, we have introduced the Sumudu Homotopy Perturbation Method(SHPM) in which sumudu transform is combined with Homotopy Perturbation method to solve some nonlinear differential equations. The  nonlinear terms that occurs in the equations are decomposed using He's Polynomials.\cite{R47}\\
+Recently Hassan Eltayeb and Adem Kilicman\cite{R43,R44} have developed the Sumudu transform method to solve the nonlinear system of partial differential equations. They have also developed the Sumudu transform method to solve the nonlinear Volterra integro-differential equations. Jagdev Singh, Devendra Kumar and Adem Kilicman \cite{R48} have introduced the combined Homotopy Perturbation Method and Sumudu Transform to solve nonlinear Fractional Gas Dynamics equations. In this method the numerical solution of logistic differential equation and Lokta-Volterra predator-prey model for the single species is obtained using the  Sumudu Homotopy Perturbation Method(SHPM).
+\subsection{Part-I}
+The aim of this section is to discuss the use of sumudu transform algorithm to solve some nonlinear differential equations. To illustrate the basic technique, consider the following second order non-homogeneous nonlinear differential equation with the given initial condition of the form
+ \begin{equation}
+    Dx(t) + Rx(t) + Nx(t) = g(t)     
+\end{equation}
+where $ x(0) = A, x\prime(0)=B  $ are constants, $D=\frac{d^{2}}{dt^{2}}$ is the second order differential operator, $R$ is the remaining linear operator, $N$ is the general nonlinear differential operator and $g(t)$ is a source term.\\
+First apply the sumudu transform on both sides of the given equation we get
+\begin{equation*}
+   \mathbb{S}[ Dx(t)] +\mathbb{S} [Rx(t)] + \mathbb{S}[Nx(t)] = \mathbb{S}[g(t) ]    
+\end{equation*}      
+Using the properties of sumudu transform, we have
+\begin{equation*}
+\mathbb{S}[ x(t)] =x(0)-x\prime(0).u+ u^2\mathbb{S} [g(t) - Nx(t) - Rx(t) ]
+\end{equation*}
+Now apply inverse Sumudu transform on both sides, we get
+\begin{equation}
+ x(t) =x(0)-x\prime(0).t+\mathbb{S}^{-1}[ u^2\mathbb{S} [g(t) - Nx(t) - Rx(t) ]]
+\end{equation}
+To find the exact solution $x(t)$, we apply the Homotopy perturbation method, for which consider $ x(t)={\sum_{n=0}^{\infty} P^{n}x_{n}(t)} $ and decompose the nonlinear term into the form $ Nx(t) ={\sum_{n=0}^{\infty} P^{n}H_{n}(t)} $\\
+where$ H_{n}(t)$ are the He's polynomial which can be calculated by the formula
+\begin{equation}
+{  H_{n} = \frac{1}{n!}\frac{d^n}{dP^n}(N(\sum_{n=0}^{\infty} P^nX_{n}))}      n = 0,1,2...
+ \end{equation}
+$\therefore$ equation (6.2.2)becomes
+\begin{eqnarray*}
+{\sum_{n=0}^{\infty} P^{n}x_{n}(t)}&=&x(0)-x\prime(0).t+\mathbb{S}^{-1}[ u^2\mathbb{S} [g(t)]\\
+&&-p\mathbb{S}^{-1}[ u^2\mathbb{S} [ - {\sum_{n=0}^{\infty} P^{n}H_{n}(t)} - \sum_{n=0}^{\infty} P^{n}x_{n}(t) ]]
+\end{eqnarray*}
+From this equation we have the recursive relation as
+\begin{equation}
+x_{0}(t)=H(t)=x(0)-x\prime(0)t+\mathbb{S}^{-1}[u^2.\mathbb{S}[g(t)]] {\hspace{0.5cm}}
+\end{equation}
+ \begin{equation}
+x_{n+1}(t)=-\mathbb{S}^{-1}[R\sum_{n=0}^{\infty} P^{n}x_{n}(t)+{\sum_{n=0}^{\infty} P^{n}H_{n}(t)}  ]
+\end{equation}
+This gives us the series solution of the given second order non-homogeneous nonlinear differential equation with the given initial condition.
+\lhead{\scriptsize\itshape\medskip Analysis of Method}
+\subsection{Analysis of Method}
+Consider the logistic differential equation for the growth of population of single species of the form \cite{R57}
+\begin{equation}
+\frac{dP}{dt} =r.P[1-\frac{P}{k}]
+\end{equation}
+Where $r$ and $k$ are constants and $P=P(t)$ represents the population of species at time t and $r[1-\frac{P}{k}]$ is the per capita growth rate,$k$ is the carrying capacity of the environment.\\
+Suppose that 
+\begin{equation*}
+X(r)=\frac{P(t)}{k},\hspace{.5cm}\omega=rt
+\end{equation*}
+which gives
+\begin{equation*}
+\frac{dX}{d\omega} =X(1-X)
+\end{equation*}
+with initial condition $ X(0)=\frac{P_{0}}{k}$ where $ P_{0}=P(0)$.\\
+Apply the Sumudu transform on both sides, we get
+\begin{equation*}
+   \mathbb{S}[ \frac{dX}{d\omega}]  = \mathbb{S}[X(1-X) ]    
+\end{equation*}      
+Using the properties of Sumudu transform, we have
+\begin{equation*}
+\mathbb{S}[ X(\omega)] =\frac{P_{0}}{k}+u.\mathbb{S}[ X-X^2]
+\end{equation*}
+Apply the inverse Sumudu transform on both sides
+\begin{equation}
+X(\omega) =\frac{P_{0}}{k}+\mathbb{S}^{-1}[ u.\mathbb{S}[ X-X^2]]
+\end{equation}
+ Now applying the classical Homotopy perturbation technique for which, consider the solution of given logistic differential equation of the form
+ \begin{equation*}
+ X(\omega)=\sum_{n=0}^{\infty} P^{n}X_{n}(\omega)
+ \end{equation*}
+ so that the equation (6.2.7) becomes
+ \begin{equation*}
+  \sum_{n=0}^{\infty} P^{n}X_{n}(\omega)=\frac{P_{0}}{k}+P.\mathbb{S}^{-1}[ u.\mathbb{S}[ \sum_{n=0}^{\infty} P^{n}X_{n}(\omega)-\sum_{n=0}^{\infty} P^{n}H_{n}(\omega)]]
+ \end{equation*}
+ where $ H_{n}(\omega) $ are the He's polynomial which can be calculated using the formula 
+ \begin{equation*}
+{  H_{n}(X) = \frac{1}{n!}\frac{d^n}{dP^n}(N(\sum_{n=0}^{\infty} P^nX_{n}))}    \hspace{0.5cm}  n = 0,1,2...
+ \end{equation*}
+ Now equating the terms with identical powers of P, we get
+ \begin{equation*}
+ P^{0}:X_{0}(\omega)=\frac{P_{0}}{k}
+ \end{equation*}
+For the numerical purpose suppose that$ P_{0}=3,k=1$ so that $\frac{P_{0}}{k}=3$
+ \begin{align*}
+ P^{1}:X_{1}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{0}-H_{0}]]\\
+ &=(\frac{P_{0}}{k}-\frac{P_{0}^2}{k^2})\omega\\
+ P^{1}:X_{1}(\omega)&= -6\omega\\
+ P^{2}:X_{2}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{1}-H_{1}]]\\
+ &=15\omega^2\\
+ P^{3}:X_{3}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{2}-H_{2}]]\\
+ &=-37\omega^3\\
+ P^{4}:X_{4}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{3}-H_{3}]]\\
+ &=\frac{365}{4}\omega^4
+ \end{align*}
+ Continue in this way, we get the series solution of the logistic differential equation in the form\\
+ \begin{eqnarray*}
+ X(\omega)&=&X_{0}+X_{1}+X_{2}+X_{3}+X_{4}+X_{5}+X_{6}...\\
+ &=&3+(-6\omega)+15\omega^2+(-37\omega^3)+\frac{365}{4}\omega^4...
+ \end{eqnarray*}
+ \subsection{Part-II}
+ Now consider the Lokta-Volterra system which is an integrating species predator-prey model governed by \cite{R9,R57,R59}\\
+ \begin{equation}
+\frac{dN}{dt} =N[a-bP]
+\end{equation}
+\begin{equation}
+\frac{dP}{dt} =P[cN-d]
+\end{equation}
+ where $ a,b,c,d $ are constants  $N=N(t), P=P(t)$ are the prey  predator population at time t respectively.\\
+ Suppose that 
+ \begin{equation*}
+X(r)=\frac{c}{d}.N(t),Y(r)=\frac{b}{a}.P(t)\hspace{.5cm}\omega=rt,\alpha=\frac{d}{a}
+\end{equation*}
+ So that equation (6.2.8),(6.2.9) becomes
+ \begin{equation*}
+ \frac{dX}{d\omega}=X(1-Y)
+\end{equation*}
+ \begin{equation*}
+ \frac{dY}{d\omega}=\alpha. Y(X-1)
+\end{equation*}
+ with initial condition $ X(0)=\delta,Y(0)=\beta $\\
+ Apply the Sumudu transform on both sides, we get
+\begin{equation*}
+ \mathbb{S}[\frac{dX}{d\omega} ] = \mathbb{S}[X(1-Y) ]    
+\end{equation*}      
+Using the properties of the Sumudu transform, we have
+\begin{equation*}
+\mathbb{S}[ X(\omega)] =\delta+u.\mathbb{S}[X(1-Y) ]
+\end{equation*}
+ Apply the inverse Sumudu transform on both sides
+\begin{equation*}
+X(\omega) =\delta+\mathbb{S}^{-1}[ u.\mathbb{S}[X(1-Y) ]
+\end{equation*}
+ Similarly we have
+ \begin{equation*}
+Y(\omega) =\beta+\mathbb{S}^{-1}[ u.\alpha.\mathbb{S}[Y(X-1)]]
+\end{equation*}
+ Let $ \delta=1.5 ,\beta=0.8 , \alpha =1 $
+ \begin{equation*}
+X(\omega) =1.5+\mathbb{S}^{-1}[ u.\mathbb{S}[X(1-Y) ]
+\end{equation*}
+ \begin{equation*}
+Y(\omega) =0.8+\mathbb{S}^{-1}[ u.\mathbb{S}[Y(X-1)]]
+\end{equation*}
+ Now applying the classical homotopy perturbation technique for that, consider the solution of the form
+  \begin{equation*}
+ X(\omega)=\sum_{n=0}^{\infty} P^{n}X_{n}(\omega)
+ \end{equation*}
+  \begin{equation*}
+ Y(\omega)=\sum_{n=0}^{\infty} P^{n}Y_{n}(\omega)
+ \end{equation*} 
+ \begin{equation*}
+  \sum_{n=0}^{\infty} P^{n}X_{n}(\omega)=1.5+P.\mathbb{S}^{-1}[ u.\mathbb{S}[ \sum_{n=0}^{\infty} P^{n}X_{n}(\omega)-\sum_{n=0}^{\infty} P^{n}H_{n}(\omega)]]
+ \end{equation*}
+ \begin{equation*}
+  \sum_{n=0}^{\infty} P^{n}Y_{n}(\omega)=0.8+P.\mathbb{S}^{-1}[ u.\mathbb{S}[ \sum_{n=0}^{\infty} P^{n}H_{n}(\omega)-\sum_{n=0}^{\infty} P^{n}Y_{n}(\omega)]]
+ \end{equation*}
+ where $ H_{n}(\omega) $ are the He's polynomial which can be calculated using the formula 
+ \begin{equation*}
+{  H_{n}(X) = \frac{1}{n!}\frac{d^n}{dP^n}(N(\sum_{n=0}^{\infty} P^nX_{n}))}      n = 0,1,2...
+ \end{equation*}
+ Now equating the terms with identical powers of P, we get
+ \begin{equation*}
+ P^{0}:X_{0}(\omega)=1.5
+ \end{equation*}
+ \begin{align*}
+ P^{1}:X_{1}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{0}-H_{0}]]\\
+ &=0.3 \omega\\
+ P^{2}:X_{2}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{1}-H_{1}]]\\
+ &=-0.27\omega^2\\
+ P^{3}:X_{3}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[X_{2}-H_{2}]]\\
+ &=-0.195\omega^3\\
+\therefore P^{0}:Y_{0}(\omega)&=0.8\\
+ P^{1}:X_{1}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[H_{0}-Y_{0}]]\\
+ &=0.4 \omega\\
+ P^{2}:Y_{2}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[H_{1}-Y_{1}]]\\
+ &=0.22\omega^2\\
+ P^{3}:Y_{3}(\omega)&=\mathbb{S}^{-1}[ u.\mathbb{S}[H_{2}-Y_{2}]]\\
+ &=0.03166\omega^3
+ \end{align*}
+continue in this way, we get the series solution of the form
+ \begin{eqnarray*}
+ X(\omega)&=&X_{0}+X_{1}+X_{2}+X_{3}+X_{4}+X_{5}+X_{6}...\\
+ &=&1.5+(0.3\omega)+(-0.27\omega^2)+(-0.195\omega^3)...
+ \end{eqnarray*}
+ \begin{eqnarray*}
+ Y(\omega)&=&Y_{0}+Y_{1}+Y_{2}+Y_{3}+Y_{4}+Y_{5}+Y_{6}...\\
+ &=&0.5+(0.4\omega)+(0.22\omega^2)+(0.03166\omega^3)+...
+ \end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Natural Decomposition Method For Solving Burger's Equations}
+ In this section, we have introduced the Natural decomposition method for solving the nonlinear Burger's equations. In this method the Natural transform and Adomian decomposition method are combined to obtain the exact solution of nonlinear Burger's equations. To illustrate the method, some examples are solved by using the said method.
+ \lhead{\scriptsize\itshape\medskip Burgers Equations}
+\subsection{Burgers Equations}
+The Burgers equation\cite{R22} is considered as fundamental model equations in fluid mechanics. The Burgers equation is the coupling between diffusion and convection processes. The standard form of Burger's equation is given by
+\begin{equation}
+U_{t}+UU_{x}=VU_{xx}  \hspace{0.5 cm} t>0
+\end{equation}
+where $V$ is a constant that defines the kinematic viscosity. If the viscosity $V=0$, the equation is called inviscid Burgers equation. The inviscid Burger's equation governs gas dynamics. Nonlinear Burger's equation is considered by most as a simple nonlinear partial differential equation\cite{R93}incorporating both convection and diffusion in fluid dynamics. Burger's introduced this equation in \cite{R22} to capture some of the features of turbulent fluid in a channel caused by the interaction of the opposite effects of convection and diffusion. The applications of the Burgers can be seen in structure of shock waves, traffic flow and acoustic transmission.\\
+There are several methods to obtain the exact solution of the burger's equation such as the method of symmetry reduction in which solutions of the nonlinear Burger's equation are found in terms of parabolic cylinder functions or Airy functions. The symmetry reduction method was applied in a modified way where the Burger's equation was transformed to an ordinary differential equation. The Cole-Hopf transformation is the commonly used method for solving the the Burger's equation. In recent years many researchers have contributed for obtaining the solutions of Burger's equations\cite{R8,R65,R83,R86}. The advantage of this method is its capability of combining the two powerful methods for having the exact solution of Burger's equation. The Adomian decomposition method(ADM) can be used to solve linear and nonlinear differential and integral equations. The main significant role of this ADM is rapid convergence of solution and error free numerical computation of the given problem. Theory and applications of the Adomian decomposition method can be seen in \cite{R1,R2,R26,R27,R28,R93}.
+\lhead{\scriptsize\itshape\medskip Analysis of Method}
+\subsection{Analysis of Method}
+In this section, we can solve the non-linear Burgers equation by using the Combine Natural Transform and Adomian Decomposition Method.\\
+ Let us consider the Burgers of the form 
+\begin{equation}
+U_{t}+UU_{x}=VU_{xx}  
+\end{equation}
+with initial condition
+\begin{equation*}
+U(x,0)=f(x)
+\end{equation*}
+Taking Natural transform on both sides of equation and using the initial condition, we get
+\begin{equation*}
+\mathbb{N}[U(x,t)]= f(x) + \frac{u}{s}\mathbb{N}[U_{xx} -UU_{x}]
+\end{equation*}
+using the properties of inverse Natural transform, we have
+\begin{equation}
+U(x,t)= f(x) + \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[U_{xx} -UU_{x}]]
+\end{equation}
+Now to find the exact solution $U(x,t)$, we apply adomian decomposition method for which consider
+\begin{equation*}
+{U(x,t) = \sum_{n=0}^{\infty} u_{n}(x,t)}
+\end{equation*}
+where the components $u_{n}(x,t)$ can be calculated by using recursive relation. However the nonlinear terms $F(U)=UU_{x}$ can be calculated by the adomian polynomials $A_{n}$ in the form
+\begin{equation}
+{  A_{n} = \frac{1}{n!}\frac{d^n}{d\lambda^n}(F(\sum_{n=0}^{\infty} \lambda^nU_{n}(x)))}      n = 0,1,2...
+ \end{equation}    
+ $\therefore$    equation (6.3.3) becomes
+ \begin{equation}
+ \sum_{n=0}^{\infty} u_{n}(x,t) = f(x) + \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} u_{n}(x)_(xx)-\sum_{n=0}^{\infty} A_{n}(x)]]\\ 
+ \end{equation}
+ from this last equation, we can have the recursive relation as
+\begin{equation}
+  u_{0}(x,t) = f(x)
+ \end{equation}
+ \begin{equation}
+ u_{k+1}(x,t) = \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} u_{k}(x)_(xx)- A_{k}]] 
+ \end{equation}
+This gives us the series solution of the given nonlinear Burgers equation with the given initial condition.
+\newpage
+\lhead{\scriptsize\itshape\medskip Illustrative Examples}
+\subsection{Illustrative Examples}
+In this section, we solve some nonlinear Burgers equation by using the Natural decomposition method.\\
+\textbf{Examples(1)} Solve the nonlinear Burgers equation by using the Natural decomposition method
+\begin{equation*}
+  u_{t}+uu_{x}=u_{xx}
+ \end{equation*}
+with the initial condition $u(x,0)=-x$\\
+\textbf{Solution:}\\
+Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{equation*}
+\mathbb{N}[u_{t}]=\mathbb{N}[u_{xx}-uu_{x}]
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[u(x,t)]=-\frac{x}{s}+\frac{u}{s}\mathbb{N}[u_{xx}-uu_{x}]
+\end{equation*}
+Apply inverse Natural transform on both sides, we get
+\begin{equation*}
+\mathbb{N}[u(x,t)]=-x+\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[u_{xx}-uu_{x}]]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{equation}
+\sum_{n=0}^{\infty} u_{n}(x)=-x+\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} (u_{n}(x,t))_{xx}-\sum_{n=0}^{\infty} A_{n}(x)]]
+\end{equation}
+this gives us
+\begin{equation*}
+u_{0}(x,t)= -x  
+\end{equation*}
+\begin{equation*}
+u_{k+1}(x,t) = \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} (u_{k}(x,t))_{xx}- A_{k}(x)]]
+\end{equation*}
+from this recursive relation we get
+\begin{align*}
+u_{1}(x,t)&=\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- A_{0}(x)]]\\
+&= \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- x]]\\
+&=-xt\\
+u_{2}(x,t)&=\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- A_{1}(x)]]\\
+&= \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- 2xt]]\\
+&=-xt^2\\
+u_{3}(x,t)&=\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- A_{2}(x)]]\\
+&= \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[- 3xt^2]]\\
+&=-xt^3
+\end{align*}
+and so on...\\
+Hence the series solution of given Burgers equation is given by
+\begin{align*}
+u(x,t)&= u_{0}+u_{1}+u_{2}+u_{3}+u_{4}+...\\
+&= -x-xt-xt^2-xt^3-xt^4-...\\
+&=-x[1+t+t^2+t^3+...]\\
+&=-x[\frac{1}{1-t}]\\
+\therefore u(x,t)&=\frac{x}{t-1}
+\end{align*}
+\textbf{Example(2)} Solve the nonlinear Burgers equation by using the Natural decomposition method
+\begin{equation*}
+  u_{t}+uu_{x}=u_{xx}
+ \end{equation*}
+with the initial condition $u(0,t)=-\frac{2}{3t} , u_{x}(0,t)=\frac{1}{t}+\frac{2}{9t^2}$\\
+ \textbf{Solution:}\\
+ Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{equation*}
+\mathbb{N}[u_{xx}]=\mathbb{N}[u_{t}+uu_{x}]
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[u(x,t)]=-\frac{2}{3t}\frac{1}{s}+\frac{u}{s^2}(\frac{1}{t}+\frac{2}{9t^2})+\frac{u^2}{s^2}\mathbb{N}[u_{t}+uu_{x}]
+\end{equation*}
+Apply inverse Natural transform on both sides, we get
+\begin{equation*}
+\mathbb{N}[u(x,t)]=-\frac{2}{3t}+x(\frac{1}{t}+\frac{2}{9t^2})+\mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[u_{t}+uu_{x}]]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{equation}
+\sum_{n=0}^{\infty} u_{n}(x)=-\frac{2}{3t}+x(\frac{1}{t}+\frac{2}{9t^2})+\mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[\sum_{n=0}^{\infty} (u_{n}(x,t))_{t}+\sum_{n=0}^{\infty} A_{n}(x)]]
+\end{equation}
+this gives us
+\begin{equation*}
+u_{0}(x,t)= -\frac{2}{3t}+x(\frac{1}{t}+\frac{2}{9t^2}) 
+\end{equation*}
+\begin{equation*}
+u_{k+1}(x,t) = \mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[\sum_{n=0}^{\infty} (u_{k}(x,t))_{t}+ A_{k}(x)]]
+\end{equation*}
+from this recursive relation we get
+\begin{align*}
+u_{1}(x,t)&=\mathbb{N}^{-1}[\frac{u^2}{s^2}\mathbb{N}[(u_{0})_{t}+ A_{0}(x)]]\\
+&= \frac{-2x^2}{27t^3}+\frac{2x^3}{243t^4}
+\end{align*}
+and so on...\\
+Hence the series solution of given Burgers equation is given by
+\begin{align*}
+u(x,t)&= u_{0}+u_{1}+u_{2}+u_{3}+u_{4}+...\\
+&= -\frac{2}{3t}+x(\frac{1}{t}+\frac{2}{9t^2})+\frac{-2x^2}{27t^3}+\frac{2x^3}{243t^4}+...\\
+&=\frac{x}{t}-\frac{2}{3t}[1-(\frac{x}{3t})+(\frac{x}{3t})^2-(\frac{x}{3t})^3+...]]\\
+&=\frac{x}{t}-\frac{2}{3t}[\frac{1}{1+\frac{x}{3t}}]\\
+\therefore u(x,t)&=\frac{x}{t}-\frac{2}{3t+x}
+\end{align*}
+\textbf{Example(3)} Solve the nonlinear Burgers equation by using the Natural decomposition method
+\begin{equation*}
+  u_{t}+uu_{x}=u_{xx}
+ \end{equation*}
+with the initial condition $u(x,0)=1-\frac{2}{x}, x>0 $\\
+\textbf{Solution:} \\
+Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{equation*}
+\mathbb{N}[u_{t}]=\mathbb{N}[u_{xx}-uu_{x}]
+\end{equation*}
+\begin{equation*}
+\mathbb{N}[u(x,t)]=1-\frac{2}{x}+\frac{u}{s}\mathbb{N}[u_{xx}-uu_{x}]
+\end{equation*}
+Apply inverse Natural transform on both sides, we get
+\begin{equation*}
+\mathbb{N}[u(x,t)]=-x+\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[u_{xx}-uu_{x}]]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{equation}
+\sum_{n=0}^{\infty} u_{n}(x)=1-\frac{2}{x}+\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} (u_{n}(x,t))_{xx}-\sum_{n=0}^{\infty} A_{n}(x)]]
+\end{equation}
+this gives us
+\begin{equation*}
+u_{0}(x,t)=1-\frac{2}{x}
+\end{equation*}
+\begin{equation*}
+u_{k+1}(x,t) = \mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[\sum_{n=0}^{\infty} (u_{k}(x,t))_{xx}- A_{k}(x)]]
+\end{equation*}
+from this recursive relation we get
+\begin{align*}
+u_{1}(x,t)&=\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[(u_{0})_{xx}- A_{0}(x)]]\\
+&=-\frac{2t}{x^2}
+\end{align*}
+\begin{align*}
+u_{2}(x,t)&=\mathbb{N}^{-1}[\frac{u}{s}\mathbb{N}[(u_{0})_{xx}- A_{1}(x)]]\\
+&=-\frac{2t^2}{x^3}
+\end{align*}
+and so on...\\
+Hence the series solution of given Burgers equation is given by
+\begin{align*}
+u(x,t)&= u_{0}+u_{1}+u_{2}+u_{3}+u_{4}+...\\
+&= 1-\frac{2}{x}-\frac{2t}{x^2}-\frac{2t^2}{x^3}...\\
+&=1-\frac{2}{x}[1+\frac{t}{x}+\frac{t^2}{x^2}+...]\\
+&=1-\frac{2}{x-t}\\
+\therefore u(x,t)&=1-\frac{2}{x-t}
+\end{align*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\lhead{\scriptsize\itshape\medskip Fractional Heat Like Equations}
+\section{Natural Decomposition Method For Solving Fractional heat like equations}
+In this section, we apply an algorithm to find the exact and approximate solution of nonlinear fractional heat like equations. The algorithm is the combination of two powerful methods namely Natural transform and Adomian Decomposition Method which can be applied to fractional partial differential equations to obtain the approximate solution. The efficiency and accuracy of algorithm is illustrated by solving some example.
+\subsection{Introduction}
+The literature survey revels that, the fractional calculus attract many researcher in this field due to the wide range of applications in the fields of applied science and engineering. The fields like visco-elasticity, biology, signal processing, optics, fluid mechanics etc. has their applications in fractional calculus. The branch of physical sciences includes the linear and non linear fractional differential equations. In the recent years many work has been done on the fractional calculus with wide range of applications.\\
+The main objective of study of fractional calculus is to obtain exact and approximate solution of the linear and non linear fractional differential equations. The various analytical and numerical methods have been developed to get exact and approximate solution of linear and non linear fractional differential equations. Some of them are Variational Iteration Method, Adomian Decomposition Method, Differential Transform Method, Homotopy Perturbation Method etc. Our objective is to modify the Adomian Decomposition Method(ADM) by combining it with the new integral transform called the Natural transform to obtain the approximate solution of fractional heat-like equations. This method is illustrated with some numerical example. The heat-like equations can be seen in the field of science and engineering. The presented fractional heat like equations has been applied in modeling to describe practical sub diffusion problems in fluid flow process and finance.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Fractional Calculus} 
+
+In this section some basic definitions and properties of fractional calculus are presented.
+\begin{definition} A real function $f(x),x>0$ is said to be in $\mathbb{C}_{\mu},\mu \in \mathbb{R}$ if there exists a real number $p>\mu$,such that $f(x)=x^{p}h(x)$,where $h(x)\in \mathbb{C}[0,\infty]$,and it is said to be in the space $\mathbb{C}^{m}_{\mu}$ if and only if $f^{(m)} \in \mathbb{C}_{\mu},m\in \mathbb{N}$
+\end{definition}
+
+\begin{definition} The Riemann Liouville fractional integral operator of order $ \alpha \geq 0 $ of a function $ f \in \mathbb{C}_{\mu}$ is defined as
+\begin{align*}
+J^{\alpha}f(x)&=\frac{1}{\Gamma{\alpha}}\int_{0}^{x}(x-t)^{\alpha-1}f(t)dt,\hspace{0.5cm} \alpha >0,x>0\\
+J^{0}f(x)&=f(x)
+\end{align*}
+\end{definition}
+The properties of operator $ J^{\alpha} $ cab be seen in, some of them are
+\begin{itemize}
+\item[(1)]$ J^{\alpha}J^{\beta}f(x)=J^{\alpha+\beta}f(x) $
+\item[(2)]$ J^{\alpha}J^{\beta}f(x)=J^{\beta}J^{\alpha}f(x) $
+\item[(3)]$ J^{\alpha}x^{\gamma}=\frac{\Gamma{\gamma+1}}{\Gamma{\alpha+\gamma+1}}x^{\alpha+\gamma}$\\
+For $ f \in \mathbb{C}_{\mu},\mu\geq -1,\alpha,\beta\geq 0,\gamma > -1 $
+\end{itemize}
+\begin{definition}
+The fractional derivative of $f(x)$ in Caputo sense is defined by
+\begin{equation*}
+D^{\alpha}_{*}f(x)=J^{m-\alpha}D^{\alpha}_{*}f(x)=\frac{1}{\Gamma{(m-\alpha)}}\int_{0}^{x}(x-t)^{m-\alpha-1}f^{(m)}(t)dt
+\end{equation*}
+for $ m-1 < \alpha \leq m,m\in \mathbb{N},x > 0,f\in \mathbb{C}_{-1}^{m}$
+\end{definition}
+
+\begin{definition}
+
+Suppose that $f(x)$ is the function of n variables $x_{i},i=1,2,...n$ and of class $C$ on $D \in \mathbb{R}_{n}$ then
+\begin{equation*}
+a\partial^{\alpha}_{x}f=\frac{1}{\Gamma{(m-\alpha)}}\int_{0}^{x_{i}}(x_{i}-t)^{m-\alpha-1}\partial^{\alpha}_{x_{i}}f(x_{j})\Vert_{x_{j}=t}dt
+\end{equation*}
+
+where $ \partial^{\alpha}_{x} $ is the usual partial derivative of integer order m.
+
+\end{definition}
+
+\begin{definition}
+
+The Natural transform of Caputo fractional derivative is defined by equation
+\begin{equation*}
+\mathbb{N}[D^{\alpha}_{t}f(t)]=\frac{s^{\alpha}}{u^{\alpha}}R(s,u)-\sum_{k=0}^{n}\frac{s^{n-k-1}}{u^{n-k}}f^{(k)}(0) \hspace{0.5cm} n-1\leq \alpha < 1
+\end{equation*}
+
+\end{definition}
+
+\begin{lemma}
+For $m-1 < \alpha \leq m,m\in N ,x > 0,f\in \mathbb{C}_{-1}^{m}$ and $ \mu \geq -1 $, then
+\begin{itemize}
+\item[1]$D^{\alpha}_{*}J^{\alpha}f(x)=f(x)$
+
+\item[2]$J^{\alpha}D^{\alpha}_{*}f(x)=f(x)-\sum_{k=0}^{m-1}f^{(k)}(0^{+})
+\frac{x^{k}}{k!}\hspace{0.5cm} x> 0$
+\end{itemize}
+\end{lemma}
+\subsection{Main Result}
+In this section we apply the Natural decomposition method to the fractional heat-like equations to obtain the approximate solution.\\
+Let us consider the general non-linear non-homogeneous fractional partial differential equation of the form
+\begin{equation}
+D_{t}^{\alpha}[U(x,t)]= L[U(x,t)] + N[U(x,t)]+f(x,t),\hspace{0.5cm} \alpha > 0
+\end{equation}
+subject to the initial condition
+\begin{align*}
+D_{0}^{k}[U(x,0)]&= g_{k},\hspace{0.5cm} k=0,1,2...n-1\\
+D_{0}^{n}[U(x,0)]&= 0,\hspace{0.5cm} n=[\alpha]
+\end{align*}
+where $ D_{t}^{\alpha} $ denotes without loss of generality the Caputo fractional derivative operator, $f$ is known function, $N$ is general nonlinear fractional differential operator and $L$ is linear fractional differential operator.\\
+Applying the Natural transform on both sides of equation (6.4.1)
+\begin{equation*}
+\mathbb{N}[D_{t}^{\alpha}[U(x,t)]]= \mathbb{N}[L[U(x,t)]] + \mathbb{N}[N[U(x,t)]]+\mathbb{N}[f(x,t)]
+\end{equation*}
+\begin{eqnarray*}
+\mathbb{N}[U(x,t)]=\frac{u^{\alpha}}{s^{\alpha}}\lbrace\mathbb{N}[L[U(x,t)]] + \mathbb{N}[N[U(x,t)]]+\mathbb{N}[f(x,t)]\rbrace\\
++\frac{u^{\alpha}}{s^{\alpha}}\sum_{k=0}^{n}\frac{s^{n-k-1}}{u^{n-k}}U^{(k)}(0)
+\end{eqnarray*}
+Now operating the inverse Natural transform on both sides we obtain
+\begin{equation}
+U(x,t)= F(x,t)+\mathbb{N}^{-1}\lbrace\frac{u^{\alpha}}{s^{\alpha}}\lbrace\mathbb{N}[L[U(x,t)]] + \mathbb{N}[N[U(x,t)]]\rbrace\rbrace
+\end{equation}
+where $F(x,t)$ is the term arising from the known function and the initial conditions. To find the approximate solution $U(x,t)$, we apply Adomian decomposition method for which consider
+\begin{equation}
+U(x,t)= \sum_{n=0}^{\infty}u_{n}(x,t)
+\end{equation}
+where the components $ u_{n}(x,t) $ can be calculated by using recursive relation. However the non linear terms can be calculated by the adomian polynomials $ A_{n} $ in the form
+\begin{equation}
+A_{n} = \frac{1}{n!}\frac{d^n}{d\lambda^n}(F(\sum_{n=0}^{\infty} \lambda^nU_{n}(x)))   \hspace{0.5cm}   n = 0,1,2...
+\end{equation}
+$\therefore$ Equation () becomes
+\begin{equation}
+\sum_{n=0}^{\infty}u_{n}(x,t)=F(x,t)+\mathbb{N}^{-1}\lbrace\frac{u^{\alpha}}{s^{\alpha}}\lbrace\mathbb{N}[L[\sum_{n=0}^{\infty}u_{n}(x,t)]] + \mathbb{N}[N[\sum_{n=0}^{\infty}A_{n}]]\rbrace\rbrace
+\end{equation}
+Here is the step where we are combining the two powerful methods, Natural transform and Adomian decomposition method. From this equation we get the recursive relation of the form
+\begin{align}
+u_{0}(x,t)&=F(x,t)\\
+u_{k+1}(x,t)&=\mathbb{N}^{-1}\lbrace\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[\sum_{n=0}^{\infty}u_{k}(x,t)+A_{k}] \rbrace
+\end{align}
+This gives us the series solution of the given general non-linear non-homogeneous fractional partial differential equation with the given initial condition.
+\subsection{Illustrative Examples}
+In this section, we solve some non-linear non-homogeneous fractional partial differential equation by using the Natural decomposition method.\\
+\textbf{Example:} Consider the following two-dimensional fractional heat-like equation
+\begin{equation}
+D_{t}^{\alpha}u(x,y,t)=\frac{1}{2}(y^{2}u_{xx}+x^{2}u_{yy}) \hspace{0.5cm} 0 < \alpha \leq 1
+\end{equation}
+subject to initial condition
+\begin{equation}
+u(x,y,0)=y^{2}
+\end{equation}
+subject to boundary condition
+\begin{equation}
+u_{x}(0,y,t)=0,u_{y}(x,0,t)=0,u_{x}(1,y,t)=2Sinh(t),u_{y}(x,1,t)=2Cosh(t)
+\end{equation}
+
+\textbf{Solution:}
+Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{align*}
+\mathbb{N}[D_{t}^{\alpha}u(x,y,t)]&=\mathbb{N}[\frac{1}{2}(y^{2}u_{xx}+x^{2}u_{yy})]\\
+\mathbb{N}[u(x,y,t)]&=\frac{1}{s}y^{2}+\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[\frac{1}{2}(y^{2}u_{xx}+x^{2}u_{yy})]
+\end{align*}
+Apply the inverse Natural transform on both sides, we get
+\begin{equation*}
+u(x,y,t)=y^{2}+\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[\frac{1}{2}(y^{2}u_{xx}+x^{2}u_{yy})]]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{equation}
+\sum_{n=0}^{\infty}u_{n}(x,y,t)=y^{2}+\frac{1}{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[y^{2}\sum_{n=0}^{\infty}(A_{n})_{xx}+x^{2}\sum_{n=0}^{\infty}(A_{n})_{yy}]]
+\end{equation}
+this gives us
+\begin{align*}
+u_{0}(x,y,t)&=y^{2}\\
+u_{k+1}(x,y,t)&=\frac{1}{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[y^{2}\sum_{n=0}^{\infty}(A_{n})_{xx}+x^{2}\sum_{n=0}^{\infty}(A_{n})_{yy}]]
+\end{align*}
+From this recursive relation we can find the series solution in the following way.
+\begin{equation*}
+u_{1}(x,y,t)=\frac{1}{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[y^{2}\sum_{n=0}^{\infty}(A_{0})_{xx}+x^{2}\sum_{n=0}^{\infty}(A_{0})_{yy}]]
+\end{equation*}
+Here $F(u) = u$ so that \hspace{0.2cm}  $A_{0}=u_{0}=y^{2}$
+\begin{equation*}
+u_{1}(x,y,t)=x^{2}\frac{t^{\alpha}}{\Gamma{(\alpha+1)}}
+\end{equation*}
+Similarly we can find $ u_{2}(x,y,t) $ as
+\begin{equation*}
+u_{2}(x,y,t)=y^{2}\frac{t^{2\alpha}}{\Gamma{(2\alpha+1)}}
+\end{equation*}
+and so on...\\
+Thus the approximate solution of the given two-dimensional fractional heat-like equation is given by
+\begin{align*}
+u(x,y,t)&=u_{0}+u_{1}+u_{2}+u_{3}+...\\
+&=y^{2}+x^{2}\frac{t^{\alpha}}{\Gamma{(\alpha+1)}}+y^{2}\frac{t^{2\alpha}}{\Gamma{(2\alpha+1)}}+x^{3}\frac{t^{3\alpha}}{\Gamma{(3\alpha+1)}}\\
+&=x^{2}\sum_{k=0}^{\alpha}\frac{t^{(2k+1)\alpha}}{\Gamma((2k+1)\alpha+1)}+y^{2}\sum_{k=0}^{\alpha}\frac{t^{(2k)\alpha}}{\Gamma((2k)\alpha+1)}
+\end{align*}
+Now the functions $ Sinh(t^{\alpha},\alpha)$ and $ Cosh(t^{\alpha},\alpha)$ are defined as
+\begin{align*}
+Sinh(t^{\alpha},\alpha)&=\frac{E_{\alpha}(\lambda)-E_{\alpha}(-\lambda)}{2}\\
+Cosh(t^{\alpha},\alpha)&=\frac{E_{\alpha}(\lambda)+E_{\alpha}(-\lambda)}{2}
+\end{align*}
+If we put $ \alpha=1 $ in the approximate solution $ u(x,y,t) $, we obtain
+\begin{equation*}
+u(x,y,t)=x^{2}Sinh(t)+y^{2}Cosh(t).
+\end{equation*}
+\textbf{Example:} Consider the following three-dimensional fractional heat-like equation
+\begin{equation}
+D_{t}^{\alpha}u(x,y,z,t)=x^{4}y^{4}z^{4}+\frac{1}{36}(x^{2}u_{xx}+y^{2}u_{yy}+z^{2}u_{zz}) \hspace{0.5cm} 0 < \alpha \leq 1
+\end{equation}
+subject to initial condition
+\begin{equation}
+u(x,y,z,0)=0
+\end{equation}
+subject to boundary condition
+\begin{align*}
+u(0,y,z,t)&=u(x,0,z,t)=u(x,y,0,t)=0\\
+u(1,y,z,t)&=y^{4}z^{4}(exp(t)-1)\\
+u(x,1,z,t)&=x^{4}z^{4}(exp(t)-1)\\
+u(x,y,1,t)&=x^{4}y^{4}(exp(t)-1)
+\end{align*}
+
+\textbf{Solution:}
+Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{align*}
+\mathbb{N}[D_{t}^{\alpha}u(x,y,z,t)]&=\mathbb{N}[x^{4}y^{4}z^{4}+\frac{1}{36}(x^{2}u_{xx}+y^{2}u_{yy}+z^{2}u_{zz})]\\
+\mathbb{N}[u(x,y,z,t)]&=\frac{u^{\alpha}}{s^{\alpha+1}}x^{4}y^{4}z^{4}+\frac{1}{36}\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(x^{2}u_{xx}+y^{2}u_{yy}+z^{2}u_{zz})]
+\end{align*}
+Apply the inverse Natural transform on both sides, we get
+\begin{equation*}
+u(x,y,z,t)=x^{4}y^{4}z^{4}\frac{t^{\alpha}}{\Gamma(\alpha+1)}+\frac{1}{36}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(x^{2}u_{xx}+y^{2}u_{yy}+z^{2}u_{zz})]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{eqnarray}
+\sum_{n=0}^{\infty}u_{n}(x,y,z,t)&=&x^{4}y^{4}z^{4}\frac{t^{\alpha}}{\Gamma(\alpha+1)}+\frac{1}{36}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[x^{2}\sum_{n=0}^{\infty}(A_{n})_{xx}\\
+&+&y^{2}\sum_{n=0}^{\infty}(A_{n})_{yy}+z^{2}\sum_{n=0}^{\infty}(A_{n})_{zz}]]
+\end{eqnarray}
+this gives us
+\begin{align*}
+u_{0}(x,y,z,t)&=x^{4}y^{4}z^{4}\frac{t^{\alpha}}{\Gamma(\alpha+1)}\\
+u_{k+1}(x,t)&=\frac{1}{36}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[x^{2}\sum_{n=0}^{\infty}(A_{k})_{xx}+y^{2}\sum_{n=0}^{\infty}(A_{k})_{yy}+z^{2}\sum_{n=0}^{\infty}(A_{k})_{zz}]]
+\end{align*}
+From this recursive relation we have 
+\begin{equation*}
+u_{1}(x,y,z,t)=x^{4}y^{4}z^{4}\frac{t^{2\alpha}}{\Gamma(2\alpha+1)},u_{2}(x,y,z,t)=x^{4}y^{4}z^{4}\frac{t^{3\alpha}}{\Gamma(3\alpha+1)}\hspace*{0.2cm} \text{and so on...}
+\end{equation*}
+Thus the approximate solution to the given three-dimensional fractional heat-like equation is given by\\
+\begin{equation}
+u_{N}(x,y,z,t)=\sum_{n=1}^{N}\frac{t^{n\alpha}x^{4}y^{4}z^{4}}{\Gamma(n\alpha+1)}
+\end{equation}
+Now as $ N\rightarrow \infty $,we get the solution of given equation as\\
+\begin{align*}
+u(x,y,z,t)&=\sum_{n=0}^{\infty}\frac{t^{n\alpha}x^{4}y^{4}z^{4}}{\Gamma(n\alpha+1)}-x^{4}y^{4}z^{4}\\
+&=x^{4}y^{4}z^{4}(E_{\alpha}(t^{\alpha})-1)
+\end{align*}
+Where $ E_{\alpha}(t^{\alpha}) $ is the generalized Mittag-Leffler function.\\
+In case of $ \alpha=1 $,we have
+\begin{equation}
+u(x,y,z,t)=x^{4}y^{4}z^{4}(exp(t)-1)
+\end{equation}
+
+\textbf{Example:} Consider the following one-dimensional fractional heat-like equation
+\begin{equation}
+D_{t}^{\alpha}u(x,t)=\frac{1}{2}x^{2}u_{xx} \hspace{0.5cm}  0 < \alpha \leq 1,0 < x < 1,t> 0
+\end{equation}
+subject to initial condition
+\begin{equation}
+u(x,0)=x^{2}
+\end{equation}
+
+
+\textbf{Solution:}
+Applying the Natural transform on both sides of given equation and using the initial condition
+\begin{align*}
+\mathbb{N}[D_{t}^{\alpha}u(x,t)]&=\mathbb{N}[\frac{1}{2}x^{2}u_{xx}]\\
+\mathbb{N}[u(x,t)]&=\frac{1}{s}x^{2}+\frac{u^{\alpha}}{s^{\alpha}}\frac{1}{2}x^{2}\mathbb{N}[(u_{xx}]
+\end{align*}
+Apply the inverse Natural transform on both sides,we get
+\begin{equation*}
+u(x,t)=x^{2}+\frac{1}{2}x^{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(u_{xx}]]
+\end{equation*}
+Now applying the Adomian decomposition method
+\begin{equation}
+\sum_{n=0}^{\infty}u_{n}(x,t)=x^{2}+\frac{1}{2}x^{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(\sum_{n=0}^{\infty}(A_{n})_{xx}]]
+\end{equation}
+this gives us
+\begin{align*}
+u_{0}(x,t)&=x^{2}\\
+u_{k+1}(x,t)&=\frac{1}{2}x^{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(\sum_{n=0}^{\infty}(A_{k})_{xx}]]
+\end{align*}
+From this recursive relation we have 
+\begin{align*}
+u_{1}(x,t)&=\frac{1}{2}x^{2}\mathbb{N}^{-1}[\frac{u^{\alpha}}{s^{\alpha}}\mathbb{N}[(\sum_{n=0}^{\infty}(A_{0})_{xx}]]\\
+&=x^{2}\frac{t^{\alpha}}{\Gamma(\alpha+1)}
+\end{align*}
+Similarly we can find the other iterative solutions as
+\begin{align*}
+u_{2}(x,t)&=x^{2}\frac{t^{2\alpha}}{\Gamma(2\alpha+1)}\\
+u_{3}(x,t)&=x^{2}\frac{t^{3\alpha}}{\Gamma(3\alpha+1)}
+\end{align*}
+and so on...
+
+Thus the approximate solution to the given one-dimensional fractional heat-like equation is given by
+\begin{align*}
+u(x,t)&=u_{0}+u_{1}+u_{2}+u_{3}+...\\
+&=x^{2}+x^{2}\frac{t^{\alpha}}{\Gamma(\alpha+1)}+x^{2}\frac{t^{2\alpha}}{\Gamma(2\alpha+1)}+x^{2}\frac{t^{3\alpha}}{\Gamma(3\alpha+1)}+...\\
+&=x^{2}E_{\alpha}(t^{\alpha})\\
+\end{align*}
+For $ \alpha=1 $, we have solution of given equation of the form
+\begin{equation}
+u(x,t)=x^{2}exp(t)
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\lhead{\scriptsize\itshape\medskip Natural Transform and Special Functions}
+\section{Natural Transform and Special Functions}
+The branch of integral transform attract many researcher in this field and hence various types of integral transforms are introduced. Natural transform is one of the new defined transform which wide range of application in science and engineering field. In this section we derived the formula for Natural transform of some special functions.
+\subsection{Pochhamber Symbol}
+ The pochhamber symbol denoted by $(\alpha)_{n}$ is defined by the equation\cite{R62}
+ \begin{eqnarray*}
+ (\alpha)_{n}& = &\alpha(\alpha+1)(\alpha+2)....(\alpha+n+1)\\
+ & =& \prod_{m = 1}^{n}(\alpha+m+1) {\hspace{1cm}} for{\hspace{0.5cm}} n\geq 1
+  \end{eqnarray*}
+ In particular $(\alpha)_{0} = 1{\hspace{1cm}} for{\hspace{0.5cm}} \alpha\neq 0$ ,${\hspace{1cm}}(1)_{n} = n! $
+ \subsection{Some Standard Results}
+ \begin{enumerate}
+ \item if $n$ is positive integer,  then
+ $$\frac{\Gamma{n}}{\Gamma{n+1}} = (\alpha)_{n}$$
+where  $\alpha$ is neither zero nor a negative integer.
+
+\item If $\alpha$ is not an integer
+$$ \frac{\Gamma{(1-\alpha-n)}}{\Gamma{(1-\alpha)}} = \frac{(-1)^{n}}{(\alpha)_{n}}$$
+
+\item $$ (1-Z)^{-\alpha} = \sum_{n=0}^{\infty}\frac{(\alpha)_{n}Z^{n}}{n!}$$
+
+\item $$(\alpha)_{n-k} = \frac{(\alpha)_{n}(-1)^{k}}{(1-\alpha-n)_{k}} {\hspace{0.5cm}}  0\leq k\leq n $$
+
+\item  If $ \alpha = 1$, then   
+$$(-1)_{n-k} = (n-k)! =  \frac{n!(-1)^{k}}{(-n)_{k}} {\hspace{0.5cm}} 0\leq k\leq n$$
+
+\item $$ (\alpha)_{2n} = 2^{2n}(\frac{\alpha}{2})_{n}(\frac{\alpha + 1}{2})_{n}$$
+\item The function $f(a,b,c;Z)$ is written as 
+$ F\left[ 
+  \begin{array}{cc}
+  a,b&;\\
+  c&; 
+  \end{array}
+ \mid{Z}
+ \right] $ and is defined as 
+$$ f(a,b;c;z) ={ \sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}z^{n}}{(c)_{n}n!}}$$
+\item  The Hypergeometric function ${}_p F_q $ is defined by
+$${}_p F_q\left[ 
+  \begin{array}{cc}
+  a_1, a_2,.......,a_p&:\\
+  a_1, a_2,.......,a_p&: 
+  \end{array}
+ \mid{Z}
+ \right] ={\sum_{n=0}^{\infty} \frac{\prod_{k=1}^{p}(a_{k})_{n}z^{n}}{\prod_{m=1}^{q}(b_{m})_{n}n!}}$$
+ \end{enumerate}
+ 
+  \subsection{Some Well known special functions}
+  \begin{enumerate}
+
+  \item The Bessel's Function is defined by
+  \begin{equation}
+   J_{n}(t)= \sum_{n=0}^{\infty} \frac{(-1)^{k}t^{2k+1}}{2^{2k+n}k!\Gamma{1+n-k}}
+   \end{equation}
+  
+   \item[2]The Legendre polynomial  is defined by
+    \begin{equation}
+   P_{n}(t)= \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(\frac{1}{2})_{n-k}(2t)^{n-2k}}{(n-2k)!k!}
+  \end{equation}
+   
+   \item[3]The Hermite polynomial  is defined by
+   \begin{equation}
+   H_{n}(t)= \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2t)^{n-2k}}{(n-2k)!k!}
+   \end{equation}
+  
+   \item[4]The Leguerre polynomial is defined by
+    \begin{equation}
+   L_{n}(\alpha)_{t}= \sum_{k=0}^{\infty} \frac{(-1)^{k}(1+\alpha)_{n}t^{k}}{(n-k)!k!(1+\alpha)_{k}}
+  \end{equation}
+    \end{enumerate}
+ \subsection{The Natural transform of Hypergeometric function}
+\begin{eqnarray*}
+\mathbb{N}\lbrace {}_p F_q\left[ 
+  \begin{array}{cc}
+  a_1, a_2,.......,a_p&;\\
+  a_1, a_2,.......,a_q&; 
+  \end{array}
+ \mid{t} \right]\rbrace &=& \int_{0}^{\infty}e^{-st} \sum_{n=0}^{\infty} \frac{\prod_{k=1}^{p}(a_{k})_{n}(ut)^{n}}{\prod_{m=1}^{q}(b_{m})_{n}n!} dt\\
+ &=& \sum_{n=0}^{\infty} \frac{\prod_{k=1}^{p}(a_{k})_{n}}{\prod_{m=1}^{q}(b_{m})_{n}n!}\int_{0}^{\infty}e^{-st}(ut)^{n}dt\\ 
+ &=&{ \sum_{n=0}^{\infty} \frac{\prod_{k=1}^{p}(a_{k})_{n}}{\prod_{m=1}^{q}(b_{m})_{n}n!}}\mathbb{N}\lbrace t^{n} \rbrace \\ 
+&=&{ \sum_{n=0}^{\infty} \frac{\prod_{k=1}^{p}(a_{k})_{n}}{\prod_{m=1}^{q}(b_{m})_{n}n!}}\frac{u^{n}}{s^{n+1}}n!\\
+\mathbb{N}\lbrace {}_p F_q\left[ 
+  \begin{array}{cc}
+  a_1, a_2,.......,a_p&;\\
+  a_1, a_2,.......,a_q&; 
+  \end{array}
+ \mid{t}
+ \right]\rbrace &=& \frac{n!}{s}{}_p F_q\left[ 
+  \begin{array}{cc}
+  a_1, a_2,.......,a_p&;\\
+  a_1, a_2,.......,a_q&; 
+  \end{array}
+ \mid{\frac{u}{s}}
+ \right]
+ \end{eqnarray*}
+ In particular,
+   \begin{eqnarray*}
+   \mathbb{N}\lbrace {}_2 F_1\left[ 
+  \begin{array}{cc}
+  a,b&;\\
+   1&; 
+  \end{array}
+ \mid{t}\right]\rbrace &=&\mathbb{N}\lbrace   \sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}t^{n}}{(1)_{n}n!}\rbrace\\
+ &=&\int_{0}^{\infty}e^{-st}\sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}(ut)^{n}}{(1)_{n}n!}dt\\ 
+  &=& \sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}}{(1)_{n}n!}\int_{0}^{\infty}e^{-st}(ut)^{n}dt \\  
+  &=&\sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}}{(1)_{n}n!}\mathbb{N}\lbrace t^{n}\rbrace\\  
+    &=& \sum_{n=0}^{\infty} \frac{(a)_{n}(b)_{n}}{(1)_{n}n!}\frac{u^{n}}{s^{n+1}}n!\\    
+   &=& {}_2 F_0\left[ 
+  \begin{array}{cc}
+  a,b&;\\
+   - &; 
+  \end{array}
+ \mid{\frac{u}{s}}\right]\frac{1}{s}
+ \end{eqnarray*}
+\subsection{The Natural transform of Bessel's function}  
+\begin{eqnarray*}
+\mathbb{N}\lbrace J_{n}(t)\rbrace &=&  \mathbb{N}\lbrace{ \sum_{n=0}^{\infty} \frac{(-1)^{k}t^{2k+1}}{2^{2k+n}k!\Gamma{1+n-k}} }\rbrace\\
+&=&\int_{0}^{\infty} e^{-st} \sum_{n=0}^{\infty} \frac{(-1)^{k}(ut)^{2k+n}}{2^{2k+n}k!\Gamma{1+n-k}}dt\\ 
+  &=& \sum_{n=0}^{\infty} \frac{(-1)^{k}}{2^{2k+n}k!\Gamma{1+n-k}}\int_{0}^{\infty} e^{-st}(ut)^{2k+n}dt\\  
+  &=& \sum_{n=0}^{\infty} \frac{(-1)^{k}}{2^{2k+n}k!\Gamma{1+n-k}}\mathbb{N} \lbrace t^{2k+n} \rbrace\\  
+ &=& \sum_{n=0}^{\infty} \frac{(-1)^{k}}{2^{2k+n}k!\Gamma{1+n-k}}\frac{u^{2k+n}}{s^{2k+n+1}}(2k+n)!\\  
+ &=&\lbrace \sum_{n=0}^{\infty} \frac{(-1)^{k}\Gamma{n+1}}{2^{2k}k!\Gamma{1+n-k}\Gamma{n+1}}\frac{u^{2k}}{s^{2k}}(2k+n)! \rbrace  \frac{u^{n}}{2^{n}s^{n+1}}\\ 
+&=&\lbrace \sum_{n=0}^{\infty} \frac{(-1)^{k}(1+n)_{2k}}{2^{2k}k!(1+n)_{k}}\frac{u^{2k}}{s^{2k}}\rbrace  \frac{u^{n}}{2^{n}s^{n+1}}\\ 
+ &=&\lbrace \sum_{n=0}^{\infty} \frac{(-1)^{k}(\frac{1+n}{2})_{k}(1+\frac{n}{2})_{k}}{k!(1+n)_{k}}\frac{u^{2k}}{s^{2k}}\rbrace  \frac{u^{n}}{2^{n}s^{n+1}}\\
+  \therefore \mathbb{N}\lbrace J_{n}(t)\rbrace &=& {}_2 F_1\left[ \begin{array}{cc}
+  \frac{n+1}{2},1+\frac{n}{2}&;\\
+   1+n &; 
+  \end{array}
+ \mid{-\frac{u^2}{s^2}}
+ \right]\frac{u^{n}}{2^{n}s^{n+1}} 
+ \end{eqnarray*}
+\subsection{The Natural transform of Legendre Polynomial}
+  \begin{eqnarray*}
+  \mathbb{N}\lbrace P_{n}(t)\rbrace &=& \mathbb{N}\lbrace { \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(\frac{1}{2})_{n-k}(2t)^{n-2k}}{(n-2k)!k!}}\rbrace\\
+ &=&\int_{0}^{\infty} e^{-st} \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(\frac{1}{2})_{n-k}(2ut)^{n-2k}}{(n-2k)!k!}dt\\
+  &=&2^{n}\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(\frac{1}{2})_{n}(-n)_{2k}}{k!(1-1/2-n)_{k}(-1)^{2k}n!2^{2k}}\int_{0}^{\infty} e^{-st}(ut)^{n-2k}dt\\
+  &=&2^{n} \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(\frac{1}{2})_{n}(-n)_{2k}}{k!(1-1/2-n)_{k}(-1)^{2k}n!2^{2k}}\mathbb{N} \lbrace t^{n-2k} \rbrace\\
+  &=&2^{n}\frac{(\frac{1}{2})_{n}}{n!}\lbrace{  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-n)_{2k}}{(1/2-n)_{k}k!2^{2k}} \frac{u^{n-2k}}{s^{n-2k+1}}\Gamma{n-2k+1}}\rbrace\\
+   &=&2^{n}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}n!}\lbrace  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-n)_{2k}}{(1/2-n)_{k}k!2^{2k}} \frac{s^{2k}}{u^{2k}}\Gamma{n-2k+1}\rbrace\\
+  &=&2^{n}\Gamma{n+1}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}n!}\lbrace  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-\frac{n}{2})_{k}(\frac{-n+1}{2})_{k}2^{2k}}{(1/2-n)_{k}2^{2k}k!} \frac{s^{2k}}{u^{2k}}\frac{\Gamma{1-(-n)-2k}}{\Gamma{1-(-n)}}\rbrace\\
+  &=&2^{n}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}}\lbrace  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-\frac{n}{2})_{k}(\frac{-n+1}{2})_{k}(-1)^{2k}}{(1/2-n)_{k}(-n)_{2k}k!} \frac{s^{2k}}{u^{2k}}\rbrace\\
+  &=&2^{n}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}}\lbrace  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-\frac{n}{2})_{k}(\frac{-n+1}{2})_{k}(-1)^{2k}}{(1/2-n)_{k}(-\frac{n}{2})_{k}(\frac{-n+1}{2})_{k}k!2^{2k}} \frac{s^{2k}}{u^{2k}}\rbrace\\
+   &=&2^{n}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}}\lbrace  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{2k}}{(1/2-n)_{k}k!}\left( \frac{s^2}{4u^2}\right) ^{k}\rbrace\\
+  \therefore \mathbb{N}\lbrace P_{n}(t)\rbrace &=&{}_0 F_1\left[ \begin{array}{cc}
+      -      &;\\
+   (\frac{1}{2}-n) &; 
+  \end{array}
+ \mid{\frac{s^2}{{2u}^2}}
+ \right]2^{n}\frac{(\frac{1}{2})_{n}u^{n}}{s^{n+1}} 
+ \end{eqnarray*}
+ \subsection{The Natural transform of Hermite Polynomial}
+ \begin{eqnarray*}
+  \mathbb{N}\lbrace H_{n}(t)\rbrace &=& \mathbb{N}\lbrace { \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2t)^{n-2k}}{(n-2k)!k!}}\rbrace\\ 
+  &=&\int_{0}^{\infty} e^{-st} \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2ut)^{n-2k}}{(n-2k)!k!}dt\\
+ &=&  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2)^{n}}{(n-2k)!k!2^{2k}}\int_{0}^{\infty} e^{-st}(ut)^{n-2k}dt\\
+ &=&  \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2)^{n}}{(n-2k)!k!2^{2k}}\mathbb{N}\lbrace{ t^{n-2k}}\rbrace\\
+  &=& \sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(2)^{n}}{(n-2k)!k!2^{2k}} \frac{u^{n-2k}}{s^{n-2k+1}}\Gamma{n-2k+1}\\
+  &=&2^{n}\frac{u^{n}}{s^{n+1}}\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}n!(-n)_{2k}}{(-1)^{2k}k!2^{2k}} \frac{s^{2k}}{u^{2k}}\Gamma{n-2k+1}\\
+ &=&2^{n}\frac{u^{n}}{s^{n+1}}\Gamma{n+1}\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}(-n)_{2k}}{(-1)^{2k}k!} \left( \frac{s^{2}}{4u^{2}}\right) ^{k}\frac{\Gamma{n-2k+1}}{\Gamma{n+1}}\\
+   &=&2^{n}\frac{u^{n}}{s^{n+1}}n!\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \frac{(-1)^{k}}{k!} \left( \frac{s^{2}}{4u^{2}}\right) ^{k}\\
+  \therefore \mathbb{N}\lbrace H_{n}(t)\rbrace &=& {}_0 F_0\left[ \begin{array}{cc}
+   -  &;\\
+   -  &; 
+  \end{array}
+ \mid{-\frac{s^2}{4u^2}}
+ \right]2^{n}\frac{u^{n}}{s^{n+1}}n!
+ \end{eqnarray*}
+ \subsection{The Natural transform of Leguerre Polynomial}
+ \begin{eqnarray*}
+ \mathbb{N}\lbrace L_{n}(\alpha)_{t}\rbrace &=& \mathbb{N}\lbrace { \sum_{k=0}^{\infty} \frac{(-1)^{k}(1+\alpha)_{n}t^{k}}{(n-k)!k!(1+\alpha)_{k}}}\rbrace\\
+   &=&\int_{0}^{\infty} e^{-st} \sum_{k=0}^{\infty} \frac{(-1)^{k}(1+\alpha)_{n}t^{k}}{(n-k)!k!(1+\alpha)_{k}}dt\\
+  &=&(1+\alpha)_{n} \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(n-k)!k!(1+\alpha)_{k}}\int_{0}^{\infty} e^{-st}(ut)^{k}dt\\
+  &=&(1+\alpha)_{n} \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(n-k)!k!(1+\alpha)_{k}}\mathbb{N}\lbrace t^{k}\rbrace\\
+  &=&(1+\alpha)_{n} \sum_{k=0}^{\infty} \frac{(-1)^{k}}{(n-k)!k!(1+\alpha)_{k}}\frac{u^{k}}{s^{k+1}}\Gamma{k+1}\\
+  &=&(1+\alpha)_{n} \sum_{k=0}^{\infty} \frac{(-1)^{k}(-n)_{k}}{(-1)^{k}k!(1+\alpha)_{k}n!}\frac{u^{k}}{s^{k+1}}\Gamma{k+1}\\
+ &=&\lbrace \sum_{k=0}^{\infty} \frac{(1)_{k}(-n)_{k}}{k!(1+\alpha)_{k}}\left( \frac{u^{k}}{s^{k}}\right)^{k} \rbrace\frac{(1+\alpha)_{n}}{sn!}\\
+  \therefore \mathbb{N}\lbrace{ L_{n}(\alpha)_{t}}\rbrace &=& {}_2 F_1\left[ \begin{array}{cc}
+            (-n),1     &;\\
+   (1+\alpha) &; 
+  \end{array}
+ \mid{\frac{u}{s}}
+ \right]\frac{(1+\alpha)_{n}}{s n!} 
+ \end{eqnarray*}
+ \textbf{Note that throughout the discussion, we assume that the validity of integration term by term in the summation.}

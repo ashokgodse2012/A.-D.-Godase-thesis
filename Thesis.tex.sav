@@ -1,0 +1,349 @@
+
+%% ----------------------------------------------------------------
+%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% ----------------------------------------------------------------
+
+% Set up the document
+\documentclass[a4paper, 12pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve
+\usepackage{graphicx}
+\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+
+% Include any extra LaTeX packages required
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\setcounter{page}{1}
+%% ----------------------------------------------------------------
+\begin{document}
+
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+
+% Set up the Title Page
+\title  {On Numerical Techniques in Nonlinear \\Fractional Partial Differential Equations and Applications}
+\authors  {\texorpdfstring
+            {\href{gabirajdar11@gmail.com}{Gunvant Achutrao Birajdar}}
+            {Gunvant Achutrao Birajdar}
+            }
+\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\date       {\today}
+\subject    {}
+\keywords   {}
+\maketitle
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+%\rhead{\small{On Numerical Technique in Nonlinear Fractional P.D.Es. and Applications}}  % Sets the right side header to show the page number
+%\lhead{Synopsis}  % Clears the left side page header
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+
+%% ----------------------------------------------------------------
+\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+\rfoot{\scriptsize\medskip\itshape Gunvant A. Birajdar}
+\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad(M.S.).}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+\setstretch{1.2}
+
+\large
+\begin{center}
+\title{\bf On Numerical Techniques in Nonlinear Fractional Partial Differential Equations and Applications}\\
+ by\\
+ \vspace{.2in}
+\bf {Gunvant Achutrao Birajdar}\\\vspace{.2in}
+\end{center}
+$$\bf {INTRODUCTION}$$
+During the second half of nineteenth century, a large number of mathematicians become
+actively involved in the investigation of numerous problem presented by partial differential
+equations(PDEs). The primary reason for this research was that partial differential equations both
+express many fundamental laws of nature and frequently arise in the mathematical analysis of
+diverse problems in science and engineering. These problems are usually formulated as initial value
+problems (IVPs), boundary value problems (BVPs) or initial boundary value problems (IBVPs).\
+
+Although the origin of nonlinear partial differential equations is very old, they have undergone
+remarkable new developments during the last half of the twentieth century. These problems arise in
+different areas of applied mathematics, physics and engineering including fluid dynamics, nonlinear
+optics, solid mechanics, plasma physics, quantum field theory and condensed-matter physics. Many
+remarkable and unexpected phenomena have also been observed in physical, chemical and biological
+systems. Other major achievements of twentieth century in applied mathematics include the discovery
+of soliton interactions, the inverse scattering transform method, numerical method for finding the
+explicit solution for several partial differential equations.\
+
+In fact, partial differential equations have been found to be essential to develop the
+theory of surfaces on the one hand and to the solution of physical problems on the other.
+These two areas of mathematics can be seen as linked by the bridge of {\bf Numerical analysis}.
+With the discovery of the basic concept and properties of the modern theory
+of the linear partial differential equations is now well established. But the theory for solutions of
+nonlinear partial differential is  not developed well. The analytic methods are fail to find the
+solution of partial differential equations if \
+\begin{itemize}
+  \item The PDEs is not linear and can't be linearized without seriously affection the result.
+  \item The solution region is complex.
+  \item The boundary conditions are of mixed types.
+  \item The boundary conditions are time-dependent.
+  \item The medium is inhomogeneous or anisotropic.
+\end{itemize}
+
+In such cases numerical methods play central role. Numerical methods are useful for solving the problems
+in fluid dynamics, heat and mass transfer and other partial differential equations of mathematical physics
+when such problems cannot be handled by the exact analysis technique because of nonlinearity, complex
+geometries and complicated boundary conditions. For solving such problems several numerical technique
+are available like finite difference method, finite element method, finite volume method and  discrete
+Adomian decomposition method (ADM). But here we concentrate on finite difference method and discrete ADM.
+The finite difference method was first developed by {\bf A. Thom} in the 1920's under the title
+{\bf \lq \lq the method of squre"} to solve nonlinear hydrodynamics equations. Whereas ADM is discovered
+ by a great mathematician {\bf Gorge Adomian} in the beginning of 1980's century. This is very useful tool
+ while dealing with nonlinear equations.\
+
+Recently lot of research is going on fractional calculus. The concept of fractional calculus(i.e. calculus
+of integrals and derivatives of arbitrary order) may be considered an old and yet novel topic. In fact, the
+concepts are almost as old as their more familiar integer-order counterparts. As early as 1695, when Leibniz
+and Newton had just been establishing standard calculus, Leibniz and L'Hospital had correspondence where they
+discussed the meaning of the derivative of order one half. Since then, many famous, mathematician have worked
+on this and related questions, creating the field which is known today as \textbf{\emph{fractional calculus}}.
+A list of mathematicians who have provided important contributions up to the middle of last century, includes
+Laplace, Fourier, Abel, Liouville, Riemann, Grunwald, Letnikov, Levy, Marchaud, Erdelyi, and Riesz. However,
+for three centuries, the theory of fractional calculus was developed mainly as a purely theoretical field of
+mathematics.\
+
+Now days, considerable interest in fractional differential equations has been stimulated by the
+applications that if finds in numerical analysis and in the different areas of physical-mathematical
+approach to anomalous diffusion \cite{mk} may be based on a generalized diffusion equation containing
+derivatives of fractional order in time, space or space-time. Such evolution equations imply for the
+flux a fractional Fick's law that accounts for spatial and temporal non-locality. Fractional-order
+derivatives and integrals provide a powerful instrument for the description of memory and hereditary
+properties of different substances \cite{p}.\
+
+The concept of fractional derivatives is by no means new. In fact, they are almost as old as their more
+familiar integer-order counterparts \cite{mr,os1,p,sk}. Fractional derivatives have recently been
+successfully applied to problems in system biology \cite{yl}, physics \cite{mk,mk1,mk2,za}, chemistry
+and biochemistry \cite{yal}, hydrology \cite{bwm,la,lt}, medicine \cite{hlw,hb}, and finance
+\cite{gms,rsm,Wy}. Numbers of authors tried to find the solution of fractional differential equations
+by analytic methods such as Wyss \cite{Wy1} considered the time fractional diffusion equation and the
+solution is given in closed form of Fox functions, Schneider and Wyss\cite{Wy2} considered the time
+fractional diffusion and wave equations. Agrawal\cite{ag} considered a time fractional diffusion-wave
+equation in a bounded space domain and find out the solution using Laplace transform technique and
+finite sine transform technique. Liu et al.\cite{lat} considered the time-fractional advection-dispersion
+equation and derived the complete solution using variable transformation, Mellin and Laplace transforms.
+Gorenflo et al.\cite{gmm} derived the fundamental solution for the time fractional diffusion equation.
+Chen et al.\cite{cla} derived the analytical solution for the time-fractional telegraph equation by the
+method of separation of variables. Also by using the Adomian decomposition method \cite{A,a}. Also some
+numerical methods are developed for solving fractional differential equations, the finite difference method
+\cite{cla,lat,la,lt,mt,slat,zl} finite element method \cite{er,r}, numerical quadrature \cite{ag1,kg},
+Monte Carlo simulation \cite{fsg,mz}, discrete Adomin decomposition method \cite{be,hh} and the matrix
+transform method \cite{ilt,its,ytl}\
+
+Liu et al.\cite{lsa} proposed an explicit finite difference scheme for the time fractional diffusion equation.
+Liu, Anh and Turner\cite{la} proposed a computationally effective methods of lines technique for solving space
+fractional partial differential equations. Zhuang and Liu\cite{zl} analyzed an implicit difference approximation
+for the time fractional diffusion equation and discussed the stability and convergence of the method.
+Meerschaert and Tadjeran \cite{mt} developed practical numerical methods for solving the one dimensional
+space fractional advection-dispersion equation with variable coefficients on a finite domain. Shen and
+Liu \cite{slat} discussed an error analysis of an explicit finite difference approximation for the space
+fractional diffusion equation with insulated end. Diethelm, Ford and Freed \cite{Di3} presented an
+Adams-type predictor-corrector method for the time fractional partial differential equations.
+Yuste \cite{Y} proposed an explicit finite difference method and a new von Neumann-type stability
+analysis for the fractional subdiffusion equation. The work on nonlinear fractional partial differential
+equations are limited to date.
+\begin{center}
+{ \bf Chapter I}\\
+{\bf Introduction}
+\end{center}
+
+This chapter includes preliminaries, notations and historical background of fractional differential
+equation which helps us for studying IVPs as well as IBVPs in further chapters of the thesis. Some basic
+definitions like Riemann-Liouville fractional integral, Caputo fractional derivatives, properties of
+Riemann-Liouville fractional derivatives. Also we provide the relations between Riemann-Liouville fractional
+integral and Caputo fractional derivatives. Moreover, literature survey of present numerical technique for
+fractional partial differential equations is given. At the end of this chapter, we plan about the thesis.
+\begin{center}
+{ \bf Chapter II}\\
+{\bf Discrete Adomian Decomposition Method}
+\end{center}
+
+In this chapter we develop the discrete Adomian decomposition method for finding the solution of fractional
+partial differential equations. In the first part we find the solution of time fractional diffusion equation,
+time fractional Schrondiger equation  and time fractional Burger's equation respectively.
+
+ Using discrete Adomian decomposition method we obtained the solution of above equations and compare the solution 
+ with exact solution by putting $\alpha=1$. Its graphical solution represents graphically using MATLAB software.\  
+
+In the second part of this chapter, we find the solution of the system of linear as well as nonlinear fractional
+partial differential equations. The obtained solution is good agreement with exact solution when $\alpha=1$.
+Moreover, we apply the discrete Adomian decomposition method for two dimensional system of time fractional
+Burger's equations. Its solution represents graphically by using MATLAB software. Finally we conclude that
+discrete Adomian decomposition method is promising method for finding the solution of linear as well as
+nonlinear fractional partial differential equations.
+
+\begin{center}
+{ \bf Chapter III}\\
+{\bf Implicit Finite Difference Scheme }
+\end{center}
+In this chapter, we develop the implicit finite difference method for  time, space-time and two dimensional
+space-time semilinear fractional diffusion equation. Consider the fractional diffusion equation
+\begin{align}\label{s1}
+\frac{\pa^{\al}{u}}{\pa t^{\al}}&= \frac{\pa^{\ba}{u}}{\pa x^{\ba}}+f(u), 0<x <l, t\geq 0,\,\, 0< \alpha \leq 1, 1<\ba \leq 2
+\end{align}
+\begin{align}\label{s2}
+\text{with initial condition}\quad &u(x,0)=f(x) \\\label{s3}
+\text{and boundary condition}\quad &u(0,t)=0=u(l,t)
+\end{align}
+For $\alpha (0 <\alpha \leq 1)$ and $\beta=2$ in the equation \eqref{s1} together with initial condition \eqref{s2} and boundary conditions \eqref{s3} is called first initial boundary value problem for time fractional semilinear diffusion equation and for $\alpha (0 <\alpha \leq 1)$ and $\beta (1< \beta \leq 2)$ in the equation \eqref{s1} together with initial condition \eqref{s2} and boundary conditions \eqref{s3} is called first initial boundary value problem for space-time fractional semilinear diffusion equation. Here we solve the above time fractional and space-time fractional first IBVP by using implicit finite difference scheme. We show that the implicit finite difference scheme is unconditionally stable. Using mathematical induction we prove that implicit finite difference scheme is convergent. As an application of this method test problem is given and its graphical representation is given by using MATLAB software.\
+
+Also we develop implicit finite difference method for two-dimension semilinear space-time fractional diffusion
+equation. Consider the two-dimensional space-time fractional diffusion equation
+\begin{equation}\label{t1}
+    \frac{\pa^{\al}u(x,y,t)}{\pa t^{\al}}=a(x,y,t)D^{\beta}_{x}u(x,y,t)+b(x,y,t)D^{\gamma}_{y}u(x,y,t)+f(x,y,t,u)
+\end{equation}
+with initial condition
+\begin{equation}\label{t2}
+    u(x,y,0)=g(x,y) \quad 0<x<L_{x},\,\,\ 0<y<L_{y}
+\end{equation}
+and boundary conditions
+\begin{align}\label{t3}
+    u(0,y,t)=0&=u(L_{x},y,t)  \quad 0<t\leq T,\\\label{t4}
+    u(x,0,t)=0&=u(x,L_{y},t)  \quad 0<t\leq T
+\end{align}
+where fractional orders $0<\al\leq 1, 1<\ba\leq 2$ and $ 1<\gamma\leq 2$ the diffusion coefficients $a(x,y,t) \& b(x,y,t) > 0$. It is called first IBVP.
+Note that $\dfrac{\pa^{\al}}{\pa t^{\al}}$ is the Caputo fractional derivative of order $\al$ $(0<\al\leq 1)$ and $D^{\beta}(.)\,\, \& D^{\gamma}(.) (1<\beta, \gamma \leq 2)$ are the Riemann-Lioville fractional derivative of order $\beta\,\, \text{and}\,\, \gamma$ respectively.
+\begin{center}
+{ \bf Chapter IV}\\
+{\bf Stability of Nonlinear Fractional Diffusion Equation}
+\end{center}
+We propose a weighted average finite difference scheme for nonlinear fractional diffusion equation.
+Consider time fractional diffusion equation
+\begin{align}\label{r}
+\frac{\pa^{\al}{u}}{\pa t^{\al}}=\frac{\pa^{2}{u^{m}}}{\pa x^{2}}\quad x \in (a,b),\,\,0<t\leq T\,\,(m\geq 2)\\
+\text{with initial condition}\,\,\, u(x,0)=g(x)\quad x \in (a,b)\\
+\label{F1}\text{and boundary conditions}\,\,\, u(a,t)=u(b,t)=0 \quad  t>0
+\end{align}
+it is called the first IBVP for nonlinear diffusion equation. This is highly nonlinear fractional IBVP
+and also difficult to solve. Here we linearize the nonlinear term by using Taylor's series expansion.
+Also the stability is obtained by using matrix method. Finally a test problem is discussed as an application of method.
+
+\begin{center}
+{ \bf Chapter V}\\
+{\bf Variable Order Semilinear Fractional Diffusion Equation}
+\end{center}
+This chapter gives the study of variable order fractional diffusion equation. It has been found that constant
+order fractional diffusion equations are not capable to express some complex diffusion process in porous medium,
+in the case of external field changes with time, in such situation the constant order fractional diffusion
+equation model cannot work well to characterize such phenomenon\cite{ass}. This motivate to construct the
+variable order fractional diffusion equation.Variable order fractional derivative is a novel concept which
+is very useful for modelling of time dependent or concentration dependent anomalous diffusion or diffusion
+process in inhomogeneous porous media. This encourages the researchers to consider the fractional differential
+equations with time variable fractional derivatives as well as space variable fractional derivatives.
+Samko et al.\cite{s,sr} first proposed the concept of variable order differential operator and investigated
+the mathematical properties of variable order integration and differentiation of Riemann-Liouville fractional
+derivative. Lorenzo and Hartley \cite{lh} generalized different types of variable order fractional differential
+operators and made some theoretical studies via the iterative Laplace transform method. Coimbra et al.\cite{C}
+investigated the dynamics and control of nonlinear viscoelasticity oscillator via a variable order operators.
+Ingman et al.\cite{is,is1} employed the time dependent variable order to model the viscoelastic deformation process.
+Pedro et al.\cite{pkp} studied the motion of particles suspended in a viscous fluid. Chechkin et al.\cite{cgs}
+who introduced the space dependent variable order derivative into the differential equation of diffusion process
+in inhomogeneous media with the assumption that the waiting-time probability density function is space dependent
+in the continuous random walk scheme.\
+
+Consider the variable order time fractional semilinear diffusion equation
+\begin{equation}\label{v1}
+\frac{\pa^{\al(x,t)}u(x,t)}{\pa t^{\al(x,t)}}=a(x,t)u_{xx}+f(u)
+\end{equation}
+\hspace{2in} $0<x<L_{x},\,\,0<t\leq T, \,\,\, 0< \al(x,t) \leq 1$
+\begin{align}\label{v2}
+\text{ with the initial condition} \quad  &u(x,0)=g(x)\\
+\text{ and boundary conditions} \quad &u(0,t)=0=u(L_{x},t)\label{v3}
+\end{align}
+where $a(x,t) >0$. The equation \eqref{v1}together with initial condition \eqref{v2} and boundary conditions
+\eqref{v3} is called first initial boundary value problem (IBVP). We develop the explicit finite difference scheme, implicit finite
+difference scheme and Crank-Nicolson scheme for variable order time fractional semilinear diffusion equation. These schemes are
+stable and convergent. As an applications of these method testes problems are discussed and shown that Crank-Nicolson is the best
+scheme.
+
+\begin{thebibliography}{00}
+
+\bibitem{A}G.Adomian.\emph{Solving Frontier Problems of Physics: The Decomposition Method,} Kluwer, Boston, 1994.
+\bibitem{a}G.Adomian.\emph{A review of the decomposition method in applied mathematics,} J.Math. Anl.Appl.135(1988) 501-544.
+\bibitem{ag} O.P.Agrawal. \emph{Solution for a fractional diffusion-wave equation defined in a bounded domain} Nonlinear Dynamics,29 (2002)145-155.
+\bibitem{ag1} O.P.Agrawal. \emph{A numirical scheme for initial compliance and creep response of a system.} Mech.Resch. Commun.36(4) (2009) 444-451.
+\bibitem{ass} de E.N. Azevedo, de P.L.Sousa, de R.E.Sousa, M. Engelsberg, M. Miranda, de N.do N and M.A. Silva,
+\emph{Concentration-dependent diffusivity and anomalous diffusion : A magnetic resonance imaging study of water ingress in porous zeolite.} J.Comput.Phys.Rev.E73(2006)011204.
+\bibitem{bmk}E.Barkai, R.Metzler and J.Klafter.\emph{From continuous time random walks to the fractional Fokker-Plank equation} Phy.Rev.E,61(1)(2000)132-138.
+\bibitem{bwm} D.A.Benson,S.W.Wheatcraft, and M.M.Meerschaert. \emph{Application of a fractional advection-dispersion equation}Water Resource Reasearch,36(6)(2000)1403-1412.
+\bibitem{be} A.Bratsos, M.Ehrhardt and I Th.Famelis.\emph{A discrete Adomian decomposition method for discrete nonlinear Schrodinger equations,} Appl.Math.Comput.197(2008) 190-205.
+\bibitem{cla}C.Chen,F. Liu, V. Anh and I.Turner.\emph{Implicit difference approximation of the Galilei invariant fractional advection diffusion equation}ANZIAM J.(2007)C775-C789.
+\bibitem{cla}J.Chen, F.Liu and V.Anh. \emph{Analytical solution for the time-fractional telegraph equation by the method of separtingn varialbles.} Journal of Mathematical Physics, 338(2)(2007),1364-1377.
+\bibitem{cgs} A. V. Chechkin, R. Gorenflo and  I. M. Sokolov, \emph{Fractional diffusion in inhomogeneous
+        media.} Phys. A: Math. Gen. 38 (2005) L679.
+\bibitem{clb}C.M. Chen, F. Liu and K. Burrage,\emph{Finite difference method and a Fourier analysis for the fractional reaction-subdiffusion equation.} Appl.Math.Comput.198 (2008)754-769.
+\bibitem{clt} C. Chen, F. Liu, I. Turner, V. Anh and Y. Chen, \emph{Numerical schemes with high spatial accuracy for a variable-order anomalous subdiffusion equation.} SIAM J. Sci. Comput. 32(4) (2010) 1740-1760.
+\bibitem{clt1} C. Chen, F. Liu, I. Turner, V. Anh and Y. Chen, \emph{Numerical approximation for a variable-order nonlinear reaction subdiffusion equation.} Numer. Algor.(2012), DOI 10.1007/s11075-012-9622-6.
+\bibitem{clt2} C. Chen, F. Liu, I. Turner and V. Anh, \emph{Numerical methods for solving a two dimensional variable-order anomalous subdiffusion equation.} Math.Coumpt.81(277) (2011) 345-366.
+\bibitem{C} C.F.M. Coimbra, \emph{Mechnics with variable-order differential operators.} Ann.Phys.Math.Sci.12 (2003)692-703.
+\bibitem{dc} G.Diaz, C.F.M. Coimnra,\emph{Nonlinear dynamics and controal of a variable order oscillator with application to the van der Pol equation.} Nonlinear Dynamics 56(2009) 145-157.
+\bibitem{Di3}K. Diethelm, N.J. Ford and A.D. Freed.\emph{A predictor corrector approach for the numerical solution of fractional differential equations.}Nonlinear Dynam. 29 (2002) 3-22.
+\bibitem{er}V.J.Ervin and J.P.Roop.\emph{Variational solution of the fractional advection dispersion equation.} Numer.Meth.PDE, 22(3) (2006) 558-576.
+\bibitem{fsg}D.Fulger, E.Scalas and G.Germano. \emph{Monte Carlo simulation of uncoupled continuous time random walks yielding a stochastic solution of the space-time fractional diffusion equation.} Phys.Rev. E. 77(2) (2008) 211-222.
+\bibitem{gms}R.Gorenflo, F.Mainardi, E.Scalas and M.Raberto.\emph{Fractional calculus and continuous time finance.III. The diffusion limit.} Mathematical finance,(2001)171-180.
+\bibitem{gmm} R.Gorenflo, F.Mainardi, D.Moretti, and P.Paradisi.\emph{Time fractional diffusion:A discrete random walk approach.}Nonlinear Dynamics, 29(2009)129-143.
+\bibitem{hlw}B.I.Henry, T.A.M.Langlands and Wearne.\emph{Fractional cabel model for spiny neuronal dendrites.}Phys.Rev.Lett.100(12)(2008) 128103.
+\bibitem{hb}M.G.Hall and T.R.Barrick.\emph{From diffusion-weighted MRI to anomalous diffusion imaging.}Magnetic Resonance in Medicine, 59(3)(2008)447-455.
+\bibitem{is}D.Ingman,J.Suzdalnitsky and M.Zeifman, \emph{Constitutive dynamic-order model for nonlinear contact phenomena.} J.Appl.Mech.67(2000)383-390.
+\bibitem{is1}D.Ingman,J.Suzdalnitsky and M.Zeifman, \emph{Controal of damping oscillations by fractional differential operators with time-dependent order.} Comput.Methods Appl.Mech.Eng.193 (2004)5585-5595.
+\bibitem{ilt} M.Ilic, F.Liu, I.Turner and V,Anh.\emph{Numerical approximationof afractional-in-space diffusion equation.} Frac.Cal.Appl.Anal.,(3)(2005) 323-341.
+\bibitem{its} M.Ilic, I.W.Turner and D.P. Simpson. \emph{A restarted Lanczos approximation to functions of a symmetric matrix.} IMA J.Numer.Anal.44 (2009) 2481–2504.
+\bibitem{kg} P.Kumar and O.P. Agrawal. \emph{An approximate method for numerical solution of fractional differential equations.} Signal Processing, 86(10)(2006)2602-2606.
+\bibitem{lat}F. Liu, V. Anh, I.Turner and P.Zhuang.\emph{Time fractional advection dispersion equation,} J.Appl.Math.$\&$ Computing 13(2003), 233-245.
+\bibitem{la} F.Liu, V. Anh, I Turner.  \emph{ Numerical solution of space fractional Fokker-Planck equation.} {J.Comp. Appl.Math.},166 (2004)209-219.
+\bibitem{lsa}F. Liu, S. Shen V. Anh and I.Turner.\emph{Analysis of a discrete non-Markovian random walk approximation for the time fractional diffusion equation,} ANZIAM J. 46(E)(2005)C488-C504
+\bibitem{lt} F.Liu, V. Anh, I Turner and P.Zhuang. \emph{ Numerical solution of solute transport in fractal porous media}. {ANZIAM J.} 45(E),2004.
+\bibitem{lx}Y. Lin and C. Xu.\emph{Finite difference/ spectral approximations for the time-fractional diffusion equation.}J.Comput.Phys.225(2)(2007)1533-1552.
+\bibitem{lh}C.F.Lorenzo and T.T. Hartly, \emph{Variable order and distributed order fractinal operators.}Nonlinear dynam.29(2002)57-98.
+\bibitem{pkp}H.T.C.Pedro, M.H.Kobayashi, J.M.C.Pereira, C.M.C.Pereira and C.F.M. Coimbra, \emph{Variable order modeling of diffusive-convective effects on the oscillatory flow past a sphere.} J. Vib. Control. 14 (2008) 1659-1672.
+\bibitem{mz}M.Marseguerra and A.Zoia.\emph{Monte Carlo evaluation of FADE aooriacg ti anomalous kinetics.} Math.Comput.Simul. 77(44)(2008)345-357.
+\bibitem{mt} M.Meerschaert and C. Tadjeran.\emph{ Finite difference approximations for fractional advection-dispersion flow equations.} {J.Comp. Appl. Math.}172(1), 65-77, 2004.
+\bibitem{mk}R.Metzler, and J.Klafter.\emph{Boundary value problems for fractional diffusion equaitons.} Physica A Statistical Mechnics and its Applications, 278(1-2)107-125,2000.
+\bibitem{mk2}R.Metzler and J. Klafter. \emph{The random walk's guide to anomalous diffusion: a fractional dynamics approach}. Physics Reports, 339(1),1-77, 2000.
+\bibitem{mr}K.S.Miller and B. Roos.\emph{An Introduction to the Fractional Calculas and Fractional Differential Equations}. Wiley, 1993.
+\bibitem{os1}K.B. Oldham and J.Spanier.\emph{The Fractional Calulus}. Academic Press, New York, 1974.
+\bibitem{p}I.Podlubny.\emph{Fractional Differential Equations.} Academic Press, San Diego,1999.
+\bibitem{rsm} M.Raberto, E.Scalas and F.Minardi.\emph{Waiting-times and returns in high-frequency financial data: an empirical study} Physica A:Statistical Mechnics and its Applications,314,(1-4)(2002)749-755.
+\bibitem{r} J.P.Roop. \emph{Computational aspects of FEM approximation of fractional advection dispersion equations on bounded domain in $\Re^{2}$}. J.Compt.Appl.Math, 193(1)(2006) 243-268.
+\bibitem{mk1}I.A.Saichev and G.M. Zaslavsky.\emph{Fractional kinetic equations: solution and appications.} Chaos,7(4) 753-764,1997.
+\bibitem{slat}S.Shen, F.Liu, V.Anh, and I.Turner.\emph{Error analysis of an explicit finite difference approximation for the space fraction diffusion equation with inslulated ends}. ANZIAM J.,46(E) 871-887.
+\bibitem{sk}S.G.Smoke, A.A. Kilbas, and O.I. Marichev. \emph{Fractional Integral and Derivatives: Theory and Applications.} Gordon and Breach Sciences Publishers, Amsterdam, 1993.
+\bibitem{s} S.G.Samko, \emph{Fractional integration and differentiation to a variable order.} Anal. Math. 21 (1995)213-236.
+\bibitem{sr} S.G.Samko and B.Ross, \emph{Integration and differentiation to a variable order.} Intgral. Trans. Special Func.1(4) (1993)277-300.
+\bibitem{ytl}Q.Yang, I.Turner and F.Liu. \emph{Analytical and numerical solutions for the time and space-symmetric fractional diffusion equation.} ANZIAM J.,50(2009) C800-C814.
+\bibitem{yl}S.B.Yuste and K.Lindenberg. \emph{Subdiffusion-limited A+A ractions.}Physical Review Letters,87(11):118301,2001.
+\bibitem{yal}S.B.Yuste,L.Acedo and K.Lindenberg. \emph{Reaction front in an $A+A\rightarrow C$ ractions subdiffusion process.} Physical Review E,69(3):036126,2004.
+\bibitem{Y}S.B. Yuste,Weighted average finite difference method for fractional diffusion equations,{\it J. Comput. Phy.},{\bf 216}(2006), 264-274.
+\bibitem{Wy} W.Wyss.\emph{The fractional Black-Scholes equation.}Fractional Calculus Application and Analysis.3(2000)51-61.
+\bibitem{Wy1}W.Wyss.\emph{The fractional diffusion equation.} Journal of Mathematical Physics. 27(11) (1986) 2782-2785.
+\bibitem{Wy2}W.R.Schneider and W.Wyss.\emph{Fractional diffusion and wave equations.}Journal of Mathematical Physics.30(1)(1989)134-144.
+\bibitem{za}G.M. Zaslavsky.\emph{Fractional kinetic equation for Hamiltonian chaos.}Oxford University Press, Oxford, 2005.
+\bibitem{zl}P.Zhuang, F.Liu.\emph{Implicit difference approximation for the time fractional diffusion equation.} J.Appl.Math. Computing, 22(3) 87-99, 2006.
+\bibitem{hh}H. Zhu, H.Shu and M.Ding.\emph{Numerical solution of two-dimensional Burger's equations by discrete Adomian decomposition method,} Comput. Math. Appl. 60 (2010) 840-848.
+\end{thebibliography}
+
+
+\end{document}
+%% ----------------------------------------------------------------
+% Now begin the Appendices, including them as separate files
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+\input{./Appendices/AppendixA}	% Appendix Title
+
+%% ----------------------------------------------------------------
+
+\end{document}  % The End
+%% ----------------------------------------------------------------

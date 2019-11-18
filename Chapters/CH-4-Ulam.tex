@@ -1,0 +1,384 @@
+\section{Introduction and basic tools}
+In 1940, Ulam \cite{u1} proposed a general Ulam stability problem in the talk before the Mathematics Club of University of Wisconsin in which he discussed a number of important unsolved problems. In the following year, Hyers \cite{dh} affirmatively answered partially to the Ulams' question. Further in 1978, Rassias \cite{r1}-\cite{r3} generalized the results of Hyers' and since then the stability of functional equations have been investigated by many researchers as an emerging field of mathematical analysis.
+
+In this paper, we will study four Ulam-type stabilities of solution of nonlinear initial value problem (IVP)
+\begin{equation}\label{a}\begin{cases}
+\D_{1}^{\alpha}x(t)=f(t,x(t),{\D_{1}^{\alpha}x(t)}),\quad t\in{J}=[1,T],T>1,\\
+  x^{(k)}(1)=x_k,\quad x_k\in{\R}^{n},\quad k=0,1,\cdots,m-1,
+  \end{cases}
+\end{equation}
+for system of implicit fractional differential equations for some $\alpha\in(m-1,m]$, $m\in\N,$ where $f:J\times{\R}^{n}\times{\R}^{n}\to{\R}^{n}$ be a nonlinear continuous function, $x:J\to{\R}^{n}$ and $\D_{1}^{\alpha}$ is the Caputo-Hadamard derivative of order $\alpha.$
+
+
+%%%%%%%Preliminaries
+
+Let $\B=C^m(J,{\R}^{n})$ be a Banach space of continuous functions from $J$ into ${\R}^{n}$ having $m^{th}$ order derivatives with supremum norm ${||\cdot||}_{\B}.$ The well-known function frequently used in the solution of fractional differential equations is the Mittag-Leffler function
+\begin{equation}\label{ml}
+E_{\alpha}(z)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(\alpha k+1)},\quad z\in\R,Re(\alpha)>0,
+\end{equation}
+where $\Gamma(x)=\int_{0}^{\infty}e^{-t}t^{x-1}dt,\,x>0,$ is the Gamma function.
+\begin{defn}\cite{kst}\label{hi}
+The Hadamard fractional integral of order $\alpha>0$ for a continuous function $g(t):[1,+\infty)\to\R$ is defined as
+\begin{equation}\label{hi} \I_{1}^{\alpha}g(t)=\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}g(s)\frac{ds}{s},\quad \alpha>0.
+\end{equation}
+\end{defn}
+\begin{defn}\cite{kst}\label{chd}
+The Caputo-Hadamard fractional derivative of order $\alpha$ for a continuous function $g(t):[1,+\infty)\to\R$ is defined as
+\begin{equation}\label{ch}
+\D_{1}^{\alpha}g(t)=\frac{1}{\Gamma(n-\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{n-\alpha-1}\delta^{n}( g)(s)\frac{ds}{s},\quad n-1<\alpha<n,
+\end{equation}
+where $\delta^n=\bigg(t\frac{d}{dt}\bigg)^{n},n\in\N.$
+\end{defn}
+\begin{lem}\cite{kst}\label{l1}
+If $m-1<\alpha\leq m,m\in\N$ and $g\in C^m[1,T],$ then
+\begin{equation*}
+\I_{1}^{\alpha}[\D_{1}^{\alpha}g(t)]=g(t)-\sum_{k=0}^{m-1}\frac{g^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k.
+\end{equation*}
+\end{lem}
+\begin{lem}\cite{kst}\label{l2}
+For all $\mu>0$ and $\nu>-1,$
+\begin{equation*}
+\frac{1}{\Gamma(\mu)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\mu-1}(\log{s})^{\nu}\frac{ds}{s}=\frac{\Gamma(\nu+1)}{\Gamma(\mu+\nu+1)}(\log{t})^{\mu+\nu}.
+\end{equation*}
+\end{lem}
+\begin{lem}\cite{kst}\label{l3}
+Let $g(t)=t^{\mu},$ where $\mu\geq0$ and if $m-1<\alpha\leq m,m\in\N,$ then
+\begin{equation*}
+\D_{1}^{\alpha}(\log{t})^{\mu}=\begin{cases}
+0, & \mbox{if}\,\,\mu\in\{0,1,\cdots,m-1\},\\
+\frac{\Gamma(\mu+1)}{\Gamma(\mu+\alpha+1)}(\log{t})^{\mu+\alpha}, &\mbox{if}\,\, \mu\in\N,\mu\geq m\,\,\mbox{or}\,\,\mu\notin\N,\mu>m-1.
+\end{cases}
+\end{equation*}
+\end{lem}
+\begin{lem}\cite{dq}\label{l4}
+For any $t\in[1,T],$
+\begin{equation*}
+u(t)\leq a(t)+b(t)\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}u(s)\frac{ds}{s},
+\end{equation*}
+where all the functions are not negative and continuous. The constant $\alpha>0,b$ is a bounded and monotonic increasing function on $[1,T),$ then,
+\begin{equation*}
+u(t)\leq a(t)+\int_{1}^{t}\bigg[\sum_{n=1}^{\infty}\frac{(b(t)\Gamma(\alpha))^{n}}{\Gamma(n\alpha)}\bigg(\log{\frac{t}{s}}\bigg)^{n\alpha-1}a(s)\bigg]\frac{ds}{s},\quad t\in[1,T).
+\end{equation*}
+\end{lem}
+\begin{rem}
+Under the hypothesis of Lemma \ref{l4}, if $a(t)$ be a nondecreasing function on $[1,T).$ Then
+\begin{equation*}
+u(t)\leq a(t)E_{\alpha}\big(b(t)\Gamma(\alpha){\log{t}}^{\alpha}\big).
+\end{equation*}
+\end{rem}
+\begin{defn}
+A function $x\in\B$ is said to be a solution of problem \eqref{a} if $x$ satisfies nonlinear implicit fractional differential system of equations $ \D_{1}^{\alpha}x(t)=f(t,x(t),{\D_{1}^{\alpha}x(t)})$ on $J$ together with initial conditions $x^{(k)}(1)=x_k,\, k=0,1,\cdots,m-1,\,\,x_k\in{\R}^{n}$, $m-1<\alpha\leq m,\,\, m\in\N.$
+\end{defn}
+\section{Ulam-type stability}
+In this section, we present our main results concerning the stability of solutions for IVP \eqref{a}.
+
+The following lemma is proved in \cite{dnj} which is equivalence of IVP \eqref{a} with integral equation
+\begin{equation}\label{b}
+x(t)=\sum_{k=0}^{m-1}\frac{x_k}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}p(s)\frac{ds}{s},\quad t\in{J},
+\end{equation}
+where $p\in\B$ satisfies the functional equation
+\begin{equation}\label{c}
+p(t)=f\bigg(t,\sum_{k=0}^{m-1}\frac{x_k}{\Gamma(k+1)}(\log{t})^k+\I_{1}^{\alpha}p(t),p(t)\bigg),\quad t\in{J}.
+\end{equation}
+\begin{lem}\label{lequi}\cite{dnj}
+Suppose that $f:J\times{\R}^{n}\times{\R}^{n}\to{\R}^{n}$ be a continuous function. Then system \eqref{a} is equivalent to the fractional integral equation \eqref{b}.
+\end{lem}
+
+Next, we make the following assumptions:
+\begin{description}
+\item $(H_{41})$ $f:J\times{\R}^{n}\times{\R}^{n}\to{\R}^{n}$ be continuous function and satisfies the Lipschitz-type condition: for $x,y,\tilde{x},\tilde{y}\in{\R}^{n}$ there exist constants $M>0$ and $0<N<1$ such that
+  \begin{equation*}
+  ||f(t,x,y)-f(t,\tilde{x},\tilde{y})||\leq M||x-\tilde{x}||+N||y-\tilde{y}||,\quad t\in{J}.
+  \end{equation*}
+\item $(H_{42})$ Let $\Phi\in C({J},{\R}_+)$ be a nondecreasing function. There exists a constant $K>0$ satisfying $0<K\theta<1$ and
+      \begin{equation*}
+      \bigg{\|}\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\Phi(s)\frac{ds}{s}\bigg{\|}\leq K\Phi(t),\quad t\in{J},
+      \end{equation*}
+      where $\theta=\frac{M}{1-N}>0.$
+\end{description}
+Let $\epsilon>0$ and $\Phi:{J}\to{\R}_{+}$ be a continuous function. We consider the following inequations:
+\begin{equation}\label{j}
+||\D_{1}^{\alpha}y(t)-f(t,y(t),{\D_{1}^{\alpha}y(t)})||\leq\epsilon,\qquad t\in{J},
+\end{equation}
+\begin{equation}\label{k}
+||\D_{1}^{\alpha}y(t)-f(t,y(t),{\D_{1}^{\alpha}y(t)})||\leq\Phi(t),\quad t\in{J},
+\end{equation}
+\begin{equation}\label{l}
+||\D_{1}^{\alpha}y(t)-f(t,y(t),{\D_{1}^{\alpha}y(t)})||\leq\epsilon\Phi(t),\quad t\in{J}.
+\end{equation}
+\begin{defn}
+Problem \eqref{a} is Ulam-Hyers stable if there exists a real number $K_f>0$ such that for each $\epsilon>0$ and for each solution $y:{J}\to{\R}^{n}$ in $\B$ of inequality \eqref{j}, there exists a solution $x:{J}\to{\R}^{n}$ of Problem \eqref{a} in $\B$ with
+\begin{equation*}
+||y(t)-x(t)||\leq\epsilon K_f;\qquad t\in{J}.
+\end{equation*}
+\end{defn}
+\begin{defn}
+Problem \eqref{a} is generalized Ulam-Hyers stable if there exists $\psi\in C({\R}_{+},{\R}_{+}), \psi(0)=0$ such that for each $\epsilon>0$ and for each solution $y:{J}\to{\R}^{n}$ in $\B$ of inequality \eqref{j}, there exists a solution $x:{J}\to{\R}^{n}$ of Problem \eqref{a} in $\B$ with
+\begin{equation*}
+||y(t)-x(t)||\leq \psi(\epsilon);\qquad t\in{J}.
+\end{equation*}
+\end{defn}
+\begin{defn}
+Problem \eqref{a} is Ulam-Hyers-Rassias stable with respect to $\Phi,$ if there exists a real number $K_{f,\phi}>0$ such that for each $\epsilon>0$ and for each solution $y:{J}\to{\R}^{n}$ in $\B$ of inequality \eqref{l}, there exists a solution $x:{J}\to{{\R}^{n}}$ of Problem \eqref{a} in $\B$ with
+\begin{equation*}
+||y(t)-x(t)||\leq\epsilon K_{f,\phi}\Phi(t);\qquad t\in{J}.
+\end{equation*}
+\end{defn}
+\begin{defn}
+Problem \eqref{a} is generalized Ulam-Hyers-Rassias stable with respect to $\Phi,$ if there exists a real number $K_{f,\phi}>0$ such that for each $\epsilon>0$ and for each solution $y:{J}\to{\R}^{n}$ in $\B$ of inequality \eqref{k}, there exists a solution $x:{J}\to{\R}^{n}$ of Problem \eqref{a} in $\B$ with
+\begin{equation*}
+||y(t)-x(t)||\leq K_{f,\phi}\Phi(t);\qquad t\in{J}.
+\end{equation*}
+\end{defn}
+Now we see Ulam-type stabilities for Problem \eqref{a} by using successive approximations.
+\begin{theorem}\label{th2}
+Suppose that $f$ satisfies assumption ${(H_{41})}$. For every $\epsilon>0,$ if $y:{J}\to{\R}^{n}$ in $\B$ satisfies inequality \eqref{j}, then there exists a unique solution $x:{J}\to{\R}^{n}$ in $\B$ of Problem \eqref{a} with $x^{(k)}(1)=y^{(k)}(1),$ for $k=0,1,\cdots,m-1.$ Moreover, Problem \eqref{a} is Ulam-Hyers stable with
+\begin{equation*}
+||y(t)-x(t)||\leq\bigg(\frac{E_{\alpha}\big(\theta(\log{T})^{\alpha}\big)-1}{\theta}\bigg)\epsilon,\,\, t\in{J},\,\,\text{and}\,\, \theta=\big(\frac{M}{1-N}\big)>0.
+\end{equation*}
+\end{theorem}
+\begin{proof}
+For every $\epsilon>0,$ let $y:{J}\to{\R}^{n}$ in $\B$ satisfies inequality \eqref{j}, then there exists a function $\sigma_y(t)\in\B$ (depending on $y$) such that
+\begin{equation*}
+||\sigma_y(t)||\leq\epsilon,\quad\text{and}\quad \D_{1}^{\alpha}y(t)=f(t,y(t),{\D_{1}^{\alpha}y(t)})+\sigma_y(t),\quad t\in{J}.
+\end{equation*}
+In the light of Lemma \ref{lequi}, $y$ satisfies the fractional integral equation
+\begin{equation*}
+y(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+{\I_{1}^{\alpha}}p^{0}(t)+{\I_{1}^{\alpha}}\sigma_y(t),\,\, t\in{J},
+\end{equation*}
+where $p^{0}\in\B$ satisfies functional equation $p^{0}(t)=f(t,y(t),p^{0}(t))$ for $t\in{J}.$
+
+\noindent Define $x^{0}(t)=y(t),t\in{J}$ and consider the sequence $\{x^{j}\}\subseteq\B$ given by
+\begin{equation}\label{m}
+x^{j}(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}p^{j-1}(s)\frac{ds}{s},\,\, t\in{J},
+\end{equation}
+where $p^{j-1}(t)\in\B \, (j\in\N)$ is such that
+\begin{equation}\label{n}
+p^{j-1}(t)=f(t,x^{j-1}(t),p^{j-1}(t)),\quad t\in{J}.
+\end{equation}
+By using the principle of mathematical induction, we prove that
+\begin{equation}\label{o}
+||x^{j}(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}\frac{[\theta(\log{t})^{\alpha}]^{j}}{\Gamma(\alpha j+1)},\quad j\in\N,t\in{J}.
+\end{equation}
+First we show that inequality \eqref{o} is true for $j=1.$ By using successive approximations for any $t\in{J},$ we obtain
+\begin{align*}
+||x^{1}(t)-x^{0}(t)||&=\bigg{\|}\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+{\I_{1}^{\alpha}}p^{0}(t)-y(t)\bigg{\|}\\
+&=\bigg{\|}\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\int_{1}^{t}\big(\log{\frac{t}{s}}\big)^{\alpha-1}\frac{p^{0}(s)}{\Gamma(\alpha)}\frac{ds}{s}\\
+&\hspace{1cm}-\bigg(\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\I_{1}^{\alpha}p^{0}(t)-\I_{1}^{\alpha}\sigma_y(t)\bigg)\bigg{\|}\\
+&=||\I_{1}^{\alpha}\sigma_y(t)||\\
+&\leq\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||\sigma_y(s)||\frac{ds}{s}\\
+&\leq\epsilon\frac{(\log{t})^{\alpha}}{\Gamma(\alpha+1)},\quad t\in{J},
+\end{align*}
+which proves inequality \eqref{o} for $j=1.$ Now, we assume that the inequality \eqref{o} hold for $j=r,r\in\N$ and prove it for $j=r+1.$ Again by definition of successive approximations, for any $t\in{J},$ we have
+\begin{equation}\label{p}
+||x^{r+1}(t)-x^{r}(t)||\leq\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||p^r(s)-p^{r-1}(s)||\frac{ds}{s}.
+\end{equation}
+Since $p^{j}(t)=f(t,x^{j}(t),p^{j}(t)),\,\, t\in{J}$ and using assumption $(H_{41})$, we have
+\begin{align*}
+||p^{r}(t)-p^{r-1}(t)||&=||f(t,x^{r}(t),p^{r}(t))-f(t,x^{r-1}(t),p^{r-1}(t))||\\
+&\leq M ||x^{r}(t)-x^{r-1}(t)||+N||p^{r}(t)-p^{r-1}(t)||\\
+&=\theta||x^{r}(t)-x^{r-1}(t)||,\quad t\in{J}.
+\end{align*}
+Using the above estimate in inequality \eqref{p}, we obtain
+\begin{align*}
+||x^{r+1}(t)-x^{r}(t)||&\leq\frac{\theta}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}[||x^r(s)-x^{r-1}(s)||]\frac{ds}{s}\\
+&\leq\frac{\theta}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\bigg[\frac{\epsilon}{\theta}\frac{[\theta(\log{s})^{\alpha}]^{r}}{\Gamma(r\alpha+1)}\bigg]\frac{ds}{s}\\
+&=\frac{\epsilon\theta^r}{\Gamma(r\alpha+1)}\bigg(\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\frac{(\log{s})^{r\alpha}}{\Gamma(\alpha)}\frac{ds}{s}\bigg)\\
+&=\frac{\epsilon}{\theta}\frac{(\theta(\log{t})^\alpha)^{(r+1)}}{\Gamma(\alpha(r+1)+1)},\quad t\in{J},
+\end{align*}
+which is inequality \eqref{o} for $j=r+1.$ The proof of inequality \eqref{o} is completed by the principle of mathematical induction.
+
+Furthermore, for any $t\in{J},$ from inequality \eqref{o}, we obtain
+\begin{equation*}
+||x^{j}(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}\sum_{j=1}^{\infty}\frac{(\theta(\log{T})^{\alpha})^j}{\Gamma(j\alpha+1)} \quad\text{and}\,\,j\in\N.
+\end{equation*}
+This gives
+\begin{equation}\label{q}
+||x^{j}(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}\big(E_\alpha(\theta(\log{T})^{\alpha})-1\big).
+\end{equation}
+Hence the series $x^{0}(t)+\sum_{j=1}^{\infty}[x^j(t)-x^{j-1}(t)]$ converges absolutely and uniformly on ${J}$ with respect to the norm $||\cdot||.$ Consider
+\begin{equation}\label{r}
+x(t)=x^{0}(t)+\sum_{j=1}^{\infty}[x^j(t)-x^{j-1}(t)],\quad t\in{J}.
+\end{equation}
+Then
+\begin{equation*}
+x^r(t)=x^{0}(t)+\sum_{j=1}^{r}[x^j(t)-x^{j-1}(t)]
+\end{equation*}
+is the $r^{th}$ partial sum of the series \eqref{r}, and gives
+\begin{equation}\label{s}
+\lim_{r\to\infty}||x^r(t)-x(t)||=0,\quad \text{for\,\,all}\,\,t\in{J}.
+\end{equation}
+Since convergence is uniform, $x\in\B.$ We prove that the limit function $x$ is a solution of
+\begin{equation*}
+x(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}p(s)\frac{ds}{s},\quad t\in{J},
+\end{equation*}
+where $p\in\B$ satisfies functional equation $p(t)=f(t,x(t),p(t)),\, t\in{J}.$
+
+For any $t\in{J},$ we prove $p^r\in\B,(r=0,1,\cdots)$ generated in \eqref{n} satisfies
+\begin{equation}\label{t}
+\lim_{r\to\infty}||p^r(t)-p(t)||=0.
+\end{equation}
+Using assumption $(H_{41}),$ we obtain
+\begin{align}\label{u}
+||p^r(t)-p(t)||&=||f(t,x^r(t),p^r(t))-f(t,x(t),p(t))||\nonumber\\
+&\leq M||x^r(t)-x(t)||+N||p^r(t)-p(t)||\nonumber\\
+&=\theta||x^r(t)-x(t)||,\quad t\in{J}.
+\end{align}
+Further, using equation \eqref{s} in \eqref{u}, equation \eqref{t} can be easily proved. Again, by definition of successive approximations
+\begin{align*}
+\bigg{\|}x(t)-&\sum_{k=0}^{m-1}\frac{x_k}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}p(s)\frac{ds}{s}\bigg{\|}\\
+&=\big{\|}x(t)-x^j(t)+{\I_{1}^{\alpha}}p^{j-1}(t)-{\I_{1}^{\alpha}}p(t)\big{\|}\\
+&\leq||x(t)-x^j(t)||+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||p^{j-1}(s)-p(s)||\frac{ds}{s}.
+\end{align*}
+Note that left hand side of above inequality is independent of $j,$ taking limit as $j\to\infty,$ we obtain
+\begin{equation}\label{v}
+x(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}p(s)\frac{ds}{s},\quad t\in{J}.
+\end{equation}
+This means $x(t)$ is solution of Problem \eqref{a} with initial condition
+\begin{equation*}
+x^{(k)}(1)=y^{(k)}(1),\quad x^{(k)}(1),y^{(k)}(1)\in{\R}^{n},k=0,1,\cdots,m-1.
+\end{equation*}
+Lastly, from inequality \eqref{q} with series \eqref{r}, it follows that Problem \eqref{a} is Ulam-Hyers stable with
+\begin{equation}\label{guh}
+||y(t)-x(t)||\leq\bigg(\frac{E_\alpha(\theta(\log{T})^{\alpha})-1}{\theta}\bigg)\epsilon,\quad t\in{J}.
+\end{equation}
+
+To prove uniqueness of solution $x(t),$ let $\bar{x}(t)$ is another solution of IVP \eqref{a} with initial values $\bar{x}^{(k)}(1)=y^{(k)}(1)$, $x^{(k)}(1),y^{(k)}(1)\in{\R}^{n}$, $k=0,1,\cdots,m-1.$ Then
+\begin{equation*}
+\bar{x}(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\bar{p}(s)\frac{ds}{s},\quad t\in{J},
+\end{equation*}
+where $\bar{p}\in\B$ satisfies $\bar{p}(t)=f(t,\bar{x}(t),\bar{p}(t)).$ Therefore
+\begin{equation*}
+||x(t)-\bar{x}(t)||\leq\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||p(s)-\bar{p}(s)||\frac{ds}{s},\quad t\in{J}.
+\end{equation*}
+By hypothesis \text{(H1)},
+\begin{equation*}
+||p(t)-\bar{p}(t)||\leq\theta||x(t)-\bar{x}(t)||.
+\end{equation*}
+Hence
+\begin{equation*}
+||x(t)-\bar{x}(t)||\leq\frac{\theta}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||x(s)-\bar{x}(s)||\frac{ds}{s},\quad t\in{J}.
+\end{equation*}
+Applying Lemma \ref{l4} to above inequality with $u(t)=||x(t)-\bar{x}(t)||$ and $a(t)=0,$ we obtain $||x(t)-\bar{x}(t)||=0,$
+for all $t\in{J}.$ The proof is completed.
+\end{proof}
+\begin{cor}
+Suppose that all the assumptions of Theorem \ref{th2} are satisfied. Then Problem \eqref{a} is generalized Ulam-Hyers stable.
+\end{cor}
+\begin{proof}
+Let $\psi(\epsilon)=\big(\frac{E_\alpha(\theta(\log{T})^{\alpha})-1}{\theta}\big)\epsilon$ in \eqref{guh} then $\psi(0)=0.$ Thus, Problem \eqref{a} is generalized Ulam-Hyers stable.
+\end{proof}
+\begin{theorem}
+Suppose that $(H_{41})$ and $(H_{42})$ hold. Then for every $\epsilon>0$ and $y:{J}\to{\R}^n$ in $\B$ satisfying inequality \eqref{l}, there exists a unique solution $x:{J}\to{\R}^{n}$ in $\B$ of Problem \eqref{a} with $x^{(k)}(1)=y^{(k)}(1),\,\, k=0,1,\cdots,m-1,$ that satisfies
+\begin{equation*}
+||y(t)-x(t)||\leq\epsilon\bigg(\frac{K}{1-K\theta}\bigg)\Phi(t),\quad t\in{J}.
+\end{equation*}
+\end{theorem}
+\begin{proof}
+For every $\epsilon>0,$ let $y:{J}\to{\R}^n$ in $\B$ satisfies inequality \eqref{l}. Then there exists a function $\sigma_y\in\B$ (depending on $y$) such that
+\begin{equation*}
+||\sigma_y(t)||\leq\epsilon\Phi(t),\quad \text{and}\quad \D_{1}^{\alpha}y(t)=f(t,y(t),{\D_{1}^{\alpha}y(t)})+\sigma_y(t),\quad t\in{J}.
+\end{equation*}
+By Lemma \ref{lequi}, $y$ satisfies the fractional integral equation
+\begin{equation*}
+y(t)=\sum_{k=0}^{m-1}\frac{y^{(k)}(1)}{\Gamma(k+1)}(\log{t})^k+{\I_{1}^{\alpha}}p^{0}(t)+{\I_{1}^{\alpha}}\sigma_{y}(t),\,\, t\in{J},
+\end{equation*}
+where $p^0\in\B$ satisfies functional equation $p^{(t)}=f(t,y(t),p^{0}(t)),t\in{J}.$
+
+Consider the sequence $\{x^{j}\}\subseteq\B$ defined by \eqref{m} with $x^0(t)=y(t)$, $t\in{J}.$ By the principle of mathematical induction, we prove that
+\begin{equation}\label{x}
+||x^j(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}(K\theta)^{j}\Phi(t),\quad j\in\N,t\in{J}.
+\end{equation}
+First we show the inequality \eqref{x} is true for $j=1.$ For any $t\in{J},$ using definition of successive approximations and assumption $(H_{42})$, we have
+\begin{align*}
+||x^{1}(t)-x^{0}(t)||&=||x^{1}(t)-y(t)||\\
+&=||\I_{1}^{\alpha}\sigma_y(t)||\\
+&\leq\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||\sigma_y(s)||\frac{ds}{s}\\
+&\leq\frac{\epsilon}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\Phi(s)\frac{ds}{s}\\
+&=\epsilon\bigg{\|}\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\Phi(s)\frac{ds}{s}\bigg{\|}\\
+&\leq\frac{\epsilon}{\theta} (K\theta)\Phi(t),\quad t\in{J}.
+\end{align*}
+Thus, inequality \eqref{x} holds for $j=1.$ Assume that inequality \eqref{x} is true for $j=r,r\in\N$ and using similar arguments as we presented in Theorem \ref{th2}, we have
+\begin{align*}
+||x^{r+1}(t)-x^{r}(t)||&\leq\frac{\theta}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}||x^{r}(s)-x^{r-1}(s)||\frac{ds}{s}\\
+&\leq\frac{\epsilon}{\Gamma(\alpha)}(K\theta)^r\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\Phi(s)\frac{ds}{s}\\
+&=\epsilon(K\theta)^r\bigg{\|}\frac{1}{\Gamma(\alpha)}\int_{1}^{t}\bigg(\log{\frac{t}{s}}\bigg)^{\alpha-1}\Phi(s)\frac{ds}{s}\bigg{\|}\\
+&\leq\epsilon(K\theta)^rK\Phi(t).
+\end{align*}
+Therefore
+\begin{equation*}
+||x^{r+1}(t)-x^{r}(t)||\leq\frac{\epsilon}{\theta}(K\theta)^{r+1}\Phi(t),\quad t\in{J},
+\end{equation*}
+which is inequality \eqref{x} for $j=r+1.$ By the principle of mathematical induction, inequality \eqref{x} is true for all $j$ and the proof of inequality \eqref{x} is completed. Now using inequality \eqref{x} and assumption $0<K\theta<1,$ we have
+\begin{equation*}
+\sum_{j=1}^{\infty}||x^{j}(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}\bigg(\sum_{j=1}^{\infty}(\theta K)^{j}\bigg)\Phi(t)=\frac{\epsilon}{\theta}\bigg(\sum_{j=0}^{\infty}(\theta K)^{j}-1\bigg)\Phi(t).
+\end{equation*}
+Therefore
+\begin{equation}\label{y}
+\sum_{j=1}^{\infty}||x^{j}(t)-x^{j-1}(t)||\leq\frac{\epsilon}{\theta}\bigg(\frac{1}{1-K\theta}-1\bigg)\Phi(t)=\epsilon\bigg(\frac{K}{1-K\theta}\bigg)\Phi(t).
+\end{equation}
+Since $\Phi(t)$ is continuous on compact set ${J},$ it is bounded. Clearly, from above inequality \eqref{y}, it follows that the series $x^{0}(t)+\sum_{j=1}^{\infty}[x^j(t)-x^{j-1}(t)]$ converges absolutely and uniformly on ${J},$ with respect to the norm $||\cdot||.$ Define
+\begin{equation}\label{z}
+x(t)=x^{0}(t)+\sum_{j=1}^{\infty}[x^j(t)-x^{j-1}(t)],\quad t\in{J},
+\end{equation}
+and following the proof of Theorem \ref{th2}, finally we obtain
+\begin{equation*}
+||y(t)-x(t)||\leq\epsilon\bigg(\frac{K}{1-K\theta}\bigg)\Phi(t),\quad t\in{J}.
+\end{equation*}
+\end{proof}
+\begin{cor}\label{c1}
+Under hypothesis of Theorem \ref{th2}, Problem \eqref{a} is generalized Ulam-Hyers-Rassias stable with respect to $\Phi\in{C}(J,{\R}_+).$
+\end{cor}
+\begin{proof}
+Set $\epsilon=1$ and $K_{f,\phi}=\frac{K}{1-K\theta},$ it directly follows that Problem \eqref{a} is generalized Ulam-Hyers-Rassias stable.
+\end{proof}
+\section{An example}
+Let ${\R}^{2}$ be the normed space with the norm
+\begin{equation*}
+||x||=|x_1|+|x_2|, \quad x=(x_1,x_2)\in{\R}^{2}.
+\end{equation*}
+Consider the following nonlinear implicit fractional initial value problem
+\begin{equation}\label{e1}
+\begin{cases}
+&\D_{1}^{\frac{5}{2}}x(t)=f(t,x(t),{\D_{1}^{\frac{5}{2}}x(t)}),\quad t\in[1,e],\\
+&x^{(k)}(1)=x_k,\quad x_k\in{\R}^{2}, k=0,1,2,
+\end{cases}
+\end{equation}
+where $x:[1,e]\to{\R}^{2}$ and a nonlinear function $f:[1,e]\times{\R}^{2}\times{\R}^{2}\to{\R}^{2}$ as
+\begin{align*}
+f(&t,x(t),{\D_{1}^{\frac{5}{2}}x(t)})=f\big(t,(x_1(t),x_2(t)),({\D_{1}^{\frac{5}{2}}x_1(t)},{\D_{1}^{\frac{5}{2}}x_1(t)})\big)\\
+&=\bigg(\frac{\log{(2+t)}}{1+|x_1(t)|+|x_2(t)|},\frac{|{\D_{1}^{\frac{5}{2}}x_1(t)}|+|{\D_{1}^{\frac{5}{2}}x_2(t)}|}{e^{t^2+1}(1+|{\D_{1}^{\frac{5}{2}}x_1(t)}|+|{\D_{1}^{\frac{5}{2}}x_2(t)}|)}\bigg).
+\end{align*}
+For any $x=(x_1,x_2),y=(y_1,y_2),\bar{x}=(\bar{x}_1,\bar{x}_2),\bar{y}=(\bar{y}_1,\bar{y}_2)\in{\R}^2,$ we have
+\begin{align*}
+||f(t,x,y)-&f(t,\bar{x},\bar{y})||\leq||f(t,(x_1,x_2),(y_1,y_2),(\bar{y}_1,\bar{y}_2))||\\
+&=\bigg{\|}\bigg(\frac{\log{(2+t)}}{1+|x_1|+|x_2|},\frac{|y_1|+|y_2|}{e^{t^2+1}(1+|y_1|+|y_2|)}\bigg)\\
+&\hspace{1cm}-\bigg(\frac{\log{(2+t)}}{1+|\bar{x}_1|+|\bar{x}_2|},\frac{|\bar{y}_1|+|\bar{y}_2|}{e^{t^2+1}(1+|\bar{y}_1|+|\bar{y}_2|)}\bigg)\bigg{\|}\\
+&=\bigg{\|}\bigg(\log{(2+t)}\bigg[\frac{1}{1+|x_1|+|x_2|}-\frac{1}{1+|\bar{x}_1|+|\bar{x}_2|}\bigg],\\
+&\hspace{1cm}\frac{1}{e^{t^2+1}}\bigg[\frac{|y_1|+|y_2|}{1+|y_1|+|y_2|}-\frac{|\bar{y}_1|+|\bar{y}_2|}{1+|\bar{y}_1|+|\bar{y}_2|}\bigg]\bigg)\bigg{\|}\\
+&=\bigg{\|}\bigg(\log{(2+t)}\bigg[\frac{|\bar{x}_1|-|x_1|+|\bar{x}_2|-|x_2|}{(1+|x_1|+|x_2|)(1+|\bar{x}_1|+|\bar{x}_2|)}\bigg],\\
+&\hspace{1cm}\frac{1}{e^{t^2+1}}\bigg[\frac{|y_1|-|\bar{y}_1|+|y_2|-|\bar{y}_2|}{(1+|y_1|+|y_2|)(1+|\bar{y}_1|+|\bar{y}_2|)}\bigg]\bigg)\bigg{\|}\\
+&=\log{(2+t)}\bigg|\frac{|\bar{x}_1|-|x_1|+|\bar{x}_2|-|x_2|}{(1+|x_1|+|x_2|)(1+|\bar{x}_1|+|\bar{x}_2|)}\bigg|\\
+&\hspace{1cm}+\frac{1}{e^{t^2+1}}\bigg|\frac{|y_1|-|\bar{y}_1|+|y_2|-|\bar{y}_2|}{(1+|y_1|+|y_2|)(1+|\bar{y}_1|+|\bar{y}_2|)}\bigg|.
+\end{align*}
+For any $a,b\geq0,$ we have $1\leq(1+a+b).$ Therefore
+\begin{align*}
+||f(t,x,y)-f(t,\bar{x},\bar{y})||&\leq\log{(2+t)}|{(|\bar{x}_1|-|x_1|+|\bar{x}_2|-|x_2|)}|\\
+&\hspace{2cm}+\frac{1}{e^{t^2+1}}|{(|y_1|-|\bar{y}_1|+|y_2|-|\bar{y}_2|)}|\\
+&\leq\log{(2+t)}||(||\bar{x}||-||x||)||\\
+&\hspace{2cm}+\frac{1}{e^{t^2+1}}||({||y||-||\bar{y}||})||\\
+&\leq\log{(2+e)}||\bar{x}-x||+\frac{1}{e^{2}}||y-\bar{y}||.
+\end{align*}
+Thus, function $f$ satisfies condition $(H_{41})$ with $M=\log{(2+e)}>0$ and $0<N=\frac{1}{e^2}<1.$ By Theorem 1 [ ], Problem \eqref{e1} has a unique solution on $[1,e].$
+
+Moreover, as shown in Theorem \ref{th2}, for every $\epsilon>0$ if $y:[1,e]\to{\R}^2$ satisfies
+\begin{equation}\label{e3}
+||\D_{1}^{\frac{5}{2}}x(t)-f(t,x(t),{\D_{1}^{\frac{5}{2}}x(t)})||\leq\epsilon,\quad t\in[1,e],
+\end{equation}
+there exists a unique solution $x:[1,e]\to{\R}^2$ such that
+\begin{equation*}
+||y(t)-x(t)||\leq\bigg(\frac{E_{\frac{5}{2}}(\theta(\log{e})^{\frac{5}{2}})-1}{\theta}\bigg)\epsilon,\quad \text{for\,\,all}\,\,t\in[1,e],
+\end{equation*}
+where $\theta=\frac{M}{1-N}=\frac{e^2\log{(2+e)}}{(e^2-1)}.$ Hence problem \eqref{e1} is Ulam-Hyers stable.
+
+Next, by corollary \ref{c1}, $\psi(\epsilon)=\frac{E_{\frac{5}{2}}(\theta)-1}{\theta}\epsilon$ then $\psi(0)=0$ which means Problem \eqref{e1} is generalized Ulam-Hyers stable. 

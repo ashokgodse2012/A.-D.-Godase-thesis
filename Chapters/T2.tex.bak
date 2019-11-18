@@ -1,0 +1,406 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+
+\chapter{Fourth Order Semilinear Elliptic Equations}
+\begin{quote}
+\texttt{...as Sir Cyril Hinshelwood has observed ...fluid dynamicists were
+divided into hydraulic engineers who observed things that could not be
+explained and mathematicians who explained things that could not be
+observed. }
+\begin{flushright}
+JAMES LIGHTHILL.
+\end{flushright}
+\end{quote}
+
+
+\vfill{\rule{3in}{2pt}\\\begin{small}{The content of this chapter is accepted in the following paper.\\
+ Maximum principles for fourth order semilinear elliptic equations with
+applications, IJPEM (Accepted).}
+\end{small}
+
+\newpage
+\def\baselinestretch{1.80}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Fourth Order Semilinear Elliptic
+Equations} \chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+\begin{large}
+
+%%% ---------------------------------------------------------------------------
+\section{Introduction}
+\hspace{0.1in} Although it is well known that there is no classical maximum
+principle for the solution of fourth order elliptic partial differential
+equations comparable to the maximum principle for second order elliptic
+equations, there are still some interesting maximum principle results that
+can be proven for such equations. In \cite{m2} Miranda first shows that the
+functional
+\begin{equation}\label{1}
+ P = | \nabla u |^{2} -  u \Delta u
+\end{equation}
+is subharmonic where $u$ is a solution to the biharmonic equation $
+\Delta^{2} u = 0 $. Here P-function so-called as an auxiliary function. In
+\cite{py2} Payne considers the semilinear equation
+$$ \Delta^{2} u  =  f(u) $$ in a bounded domain $\Omega$ in $\textbf{R}^{n}$.
+He shows that the maximum value, for auxiliary functions containing the terms
+$ |\nabla^{2} u |^{2} - u_{,i} \Delta u_{,i}$ , and for certain restrictions
+on $f^{'}(u)$, is achieved on the boundary of the domain. Later, several
+mathematicians have developed maximum principles for auxiliary function
+defined on solution of elliptic equations \cite{cs, du2, gs,hai, s1, sr2,
+sc}.
+
+In \cite{dg} Dhaigude and Gosavi utilizes auxiliary functions of type
+\eqref{1} to study semilinear equations of the form
+$$ \Delta^{2} u  +  a(x, y) \Delta u  +  b(x, y) f(u) = 0 $$  in a plane domain.\\
+
+\hspace{0.1in} This chapter is organized as follows. In the section 2.2 some
+useful notations and results are given. The section 2.3 deals with the
+maximum principle results for the semilinear fourth order elliptic equation
+of the form
+\begin{equation}\label{2a}
+\Delta^{2} u  +  a(x) \Delta u  +  b(x) f(u) = 0
+\end{equation}
+by modifying the auxiliary functions used in \cite{py2}. In the last section
+these maximum principles are used to obtained integral bounds on second
+gradients of the solutions of \eqref{2a}, subject to zero boundary
+conditions.
+
+
+\section{Preliminaries and Notations}
+\hspace{0.1in} In this chapter, $\Omega$ represent a bounded domain in $\textbf{R}^{n}$. We used commas to denote partial differentiation and the summation convention on repeated indices. \\
+\noindent\textbf{Definition 2.1} Suppose $u$ is a $C^{3}$ function
+$$ u_{,i} u_{,i}  =  | \nabla u |^{2} $$
+$$ u_{,ij} u_{,ij}  =  | \nabla^{2} u |^{2} $$
+$$ u_{,ijk} u_{,ijk}  =  | \nabla^{3} u |^{2} $$
+for indices $i,j,k = 1,2,...,n.$\\
+\hspace{0.1in} The scalar product of the gradient of two functions $u$ and $v$ denoted by $ \nabla u \cdot \nabla v  =  u_{,i} v_{,i}$ for indices $i,j,k = 1,2,...,n.$\\
+The following Lemmas are useful to prove the main results of this chapter.
+
+\begin{lemma}\label{c2l1}
+\cite{sp3}Let v be an arbitrary function in $C^{3}(\Omega)$. Then
+$$ |\nabla^{3} v |^{2} \geq  \frac{3}{n + 2} | \nabla(\Delta v)  |^{2}.$$
+\end{lemma}
+\begin{lemma}\label{c2l2}
+\cite{sp3}Let v be an arbitrary function in $C^{2}(\Omega)$. Then
+$$ |\nabla^{2} v |^{2} \geq  \frac{1}{n} (\Delta v)^{2}.$$
+\end{lemma}
+
+\section{Maximum Principle Results}
+\hspace{0.1in} In this section, we state and prove the main results of the
+chapter.
+\begin {theorem}\label{c2th1}
+Suppose that\\
+i) $ u \in C^{5}(\Omega)\bigcap C^{3}(\bar{\Omega}) $ is a solution of
+\begin{equation}\label{2}
+\Delta^{2} u  +  a(x) \Delta u  +  b(x) f(u) = 0
+\end{equation}
+where $ a \leq 0, b > 0 \, , n \leq 3$ and \\
+ii)  $ f \in  C^{1}(R),  c  \in  C^{2}(\Omega) \bigcap  C(\bar{\Omega}),  \gamma  \in C^{2}(\Omega) \bigcap  C(\bar{\Omega}) $.\\
+ If $ f, c, \gamma $ satisfy the requirement \\
+iii) $ f^{'} \geq  0$,\\
+iv) $ c(x) \geq c_{0}$, for a positive constant $c_{0}$ and\\
+\begin{equation*}
+ \Delta c  -  10 c^{2}  -  \frac{2}{c_{0}}|\nabla c |^{2}  -  \frac{1}{2} (\Delta u)^{2}  -  \frac{1}{2} f^{2}  \geq  \frac{5}{2} a^{2},
+\end{equation*}
+v) $\gamma$ is positive and $\Delta \gamma  \geq  1$, and\\
+vi) the constant $M$ is upper bound for $|\nabla a|^{2}  +  |\nabla b|^{2}$,\\
+then the function
+\begin{equation}\label{a3}
+P  =  |\nabla^{2} u |^{2}  -  \nabla u \cdot \nabla(\Delta u)  +  c(x) |\nabla u |^{2}  +  \frac{1}{2} \gamma (x) M
+\end{equation}
+attain its maximum value on $\partial\Omega$.
+\end{theorem}
+
+
+\textbf{Proof:} Consider the function
+\begin{equation}\nonumber
+P  =  |\nabla^{2} u |^{2}  -  \nabla u \cdot \nabla(\Delta u)  +  c(x) |\nabla u |^{2}  +  \frac{1}{2} \gamma (x) M.
+\end{equation}
+
+ Differentiating P with respect to $x_{k}$, we have
+\begin{align}\nonumber
+ P_{,k}  = & 2 u_{,ij}u_{,ijk}  - u_{,ik}(\Delta u)_{,i}  -  u_{,i}(\Delta u)_{,ik}  +  c_{,k} | \nabla u |^{2}  \\ \nonumber &+  2 c  u_{,i} u_{,ik} +  \frac{1}{2} M \gamma_{,k}.
+\end{align}
+Again differentiating with respect to $x_{k}$, we get
+\begin{align}\nonumber
+P_{,kk} &= 2 u_{,ijk}u_{,ijk} +  2 u_{,ij}u_{,ijkk} -  u_{,ik}(\Delta u)_{,ik}  -  u_{,ikk}(\Delta u)_{,i} \\
+\nonumber & -  u_{,ik}(\Delta u)_{,ik}  -  u_{,i}(\Delta u)_{,ikk}
++  c_{,kk} | \nabla u |^{2}   +  c_{,k} 2 u_{,i} u_{,ik}  \\ \nonumber
+&+  2 c_{,k} u_{,i} u_{,ik}   +  2 c u_{,ik} u_{,ik}  +   2 c u_{,i} u_{,ikk} +  \frac{1}{2} M \gamma_{,kk}.
+\end{align}
+
+\begin{align}\nonumber
+P_{,kk} &= 2 u_{,ijk}u_{,ijk} -  u_{,ikk}(\Delta u)_{,i} -  u_{,i}(\Delta u)_{,ikk}
++  c_{,kk} | \nabla u |^{2}   \\  &+ 4 c_{,k}  u_{,i} u_{,ik}    +  2 c u_{,ik} u_{,ik}  +   2 c u_{,i} u_{,ikk} +  \frac{1}{2} M \gamma_{,kk}. \label{c2.t1a}
+\end{align}
+Using notations
+\begin{align}\nonumber
+&i) u_{,ijk}u_{,ijk}  =   | \nabla^{3} u |^{2}  \quad \,\,  ii)u_{,ikk}  =  (\Delta u)_{,i} \\ \nonumber
+&iii)(\Delta u)_{,ikk}  =  (\Delta^{2} u)_{,i}   \quad  \,\,iv)c_{,kk}  =  \Delta c ,\,\, \gamma_{,kk} = \Delta \gamma \\ \nonumber
+&v) 2  u_{,i} u_{,ik} =  \nabla(| \nabla u |^{2}) \quad \,\,vi) u_{,ik} u_{,ik} =  | \nabla^{2} u |^{2}.
+\end{align}
+Now equation \eqref{c2.t1a}, we  can write as
+\begin{align}\nonumber
+\Delta P  &=  2 | \nabla^{3} u |^{2}  -  | \nabla (\Delta u )|^{2}  -  \nabla u \cdot \nabla(\Delta^{2} u)  +  \Delta c | \nabla u |^{2} \\
+& +  2 \nabla c \cdot \nabla(| \nabla u |^{2})  +  2 c | \nabla^{2} u |^{2}  + 2 c \nabla u \cdot \nabla(\Delta u)  + \frac{1}{2} M \Delta \gamma.\label{3.1}
+\end{align}
+
+From equation $\eqref{2}$ we have
+\begin{equation}\nonumber
+\Delta^{2} u  +  a(x) \Delta u  +  b(x) f(u) = 0
+\end{equation}
+After some simplifications, we have
+\begin{equation}\label{a101}
+\nabla u \cdot \nabla(\Delta^{2} u) +  \nabla a \cdot \nabla u \Delta u  +  a \nabla u \cdot \nabla(\Delta u) +  \nabla u   \nabla b f(u)  +  b f^{'}| \nabla u |^{2}  =  0.
+\end{equation}
+
+Using equation $\eqref{a101}$ in equation $\eqref{3.1}$, we obtain
+\begin{align}\nonumber
+\Delta P  &=  2 | \nabla^{3} u |^{2}  -  | \nabla (\Delta u )|^{2}  +  \nabla a \cdot \nabla u \Delta u  +  a \nabla u \cdot \nabla(\Delta u)  \\ \nonumber
+  &+  \nabla u  \nabla b f(u)  +  b f^{'}| \nabla u |^{2}  +  \Delta c | \nabla u |^{2} +  2 \nabla c \cdot \nabla(| \nabla u |^{2})   \\
+ & +  2 c | \nabla^{2} u |^{2}  + 2 c \nabla u \cdot \nabla(\Delta u)  + \frac{1}{2} M \Delta \gamma.\label{4}
+\end{align}
+By using inequalities
+
+\begin{equation}\label{5}
+ \nabla a \cdot \nabla u \Delta u  \geq  -\frac{1}{2} | \nabla a |^{2}  -  \frac{1}{2} | \nabla u |^{2} (\Delta u)^{2}
+\end{equation}
+\begin{equation}\nonumber
+ \bigg\{ \because \bigg[ \nabla a  +  \nabla u \Delta u \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+| \nabla a |^{2}  +  2  \nabla a \cdot \nabla u \, \Delta u  +  |\nabla u |^{2} (\Delta u)^{2} \geq  0 \bigg\}
+\end{equation}
+\begin{equation}\label{6}
+ a \nabla u \cdot \nabla (\Delta u)  \geq  -\frac{5}{2} a^{2} | \nabla u |^{2}  -  \frac{1}{10}| \nabla (\Delta u) |^{2}
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because  \bigg[ \sqrt{5} a \nabla u   +  \frac{1}{\sqrt{5}}  \nabla (\Delta u)  \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+5 a^{2} | \nabla u |^{2}  +  2 a \nabla u \cdot \nabla (\Delta u)  +  \frac{1}{5}| \nabla (\Delta u) |^{2}  \geq  0  \bigg\}
+\end{equation}
+
+\begin{equation}\label{7}
+\nabla u \cdot \nabla b \, f  \geq  -\frac{1}{2} | \nabla b |^{2}  -   \frac{1}{2} f^{2} | \nabla u |^{2}
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{  \because \bigg[  \nabla b  +  f \, \nabla u \bigg]  \geq 0
+\end{equation}
+\begin{equation}\nonumber
+| \nabla b |^{2} +  2 \nabla u \cdot \nabla b \, f  +  f^{2} |\nabla u |^{2}  \geq  0 \bigg\}
+\end{equation}
+
+\begin{equation}\label{8}
+2 \nabla c \cdot \nabla (| \nabla u |^{2})  \geq  - \frac{2}{c_{0}} | \nabla c |^{2} | \nabla u |^{2}  -  2 c_{0}  | \nabla^{2} u |^{2}
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[  \sqrt{2} \nabla c  \nabla u   +   \sqrt{2} c_{0}  \nabla^{2} u \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+2 | \nabla c|^{2} | \nabla u |^{2}  +  4  \nabla c \nabla u c_{0} \nabla^{2} u +  2 c^{2}_{0} | \nabla^{2} u |^{2}   \geq  0
+\end{equation}
+\begin{equation}\nonumber
+\because \nabla(| \nabla u |^{2}) =  2 \nabla u  \cdot \nabla^{2} u
+\end{equation}
+\begin{equation}\nonumber
+2 | \nabla c|^{2} | \nabla u |^{2}  +  2 c_{0} \nabla c \cdot \nabla (| \nabla u |^{2} )  +  2 c^{2}_{0} | \nabla^{2} u |^{2}   \geq  0  \bigg\}
+\end{equation}
+
+\begin{equation}\label{9}
+2 c\,  \nabla u \cdot \nabla (\Delta u)  \geq  - 10 c^{2} | \nabla u |^{2}   -   \frac{1}{10} | \nabla (\Delta u)|^{2}.
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ \sqrt{10}\,c \,\nabla u  +  \frac{1}{\sqrt{10}} \, \nabla (\Delta u ) \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+10 c^{2} | \nabla u |^{2}  +  2 c\,  \nabla u \cdot \nabla (\Delta u)  +  \frac{1}{10} | \nabla(\Delta u)|^{2}  \geq  0  \bigg\}
+\end{equation}
+
+
+ in equation $\eqref{4}$, we have
+\begin{align}\nonumber
+\Delta P  &\geq  2 | \nabla^{3} u |^{2} -  | \nabla (\Delta u )|^{2} -\frac{1}{2} | \nabla a |^{2}  -  \frac{1}{2} | \nabla u |^{2} (\Delta u)^{2} \\ \nonumber
+&-  \frac{5}{2} a^{2} | \nabla u |^{2}  -  \frac{1}{10}| \nabla (\Delta u) |^{2}  -  \frac{1}{2} | \nabla b |^{2}  -   \frac{1}{2} f^{2} | \nabla u |^{2}  \\ \nonumber
+&+  b f' | \nabla u |^{2}  +  \Delta c  | \nabla u |^{2}   -  \frac{2}{c_{0}} | \nabla c |^{2} | \nabla u |^{2}  -  2 c_{0}  | \nabla^{2} u |^{2} \\ \nonumber
+&+  2 c | \nabla^{2} u |^{2} - 10 c^{2} | \nabla u |^{2}   -   \frac{1}{10} | \nabla (\Delta u)|^{2}  +  \frac{1}{2}  M \Delta \gamma.
+\end{align}
+After rearranging terms, we have
+\begin{align}\nonumber
+\Delta P  &\geq  2 | \nabla^{3} u |^{2}  -  \frac{6}{5}| \nabla (\Delta u )|^{2}  +  b f^{'} | \nabla u |^{2}  \\&+  \bigg(  \Delta c  -  \frac{5}{2} a^{2}  -  \frac{1}{2} (\Delta u)^{2}  -  \frac{1}{2} f^{2}  -  \frac{2}{c_{0}} | \nabla c |^{2}  -  10 c^{2} \bigg) | \nabla u |^{2}   \nonumber \\&+  2( c  -  c_{0} )| \nabla^{2} u |^{2}  -  \frac{1}{2}( | \nabla a |^{2}  +  | \nabla b |^{2} )  +  \frac{1}{2}  M \Delta \gamma.\label{10a}
+\end{align}
+By Lemma $\ref{c2l1} $ we can conclude that the difference of the first two
+terms, $ 2 | \nabla^{3} u |^{2}  -  \frac{6}{5}| \nabla (\Delta u )|^{2} $ is
+nonnegative when the dimension $n  \leq  3$ and the assumptions of the
+Theorem $\ref{c2th1}$ we observe that the right-hand side of equation
+$\eqref{10a}$ is non-negative. Thus $P$ is subharmonic in $\Omega$.i.e.
+\begin{equation*}
+\Delta P   \geq  0  \quad \text{in}  \quad \Omega.
+\end{equation*}
+ By maximum principle, result follows. This completes the proof.
+
+
+\begin {theorem}\label{c2th2}
+Suppose that\\
+i) $ u \in C^{5}(\Omega)\bigcap C^{3}(\bar{\Omega}) $ is a solution of
+equation $\eqref{2}$ where $a \leq 0,$ $b > 0 \, , n \leq 3$ and\\
+ii) $ f \in  C^{1}(R),\gamma  \in C^{2}(\Omega) \bigcap  C(\bar{\Omega}),  c  \in  C^{2}(\Omega) \bigcap  C(\bar{\Omega})$ and a positive constant $\alpha$. \\
+If $ f, c, \gamma $ satisfy the requirement \\
+iii) $ f^{'} \geq  \beta$, and $ b\beta \geq 2 \bigg( \frac{5}{4} a^{2}  +  5 \alpha^{2}  +  \frac{1}{4} f^{2}  +  \frac{1}{4} (\Delta u)^{2}  \bigg)$\\
+iv) $ c(x) $ for a positive function and
+\begin{equation*}
+  \Delta c  -  \frac{2}{c}|\nabla c |^{2}  -  \frac{3}{2\alpha} c^{2}  \geq  0,
+\end{equation*}
+v) $\gamma$ is positive and $\Delta \gamma  \geq  1$, and\\
+vi) the constant $M$ is upper bound for $|\nabla a|^{2}  +  |\nabla b|^{2}$,\\
+then the function
+\begin{equation}\label{b1}
+ R  =  |\nabla^{2} u |^{2}  -  \nabla u \cdot \nabla(\Delta u)  +  \alpha |\nabla u |^{2} +  c(x) u^{2}  +  \frac{1}{2} \gamma (x) M
+\end{equation}
+attain its maximum value on $\partial\Omega$.
+\end{theorem}
+
+\textbf{Proof:} Consider the function
+\begin{equation}\nonumber
+ R  =  |\nabla^{2} u |^{2}  -  \nabla u \cdot \nabla(\Delta u)  +  \alpha |\nabla u |^{2} +  c(x) u^{2}  +  \frac{1}{2} \gamma (x) M
+\end{equation}
+
+ Differentiating R with respect to $x_{k}$, we have
+\begin{align}\nonumber
+ R_{,k}  = & 2 u_{,ij}u_{,ijk}  - u_{,ik}(\Delta u)_{,i}  -  u_{,i}(\Delta u)_{,ik}  +  \alpha  2 u_{,i} u_{,ik}  +  c_{,k} u^{2}  \\ \nonumber &+  2 c u  u_{,k} +  \frac{1}{2} M \gamma_{,k}
+\end{align}
+Again differentiating with respect to $x_{k}$, we get
+\begin{align}\nonumber
+R_{,kk} &= 2 u_{,ijk}u_{,ijk} +  2 u_{,ij}u_{,ijkk} -  u_{,ik}(\Delta u)_{,ik}  -  u_{,ikk}(\Delta u)_{,i}  -  u_{,ik}(\Delta u)_{,ik}  \\
+\nonumber &-  u_{,i}(\Delta u)_{,ikk} + 2 \alpha   u_{,ik} u_{,ik}  + 2 \alpha   u_{,i} u_{,ikk} +  c_{,kk} u^{2}   + 2  c_{,k}  u u_{,k} \\ \nonumber
+&+ 2 c_{,k}  u u_{,k}   +  2 c u_{,k} u_{,k}   +  2 c u u_{,kk}  +  \frac{1}{2} M  \gamma_{,kk}
+\end{align}
+Using notations
+\begin{align}\nonumber
+&i) u_{,ijk}u_{,ijk}  =   | \nabla^{3} u |^{2}  \quad \,\,  ii)u_{,ikk}  =  (\Delta u)_{,i} \\ \nonumber
+&iii)(\Delta u)_{,ikk}  =  (\Delta^{2} u)_{,i}   \quad  \,\,iv)c_{,kk}  =  \Delta c ,\,\, \gamma_{,kk} = \Delta \gamma \\ \nonumber
+&v) u_{,k} u_{,k} =  | \nabla u |^{2} \quad \,\,vi) u_{,ik} u_{,ik} =  | \nabla^{2} u |^{2}
+\end{align}
+\begin{align}\nonumber
+\Delta R  &=  2 | \nabla^{3} u |^{2}  -  | \nabla (\Delta u )|^{2}  -  \nabla u \cdot \nabla(\Delta^{2} u)  +  2 \alpha | \nabla^{2} u |^{2}  +  2 \alpha \nabla u \cdot \nabla(\Delta u) \\
+&+  \Delta c \,u^{2}  +  4 u \nabla c \cdot \nabla u  +  2 c | \nabla u |^{2}  +  2 \,c\, u\, \Delta u  +   \frac{1}{2} M \Delta \gamma.\label{12}
+\end{align}
+
+Differentiating equation $\eqref{2}$, we have
+\begin{equation}\label{a102}
+\nabla u \cdot \nabla(\Delta^{2} u) +  \nabla a \cdot \nabla u \Delta u  +  a \nabla u \cdot \nabla(\Delta u) +  \nabla u   \nabla b f(u)  +  b f^{'}| \nabla u |^{2}  =  0.
+\end{equation}
+substituting the equation $\eqref{a102}$ into equation $\eqref{12}$, we
+obtain
+\begin{align}\nonumber
+\Delta R  &=  2 | \nabla^{3} u |^{2}  -  | \nabla (\Delta u )|^{2}  +  \nabla u \cdot \nabla a \, \Delta u  +  a  \nabla u \cdot \nabla ( \Delta u )  \\&+  \nabla u \cdot \nabla b \,f  +  b\, f^{'} | \nabla u |^{2}
++  2 \alpha | \nabla^{2} u |^{2}  +  2 \alpha \nabla u \cdot \nabla(\Delta u) \nonumber \\& +  \Delta c \,u^{2}  +  4 u ( \nabla c \cdot \nabla u ) +  2 c | \nabla u |^{2}  +  2 c \,u \Delta u  +   \frac{1}{2} M \Delta \gamma.\label{13}
+\end{align}
+By using inequalities $\eqref{5}, \eqref{6}, \eqref{7}$ and
+\begin{equation}\label{14}
+2 \alpha \nabla u \cdot \nabla (\Delta u)  \geq  -10 \alpha^{2} | \nabla u |^{2}  -  \frac{1}{10} | \nabla (\Delta u) |^{2},
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{  \because \bigg[  \sqrt{10}\, \alpha  \nabla u   +   \frac{1}{\sqrt{10}}  \nabla (\Delta u) \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+10 \alpha^{2} | \nabla u |^{2}  +  2 \alpha \nabla u \cdot \nabla (\Delta u)  +  \frac{1}{10} | \nabla (\Delta u) |^{2}   \geq  0   \bigg\}
+\end{equation}
+
+\begin{equation}\label{15}
+4 u\, ( \nabla c \cdot \nabla u )  \geq  -  \frac{2}{c}\, u^{2} |\nabla c|^{2}  -  2 c\, | \nabla u |^{2},
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ 2 u \, \nabla c  +  2 c\,  \nabla u \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+4  u^{2} |\nabla c|^{2}  +  8 u\, c\, \nabla c \cdot \nabla u  +  4  c^{2} | \nabla u |^{2}  \geq  0  \bigg\}
+\end{equation}
+
+\begin{equation}\label{16}
+2 \,c \,u \,\Delta u  \geq  - \frac{3}{2 \alpha}\, c^{2} \,u^{2}  -  \frac{2 \alpha}{3} \,(\Delta u)^{2},
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[  \sqrt{\frac{3}{2}} \,c\, u  +   \sqrt{\frac{2}{3}} \, \alpha \, \Delta u \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+\frac{3}{2} \,c^{2}\, u^{2}  +   2 \,\alpha \,c \,u \,\Delta u  +  \frac{2}{3} \alpha^{2} (\Delta u)^{2}  \geq  0 \bigg\}
+\end{equation}
+
+in equation $\eqref{13}$ we obtain
+\begin{align}\nonumber
+\Delta R  &\geq  2 | \nabla^{3} u |^{2} -  | \nabla (\Delta u )|^{2} - \frac{1}{2} | \nabla a |^{2}  -  \frac{1}{2} | \nabla u |^{2} (\Delta u)^{2} \\ \nonumber
+&-  \frac{5}{2} a^{2} | \nabla u |^{2}  -  \frac{1}{10}| \nabla (\Delta u) |^{2}  -  \frac{1}{2} | \nabla b |^{2}  -   \frac{1}{2} f^{2} | \nabla u |^{2}  \\ \nonumber
+&+  b f' | \nabla u |^{2}  +  2 \alpha | \nabla^{2} u |^{2}  -  10 \alpha^{2} | \nabla u |^{2}  -  \frac{1}{10} | \nabla (\Delta u) |^{2} \\ \nonumber
+&+  \Delta c \, u^{2}  -  \frac{2}{c}\, u^{2} |\nabla c|^{2}  -  2 c\, | \nabla u |^{2}  + 2 c\, | \nabla u |^{2}\\ \nonumber
+&- \frac{3}{2 \alpha}\, c^{2} \,u^{2}  -  \frac{2 \alpha}{3} \,(\Delta u)^{2}  +  \frac{1}{2} M \Delta \gamma.
+\end{align}
+After  rearranging the terms, we get
+\begin{align}\nonumber
+\Delta R  &\geq  2 | \nabla^{3} u |^{2}  -  \frac{6}{5}| \nabla (\Delta u )|^{2}  +  2 \alpha | \nabla^{2} u |^{2}  - \frac{2 \alpha }{3} (\Delta u)^{2} \\
+\nonumber & +  \bigg[ \Delta c  -  \frac{2}{c} | \nabla c |^{2}  -  \frac{3}{2 \alpha} c^{2} \bigg] u^{2}  +  \bigg[ b \beta  -  2\bigg(  \frac{5}{4} a^{2}  +  5 \alpha^{2} \\
+& +  \frac{1}{4} f^{2}  +  \frac{1}{4} (\Delta u)^{2} \bigg) \bigg] | \nabla u |^{2}  -  \frac{1}{2}  ( | \nabla a |^{2}  +  | \nabla b |^{2} )  +  \frac{1}{2} M \Delta \gamma.
+\end{align}\label{17}
+By using Lemma $\ref{c2l1}$, Lemma $\ref{c2l2}$ and the stated assumptions of
+the Theorem $\ref{c2th2}$, we conclude that
+\begin{equation*}
+\Delta R \geq 0  \quad \text{in} \quad \Omega.
+\end{equation*}
+ Hence by maximum principle, $R$ takes its maximum value on $\partial\Omega$. This
+completes the proof.
+
+
+\section{Application}
+As an application of our maximum principle discussed in previous section, we
+find integral bounds for the second gradient of the solution $ u \in
+C^{5}(\Omega)\bigcap C^{3}(\bar{\Omega}) $ of following boundary value
+problem
+\begin{equation}\nonumber
+\Delta^{2} u  +  a(x) \Delta u  +  b(x) f(u) = 0
+\end{equation}
+\begin{equation}\nonumber
+u  =  0,\,\,  \frac{\partial u}{\partial n}  =  0.
+\end{equation}
+\begin {theorem}\label{c2th3}
+Let $ u \in C^{5}(\Omega)\bigcap C^{3}(\bar{\Omega}) $ be a solution of
+\begin{equation}\label{18.1}
+\Delta^{2} u  +  a(x) \Delta u  +  b(x) f(u) = 0
+\end{equation}
+\begin{equation}\label{18.2}
+u  =  0,\,\,  \frac{\partial u}{\partial n}  =  0.
+\end{equation}
+Suppose that the assumptions of Theorem  $\ref{c2th1}$ are satisfied, then \\
+\begin{equation}\label{18}
+\int_{\Omega} | \nabla^{2} u |^{2} dx  \leq  \frac{1}{2} A d
+\end{equation}
+where
+\begin{equation}\nonumber
+d = \max_{x \in \partial\Omega}| \nabla^{2} u |^{2}
+\end{equation}
+ and $A$ is the area of $\Omega$.
+\end{theorem}
+\textbf{Proof:} Using Theorem \ref{c2th1} we know that $P$ attains its
+maximum on the boundary. Also using boundary conditions, we have
+\begin{equation}\label{19}
+|\nabla^{2} u |^{2}  -  \nabla u \cdot \nabla(\Delta u)  +  c(x) |\nabla u |^{2}  +  \frac{1}{2} \gamma (x) M  \leq  \max_{x \in \partial\Omega}|\nabla^{2} u |^{2}.
+\end{equation}
+Integrate equation \eqref{19} over $\Omega$, and using Green's first identity
+\begin{equation*}
+\int_{\Omega}  v  \Delta u dx  +  \int_{\Omega}  \nabla v . \nabla u   dx   =  \int_{\partial \Omega} v \frac{\partial u}{\partial n} ds
+\end{equation*}
+ with  $ v =  u_{,i} $ and $ u = u_{,i}$.
+Then
+$$ \int_{\Omega} | \nabla^{2} u |^{2} dx  \leq  \frac{1}{2} A d  $$
+can easily be deduced.
+
+
+
+\end{large}

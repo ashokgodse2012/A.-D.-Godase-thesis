@@ -1,0 +1,1118 @@
+%
+% File: chap01.tex
+% Author: Victor F. Brena-Medina
+% Description: Introduction chapter where the biology goes.
+%
+\let\textcircled=\pgftextcircled
+\chapter{Applications of $k$- Fibonacci and $k$- Lucas Sequences in Non-Associative Algebra}
+\label{chap:Applications of $k$- Fibonacci and $k$- Lucas Sequences }
+The hyperbolic quaternions form a 4-dimensional non-associative and non-commutative algebra over the set of real numbers. In first section of this paper, we introduce the hyperbolic \kF\hspace{.5mm} and \kL\hspace{.5mm} quaternions. We present generating functions and Binet formulas for the \kF\hspace{.5mm} and \kL\hspace{.5mm} hyperbolic quaternions, and establish binomial and congruence sums of hyperbolic \kF\hspace{.5mm} and \kL\hspace{.5mm} quaternions. In second section of this paper, We investigate  some binomial and congruence properties for the \kF\hspace{0mm} and \kL\hspace{0mm} hyperbolic octonions. In addition, we present several well-known identities such as Catalan's, Cassini's and d'Ocagne's identities for \kF\hspace{0mm} and \kL\hspace{0mm} hyperbolic octonions. 
+\vspace{2mm}
+\let\thefootnote\relax\footnote{\textbf{\hspace{-0.78cm}The content of this chapter is accepted in the following paper.}}\footnote{\hspace{-0.78cm}Properties of k-Fibonacci and k-Lucas Octonions, Indian Journal of Pure and Applied Mathematics}
+\section{Introduction}
+The well known integer sequence, Fibonacci sequence is defined by the
+numbers which satisfy the second order recurrence relation $F_n = F_{n-1}+F_{n-2}$ with the initial conditions $F_0 = 0$ and $F_1 = 1$. Fibonacci numbers have many interesting properties and applications in various research areas such as Architecture, Engineering, Nature and Art. The Lucas sequence is companion sequence of Fibonacci sequence defined with the Lucas numbers which are defined with the recurrence relation $L_n = L_{n-1}+L_{n-2}$ with the initial conditions $L_0 = 2$ and $L_1 = 1$. Binet's formulas for the Fibonacci and Lucas numbers are 
+$$F_n=\dfrac{{r_1}^n-{r_2}^n}{r_1-r_2}$$ and $$L_n={r_1}^n+{r_2}^n$$ respectively, where $r_1 = \dfrac{1+\sqrt{5}}{2}$ and $r_2=\dfrac{1-\sqrt{5}}{2}$are the roots of the characteristic equation $x^2 - x -1 = 0$. The positive root $r_1$ is known as the golden ratio. The Fibonacci and Lucas  sequences are generalised by changing the initial conditions or changing the recurrence relation. One of the generalizations of the Fibonacci sequence is $k$- Fibonacci sequence first introduced by Falcon and Plaza \cite{4}. The $k$- Fibonacci sequence is defined by the numbers which satisfy the second order recurrence relation $F_{k,n} = kF_{k,n-1}+F_{k,n-2}$ with the initial conditions $F_{k,0} = 0$ and $F_{k,1} = 1$. Falcon \cite{6} defined the $k$- Lucas sequence which is companion sequence of $k$- Fibonacci sequence defined with the $k$- Lucas numbers which are defined with the recurrence relation $L_{k,n} = kL_{k,n-1}+L_{k,n-2}$ with the initial conditions $L_{k,0} = 2$ and $L_{k,1} = k$. Binet's formulas for the $k$- Fibonacci and $k$- Lucas numbers are $$F_{k, n}=\dfrac{{r_1}^n-{r_2}^n}{r_1-r_2}$$ and $$L_{k,n}={r_1}^n+{r_2}^n$$ respectively, where $r_1 = \dfrac{k+\sqrt{k^2+4}}{2}$ and $r_2=\dfrac{k-\sqrt{k^2+4}}{2}$ are the roots of the characteristic equation $x^2 - kx -1 = 0$.  The characteristic roots $r_1$ and $r_2$ satisfy the properties  
+ \begin{align*} 
+   r_{1}-r_{2} = \sqrt{k^2+4}= \sqrt{\delta}\text{,}
+ \quad r_{1}+r_{2}=k\text{,}\quad r_{1}r_{2}=-1.
+\end{align*}
+\noindent The quaternions are generalized numbers. The quaternions first introduced by Irish mathematician William Rowan Hamilton in $1843$. Hamilton \cite{27} introduced the set of quaternions form a $4$-dimensional real vector space with a multiplicative operation. The quaternions are used in applied sciences such as physics  computer science and Clifford algebras in mathematics. In particular, they are important in mechanics \cite{14}, chemistry\cite{16}, kinematics \cite{15}, quantum mechanics\cite{17}, differential geometry, pure algebra. A quaternion $a$, with real components $a_0$, $a_1$, $a_2$, $a_3$ and basis $1, i, j,k$, is an element of the form 
+$$a=a_0+a_1i+a_2j+a_3k=\big(a_0, a_1, a_2, a_3\big),$$
+where
+$$i^2=j^2=k^2=ijk=-1,$$
+$$ij=k=-ji, jk=i=-kj, ki=j==ik.$$
+Horadam\cite{18} defined  the $n^{th}$ Fibonacci and $n^{th}$ Lucas quaternions as
+$$\bar{F_n}=F_n+F_{n+1}i+F_{n+2}j+F_{n+3}k=\big(F_n, F_{n+1}, F_{n+2}, F_{n+3}\big)$$
+and
+$$\bar{L_n}=L_n+L_{n+1}i+L_{n+2}j+L_{n+3}k=\big(L_n, L_{n+1}, L_{n+2}, L_{n+3}\big)$$
+respectively.\\
+Ramirez \cite{19} has defined and studied the $k$-Fibonacci and $k$-Lucas quaternions as
+$$\bar{F_{k,n}}=F_{k,n}+F_{k,n+1}i+F_{k,n+2}j+F_{k,n+3}k=\big(F_{k,n}, F_{k,n+1}, F_{k,n+2}, F_{k,n+3}\big)$$
+and
+$$\bar{L_{k,n}}=L_{k,n}+L_{k,n+1}i+L_{k,n+2}j+L_{k,n+3}k=\big(L_{k,n}, L_{k,n+1}, L_{k,n+2}, L_{k,n+3}\big)$$
+respectively. where $F_{k,n}$ is the ${n^{th}}$ $k$-Fibonacci sequence and $L_{k,n}$ is the ${n^{th}}$ $k$-Lucas sequence.\\
+Different quaternions of sequences have been studied by different researchers. For example, Iyer \cite{20, 21} obtained various relations containing the Fibonacci and Lucas quaternions. Halici \cite{22} studied some combinatorial properties of Fibonacci quaternions. Akyigit et al. \cite{23,24} established and investigated the Fibonacci generalized quaternions and split Fibonacci quaternions. Catarino \cite{25} obtained different properties of the $h(x)$-Fibonacci quaternion polynomials. Polatli and Kesim \cite{26} have introduced quaternions with generalized Fibonacci and Lucas number components.\\
+A hyperbolic quaternion $h$ is an expression of the form
+$$h=h_1i_1+h_2i_2+h_3i_3+h_4i_4=\big(h_1, h_2, h_3, h_4\big),$$
+with real components $h_1$, $h_2$, $h_3$, $h_4$ and  $i_1, i_2, i_3,i_4$ are hyperbolic quaternion units
+which satisfy the non-commutative multiplication rules
+\begin{align*}\label{1.1}
+{i_2}^2={i_3}^2={i_4}^2=i_2i_3i_4=+1,i_1=1
+\end{align*}
+\begin{align}
+i_2i_3=i_4=-i_3i_2, i_3i_4=i_2=-i_4i_3, i_4i_2=i_3=-i_2i_4.
+\end{align}
+The scalar and the vector part of a hyperbolic quaternion $h$ are denoted by $S_h=h_1$ and $\overrightarrow{V}_h=h_2i_2+h_3i_3+h_4i_4$, respectively. Thus, a hyperbolic quaternion $h$ is given by $h=S_h+\overrightarrow{V}_h$. For any two hyperbolic quaternion $h^{(1)}=h^{(1)}_1i_1+h^{(1)}_2i_2+h^{(1)}_3i_3+h^{(1)}_4i_4$ and 
+$h^{(2)}=h^{(2)}_1i_1+h^{(2)}_2i_2+h^{(2)}_3i_3+h^{(2)}_4i_4$. Addition and subtraction of the hyperbolic quaternions is defined by
+\begin{align*}
+&h^{(1)}\pm h^{(2)}=\big(h^{(1)}_1i_1+h^{(1)}_2i_2+h^{(1)}_3i_3+h^{(1)}_4i_4\big)\\&\pm \big( h^{(2)}_1i_1+h^{(2)}_2i_2+h^{(2)}_3i_3+h^{(2)}_4i_4\big)\\
+&=\big(h^{(1)}_1\pm h^{(2)}_1\big)i_1+\big(h^{(1)}_2\pm h^{(2)}_2\big)i_2+\big(h^{(1)}_3\pm h^{(2)}_3\big)i_3+\big(h^{(1)}_4\pm h^{(2)}_4\big)i_4\big)
+\end{align*}
+Multiplication of the hyperbolic quaternions is defined by
+\begin{align*}
+&h^{(1)}\cdot h^{(2)}=\big(h^{(1)}_1i_1+h^{(1)}_2i_2+h^{(1)}_3i_3+h^{(1)}_4i_4\big)\\&\cdot\big( h^{(2)}_1i_1+h^{(2)}_2i_2+h^{(2)}_3i_3+h^{(2)}_4i_4\big)\\
+&=\big(h^{(1)}_1h^{(2)}_1+ h^{(1)}_2h^{(2)}_2+h^{(1)}_3h^{(2)}_3+h^{(1)}_4h^{(2)}_4\big)\\&+\big(h^{(1)}_1h^{(2)}_2+ h^{(1)}_2h^{(2)}_1+h^{(1)}_3h^{(2)}_4-h^{(1)}_4h^{(2)}_3\big)i_2\\
+&+\big(h^{(1)}_1h^{(2)}_3- h^{(1)}_2h^{(2)}_4+h^{(1)}_3h^{(2)}_1+h^{(1)}_4h^{(2)}_2\big)i_3\\
+&+\big(h^{(1)}_1h^{(2)}_4+ h^{(1)}_2h^{(2)}_3-h^{(1)}_3h^{(2)}_2+h^{(1)}_4h^{(2)}_1\big)i_4.
+\end{align*}
+A. Cariow and G. Cariow \cite{28} state low multiplicative complexity algorithm for multiplying two hyperbolic octonions.\\
+The conjugate of hyperbolic quaternion $h$ is denoted by $\widehat{h}$ and it is
+\begin{align*}
+\widehat{h}=h_1i_1-h_2i_2-h_3i_3-h_4i_4=\big(h_1, -h_2, -h_3, -h_4\big).
+\end{align*}
+The norm of $h$ is defined as
+\begin{align*}
+N_h=h\cdot\widehat{h}={h_1}^2-{h_2}^2-{h_3}^2-{h_4}^2.
+\end{align*}
+In the present paper, our main aim is to define hyperbolic \kF\hspace{1mm} quaternion $\hf_{k,n}$ and hyperbolic \kL\hspace{1mm} quaternion $\hl_{k,n}$ and  derive the relations connecting the  hyperbolic \kF\hspace{1mm} and \kL\hspace{1mm} quaternions. We have adapted the methods of Carlitz  \cite{2} and Zhizheng Zhang \cite{3} to the hyperbolic \kF\hspace{1mm} and \kL\hspace{1mm} quaternions and derived some fundamental and congruence identities for these quaternions. 
+
+\noindent A hyperbolic octonion $\ho$ is an expression of the form
+\begin{align*}
+\ho&=h_0+h_1i_1+h_2i_2+h_3i_3+h_4e_4+h_5e_5+h_6e_6+h_7e_7\\&=\big\langle h_0,h_1, h_2, h_3, h_4, h_5,h_6,h_7 \big\rangle,
+\end{align*}
+with real components $h_0$, $h_1$, $h_2$, $h_3$, $h_4$, $h_5$, $h_6$, $h_7$ and  $i_1, i_2, i_3$ are quaternion imaginary units, $e_4 ({e_4}^2=1)$ is a counter imaginary unit, and the bases of hyperbolic octonions are defined as follows:
+\begin{align*}
+i_1e_4=e_5, i_2e_4=e_6,i_3e_4=e_7,\\
+{e_4}^2={e_5}^2={e_6}^2={e_7}^2=1.
+\end{align*}
+The bases of hyperbolic octonion $\ho$ have multiplication rules as in Table- (\ref{t711}).
+\begin{table}[H] \label{t711}
+\begin{center}\vspace{3mm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+$\cdot$ & $i_1$ & $i_2$ & $i_3$ & $e_4$ & $e_5$ & $e_6$ & $e_7$ \\ 
+\hline 
+$i_1$ & -1 & $i_3$ & $-i_2$ & $e_5$ & $e_4$ & $-e_7$ & $e_6$ \\ 
+\hline 
+$i_2$ & $-e_3$ & $-1$ & $i_1$ & $e_6$ & $e_7$ & $e_4$ & $-e_5$ \\ 
+\hline 
+$i_3$ & $i_2$ & $-i_1 $& $-1$ &$ e_7$ & $-e_6$ & $e_5$ & $e_4$ \\ 
+\hline 
+$e_4$ & $-e_5$ & $-e_6$ & $-e_7$ & $1$ & $i_1$ & $i_2$ &$ i_3$ \\ 
+\hline 
+$e_5$ & $-e_4$ & $-e_7$ & $e_6$ & $-i_1$ & $1$ & $i_3$ & $-i_2$ \\ 
+\hline 
+$e_6$ & $e_7$ & $-e_4$ & $-e_5$ & $-i_2$ & $-i_3$ & $1$ & $i_1$ \\ 
+\hline 
+$e_7$ & $-e_6$ & $e_5$ & $-e_4$ & $-i_3$ & $i_2$ & $-i_1$ & $1$ \\ 
+\hline 
+\end{tabular}
+\vspace{3mm}
+\caption{Rules for multiplication of hyperbolic octonion bases }
+\end{center}
+\end{table}
+\noindent A. Cariow and G. Cariow \cite{28} state low multiplicative complexity algorithm for multiplying two hyperbolic octonions.\\
+The scalar and the vector part of a hyperbolic octonion $\ho$ are denoted by $S_{\ho}=h_0$ and $\overrightarrow{V}_{\ho}=h_1i_1+h_2i_2+h_3i_3+h_4e_4+h_5e_5+h_6e_6+h_7e_7$, respectively. Thus, a hyperbolic octonion $\ho$ is given by $\ho=S_{\ho}+\overrightarrow{V}_{\ho}$. For any two hyperbolic octonions $\ho^{(h)}=h_0+h_1i_1+h_2i_2+h_3i_3+h_4e_4+h_5e_5+h_6e_6+h_7e_7$ and 
+$\ho^{(H)}=H_0+H_1i_1+H_2i_2+H_3i_3+H_4e_4+H_5e_5+H_6e_6+H_7e_7$ addition and subtraction of the hyperbolic octonions is defined by
+\begin{align*}
+&\ho^{(h)}\pm \ho^{(H)}=\big(h_0+h_1i_1+h_2i_2+h_3i_3+h_4e_4+h_5e_5+h_6e_6+h_7e_7\big)\\&\quad \pm \big( H_0+H_1i_1+H_2i_2+H_3i_3+H_4e_4+H_5e_5+H_6e_6+H_7e_7\big)\\
+&\quad =\big(h_0\pm H_0\big)+\big(h_1\pm H_1\big)i_1+\big(h_2\pm H_2\big)i_2\big)+\big(h_3\pm H_3\big)i_3\\&\quad +\big(h_4\pm H_4\big)e_4+\big(h_5\pm H_5\big)e_5+\big(h_6\pm H_6\big)e_6+\big(h_7\pm H_7\big)e_7.
+\end{align*}
+Multiplication of the hyperbolic octonions is defined by
+\begin{align*}
+&\ho^{(h)}\cdot\ho^{(H)}=\big(h_0+h_1i_1+h_2i_2+h_3i_3+h_4e_4+h_5e_5+h_6e_6+h_7e_7\big)\\&\quad \cdot \big( H_0+H_1i_1+H_2i_2+H_3i_3+H_4e_4+H_5e_5+H_6e_6+H_7e_7\big)\\
+&\quad =\ho_{0}+\ho_1i_1+\ho_2i_2+\ho_3i_3+\ho_4e_4+\ho_5e_5+\ho_6e_6+\ho_7e_7,\\
+&\text{where,}\\
+& \quad \ho_0 = h_0H_0 - h_1H_1 - h_2H_2 - h_3H_3 + h_4H_4 + h_5H_5 + h_6H_6 + h_7H_7,\\
+\end{align*}
+\begin{align*}
+& \quad \ho_1 = h_0H_1 + h_1H_0 + h_2H_3 - h_3H_2 + h_4H_5 - h_5H_4 + h_6H_7 - h_7H_6,\\
+& \quad \ho_2 = h_0H_2 - h_1H_3 + h_2H_0 + h_3H_1 + h_4H_6 - h_5H_7 - h_6H_4 + h_7H_5,\\
+& \quad \ho_3 = h_0H_3 + h_1H_2 - h_2H_1 + h_3H_0 + h_4H_7 + h_5H_6 - h_6H_5 - h_7H_4,\\
+& \quad \ho_4 = h_0H_4 + h_1H_5 + h_2H_6 + h_3H_7 + h_4H_0 - h_5H_1 - h_6H_2 - h_7H_3,\\
+& \quad \ho_5 = h_0H_5 + h_1H_4 - h_2H_7 + h_3H_6 - h_4H_1 + h_5H_0 - h_6H_3 + h_7H_2,\\
+& \quad \ho_6 = h_0H_6 + h_1H_7 + h_2H_4 - h_3H_5 - h_4H_2 + h_5H_3 + h_6H_0 - h_7H_1,\\
+& \quad \ho_7 = h_0H_7 - h_1H_6 + h_2H_5 + h_3H_4 - h_4H_3 - h_5H_2 + h_6H_1 + h_7H_0.
+\end{align*}
+The conjugate of hyperbolic octonion $\ho$ is denoted by $\bar{\ho}$ and it is
+\begin{align*}
+\bar{\ho}=h_0-h_1i_1-h_2i_2-h_3i_3-h_4e_4-h_5e_5-h_6e_6-h_7e_7.
+\end{align*}
+The norm of $\ho$ is defined as
+\begin{align*}
+N_{\ho}=\ho\cdot\bar{\ho}={h_0}^2-{h_1}^2-{h_2}^2-{h_3}^2+{h_4}^2+{h_5}^2+{h_6}^2+{h_7}^2.
+\end{align*}
+In \cite{1}, the hyperbolic \kF\vspace{0mm} and \kL\vspace{0mm} octonions $\hp_{k,n}$ and $\hq_{k,n}$ are defined as 
+\begin{align*} 
+&\hp_{k,n}=F_{k,n}+F_{k,n+1}i_1+F_{k,n+2}i_2+F_{k,n+3}i_3+F_{k,n+4}e_4+F_{k,n+5}e_5\\&\quad +F_{k,n+6}e_6+F_{k,n+7}e_7\\
+&\quad =\big\langle F_{k,n}, F_{k,n+1}, F_{k,n+2}, F_{k,n+3}, F_{k,n+4}, F_{k,n+5}, F_{k,n+6}, F_{k,n+7}\big\rangle,
+\end{align*}
+and
+\begin{align*}
+&\hq_{k,n}=L_{k,n}+L_{k,n+1}i_1+L_{k,n+2}i_2+L_{k,n+3}i_3+L_{k,n+4}e_4+L_{k,n+5}e_5\\&\quad +L_{k,n+6}e_6+L_{k,n+7}e_7\\
+&\quad =\big\langle L_{k,n}, L_{k,n+1}, L_{k,n+2}, L_{k,n+3}, L_{k,n+4}, L_{k,n+5}, L_{k,n+6}, L_{k,n+7}\big\rangle,
+\end{align*}
+respectively. The conjugate of hyperbolic \kF\vspace{0mm} and \kL\vspace{0mm} octonions $\bar{\hp}_{k,n}$ and $\bar{\hq}_{k,n}$ are defined as 
+\begin{align*} 
+&\bar{\hp}_{k,n}=F_{k,n}-F_{k,n+1}i_1-F_{k,n+2}i_2-F_{k,n+3}i_3-F_{k,n+4}e_4-F_{k,n+5}e_5\\&\quad -F_{k,n+6}e_6-F_{k,n+7}e_7\\
+&\quad =\big\langle F_{k,n}, -F_{k,n+1}, -F_{k,n+2}, -F_{k,n+3}, -F_{k,n+4}, -F_{k,n+5}, -F_{k,n+6}, -F_{k,n+7}\big\rangle,
+\end{align*}
+and
+\begin{align*}
+&\bar{\hq}_{k,n}=L_{k,n}-L_{k,n+1}i_1-L_{k,n+2}i_2-L_{k,n+3}i_3-L_{k,n+4}e_4-L_{k,n+5}e_5\\&\quad -L_{k,n+6}e_6-L_{k,n+7}e_7\\
+&\quad =\big\langle L_{k,n}, -L_{k,n+1}, -L_{k,n+2}, -L_{k,n+3}, -L_{k,n+4}, -L_{k,n+5}, -L_{k,n+6}, -L_{k,n+7}\big\rangle,
+\end{align*}
+respectively, where $F_{k,n}$ is $n^{th}$ $k$-Fibonacci sequence and $L_{k,n}$ is $n^{th}$ $k$-Lucas sequence. Here, $i_1, i_2, i_3$ are quaternion imaginary units, $e_4 ({e_4}^2=1)$ is a counter imaginary unit, and the bases of hyperbolic octonions $\hp_{k,n}$ and $\hq_{k,n}$ are defined as $i_1e_4=e_5, i_2e_4=e_6,i_3e_4=e_7, {e_4}^2={e_5}^2={e_6}^2={e_7}^2=1$. The bases of hyperbolic octonions $\hp_{k,n}$ and $\hq_{k,n}$ have multiplication rules as in Table-(\ref{t711}).
+ \section{Some Fundamental Properties of Hyperbolic $k$- Fibonacci and $k$- Lucas Quaternions}
+In this section, we establish certain elementary  properties of the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions. 
+\begin{definition}\label{1}
+For $n\geq{0}$, the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions $\hf_{k,n}$ and $\hl_{k,n}$ are defined by 
+\begin{align}\label{2.1}  
+\hf_{k,n}&=F_{k,n}i_1+F_{k,n+1}i_2+F_{k,n+2}i_3+F_{k,n+3}i_4
+\end{align}
+\begin{align*}
+&=\big(F_{k,n}, F_{k,n+1}, F_{k,n+2}, F_{k,n+3}\big)
+\end{align*}
+ and 
+\begin{align}\label{2.2}  
+\hl_{k,n}=L_{k,n}i_1+L_{k,n+1}i_2+L_{k,n+2}i_3+L_{k,n+3}i_4
+\end{align}
+\begin{align*}
+&=\big(L_{k,n}, L_{k,n+1}, L_{k,n+2}, L_{k,n+3}\big),
+\end{align*}
+respectively, where $F_{k,n}$ is n-th $k$- Fibonacci sequence and $L_{k,n}$ is n-th $k$- Lucas sequence. Here, $i_1$, $i_2$, $i_3$, $i_4$ are hyperbolic quaternion units which satisfy the multiplication rule (\ref{1.1}). 
+\end{definition}
+\begin{theorem} For all $n\geq{0}$, we have
+\begin{align} \label{2.3*}
+\hf_{k,n+2}=k\hf_{k,n+1}+\hf_{k,n},
+\end{align}
+\begin{align}\label{2.4} 
+\hl_{k,n+2}=k\hl_{k,n+1}+\hl_{k,n},
+\end{align}
+\begin{align}\label{2.5} 
+\hl_{k,n}=\hf_{k,n+1}+\hl_{k,n-1}.
+\end{align}
+\end{theorem}
+\begin{proof}
+i. From equations (\ref{2.1}) and (\ref{2.2}), we have
+\begin{align*} 
+k\hf_{k,n+1}+\hf_{k,n}&=k\big[F_{k,n+1}i_1+F_{k,n+2}i_2+F_{k,n+3}i_3+F_{k,n+4}i_4\big]\\
+&+\big[F_{k,n}i_1+F_{k,n+1}i_2+F_{k,n+2}i_3+F_{k,n+3}i_4\big]\\
+&=\big[kF_{k,n+1}+F_{k,n}\big]i_1+\big[kF_{k,n+2}+F_{k,n+1}\big]i_2\\&+\big[kF_{k,n+3}+F_{k,n+2}\big]i_3+\big[kF_{k,n+4}+F_{k,n+3}\big]i_4\\
+&=F_{k,n+2}i_1+F_{k,n+3}i_2+F_{k,n+4}i_3+F_{k,n+5}i_4\\
+&=\hf_{k,n+2}.
+\end{align*}
+The proofs of (ii) and (iii) are similar to (i), using equations (\ref{2.1}) and (\ref{2.2}).
+\end{proof}
+\begin{theorem}\textbf{(Binet Formulas)}. For all $n\geq{0}$, we have\label{2.3}
+\begin{align}\label{2.6} 
+\hf_{k,n}= \dfrac{\bar{r_1}{{r_1}}^n-\bar
+r_2{r_{2}}^n}{r_1-r_2}
+\end{align}
+and
+\begin{align}\label{2.7} 
+\hl_{k,n}= \bar{r_1}{r_{1}}^n +\bar{r_2}{r_{2}}^n,
+\end{align}
+where, $\bar{r_1}=i_1+r_1i_2+{r_1}^2i_3+{r_1}^3i_4=\big(1, r_1, {r_1}^2, {r_1}^3\big) $, $\bar{r_2}=i_1+r_2i_2+{r_2}^2i_3+{r_2}^3i_4=\big(1, r_2, {r_2}^2, {r_2}^3\big) $ and $i_1$, $i_2$, $i_3$, $i_4$ are hyperbolic quaternion units which satisfy the multiplication rule (\ref{1.1}).
+\end{theorem}
+\begin{proof}
+Using the definition of $\hf_{k,n}$ and the Binet formulas of $k$- Fibonacci and $k$- Lucas sequences, we have
+\begin{align*}
+\hf_{k,n}&=F_{k,n}i_1+F_{k,n+1}i_2+F_{k,n+2}i_3+F_{k,n+3}i_4\\
+&= \big[\dfrac{{r_1}^n-{r_2}^n}{r_1-r_2}\big]i_1+\big[\dfrac{{r_1}^{n+1}-{r_2}^{n+1}}{r_1-r_2}\big]i_2+\big[\dfrac{{r_1}^{n+2}-{r_2}^{n+2}}{r_1-r_2}\big]i_3\\&+\big[\dfrac{{r_1}^{n+3}-{r_2}^{n+3}}{r_1-r_2}\big]i_4\\
+&=\dfrac{{r_1}^n}{r_1-r_2}\big(i_1+r_1i_2+{r_1}^2i_3+{r_1}^3i_4\big)-\dfrac{{r_2}^n}{r_1-r_2}\big(i_1+r_2i_2+{r_2}^2i_3+{r_2}^3i_4\big)\\
+&=\dfrac{\bar{r_1}{{r_1}}^n-\bar
+r_2{r_{2}}^n}{r_1-r_2}
+\end{align*}
+and
+\begin{align*}
+\hl_{k,n}&={L_{k,n}}i_1+{L_{k,n+1}}i_2+{L_{k,n+2}}i_3+{L_{k,n+3}}i_4\\
+&= \big[{r_1}^n+{r_2}^n\big]i_1+\big[{r_1}^{n+1}+{r_2}^{n+1}\big]i_2+\big[{r_1}^{n+2}+{r_2}^{n+2}\big]i_3+\big[{r_1}^{n+3}{r_2}^{n+3}\big]i_4\\
+&={r_1}^n\big(i_1+r_1i_2+{r_1}^2i_3+{r_1}^3i_4\big)+{r_2}^n\big(i_1+r_2i_2+{r_2}^2i_3+{r_2}^3i_4\big)\\
+&=\bar{r_1}{{r_1}}^n+\bar
+r_2{r_{2}}^n.
+\end{align*}
+\end{proof}
+\begin{lemma}\label{2.4l}
+For $\bar{r_1}$ and $\bar{r_2}$, we have
+\begin{align*}
+&(i)\quad\bar{r_1}-\bar{r_2}=\sqrt{\delta}\hf_{k,0},\\ 
+&(ii)\quad\bar{r_1}+\bar{r_2}=\hl_{k,0},\\
+&(iii)\quad\bar{r_1}\bar{r_2}=\big(0, 2r_2, 2{r_2}^2, {r_1}^3+{r_2}^3+r_1-r_2\big),\\
+&(iv)\quad\bar{r_2}\bar{r_1}=\big(0, 2r_1, 2{r_1}^2, {r_1}^3+{r_2}^3-r_1+r_2\big),\\
+&(v)\quad{\bar{r_1}}^2=\big(-1+{r_1}^2+{r_1}^4+{r_1}^6\big)+2\bar{r_1},\\
+&(vi)\quad{\bar{r_2}}^2=\big(-1+{r_2}^2+{r_2}^4+{r_2}^6\big)+2\bar{r_2},\\
+&(vii)\quad\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}=2\big(\hl_{k,0}-2\big),\\
+&(viiii)\quad\bar{r_1}\bar{r_2}-\bar{r_2}\bar{r_1}=2\sqrt{\delta}\big(0, -1, -k, 1\big),\\
+&(ix)\quad{\bar{r_1}}^2-{\bar{r_2}}^2=\sqrt{\delta}\big(F_{k,2}+F_{k,4}+F_{k,6}+2\hf_{k,0}\big),\\
+&(x)\quad{\bar{r_1}}^2+{\bar{r_2}}^2=\big(-L_{k,0}+L_{k,2}+L_{k,4}+L_{k,6}2\hl_{k,0}\big).
+\end{align*}
+\end{lemma}
+\begin{theorem}\label{2.5t}
+For all $s, t\in Z^+$,$s\geq t$ and $n\in N$, the generating functions for the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions $\hf_{k,tn}$ and $\hl_{k,tn}$ are 
+\begin{align*}
+&(i)\quad \sum\limits_{n=0}^{\infty}\hf_{k,tn}x^n=\dfrac{\hf_{k,0}+\big(\hl_{k,0}F_{k,t}-\hf_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t},\\
+&(ii)\quad\sum\limits_{n=0}^{\infty}\hl_{k,tn}x^n=\dfrac{\hl_{k,0}-\big(\hl_{k,0}L_{k,t}-\hl_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t},\\
+&(iii)\quad\sum\limits_{n=0}^{\infty}\hf_{k,tn+s}x^n=\dfrac{\hf_{k,s}+(-1)^tx\hf_{s,s-t}}{1-xL_{k,t}+x^2(-1)^t},\\
+&(iv)\quad\sum\limits_{n=0}^{\infty}\hl_{k,tn+s}x^n=\dfrac{\hl_{k,s}+(-1)^tx\hl_{s-t}}{1-xL_{k,t}+x^2(-1)^t}.
+\end{align*}
+\end{theorem}
+\begin{proof}(1).
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+\sum\limits_{n=0}^{\infty}\hf_{k,tn}x^n&= \sum\limits_{n=0}^{\infty}\dfrac{\bar{r_1}{{r_1}}^{tn}-\bar{r_2}{r_{2}}^{tn}}{r_1-r_2}x^n\\
+&=\dfrac{\bar{r_1}}{r_1-r_2}\sum\limits_{n=0}^{\infty}\big({r_1}^t\big)^nx^n-\dfrac{\bar{r_2}}{r_1-r_2}\sum\limits_{n=0}^{\infty}\big({r_2}^t\big)^nx^n\\
+&=\dfrac{\big(\dfrac{\bar{r_1}-\bar{r_2}}{r_1-r_2}\big)+\big[\big(\bar{r_1}+\bar{r_2}\big)\big(\dfrac{{r_1}^t-{r_2}^t}{r_1-r_2}\big)-\big(\dfrac{\bar{r_1}{r_1}^t-\bar{r_2}{r_2}^t}{r_1-r_2}\big)\big]x}{1-\big({r_1}^t+{r_2}^t\big)x+x^2(r_1r_2)^t}\\
+&=\dfrac{\hf_{k,0}+\big(\hl_{k,0}F_{k,t}-\hf_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t}
+\end{align*}
+The proofs of (ii), (iii) and (iv) are similar to (i), using theorem (\ref{2.3}).
+\end{proof}
+\begin{theorem}
+For all $t\in Z^+$ and $n\in N$, the exponential generating functions for the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions $\hf_{k,tn}$ and $\hl_{k,tn}$ are \label{2.6t}
+\begin{align*}
+\sum\limits_{n=0}^{\infty}\dfrac{\hf_{k,tn}}{{n!}}x^n=\dfrac{\bar{r_1}e^{{r_1}^tx}-\bar{r_2}e^{{r_2}^tx}}{r_1-r_2}
+\end{align*}
+and
+\begin{align*}
+\sum\limits_{n=0}^{\infty}\dfrac{\hl_{k,tn}}{{n!}}x^n={\bar{r_1}e^{{r_1}^tx}+\bar{r_2}e^{{r_2}^tx}}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+The proof is similar to theorem (\ref{2.6t}).
+\end{proof}
+\begin{theorem}
+For all $n\in N$, we have\label{2.7t}
+\begin{align*}
+&(i)\qquad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hf_{k,i}=\hf_{k,2n},\\
+&(ii)\qquad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hl_{k,i}=\hl_{k,2n}.
+\end{align*}
+\end{theorem}
+\begin{proof}(i).
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hf_{k,i}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\big(\dfrac{\bar{r_1}{{r_1}}^{i}-\bar{r_2}{r_{2}}^{i}}{r_1-r_2}\big)\\
+&=\dfrac{\bar{r_1}}{r_1-r_2}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) (kr_1)^{i}-\dfrac{\bar{r_2}}{r_1-r_2}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) (kr_2)^{i}\\
+&=\dfrac{\bar{r_1}}{r_1-r_2}\big(1+kr_1\big)^n-\dfrac{\bar{r_2}}{r_1-r_2}\big(1+kr_2\big)^n\\
+&=\dfrac{\bar{r_1}{{r_1}}^{2n}-\bar{r_2}{r_{2}}^{2n}}{r_1-r_2}\\
+&=\hf_{k,2n}.
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}).
+\end{proof}
+\begin{lemma}\label{2.8l}
+For all $t\geqslant 0$ and $m\geqslant n$, we have 
+\begin{align*}
+&(i)\quad\dfrac{\bar{r_1}\bar{r_2}{r_2}^{t}-\bar{r_2}\bar{r_1}{r_1}^{t}}{r_1-r_2}=\big(0, -2F_{k,t+1}, -2F_{k,t+2},  \\&\qquad\qquad\qquad\qquad\qquad\qquad-F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big),\\
+&(ii)\quad \dfrac{{r_1}^{m-n}\bar{r_1}\bar{r_2}-{r_2}^{m-n}\bar{r_2}\bar{r_1}}{r_1-r_2}=\big(0, -2F_{k,m-n-1}, 2F_{k,m-n-2}, \\&\qquad\qquad\qquad\qquad\qquad\qquad F_{k,m-n+3}-F_{k,m-n-3}+F_{k,m-n+1}+F_{k,m-n-1}\big).
+\end{align*}
+\end{lemma}
+\begin{theorem}\textbf{(Catalan's Identity)}. For any integer $t$ and $s$, we have \label{2.9t}
+\begin{align*}
+(i)\quad\hf_{k,n-t}\hf_{k,n+t}-{\hf_{k,n}}^2&={(-1)}^{n-t}{{F}_{k,t}}\big(0, -2F_{k,t+1},-2F_{k,t+2},\\& -2F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big),\\
+(ii)\quad\hl_{k,n-t}\hl_{k,n+t}-{\hl_{k,n}}^2&=\delta{(-1)}^{n-t+1}{{F}_{k,t}}\big(0, -2F_{k,t+1},-2F_{k,t+2}, \\&-2F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big).
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we have
+\begin{align*}
+\hf_{k,n-t}\hf_{k,n+t}-{\hf_{k,n}}^2&=\big(\dfrac{\bar{r_1}{{r_1}}^{n-t}-\bar{r_2}{r_{2}}^{n-t}}{r_1-r_2}\big)\big(\dfrac{\bar{r_1}{{r_1}}^{n+t}-\bar{r_2}{r_{2}}^{n+t}}{r_1-r_2}\big)\\&-\big(\dfrac{\bar{r_1}{{r_1}}^{n}-\bar{r_2}{r_{2}}^{n}}{r_1-r_2}\big)^2.
+\end{align*}
+Using lemma (\ref{2.8l}), we obtain
+\begin{align*}
+&=(-1)^{n-t}F_{k,t}\big(\dfrac{\bar{r_1}\bar{r_2}{{r_1}}^{t}-\bar{r_2}\bar{r_1}{r_{2}}^{t}}{r_1-r_2}\big)\\
+&={(-1)}^{n-t}{{F}_{k,t}}\big(0, -2F_{k,t+1},-2F_{k,t+2},\\& -2F_{k,t+3}+F_{k,t-3}+F_{k,t+1}+F_{k,t-1}\big).
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.8l}).
+\end{proof}
+\begin{theorem}\textbf{(Cassini's Identity)}. For all $n\geq{1}$, we have\label{2.10t}
+\begin{align*}
+\hf_{k,n-1}\hf_{k,n+1}-{\hf_{k,n}}^2&={(-1)}^{n}\big(0, -2F_{k,2},2F_{k,3}, F_{k,4}\big)
+\end{align*}
+and
+\begin{align*}
+\hl_{k,n-1}\hl_{k,n+1}-{\hl_{k,n}}^2&={\delta(-1)}^{n-1}\big(0, -2F_{k,2},2F_{k,3}, F_{k,4}\big).
+\end{align*}
+\end{theorem}
+\begin{theorem}\textbf{(d'Ocagene's Identity)}. Let $n$ be any non-negative integer and $t$ a natural number. If $t\geq {n+1}$, then we have\label{2.11t}
+\begin{align*}
+(i)\quad\hf_{k,t}\hf_{k,n+1}-\hf_{k,t+1}\hf_{k,n}&=(-1)^n \big(0, -2F_{k,t-n-1},2F_{k,t-n-2}, \\&F_{k,t-n+3}+F_{k,t-n-3}+F_{k,t-n+1}+F_{k,t-n-1}\big),\\
+(ii)\quad\hl_{k,t}\hl_{k,n+1}-\hl_{k,t+1}\hl_{k,n}&=(-1)^{n+1}\delta \big(0, -2F_{k,t-n-1},2F_{k,t-n-2},\\& F_{k,t-n+3}+F_{k,t-n-3}+F_{k,t-n+1}+F_{k,t-n-1}\big).
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+\hf_{k,t}\hf_{k,n+1}-\hf_{k,t+1}\hf_{k,n}&=\big(\dfrac{\bar{r_1}{{r_1}}^{t}-\bar{r_2}{r_{2}}^{t}}{r_1-r_2}\big)\big(\dfrac{\bar{r_1}{{r_1}}^{n+1}-\bar{r_2}{r_{2}}^{n+1}}{r_1-r_2}\big)\\&-\big(\dfrac{\bar{r_1}{{r_1}}^{t+1}-\bar{r_2}{r_{2}}^{t+1}}{r_1-r_2}\big)\big(\dfrac{\bar{r_1}{{r_1}}^{n}-\bar{r_2}{r_{2}}^{n}}{r_1-r_2}\big).
+\end{align*}
+Using lemma (\ref{2.8l}), we obtain
+\begin{align*}
+&=(-1)^{n}\big(\dfrac{\bar{r_1}\bar{r_2}{{r_1}}^{t-n}-\bar{r_2}\bar{r_1}{r_{2}}^{t-n}}{r_1-r_2}\big)\\
+&=(-1)^n \big(0, -2F_{k,t-n-1},2F_{k,t-n-2}, F_{k,t-n+3}+F_{k,t-n-3}\\&+F_{k,t-n+1}+F_{k,t-n-1}\big).
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.8l}).
+\end{proof}
+\begin{theorem} For any integer $t$, we have\label{2.12t}
+\begin{align*}
+(i)\quad{\hf_{k,t}}^2+{\hl_{k,t}}^2&=\dfrac{2(k^2+5)}{k}\hl_{k,2t}+\delta(k^2+5)L_{k,2t+3}+2(-1)^t\dfrac{(k^2+3)}{\delta}\\&\big(\hl_{k,0}-2\big),\\
+(ii)\quad{\hf_{k,t}}^2-{\hl_{k,t}}^2&=\dfrac{2(k^2+3)}{\delta}\hl_{k,2t}+(k^2+3)(k^2+2)L_{k,2t+3}\\&+2(-1)^{t+1}\dfrac{(k^2+5)}{\delta}\big(\hl_{k,0}-2\big).
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+{\hf_{k,t}}^2+{\hl_{k,t+1}}^2&=\big(\dfrac{\bar{r_1}{{r_1}}^{t}-\bar{r_2}{r_{2}}^{t}}{r_1-r_2}\big)^2+\big(\bar{r_1}{{r_1}}^{t}+\bar{r_2}{r_{2}}^{t}\big)^2\\
+&=\dfrac{k^2+5}{\delta}\big[-{r_1}^{2t}-{r_2}^{2t}+{r_1}^{2t+2}+{r_2}^{2t+2}+{r_1}^{2t+4}+{r_2}^{2t+4}\\&+{r_1}^{2t+6}+{r_2}^{2t+6}+2\big(\bar{r_1}{r_1}^{2t}+\bar{r_2}{r_2}^{2t}\big)\big]\\&+\dfrac{k^2+3}{\delta}(-1)^t\big[\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}\big].
+\end{align*}
+Using lemma (\ref{2.4l}), we obtain
+\begin{align*}
+=\dfrac{2(k^2+5)}{k}\hl_{k,2t}+\delta(k^2+5)L_{k,2t+3}+2(-1)^t\dfrac{(k^2+3)}{\delta}\big(\hl_{k,0}-2\big).
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+\end{proof}
+\begin{theorem} For any integer $r$, $s\geq t$,  we have\label{2.13t}
+\begin{align*}
+\hf_{k, r+s}\hl_{k,r+t}-\hf_{k,r+t}\hl_{k,r+s}=2(-1)^{r+t}\big(\hl_{k,0}-2\big)F_{k,s-t}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+\hf_{k, r+s}\hl_{k,r+t}-\hf_{k,r+t}\hl_{k,r+s}&=\dfrac{1}{r_1-r_2}\big[\big(\bar{r_1}{r_1}^{r+s}-\bar{r_2}{r_2}^{r+s}\big)\\&\big(\bar{r_1}{r_1}^{r+t}+\bar{r_2}{r_2}^{r+t}\big)-\big(\bar{r_1}{r_1}^{r+t}-\bar{r_2}{r_2}^{r+t}\big)\\&\big(\bar{r_1}{r_1}^{r+s}+\bar{r_2}{r_2}^{r+s}\big)\big]\\
+&=\dfrac{(-1)^r}{r_1-r_2}\big(\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}\big)\big({r_1}^s{r_2}^t-{r_1}^t{r_2}^s\big).
+\end{align*}
+Using lemma (\ref{2.4l}), we obtain
+\begin{align*}
+=2(-1)^{r+t}\big(\hl_{k,0}-2\big)F_{k,s-t}.
+\end{align*}
+\end{proof}
+\begin{theorem} For any integer $s$, and $ t$,  we have\label{2.14t}
+\begin{align}
+\hf_{k, s+t}+(-1)^{t}\hf_{k,s-t}=\hf_{k,s}L_{k,t}\label{2.8}
+\end{align}
+and 
+\begin{align}
+\hl_{k, s+t}+(-1)^{t}\hl_{k,s-t}=\hl_{k,s}L_{k,t}.\label{2.9}
+\end{align}
+\end{theorem}
+\noindent\textbf{Proof of (\ref{2.8}):}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+\hf_{k, s+t}+(-1)^{t}\hf_{k,s-t}&=\dfrac{1}{r_1-r_2}\big[\big(\bar{r_1}{r_1}^{s+t}-\bar{r_2}{r_2}^{s+t}\big)\\&+(-1)^t\big(\bar{r_1}{r_1}^{s-t}+\bar{r_2}{r_2}^{s-t}\big)\big]\\
+&=(\dfrac{\bar{r_1}{r_1}^{s}-\bar{r_2}{r_2}^{s}}{r_1-r_2}\big)\big({r_1}^t+{r_2}^t\big).
+\end{align*}
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+=\hf_{k,s}L_{k,t}.
+\end{align*}
+The proof of (\ref{2.9}) is similar to (\ref{2.8}), using theorem (\ref{2.3}).
+\begin{theorem} For any integer $s\leq t$,  we have\label{2.15t}
+\begin{align}
+\hf_{k, s}\hf_{k,t}-\hf_{k,t}\hf_{k,s}=2(-1)^sF_{k, t-s}\big(0, -1, -k, 1\big)\label{2.10}
+\end{align}
+and 
+\begin{align}
+\hl_{k, s}\hl_{k,t}-\hl_{k,t}\hl_{k,s}=2(-1)^{s+1}F_{k, t-s}\delta\big(0, -1, -k, 1\big).\label{2.11}
+\end{align}
+\end{theorem}
+\noindent\textbf{Proof of (\ref{2.10}):}
+Using theorem (\ref{2.3}), we have
+\begin{align*}
+\hl_{k, s}\hl_{k,t}-\hl_{k,t}\hl_{k,s}&=\dfrac{1}{(r_1-r_2)^2}\big[{r_1}^t{r_2}^s-{r_1}^s{r_2}^t\big]\big[\bar{r_1}\bar{r_{2}}-\bar{r_2}\bar{r_1}\big].
+\end{align*}
+Using lemma (\ref{2.4l}), we obtain
+\begin{align*}
+=2(-1)^sF_{k, t-s}\big(0, -1, -k, 1\big).
+\end{align*}
+The proof of (\ref{2.11}) is similar to (\ref{2.10}), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+\begin{theorem} For any integer $s\leq t$,  we have\label{2.16t}
+\begin{align}
+\hf_{k, t}\hl_{k,s}-\hf_{k,s}\hl_{k,t}=2(-1)^sF_{k, t-s}\big(\hl_{k,0}-2\big)\label{2.12}
+\end{align}
+and 
+\begin{align}
+\hf_{k, t}\hl_{k,s}-\hl_{k,t}\hf_{k,s}=2(-1)^s\bar{r_2}\big[\hf_{k,t-s}-{r_2}^{t-s}\big(0,1,k,k^2+1\big)\big].\label{2.13}
+\end{align}
+\end{theorem}
+\noindent\textbf{Proof of (\ref{2.12}):}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+\hf_{k, t}\hl_{k,s}-\hf_{k,s}\hl_{k,t}&=\dfrac{1}{(r_1-r_2)}\big[{r_1}^t{r_2}^s-{r_1}^s{r_2}^t\big]\big[\bar{r_1}\bar{r_{2}}+\bar{r_2}\bar{r_1}\big].
+\end{align*}
+Using lemma (\ref{2.4l}), we obtain
+\begin{align*}
+=2(-1)^sF_{k, t-s}\big(\hl_{k,0}-2\big).
+\end{align*}
+The proof of (\ref{2.13}) is similar to (\ref{2.12}), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+This completes the proof of theorem (\ref{2.16t}).
+\section{{Some Binomial and Congruence Properties of Hyperbolic $k$- Fibonacci and $k$- Lucas Quaternions}}
+In this section, we explore some binomial and congruence properties of the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions.
+\begin{lemma}
+Let $u=r_{1}$ or $r_{2}$, then we have\label{3.1l}
+\begin{align*}
+&(a)\quad u^n=u{F}_{k,n}+{F}_{k,n-1},\\
+&(b)\quad u^{2n}=u^n{L}_{k,n}-(-1)^n,\\
+&(c)\quad u^{tn}=u^n\dfrac{{F}_{k,tn}}{{F}_{k,n}}-(-1)^n-\dfrac{{F}_{k,(t-1)n}}{{F}_{k,n}},\\
+&(d)\quad u^{sn}{F}_{k,rn}-u^{rn}{F}_{k,sn}=(-1)^{sn}{F}_{k,(r-s)n}.
+\end{align*}
+\begin{proof}
+We prove only (a) and (c) since the proofs of (b) and (d) are similar.\\
+\textbf{{(a):}}
+Since $r_1$ and $r_2$ are roots of $r^2-kr-1=0$, then we have $r_1^2=kr_1+1$ and $r_2^2=kr_2+1$. Therefore, we have
+\begin{align*}
+u^{2n}&={F}_{k,n}u^{n+1}+u^n{F}_{k,n-1}\\
+&={F}_{k,n}(u{F}_{k,n+1}+{F}_{k,n})+u^n{F}_{k,n-1}\\
+&=u{F}_{k,n}{F}_{k,n+1}+{F}_{k,n-1}u^n+{F}_{k,n}^2\\
+&=(u^n-{F}_{k,n-1}){F}_{k,n+1}+{F}_{k,n-1}u^n+{F}_{k,n}^2\\
+&=u^n({F}_{k,n+1}+{F}_{k,n-1})+{F}_{k,n}^2-{F}_{k,n}F_{k,n-1}.
+\end{align*}
+Using ${F}_{k,n-1}{F}_{k,n+1}-{F}_{k,n}^2=(-1)^n$ and ${F}_{k,n+1}+{F}_{k,n-1}={L}_{k,n}$, we obtain
+\begin{align*}
+u^{2n}={L}_{k,n}u^n-(-1)^n.
+\end{align*}
+This completes the proof of (a).\\
+\textbf{{(c):}}
+If $u=r_1$, then we have
+\begin{align*}
+{F}_{k,tn}r_1^n-(-1)^n{F}_{k,(t-1)n}&=(\dfrac{r_1^{tn}-r_2^{tn}}{r_1-r_2})r_1^{n}-(r_1r_2)^n(\dfrac{r_1^{(t-1)n}-r_2^{(t-1)n}}{r_1-r_2})\\
+&=(\dfrac{r_1^{n}-r_2^{n}}{r_1-r_2})r_1^{tn}\\
+&={F}_{k,n}r_1^{tn}.
+\end{align*}
+This completes the proof of (c).
+\end{proof}
+\end{lemma}
+\begin{theorem}For all $n, r, s, t\geq 1$, we have\label{3.2t}
+\begin{align*}
+&(i)\quad\hf_{k,n+t}={F}_{k,n}\hf_{k,t+1}+{F}_{k,n-1}\hf_{k,t},\\
+&(ii)\quad\hf_{k,2n+t}={L}_{k,n}\hf_{k,n+t}-(-1)^n\hf_{k,t},\\
+&(iii)\quad\hf_{k,sn+t}=\dfrac{{F}_{k,sn}}{{F}_{k,n}}\hf_{k,n+t}-(-1)^n\dfrac{{F}_{k,(s-1)n}}{{F}_{k,n}}\hf_{k,t},\\ 
+&(iv)\quad\hf_{k,sn+t}{F}_{k,rn}-\hf_{k,rn+t}{F}_{k,sn}=(-1)^{sn}\hf_{k,t}{F}_{k,(r-s)n}.
+\end{align*}
+\end{theorem}
+\begin{theorem}For all $n, r, s, t\geq 1$ and $\mathcal{G}_{k,n}=\hf_{k,n}$ or $\hl_{k,n}$, we have\label{3.3t}
+\begin{align*}
+&(i)\quad\mathcal{G}_{k,rn+t}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) {F}_{k,r}^{i}{F}_{k,r-1}^{n-i}\mathcal{G}_{k,i+t},\\
+&(ii)\quad\mathcal{G}_{k,2rn+t}=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)(r+1)}{L}_{k,r}^{i}\mathcal{G}_{k,ri+t},\\
+&(iii)\quad\mathcal{G}_{k,trn+l}=\dfrac{1}{{F}_{k,r}^{n}}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)(r+1)} {F}_{k,(t-1)r}^{n-i}{F}_{k,tr}^{i}\mathcal{G}_{k,ri+l},\\
+&(iv)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{i} \mathcal{G}_{k,r(n-i)+i+t}{F}_{k,r}^{i}=\mathcal{G}_{k,t}{F}_{k,r-1}^{n},\\
+&(v)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)} \mathcal{G}_{k,ri+t}{F}_{k,r-1}^{(n-i)}=\mathcal{G}_{k,n+t}{F}_{k,r}^{n} ,\\
+&(vi)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}{F}_{k,sm}^{(n-i)}{F}_{k,rm}^{(i)} \mathcal{G}_{k,m[rn+i(s-r)]+t}=(-1)^{smn}\mathcal{G}_{k,t}{F}_{k,(r-s)m}^{n} .
+\end{align*}
+\end{theorem}
+\begin{lemma}\label{3.4l}
+If ${L}_{k,n}$ is $n^{\text{th}}$ $k$-Lucas sequence and $u=r_{1}$ or $r_{2}$, then we have
+\begin{align*}
+1+ku+u^{2(2^{n+1}+1)}={L}_{k,2^{n+1}}u^{2(2^{n}+1)}.
+\end{align*}
+\end{lemma}
+\begin{theorem}For all $t\geq 1$ and $\mathcal{G}_{k,n}=\hf_{k,n}$ or $\hl_{k,n}$, we have\label{3.5t}
+\begin{align*}
+&(i)\quad\mathcal{G}_{k,t+2^{n+1}+2}=\dfrac{\mathcal{G}_{k,t}+k\mathcal{G}_{k,t+1}+\mathcal{G}_{k,t+2^{n+2}+2}}{{L}_{k,2^{n+1}}},\\
+&(ii)\quad\mathcal{G}_{k,n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&(iii)\quad\mathcal{G}_{k,(2^{r+2}+2)n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,(2^{r+1}+2)i+j+t},\\
+&(iv)\quad\mathcal{G}_{k,(2^{r+1}+2)n+t}=\sum\limits_{i+j+s=n}\left( \stackrel{n}{i,j}\right) k^{j}{{L}_{k,2^{r+1}}}^{-n}\mathcal{G}_{k,(2^{r+1}+2)i+j+t}.
+\end{align*}
+\end{theorem}
+\begin{lemma} Let $u=r_{1}$ or $r_{2}$, then for $l_n=\sum\limits_{i=1}^n{L}_{k,2^i}$ and for every $n, t\geq 1$, we have \label{3.6l}
+\begin{align*}
+ 1+u^{2^n}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}}u^{2^{n-1}};\\
+\dfrac{l_{n-1}}{l_{n-t-1}}u^{2^{n-t}}-l_{n-1}\sum\limits_{i=2}^{t}\dfrac{1}{l_{n-i}}, & \text{If $t=2, 3, 4,\hdots, n-2 $ };\\l_{n-1}u^2-l_{n-1}\sum\limits_{i=2}^{n-1}\dfrac{1}{l_{n-i}}.
+ \end{cases}
+\end{align*} 
+\end{lemma}
+\begin{theorem} For $l_n=\sum\limits_{i=1}^n\mathcal{L}_{k,2^i}$, for every $n, t\geq 1$ and $\mathcal{G}_{k,n}=\mathcal{F}_{k,n}$ or $\mathcal{L}_{k,n}$, we have\label{3.7t}
+\begin{align*}
+&(i)\quad \mathcal{G}_{k,{t+2^n}}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}} \mathcal{G}_{k,t+2^{n-1}}- \mathcal{G}_{k,t};\\
+\dfrac{l_{n-1}}{l_{n-t-1}} \mathcal{G}_{k,{t+2^{n-s}}}-l_{n-1}\sum\limits_{i=2}^{s}(1+\dfrac{1}{l_{n-i}}) \mathcal{G}_{k,t},&\\\quad\quad\quad\quad\quad\quad\quad   \text{If $s=2, 3, 4,\hdots, n-2 $ };\\l_{n-1} \mathcal{G}_{k,{t+2}}-l_{n-1}\sum\limits_{i=2}^{n-1}(\dfrac{1}{l_{n-i}}+1) \mathcal{G}_{k,t}.
+ \end{cases}\\
+&(ii)\quad  \mathcal{G}_{k,{2^rn+t}}= \begin{cases}
+\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)(\dfrac{l_{r-1}}{l_{r-2}})^i(-1)^j \mathcal{G}_{k,2^{r-1}i+t};\\
+\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)(\dfrac{l_{r-1}}{l_{r-s-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\mathcal{G}_{k,2^{n-s}i+t}, &\\\quad\quad\quad\quad\quad\quad\quad \text{If $s=2, 3, 4,\hdots, n-2 $ };\\\sum\limits_{i+j=n}\left( \stackrel{n}{i}\right)({l_{r-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\mathcal{G}_{k,2i+t}.
+ \end{cases}
+ \end{align*}
+\end{theorem}
+\begin{lemma}
+For all $t\geq 1$, we have\label{3.8l}
+\begin{align*}
+&(i)\quad r_1^{2t}=\dfrac{{F}_{k,2t}}{k}r_1\sqrt{\delta}-\dfrac{{L}_{k,2t-1}}{k},r_2^{2t}=-\dfrac{{F}_{k,2t}}{k}r_2\sqrt{\delta}-\dfrac{{L}_{k,2t-1}}{k}.\\
+&(ii)\quad r_1^{2t+1}=\dfrac{{L}_{k,2t+1}}{k}r_1-\dfrac{{F}_{k,2t}}{k}\sqrt{\delta},r_2^{2t+1}=\dfrac{{L}_{k,2t+1}}{k}r_2+\dfrac{{F}_{k,2t}}{k}\sqrt{\delta}.
+\end{align*}
+\end{lemma}
+\begin{theorem} For $s, t\geq 1$, we have\label{3.9t}
+\begin{align*}
+&(i)\quad\hf_{k,s+2t}=\dfrac{{F}_{k,2t}}{k}\hl_{k,s+1}-\dfrac{{L}_{k,2t-1}}{k}\hf_{k,s},\\
+&(ii)\quad\hl_{k,s+2t}=\dfrac{{F}_{k,2t}}{k}\delta\hf_{k,s+1}-\dfrac{{L}_{k,2t-1}}{k}\hl_{k,s},\\
+&(iii)\quad\hf_{k,s+2t}-\dfrac{{F}_{k,2t}}{k}\hf_{k,s+2}+\dfrac{{F}_{k,2t-2}}{k}\hf_{k,s}=0,\\
+&(iv)\quad\hl_{k,s+2t}-\dfrac{{F}_{k,2t}}{k}\hl_{k,s+2}+\dfrac{{F}_{k,2t-2}}{k}\hl_{k,s}=0.
+\end{align*}
+\end{theorem}
+\begin{theorem}For all $s, t\geq 1$, we have\label{3.10t}
+\begin{align*}
+&(i)\quad\hf_{k,s+2t+1}=\dfrac{{L}_{k,2t+1}}{k}\hf_{k,s+1}-\dfrac{{F}_{k,2t}}{k}\hl_{k,s},\\
+&(ii)\quad\hl_{k,s+2t+1}=\dfrac{{L}_{k,2t+1}}{k}\hl_{k,s+1}-\delta\dfrac{{F}_{k,2t}}{k}\hf_{k,s},\\
+&(iii)\quad\hf_{k,s+2t+1}-\dfrac{{L}_{k,2t+1}}{k(k^2+3)}\hf_{k,s+3}+\dfrac{{F}_{k,2t-2}}{k(k^2+3)}\hl_{k,s}=0,\\
+&(iv)\quad\hl_{k,s+2t+1}-\dfrac{{L}_{k,2t+1}}{k(k^2+3)}\hl_{k,s+3}+\dfrac{{F}_{k,2t-2}}{k(k^2+3)}\delta\hf_{k,s}=0.
+\end{align*}
+\end{theorem}
+\begin{theorem}For $n,s, t\geq 1$, we have\label{3.11t}
+\begin{align*}
+&(i)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}({L}_{k,2t-1})^{(n-i)}\hf_{k,2ti+s}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\hf_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}}\hl_{k,n+s},& \text{if $n$ is odd,}\end{cases} \\
+&(ii)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)k^{(i-n)}({L}_{k,2t-1})^{(n-i)}\hl_{k,2ti+s}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+k^{-n}({F}_{k,2t})^n\delta^{\frac{n}{2}}\hl_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}({F}_{k,2t})^n\delta^{\frac{n+1}{2}}\hf_{k,n+s},& \text{if $n$ is odd.}
+\end{cases} \\
+&(iii)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\hf_{k,2t(n-i)+n}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+{\delta}^{\frac{n}{2}}\hf_{k,0},& \text{if $n$ is even;}\\
+{\delta}^{\frac{n-1}{2}}\hl_{k,0},& \text{if $n$ is odd,}
+\end{cases} \\
+&(iv)\quad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right)(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\hl_{k,2t(n-i)+n}\\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+{\delta}^{\frac{n}{2}}\hl_{k,0},& \text{if $n$ is even;}\\
+{\delta}^{\frac{n+1}{2}}\hf_{k,0},& \text{if $n$ is odd.}
+\end{cases} 
+\end{align*}
+\end{theorem}
+\noindent The following theorem deals with congruence properties of the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} quaternions. 
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{G}_{k,n}=\hf_{k,n}$ or $\hl_{k,n}$, we have\label{3.12t}
+\begin{align*}
+&(i)\qquad\mathcal{G}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{G}_{k,(2^{r+2}+2)j+t} \equiv 0\quad (\text{mod} {L_{k,2^{r+1}}}),\\
+&(ii)\qquad\mathcal{G}_{k,(2^{r+2}+2)n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{j}(-1)^{n}\mathcal{G}_{k,j+t}\equiv 0\quad (\text{mod} L_{k,2^{r+1}}).
+\end{align*}
+\end{theorem}
+\begin{proof}
+From theorem (\ref{3.5t}; (ii)), for all $n, t\geq 1$ and $\mathcal{G}_{k,n}=\hf_{k,n}$ or $\hl_{k,n}$, we have
+\begin{align*}
+\mathcal{G}_{k,n+t}&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,2^{r+1}(i+2j)+2(i+j)+t}\\&+\sum\limits_{{i+j+s=n};_{i= 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,2^{r+1}(i+2j)+2(i+j)+t}\\&+\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{G}_{k,(2^{r+2}+2)j+t}.
+\end{align*}
+\begin{align*}
+&\mathcal{G}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{G}_{k,(2^{r+2}+2)j+t}\\&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\left( \stackrel{n}{i,j}\right) k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\mathcal{G}_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&\therefore {L}_{k,2} \quad\text{divides}\quad(\mathcal{G}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{G}_{k,(2^{r+2}+2)j+t}),\\
+&\therefore\mathcal{G}_{k,n+t}-\sum\limits_{j=0}^{n}\left( \stackrel{n}{j}\right) k^{-n}(-1)^{n}\mathcal{G}_{k,(2^{r+2}+2)j+t}\equiv 0\quad (\text{mod} {L}_{k,2}).
+\end{align*}
+This completes the proof of (i).\\
+\noindent The proof of (ii) is similar to (i), using theorem (\ref{3.5t}; (iii)).
+\end{proof} 
+\section{Some Fundamental Properties of Hyperbolic $k$- Fibonacci and $k$- Lucas Octonions}
+In this section, we establish certain elementary  properties of the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} octonions.
+\begin{theorem} For all $n\geq{0}$, we have
+\begin{align*} 
+&(i)\quad \hp_{k,n+2}=k\hp_{k,n+1}+\hp_{k,n},\\
+&(ii)\quad\hq_{k,n+2}=k\hq_{k,n+1}+\hq_{k,n}\\
+&(iii)\quad\hq_{k,n}=\hp_{k,n+1}+\hp_{k,n-1}\\
+&(iv)\quad \bar{\hp}_{k,n+2}=k\bar{\hp}_{k,n+1}+\bar{\hp}_{k,n},\\
+&(v)\quad\bar{\hq}_{k,n+2}=k\bar{\hq}_{k,n+1}+\bar{\hq}_{k,n}\\
+&(vi)\quad\bar{\hq}_{k,n}=\bar{\hp}_{k,n+1}+\bar{\hp}_{k,n-1}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+(i). Using definition (\ref{2.1d}), we have
+\begin{align*} 
+&k\hp_{k,n+1}+\hp_{k,n}=k\big(F_{k,n+1}+F_{k,n+2}i_1+F_{k,n+3}i_2+F_{k,n+4}i_3+F_{k,n+5}e_4\\&\quad +F_{k,n+6}e_5+F_{k,n+7}e_6+F_{k,n+8}e_7\big)\\
+&\quad +\big(F_{k,n}+F_{k,n+1}i_1+F_{k,n+2}i_2+F_{k,n+3}i_3+F_{k,n+4}e_4\\&\quad +F_{k,n+5}e_5+F_{k,n+6}e_6+F_{k,n+7}e_7\big)\\
+&\quad =\big(kF_{k,n+1}+F_{k,n}\big)+\big(kF_{k,n+2}+F_{k,n+1}\big)i_1\\&\quad +\big(kF_{k,n+3}+F_{k,n+2}\big)i_2+\big(kF_{k,n+4}+F_{k,n+3}\big)i_3\\&\quad +\big(kF_{k,n+5}+F_{k,n+4}\big)e_4+\big(kF_{k,n+6}+F_{k,n+5}\big)e_5\\&\quad +\big(kF_{k,n+7}+F_{k,n+6}\big)e_6+\big(kF_{k,n+8}+F_{k,n+7}\big)e_7\\
+&\quad =F_{k,n+2}+F_{k,n+3}i_1+F_{k,n+4}i_2+F_{k,n+5}i_3+F_{k,n+6}e_4\\&\quad +F_{k,n+7}e_5+F_{k,n+8}e_6+F_{k,n+9}e_7\\
+&\quad =\hp_{k,n+2}.
+\end{align*}
+The proofs of (ii), (iii), (iv), (v) and (vi) are similar to (i), using definition (\ref{2.1d}).
+\end{proof}
+%\vspace{15mm}
+\begin{theorem}\textbf{(Binet Formulas)}. For all $n\geq{0}$, we have\label{2.3}
+\begin{align*}
+&(i)\quad \hp_{k,n}= \dfrac{\bar{r_1}{{r_1}}^n-\bar
+{r_2}{r_{2}}^n}{r_1-r_2}\\
+&(ii)\quad \hq_{k,n}= \bar{r_1}{r_{1}}^n +\bar{r_2}{r_{2}}^n,\\
+&(iii)\quad \bar{\hp}_{k,n}= \dfrac{\bar{r_3}{{r_1}}^n-\bar
+{r_4}{r_{2}}^n}{r_1-r_2}\\
+&(iv)\quad \bar{\hq}_{k,n}= \bar{r_3}{r_{1}}^n +\bar{r_4}{r_{2}}^n,\\
+& \text{where,}\\
+ & \quad \bar{r_1}=1+r_1i_1+{r_1}^2i_2+{r_1}^3i_3+{r_1}^4e_4+{r_1}^5e_5+{r_1}^6e_6+{r_1}^7e_7\\
+ &\qquad =\big\langle 1, r_1, {r_1}^2, {r_1}^3, {r_1}^4, {r_1}^5, {r_1}^6, {r_1}^7\big\rangle,\\
+ &\quad \bar{r_2}=1+r_2i_1+{r_2}^2i_2+{r_2}^3i_3+{r_2}^4e_4+{r_2}^5e_5+{r_2}^6e_6+{r_2}^7e_7\\
+ &\qquad =\big\langle 1, r_2, {r_2}^2, {r_2}^3, {r_2}^4, {r_2}^5, {r_2}^6, {r_2}^7\big\rangle,\\
+ &\quad \bar{r_3}=1-r_1i_1-{r_1}^2i_2-{r_1}^3i_3-{r_1}^4e_4-{r_1}^5e_5-{r_1}^6e_6-{r_1}^7e_7\\
+ &\qquad =\big\langle 1,- r_1, -{r_1}^2, -{r_1}^3, -{r_1}^4, -{r_1}^5, -{r_1}^6, -{r_1}^7\big\rangle,\\
+ &\quad \bar{r_4}=1+r_2i_1-{r_2}^2i_2-{r_2}^3i_3-{r_2}^4e_4-{r_2}^5e_5-{r_2}^6e_6-{r_2}^7e_7\\
+ &\qquad =\big\langle 1, -r_2, -{r_2}^2, -{r_2}^3, -{r_2}^4, -{r_2}^5, -{r_2}^6, -{r_2}^7\big\rangle.
+ \end{align*}
+ \end{theorem}
+And, $i_1, i_2, i_3$ are quaternion imaginary units, $e_4 ({e_4}^2=1)$ is a counter imaginary unit, and the bases of hyperbolic octonions $\hp_{k,n}$ and $\hq_{k,n}$ are defined as $i_1e_4=e_5, i_2e_4=e_6,i_3e_4=e_7, {e_4}^2={e_5}^2={e_6}^2={e_7}^2=1$.
+The bases of hyperbolic octonions $\hp_{k,n}$ and $\hq_{k,n}$ have multiplication rules as in Table-( \ref{table-1}).
+\begin{proof}
+(i). Using the definition (\ref{2.1d}) and the Binet formulas of $k$- Fibonacci and $k$- Lucas sequences, we have
+\begin{align*}
+&\hp_{k,n}=F_{k,n}+F_{k,n+1}i_1+F_{k,n+2}i_2+F_{k,n+3}i_3+F_{k,n+4}e_4+F_{k,n+5}e_5\\&\quad +F_{k,n+6}e_6+F_{k,n+7}e_7\\
+&\quad = \big[\dfrac{{r_1}^n-{r_2}^n}{r_1-r_2}\big]+\big[\dfrac{{r_1}^{n+1}-{r_2}^{n+1}}{r_1-r_2}\big]i_1+\big[\dfrac{{r_1}^{n+2}-{r_2}^{n+2}}{r_1-r_2}\big]i_2\\&\quad +\big[\dfrac{{r_1}^{n+3}-{r_2}^{n+3}}{r_1-r_2}\big]i_3+\big[\dfrac{{r_1}^{n+4}-{r_2}^{n+4}}{r_1-r_2}\big]e_4+\big[\dfrac{{r_1}^{n+5}-{r_2}^{n+5}}{r_1-r_2}\big]e_5\\&\quad +\big[\dfrac{{r_1}^{n+6}-{r_2}^{n+6}}{r_1-r_2}\big]e_6+\big[\dfrac{{r_1}^{n+7}-{r_2}^{n+7}}{r_1-r_2}\big]e_7\\
+&\quad =\dfrac{{r_1}^n}{r_1-r_2}\big(1+r_1i_1+{r_1}^2i_2+{r_1}^3i_3+{r_1}^4e_4+{r_1}^5e_5+{r_1}^6e_6+{r_1}^7e_7\big)\\&\quad -\dfrac{{r_2}^n}{r_1-r_2}\big(1+r_2i_1+{r_2}^2i_2+{r_2}^3i_3+{r_2}^4e_4+{r_2}^5e_5+{r_2}^6e_6+{r_2}^7e_7\big)\\
+&\quad =\dfrac{\bar{r_1}{{r_1}}^n-\bar
+r_2{r_{2}}^n}{r_1-r_2}\\
+&(ii).\quad \hq_{k,n}=L_{k,n}+L_{k,n+1}i_1+L_{k,n+2}i_2+L_{k,n+3}i_3+L_{k,n+4}e_4+L_{k,n+5}e_5\\&\quad +L_{k,n+6}e_6+L_{k,n+7}e_7\\
+&\quad = \big({r_1}^n+{r_2}^n\big)+\big({r_1}^{n+1}+{r_2}^{n+1}\big)i_1+\big({r_1}^{n+2}+{r_2}^{n+2}\big)i_2+\big({r_1}^{n+3}{r_2}^{n+3}\big)i_3\\&\quad +\big({r_1}^{n+4}{r_2}^{n+4}\big)e_4+\big({r_1}^{n+5}{r_2}^{n+5}\big)e_5+\big({r_1}^{n+6}{r_2}^{n+6}\big)e_6+\big({r_1}^{n+7}{r_2}^{n+7}\big)e_7\\
+&\quad ={r_1}^n\big(1+r_1i_1+{r_1}^2i_2+{r_1}^3i_3+{r_1}^4e_4+{r_1}^5e_5+{r_1}^6e_6+{r_1}^7e_7\big)\\&\quad +{r_2}^n\big(1+r_2i_1+{r_2}^2i_2+{r_2}^3i_3+{r_2}^4e_4+{r_2}^5e_5+{r_2}^6e_6+{r_2}^7e_7\big)\\
+&\quad =\bar{r_1}{{r_1}}^n+\bar
+r_2{r_{2}}^n.
+\end{align*}
+The proofs of (iii) and (iv) are similar to (i) and (ii) using definition (\ref{2.1d}).
+\end{proof}
+\begin{lemma}\label{2.4l}
+For $\bar{r_1}=\big\langle 1, r_1, {r_1}^2, {r_1}^3, {r_1}^4, {r_1}^5, {r_1}^6, {r_1}^7\big\rangle$, $\bar{r_2}=\big\langle 1, r_2, {r_2}^2, {r_2}^3, {r_2}^4,\\ {r_2}^5, {r_2}^6, {r_2}^7\big\rangle$, $\bar{r_3}=\big\langle 1, -r_1, -{r_1}^2, -{r_1}^3, -{r_1}^4, -{r_1}^5, -{r_1}^6, -{r_1}^7\big\rangle$ and $\bar{r_4}=\big\langle 1, -r_2,\\ -{r_2}^2, -{r_2}^3, -{r_2}^4, -{r_2}^5, -{r_2}^6, -{r_2}^7\big\rangle$, we have
+\begin{align*}
+&(1)\quad\bar{r_1}-\bar{r_2}=\sqrt{\delta}\hp_{k,0},\\ 
+&(2)\quad\bar{r_1}+\bar{r_2}=\hq_{k,0},\\
+&(3)\quad\bar{r_1}\bar{r_2}=\big\langle 2, -2(r_1-2r_2), -2({r_1}^2-2{r_2}^2), 2(r_1-r_2+{r_2}^3), 2{r_1}^4, \\&\qquad 2({r_1}^3-{r_2}^3)+2{r_1}^5, -2({r_1}^2-{r_2}^2+{r_1}^6), {r_1}^7+{r_2}^7-(r_1-r_2)({r_1}^4+{r_2}^4-1)\big\rangle\\&\qquad=\bar{u_1},\\
+&(4)\quad\bar{r_2}\bar{r_1}=\big{\langle} 2, -2(r_2-2r_1), -2({r_2}^2-2{r_1}^2), 2(r_2-r_1+{r_1}^3), 2{r_2}^4, \\&\qquad 2({r_2}^3-{r_1}^3)+2{r_2}^5, -2({r_2}^2-{r_1}^2+{r_2}^6), {r_2}^7+{r_1}^7-(r_2-r_1)({r_1}^4+{r_2}^4-1)\big{\rangle}\\&\qquad=\bar{u_2},\\
+\end{align*}
+\begin{align*}
+&(5)\quad{\bar{r_1}}^2=\big(-1-{r_1}^2-{r_1}^4-{r_1}^6+{r_1}^8+{r_1}^{10}+{r_1}^{12}+{r_1}^{14}\big)+2\bar{r_1}=\bar{u_3},\\
+&(6)\quad{\bar{r_2}}^2=\big(-1-{r_2}^2-{r_2}^4-{r_2}^6+{r_2}^8+{r_2}^{10}+{r_2}^{12}+{r_2}^{14}\big)+2\bar{r_2}=\bar{u_4},\\
+&(7)\quad\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}=2\hq_{k,0},\\
+&(8)\quad\bar{r_1}\bar{r_2}-\bar{r_2}\bar{r_1}=2\sqrt{\delta}\big\langle0, -3, -3k, (1-k^2), k(k^2+2),\\&\qquad \qquad  k^4+5k^2+3, k^5+4k^3+k, -(k^4+4k+1)\big\rangle=\bar{u_5},\\
+&(9)\quad{\bar{r_1}}^2-{\bar{r_2}}^2=\sqrt{\delta}\big( k^{13}+13k^{11}+66k^9+165k^7+208k^5+116k^3+16k+2\hp_{k,0}\big)\\&\qquad=\bar{u_6},\\
+&(10)\quad{\bar{r_1}}^2+{\bar{r_2}}^2=\big( k^{14}+15k^{12}+90k^{10}+275k^8+448k^6+364k^4+112k^2+2\hq_{k,0}\big)\\&\qquad=\bar{u_7},\\
+&(11)\quad \bar{r_3}=2-\bar{r_1}\quad\text{and} \quad \bar{r_4}=2-\bar{r_2},\\
+&(12)\quad \bar{r_1}\bar{r_3}=\bar{r_3}\bar{r_1}=\big(1+{r_1}^2+{r_1}^4+{r_1}^6-{r_1}^8-{r_1}^{10}-{r_1}^{12}-{r_1}^{14}\big)=u_8,\\
+&(13)\quad \bar{r_2}\bar{r_4}=\bar{r_4}\bar{r_2}=\big(1+{r_2}^2+{r_2}^4+{r_2}^6-{r_2}^8-{r_2}^{10}-{r_2}^{12}-{r_2}^{14}\big)=u_9,\\
+&(14)\quad \bar{r_1}\bar{r_4}= \big\langle 0, 4(r_1-r_2), 4({r_1}^2-{r_2}^2), -2(r_1-r_2-{r_1}^3-{r_2}^3), 0,\\&\quad  -2({r_1}^3-{r_2}^3), 2({r_1}^2-{r_2}^2+2{r_1}^6), {r_1}^7-{r_2}^7+(r_1-r_2)({r_1}^4+{r_2}^4-1)  \big\rangle =\bar{u_{10}},\\
+&(15)\quad \bar{r_4}\bar{r_1}=\big\langle 0, -2(r_1-r_2), -2({r_1}^2-{r_2}^2), 2(r_1-r_2), -2({r_1}^4-{r_2}^4), 2({r_1}^3-{r_2}^3\\&\quad -{r_2}^5+{r_1}^5), -2({r_1}^2-{r_2}^2-{r_1}^6-{r_2}^6), {r_1}^7-{r_2}^7-(r_1-r_2)({r_1}^4+{r_2}^4-1)  \big\rangle\\&\quad =\bar{u_{11}},\\
+&(16)\quad \bar{r_2}\bar{r_3}=\big\langle 0, -2(r_1-r_2), -2({r_1}^2-{r_2}^2), 2(r_1-r_2-{r_1}^3+{r_2}^3), -2({r_1}^4-{r_2}^4),\\&\quad 2({r_1}^3-{r_2}^3), -2({r_1}^2-{r_2}^2-2{r_2}^6), -{r_1}^7+{r_2}^7-(r_1-r_2)({r_1}^4+{r_2}^4-1)  \big\rangle =\bar{u_{12}},\\
+&(17)\quad \bar{r_3}\bar{r_2}=\big\langle 0, 2(r_1-r_2), 2({r_1}^2-{r_2}^2), -2(r_1-r_2), -2({r_1}^4-{r_2}^4), -2({r_1}^3-{r_2}^3\\&\quad+{r_1}^5-{r_2}^5), 2({r_1}^2-{r_2}^2+{r_1}^6+{r_2}^6), -{r_1}^7+{r_2}^7+(r_1-r_2)({r_1}^4+{r_2}^4-1)  \big\rangle \\&\quad=\bar{u_{13}},\\
+&(18)\quad \bar{r_3}\bar{r_4}=4-2\hq_{k,0}+\bar{u_1},,\\
+&(19)\quad \bar{r_4}\bar{r_3}=4-2\hq_{k,0}+\bar{u_2},\\
+&(20)\quad \bar{r_3}\bar{r_4}-\bar{r_4}\bar{r_3}=\bar{u_1}-\bar{u_2},\\
+&(21)\quad \bar{r_3}\bar{r_2}=\big\langle 0, -2(r_1-r_2), -2({r_1}^2-{r_2}^2), -2({r_1}^3-{r_2}^3), -4({r_1}^4-{r_2}^4),  \\&\quad-2({r_1}^5-{r_2}^5), 2({r_1}^6+3{r_2}^6), -2({r_1}^7-{r_2}^7) \big\rangle=\bar{u_{14}},\\
+&(22)\quad \bar{r_3}\bar{r_2}-\bar{r_2}\bar{r_3}=\big\langle 0, 6(r_1-r_2), 6({r_1}^2-{r_2}^2), -2(2r_1-2r_2-{r_1}^3+{r_2}^3), 0, \\&\quad-2(2{r_1}^3-2{r_2}^3+{r_1}^5-{r_2}^5), 2(2{r_1}^2-2{r_2}^2+{r_1}^6-{r_2}^6), 2(r_1-r_2)({r_1}^4+{r_2}^4-1) \big\rangle\\&\quad=\bar{u_{15}},\\
+&(23)\quad \bar{r_1}\bar{r_4}-\bar{r_4}\bar{r_1}=\big\langle 0, 6(r_1-r_2), 6({r_1}^2-{r_2}^2), -2(2r_1-2r_2-{r_1}^3-{r_2}^3), 2({{r_2}^4-r_1}^4), \\&\quad-2(2{r_1}^3-2{r_2}^3+{r_1}^5-{r_2}^5), 2(2{r_1}^2-2{r_2}^2+{r_1}^6-{r_2}^6), 2(r_1-r_2)({r_1}^4+{r_2}^4-1) \big\rangle\\&\quad=\bar{u_{16}},\\
+&(24)\quad {\bar{r_3}}^2=4\bar{r_3}+\bar{u_3}-4=\bar{u_{17}},\\
+&(25)\quad {\bar{r_4}}^2=4\bar{r_4}+\bar{u_4}-4=\bar{u_{18}}.
+\end{align*}
+\end{lemma}
+\begin{theorem}\label{2.5t}
+For all $s, t\in Z^+$,$s\geq t$ and $n\in N$, the generating functions for the hyperbolic \kF\vspace{0mm} and \kL\vspace{0mm} quaternions $\hp_{k,tn}$ and $\hq_{k,tn}$ are 
+\begin{align*}
+&(i)\quad \sum\limits_{n=0}^{\infty}\hp_{k,tn}x^n=\dfrac{\hp_{k,0}+\big(\hq_{k,0}F_{k,t}-\hp_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t},\\
+&(ii)\quad\sum\limits_{n=0}^{\infty}\hq_{k,tn}x^n=\dfrac{\hq_{k,0}-\big(\hq_{k,0}L_{k,t}-\hq_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t},\\
+&(iii)\quad\sum\limits_{n=0}^{\infty}\hp_{k,tn+s}x^n=\dfrac{\hp_{k,s}+(-1)^tx\hp_{s,s-t}}{1-xL_{k,t}+x^2(-1)^t},
+\end{align*}
+\begin{align*}
+&(iv)\quad\sum\limits_{n=0}^{\infty}\hq_{k,tn+s}x^n=\dfrac{\hq_{k,s}+(-1)^tx\hq_{s-t}}{1-xL_{k,t}+x^2(-1)^t},
+\end{align*}
+the exponential generating functions for the hyperbolic \kF\vspace{0mm} and \kL\vspace{0mm} quaternions $\hp_{k,tn}$ and $\hq_{k,tn}$ are
+\begin{align*}
+&(v)\qquad \sum\limits_{n=0}^{\infty}\dfrac{\hp_{k,tn}}{{n!}}x^n=\dfrac{\bar{r_1}e^{{r_1}^tx}-\bar{r_2}e^{{r_2}^tx}}{r_1-r_2},\\
+&(vi)\qquad \sum\limits_{n=0}^{\infty}\dfrac{\hq_{k,tn}}{{n!}}x^n={\bar{r_1}e^{{r_1}^tx}+\bar{r_2}e^{{r_2}^tx}}.
+\end{align*}
+\end{theorem}
+\begin{proof}(i).
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+&\sum\limits_{n=0}^{\infty}\hp_{k,tn}x^n= \sum\limits_{n=0}^{\infty}\big(\frac{\bar{r_1}{{r_1}}^{tn}-\bar{r_2}{r_{2}}^{tn}}{r_1-r_2}\big)x^n\\
+\\&\quad =\frac{\bar{r_1}}{r_1-r_2}\sum\limits_{n=0}^{\infty}\big({r_1}^t\big)^nx^n-\frac{\bar{r_2}}{r_1-r_2}\sum\limits_{n=0}^{\infty}\big({r_2}^t\big)^nx^n\\
+\\&\quad =\frac{\bar{r_1}}{r_1-r_2}\big(\frac{1}{1-{r_1}^tx}\big)-\frac{\bar{r_2}}{r_1-r_2}\big(\frac{1}{1-{r_2}^tx}\big)\\
+\\&\quad =\frac{1}{r_1-r_2}\big[\frac{\big(\bar{r_1}-\bar{r_2}\big)+\big[\bar{r_2}{r_1}^t-\bar{r_1}{r_2}^t\big]x}{1-\big({r_1}^t+{r_2}^t\big)x+x^2(r_1r_2)^t}\big]\\
+\\&\quad =\frac{1}{r_1-r_2}\big[\frac{\big(\bar{r_1}-\bar{r_2}\big)+\big[\bar{r_2}{r_1}^t-\bar{r_2}{r_2}^t+\bar{r_2}{r_2}^t-\bar{r_1}{r_1}^t+\bar{r_1}{r_1}^t-\bar{r_1}{r_2}^t\big]x}{1-\big({r_1}^t+{r_2}^t\big)x+x^2(r_1r_2)^t}\big]\\
+\end{align*}
+\begin{align*}
+\\&\quad =\dfrac{\big(\dfrac{\bar{r_1}-\bar{r_2}}{r_1-r_2}\big)+\big[\big(\bar{r_1}+\bar{r_2}\big)\big(\dfrac{{r_1}^t-{r_2}^t}{r_1-r_2}\big)-\big(\dfrac{\bar{r_1}{r_1}^t-\bar{r_2}{r_2}^t}{r_1-r_2}\big)\big]x}{1-\big({r_1}^t+{r_2}^t\big)x+x^2(r_1r_2)^t}.
+\end{align*}
+Using theorem (\ref{2.3}) and lemma (\ref{2.4l}), we obtain
+\begin{align*}
+=\dfrac{\hp_{k,0}+\big(\hq_{k,0}F_{k,t}-\hp_{k,t}\big)x}{1-xL_{k,t}+x^2(-1)^t}.
+\end{align*}
+The proofs of (ii), (iii), (iv), (v) and (vi) are similar to (i), using theorem (\ref{2.3}).
+\end{proof}
+\begin{theorem}
+For all $n\in N$, we have\label{2.7t}
+\begin{align*}
+&(i)\qquad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hp_{k,i}=\hp_{k,2n},\\
+&(ii)\qquad\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hq_{k,i}=\hq_{k,2n}.
+\end{align*}
+\end{theorem}
+\begin{proof}(i).
+Using theorem (\ref{2.3}), we obtain
+\begin{align*}
+\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\hp_{k,i}&=\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) k^{i}\big(\dfrac{\bar{r_1}{{r_1}}^{i}-\bar{r_2}{r_{2}}^{i}}{r_1-r_2}\big)\\
+&=\dfrac{\bar{r_1}}{r_1-r_2}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) (kr_1)^{i}-\dfrac{\bar{r_2}}{r_1-r_2}\sum\limits_{i=0}^{n}\left( \stackrel{n}{i}\right) (kr_2)^{i}\\
+&=\dfrac{\bar{r_1}}{r_1-r_2}\big(1+kr_1\big)^n-\dfrac{\bar{r_2}}{r_1-r_2}\big(1+kr_2\big)^n\\
+&=\dfrac{\bar{r_1}{{r_1}}^{2n}-\bar{r_2}{r_{2}}^{2n}}{r_1-r_2}\\
+&=\hp_{k,2n}.
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}).
+\end{proof}
+\begin{lemma}\label{2.8l}
+For all $t\geq{0}$, we have 
+\begin{align*}
+&(i)\quad\dfrac{\bar{u_1}{r_2}^{t}-\bar{u_2}{r_1}^{t}}{r_1-r_2}=\bar{\mathcal{U}}_{k,t},\\
+&\text{where}\\
+&\bar{\mathcal{U}}_{k,t}=\big\langle -2F_{k,t}, -2F_{k,t-1}-4F_{k,t+1}, 2F_{k,t-2}-4F_{k,t+2},2F_{k,t-2}+2F_{k,t+1}\\&\qquad-2F_{k,t+3}, -2F_{k,t-4}, 2F_{k,t-3}+2F_{k,t+3}+2F_{k,t-5}, 2F_{k,t-2}-2F_{k,t+2}\\&\qquad+2F_{k,t-6}, F_{k,t-7}-F_{k,t+7}-L_{k,t+4}-L_{k,t-4}+L_{k,t}\big\rangle,\\
+\end{align*}
+\begin{align*}
+&(ii)\quad \dfrac{{r_1}^{m-n}\bar{u_1}-{r_2}^{m-n}\bar{u_2}}{r_1-r_2}= \bar{\mathcal{V}}_{k,m-n},\\
+&\text{where}\\
+&\quad \bar{\mathcal{V}}_{k,m-n}=\big\langle 2F_{k,{m-n}}, -2F_{k,{m-n}+1}-4F_{k,{m-n}-1}, -2F_{k,{m-n}+2}\\&\qquad+4F_{k,{m-n}-2}, 2F_{k,{m-n}+1}+2F_{k,{m-n}-1}-2F_{k,{m-n}-3},\\&\qquad 2F_{k,{m-n}+4}, 2F_{k,{m-n}+3}+2F_{k,{m-n}-3}+F_{k,{m-n}+5}, -2F_{k,{m-n}+2}\\&\qquad+2F_{k,{m-n}-2}-2F_{k,{m-n}+6}, F_{k,{m-n}+7}-F_{k,{m-n}-7}-L_{k,{m-n}+4}\\&\qquad-L_{k,{m-n}-4}+L_{k,{m-n}}\big\rangle,\\
+&(iii)\quad \bar{u_3}{r_1}^{t}+\bar{u_4}{r_2}^{t}=\bar{\mathcal{W}}_{k,t},\\
+&\text{where}\\
+&\quad \bar{\mathcal{W}}_{k,t}=\big(-L_{k,t}-L_{k,t+2}-L_{k,t+4}-L_{k,t+6}+L_{k,t+8} +L_{k,t+10}+L_{k,t+12}\\&\qquad+L_{k,t+14}\big)+2\hq_{k,t},\\
+&(iv)\quad \frac{\bar{u_3}{r_1}^{t}-\bar{u_4}{r_2}^{t}}{r_1-r_2}=\bar{\mathcal{X}}_{k,t},\\
+&\text{where}\\
+&\quad \bar{\mathcal{X}}_{k,t}=\big( -F_{k,t}-F_{k,t+2}-F_{k,t+4}-F_{k,t+6}+F_{k,t+8} +F_{k,t+10}+F{k,t+12}\\&\qquad+F_{k,t+14}\big)+2\hp_{k,t},\\
+&(v)\quad \frac{\bar{u_8}{r_1}^{t}-\bar{u_9}{r_2}^{t}}{r_1-r_2}=L_{k,t+1}+L_{k,t+3}-L_{k,t+9}-L_{k,t+13},\\
+&(vi)\quad \frac{\bar{u_{17}}{r_1}^{t}-\bar{u_{18}}{r_2}^{t}}{r_1-r_2}=\bar{\mathcal{Y}}_{k,t},\\
+&\text{where}\\
+&\quad \bar{\mathcal{Y}}_{k,t}=\big( -F_{k,t}-F_{k,t+2}-F_{k,t+4}-F_{k,t+6}+F_{k,t+8} +F_{k,t+10}+F{k,t+12}\\&\qquad+F_{k,t+14}\big)+4-2\hp_{k,t}.
+\end{align*}
+\end{lemma}
+\begin{theorem}\textbf{(Catalan's Identity)}. For any integer $t$ and $s$, we have \label{2.9t}
+\begin{align*}
+(i)\quad\hp_{k,n-t}\hp_{k,n+t}-{\hp_{k,n}}^2&=(-1)^{n-t}F_{k,t}\bar{\mathcal{U}}_{k,t},\\
+(ii)\quad\hq_{k,n-t}\hq_{k,n+t}-{\hq_{k,n}}^2&=\delta{(-1)}^{n-t+1}{{F}_{k,t}}\bar{\mathcal{V}}_{k,m-n}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we have
+\begin{align*}
+&\hp_{k,n-t}\hp_{k,n+t}-{\hp_{k,n}}^2=\big(\frac{\bar{r_1}{{r_1}}^{n-t}-\bar{r_2}{r_{2}}^{n-t}}{r_1-r_2}\big)\big(\frac{\bar{r_1}{{r_1}}^{n+t}-\bar{r_2}{r_{2}}^{n+t}}{r_1-r_2}\big)\\&\quad -\big(\frac{\bar{r_1}{{r_1}}^{n}-\bar{r_2}{r_{2}}^{n}}{r_1-r_2}\big)^2\\
+&\quad =\frac{1}{(r_1-r_2)^2}\big[{\bar{r_1}}^2{r_1}^{2n}-{\bar{r_1}\bar{r_2}}{r_1}^{n-t}{r_2}^{n+t}-{\bar{r_2}\bar{r_1}}{r_2}^{n-t}{r_1}^{n+t}+{\bar{r_2}}^2{r_2}^{2n}\\&\quad -{\bar{r_1}}^2{r_1}^{2n}+{\bar{r_1}\bar{r_2}}{(r_1r_2)}^{n}+{\bar{r_2}\bar{r_1}}{(r_1r_2)}^{n}-{\bar{r_2}}^2{r_2}^{2n}\big]\\
+\end{align*}
+\begin{align*}
+&\quad =\frac{(r_1r_2)^n}{(r_1-r_2)^2}\big[{\bar{r_1}\bar{r_2}}{r_1}^{t}{r_1}^{-t}-{\bar{r_2}\bar{r_1}}{r_1}^{t}{r_2}^{-t}-{\bar{r_1}\bar{r_2}}{r_2}^{t}{r_2}^{-t}+{\bar{r_2}\bar{r_1}}{r_2}^{t}{r_2}^{-t}\big]\\
+&\quad =\frac{(r_1r_2)^n}{(r_1-r_2)^2}\big[{r_1}^t[(\bar{r_1}\bar{r_2}){r_1}^{-t}-(\bar{r_2}\bar{r_1}){r_2}^{-t}]-{r_2}^t[(\bar{r_1}\bar{r_2}){r_1}^{-t}-(\bar{r_2}\bar{r_1}){r_2}^{-t}]\big]\\
+&\quad =(r_1r_2)^{n}\big(\frac{{r_1}^t-{r_2}^t}{r_1-r_2}\big)\big(\frac{(\bar{r_1}\bar{r_2}){r_1}^{-t}-(\bar{r_2}\bar{r_1}){r_2}^{-t}}{r_1-r_2}\big)\\
+&\quad =(r_1r_2)^{n-t}\big(\frac{{r_1}^t-{r_2}^t}{r_1-r_2}\big)\big(\frac{(\bar{r_1}\bar{r_2}){r_1}^{t}-(\bar{r_2}\bar{r_1}){r_2}^{t}}{r_1-r_2}\big).
+\end{align*}
+Using lemma (\ref{2.8l}) and $r_1r_2=-1$, we obtain
+\begin{align*}
+&=(-1)^{n-t}F_{k,t}\bar{\mathcal{U}}_{k,t}.
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.8l}).
+\end{proof}
+\begin{theorem}\textbf{(Cassini's Identity)}. For all $n\geq{1}$, we have\label{2.10t}
+\begin{align*}
+(i)\quad\hp_{k,n-1}\hp_{k,n+1}-{\hp_{k,n}}^2&=(-1)^{n-1}F_{k,t}\bar{\mathcal{U}}_{k,1},\\
+(ii)\quad\hq_{k,n-1}\hq_{k,n+1}-{\hq_{k,n}}^2&=\delta{(-1)}^{n}{{F}_{k,t}}\bar{\mathcal{V}}_{k,1}.
+\end{align*}
+\end{theorem}
+\begin{theorem}\textbf{(d'Ocagene's Identity)}. Let $n$ be any non-negative integer and $t$ a natural number. If $t\geq {n+1}$, then we have\label{2.11t}
+\begin{align*}
+(i)\quad\hp_{k,t}\hp_{k,n+1}-\hp_{k,t+1}\hp_{k,n}&=(-1)^n \bar{\mathcal{V}}_{k,t-n},\\
+(ii)\quad\hq_{k,t}\hq_{k,n+1}-\hq_{k,t+1}\hq_{k,n}&=(-1)^{n+1}\delta \bar{\mathcal{V}}_{k,t-n}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+&\hp_{k,t}\hp_{k,n+1}-\hp_{k,t+1}\hp_{k,n}=\big(\dfrac{\bar{r_1}{{r_1}}^{t}-\bar{r_2}{r_{2}}^{t}}{r_1-r_2}\big)\big(\dfrac{\bar{r_1}{{r_1}}^{n+1}-\bar{r_2}{r_{2}}^{n+1}}{r_1-r_2}\big)\\&\quad -\big(\dfrac{\bar{r_1}{{r_1}}^{t+1}-\bar{r_2}{r_{2}}^{t+1}}{r_1-r_2}\big)\big(\dfrac{\bar{r_1}{{r_1}}^{n}-\bar{r_2}{r_{2}}^{n}}{r_1-r_2}\big)\\
+&\quad=\frac{1}{(r_1-r_2)^2}\big[{\bar{r_1}}^2{r_1}^{n+t+1}-{\bar{r_1}\bar{r_2}}{r_1}^{t}{r_2}^{n+1}-{\bar{r_2}\bar{r_1}}{r_2}^{t}{r_1}^{n+1}+{\bar{r_2}}^2{r_2}^{n+t+1}\\&\quad -{\bar{r_1}}^2{r_1}^{n+t+1}+{\bar{r_1}\bar{r_2}}{({r_1}^{t+1}{r_2}^n)}+{\bar{r_2}\bar{r_1}}{({r_1}^n{r_2}^{t+1})}-{\bar{r_2}}^2{r_2}^{n+t+1}\big]\\
+&\quad =\frac{(r_1r_2)^n}{(r_1-r_2)^2}\big[\bar{r_1}\bar{r_2}{r_1}^{t-n}(r_1-r_2)-\bar{r_2}\bar{r_1}{r_2}^{t-n}(r_1-r_2)\big]\\
+&\quad =(r_1r_2)^n\big[\frac{\bar{r_1}\bar{r_2}{r_1}^{t-n}-\bar{r_2}\bar{r_1}{r_2}^{t-n}}{r_1-r_2}\big].
+\end{align*}
+Using lemma (\ref{2.8l}) and $r_1r_2=-1$, we obtain
+\begin{align*}
+&=(-1)^n \bar{\mathcal{V}}_{k,t-n}.
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.8l}).
+\end{proof}
+\begin{theorem} For any integer $t$, we have\label{2.12t}
+\begin{align*}
+&(i)\quad{\hp_{k,t}}^2+{\hq_{k,t}}^2=\frac{1}{\delta}\big[(1+\delta)\bar{\mathcal{W}}_{k,2t}+(\delta-1)(-1)^t\hq_{k,0}\big],\\
+&(ii)\quad{\hp_{k,t}}^2-{\hq_{k,t}}^2=\frac{1}{\delta}\big[(1-\delta)\bar{\mathcal{W}}_{k,2t}-(1+\delta)(-1)^t\hq_{k,0}\big].
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+&{\hp_{k,t}}^2+{\hq_{k,t+1}}^2=\big(\dfrac{\bar{r_1}{{r_1}}^{t}-\bar{r_2}{r_{2}}^{t}}{r_1-r_2}\big)^2+\big(\bar{r_1}{{r_1}}^{t}+\bar{r_2}{r_{2}}^{t}\big)^2\\
+&\quad =\frac{1}{(r_1-r_2)^2}\big[(\bar{r_1})^2{r_1}^{2t}+(\bar{r_2})^2{r_2}^{2t}-\bar{r_1}\bar{r_2}{r_1r_2}^{t}-\bar{r_2}\bar{r_1}{r_1r_2}^{t}\big]\\&\quad +\big[(\bar{r_1})^2{r_1}^{2t}+(\bar{r_2})^2{r_2}^{2t}+\bar{r_1}\bar{r_2}{r_1r_2}^{t}+\bar{r_2}\bar{r_1}{r_1r_2}^{t}\big]\\
+&\quad = \frac{(1+\delta)}{\delta}\big[(\bar{r_1})^2{r_1}^{2t}+\bar{r_2})^2{r_2}^{2t}\big)+\frac{(\delta-1)(-1)^t}{\delta}\big[\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}\big].\\
+&\text{Using lemma (\ref{2.4l}), we obtain}\\
+&\quad =\frac{1}{\delta}\big[(1+\delta)\bar{\mathcal{W}}_{k,2t}+(\delta-1)(-1)^t\hq_{k,0}\big].
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+\end{proof}
+\begin{theorem} For any integer $r$, $s\geq t$,  we have\label{2.13t}
+\begin{align*}
+\hp_{k, r+s}\hq_{k,r+t}-\hp_{k,r+t}\hq_{k,r+s}=2(-1)^{r+t}\big(\hq_{k,0}-2\big)F_{k,s-t}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}) and $r_1r_2=-1$, we get
+\begin{align*}
+&\hp_{k, r+s}\hq_{k,r+t}-\hp_{k,r+t}\hq_{k,r+s}=\dfrac{1}{r_1-r_2}\big[\big(\bar{r_1}{r_1}^{r+s}-\bar{r_2}{r_2}^{r+s}\big)\cdot\\&\quad\big(\bar{r_1}{r_1}^{r+t}+\bar{r_2}{r_2}^{r+t}\big)-\big(\bar{r_1}{r_1}^{r+t}-\bar{r_2}{r_2}^{r+t}\big)\big(\bar{r_1}{r_1}^{r+s}+\bar{r_2}{r_2}^{r+s}\big)\big]\\
+&\quad=\frac{(r_1r_2)^r}{r_1-r_2}\big[(\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}){r_1}^s{r_2}^t-(\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}){r_1}^t{r_2}^s\big]\\
+&\quad=\dfrac{(r_1r_2)^r}{r_1-r_2}\big(\bar{r_1}\bar{r_2}+\bar{r_2}\bar{r_1}\big)\big({r_1}^s{r_2}^t-{r_1}^t{r_2}^s\big).\\
+&\text{Using lemma (\ref{2.4l}), we obtain}\\
+&\quad =2(-1)^{r+t}\big(\hq_{k,0}-2\big)F_{k,s-t}.
+\end{align*}
+\end{proof}
+\begin{theorem} For any integer $s$, and $ t$,  we have\label{2.14t}
+\begin{align*}
+&(i)\quad \hp_{k, s+t}+(-1)^{t}\hp_{k,s-t}=\hp_{k,s}L_{k,t},\\
+&(ii)\quad \hq_{k, s+t}+(-1)^{t}\hq_{k,s-t}=\hq_{k,s}L_{k,t}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Using theorem (\ref{2.3}), we get
+\begin{align*}
+&\hp_{k, s+t}+(-1)^{t}\hp_{k,s-t}=\dfrac{1}{r_1-r_2}\big[\big(\bar{r_1}{r_1}^{s+t}-\bar{r_2}{r_2}^{s+t}\big)\\
+&\quad +(-1)^t\big(\bar{r_1}{r_1}^{s-t}+\bar{r_2}{r_2}^{s-t}\big)\big]\\
+&\quad= \frac{1}{r_1-r_2}\big[\bar{r_1}{r_1}^{s+t}-\bar{r_2}{r_2}^{s+t}+\bar{r_1}{r_1}^{s}{r_2}^t-\bar{r_2}{r_1}^{t}{r_2}^s\big]\\
+&\quad = \frac{1}{r_1-r_2}\big[\bar{r_1}{r_1}^{s}({r_1}^t+{r_2}^t)-\bar{r_2}{r_2}^{s}({r_1}^t+{r_2}^t)\\
+&\quad =(\dfrac{\bar{r_1}{r_1}^{s}-\bar{r_2}{r_2}^{s}}{r_1-r_2}\big)\big({r_1}^t+{r_2}^t\big).\\
+&\text{Using theorem (\ref{2.3}), we obtain}\\
+& \quad =\hp_{k,s}L_{k,t}.
+\end{align*}
+The proof of (ii) is similar to (i), using theorem (\ref{2.3}).
+\end{proof}
+\begin{theorem} For any integer $s\leq t$,  we have\label{2.15t}
+\begin{align*}
+&(i)\quad \hp_{k, s}\hp_{k,t}-\hp_{k,t}\hp_{k,s}=(-1)^s{\delta}^{-\frac{1}{2}}\bar{u_5} F_{k, t-s},\\
+&(ii)\quad \hq_{k, s}\hq_{k,t}-\hq_{k,t}\hq_{k,s}=(-1)^t{\delta}^{\frac{1}{2}}\bar{u_5} F_{k, s-t},\\
+&(iii)\quad \hp_{k, t}\hq_{k,s}-\hp_{k,s}\hq_{k,t}=2(-1)^sF_{k, t-s}\hq_{k,0},\\
+&(iv)\quad \hp_{k, t}\hq_{k,s}-\hq_{k,t}\hp_{k,s}=2(-1)^s\bar{\mathcal{V}}_{k,t-s}.
+\end{align*}
+\end{theorem}
+\begin{proof}
+
+(i). Using theorem (\ref{2.3}), we have
+\begin{align*}
+&\hq_{k, s}\hq_{k,t}-\hq_{k,t}\hq_{k,s}=\big(\frac{\bar{r_1}{r_1}^s-\bar{r_2}{r_2}^s}{r_1-r_2}\big)\big(\frac{\bar{r_1}{r_1}^t-\bar{r_2}{r_2}^t}{r_1-r_2}\big)\\
+&\quad-\big(\frac{\bar{r_1}{r_1}^t-\bar{r_2}{r_2}^t}{r_1-r_2}\big)\big(\frac{\bar{r_1}{r_1}^s-\bar{r_2}{r_2}^s}{r_1-r_2}\big)\\
+&\quad =\dfrac{1}{(r_1-r_2)^2}\big({r_1}^t{r_2}^s-{r_1}^s{r_2}^t\big)\big(\bar{r_1}\bar{r_{2}}-\bar{r_2}\bar{r_1}\big)\\
+&\quad =(r_1r_2)^s(r_1-r_2)^{-1}\big(\bar{r_1}\bar{r_{2}}-\bar{r_2}\bar{r_1}\big)\big(\frac{{r_1}^{t-s}-{r_2}^{t-s}}{r_1-r_2}\big)\\
+&\text{Using lemma (\ref{2.4l}), we obtain}\\
+&\quad =(-1)^s{\delta}^{-\frac{1}{2}}\bar{u_5} F_{k, t-s}.
+\end{align*}
+The proof of (ii), (iii) and (iv) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+\end{proof}
+\begin{theorem} For any integer $n\ge 0$,  we have\label{2.15t}
+\begin{align*}
+&(i)\quad \hp_{k, n}\bar{\hq}_{k,n}-\bar{\hp}_{k,n}\hp_{k,n}=(-1)^n{\delta}^{-\frac{1}{2}}(2\bar{u_{10}}-\bar{u_{14}}),\\
+&(ii)\quad \hp_{k, n}\bar{\hq}_{k,n}+\bar{\hp}_{k,n}\hp_{k,n}=2{\delta}^{-\frac{1}{2}}(L_{k,t+1}+L_{k,t+3}-L_{k,t+9}-L_{k,t+13})\\&\quad +(-1)^n{\delta}^{-\frac{1}{2}}(2\bar{u_{15}}-\bar{u_{16}}),\\
+&(iii)\hp_{k, n}{\hq}_{k,n}-\bar{\hp}_{k,n}\bar{\hp}_{k,n}=\bar{\mathcal{X}}_{k,2n}+{\delta}^{-\frac{1}{2}}\big((-1)^n\bar{u_5}-\bar{u_1}+\bar{u_2}\big)-\bar{\mathcal{Y}}_{k,2n}.\\
+\end{align*}
+\end{theorem}
+\begin{proof}
+(i). Using theorem (\ref{2.3}), we have
+\begin{align*}
+&\hp_{k, n}\bar{\hq}_{k,n}-\bar{\hp}_{k,n}\hp_{k,n}=\big(\frac{\bar{r_1}{r_1}^n-\bar{r_2}{r_2}^n}{r_1-r_2}\big)\big({\bar{r_3}{r_1}^n+\bar{r_4}{r_2}^n}\big)\\
+&\quad-\big(\frac{\bar{r_3}{r_1}^n-\bar{r_4}{r_2}^n}{r_1-r_2}\big)\big({\bar{r_1}{r_1}^n+\bar{r_2}{r_2}^n}\big)\\
+&\quad =\dfrac{(r_1r_2)^n}{(r_1-r_2)}\big(2\bar{r_1}\bar{r_4}-\bar{r_2}\bar{r_3}-\bar{r_3}\bar{r_2}\big)\\
+&\text{Using lemma (\ref{2.4l}), we obtain}\\
+&\quad =(-1)^n{\delta}^{-\frac{1}{2}}(2\bar{u_{10}}-\bar{u_{14}}).
+\end{align*}
+The proof of (ii) and (iii) is similar to (i), using theorem (\ref{2.3}) and lemma (\ref{2.4l}).
+\end{proof}
+
+\section{{Some Binomial and Congruence Properties of Hyperbolic $k$- Fibonacci and $k$- Lucas Octonions}}
+In this section, we explore some binomial and congruence properties of the hyperbolic \kF\vspace{0mm} and \kL\vspace{0mm} octonions.
+\begin{lemma}
+For $n\ge 0$, we have\label{3.1l}
+\begin{align*}
+&(i)\quad {r_1}^n=r_1 {F}_{k,n}+{F}_{k,n-1},\\
+&(ii)\quad {r_2}^n=r_2 {F}_{k,n}+{F}_{k,n-1},\\
+&(iii)\quad {r_1}^{2n}={r_1}^n{L}_{k,n}-(-1)^n,\\
+&(iv)\quad {r_2}^{2n}={r_2}^n{L}_{k,n}-(-1)^n,\\
+&(v)\quad {r_1}^{tn}={r_1}^n\dfrac{{F}_{k,tn}}{{F}_{k,n}}-(-1)^n-\dfrac{{F}_{k,(t-1)n}}{{F}_{k,n}},\\
+&(vi)\quad {r_2}^{tn}={r_2}^n\dfrac{{F}_{k,tn}}{{F}_{k,n}}-(-1)^n-\dfrac{{F}_{k,(t-1)n}}{{F}_{k,n}},\\
+&(vii)\quad {r_1}^{sn}{F}_{k,rn}-{r_1}^{rn}{F}_{k,sn}=(-1)^{sn}{F}_{k,(r-s)n},\\
+&(viii)\quad {r_2}^{sn}{F}_{k,rn}-{r_2}^{rn}{F}_{k,sn}=(-1)^{sn}{F}_{k,(r-s)n},\\
+&(ix)\quad 1+k{r_1}+{r_1}^{2(2^{n+1}+1)}={L}_{k,2^{n+1}}{r_1}^{2(2^{n}+1)},\\
+&(x)\quad 1+k{r_2}+{r_2}^{2(2^{n+1}+1)}={L}_{k,2^{n+1}}{r_1}^{2(2^{n}+1)},\\
+&(xi) \quad \text{For every $n, t\geq 1$ and $l_n=\sum\limits_{i=1}^n{L}_{k,2^i}$, we have }\\
+ &\quad (a)\quad 1+{r_1}^{2^n}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}}{r_1}^{2^{n-1}};\\
+\dfrac{l_{n-1}}{l_{n-t-1}}{r_1}^{2^{n-t}}-l_{n-1}\sum\limits_{i=2}^{t}\dfrac{1}{l_{n-i}}, & \text{for $t=2, 3, 4,\hdots, n-2 $ };\\l_{n-1}{r_1}^2-l_{n-1}\sum\limits_{i=2}^{n-1}\dfrac{1}{l_{n-i}}
+ \end{cases},\\
+ \end{align*}
+\begin{align*}
+ &\quad (b)\quad 1+{r_2}^{2^n}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}}{r_2}^{2^{n-1}};\\
+\dfrac{l_{n-1}}{l_{n-t-1}}{r_2}^{2^{n-t}}-l_{n-1}\sum\limits_{i=2}^{t}\dfrac{1}{l_{n-i}}, & \text{for $t=2, 3, 4,\hdots, n-2 $ };\\l_{n-1}{r_2}^2-l_{n-1}\sum\limits_{i=2}^{n-1}\dfrac{1}{l_{n-i}}.
+ \end{cases},\\
+ &(xii)\quad r_1^{2t}=\dfrac{{F}_{k,2t}}{k}r_1\sqrt{\delta}-\dfrac{{L}_{k,2t-1}}{k},\\
+&(xiii)\quad r_2^{2t}=-\dfrac{{F}_{k,2t}}{k}r_2\sqrt{\delta}-\dfrac{{L}_{k,2t-1}}{k}.\\
+&(xiv)\quad r_1^{2t+1}=\dfrac{{L}_{k,2t+1}}{k}r_1-\dfrac{{F}_{k,2t}}{k}\sqrt{\delta},\\
+&(xv)\quad r_2^{2t+1}=\dfrac{{L}_{k,2t+1}}{k}r_2+\dfrac{{F}_{k,2t}}{k}\sqrt{\delta}.
+\end{align*} 
+\end{lemma}
+\begin{proof}
+(i). We use induction principle on $n$, for $n=1$, we have
+\begin{align*}
+&{r_1}^1=1\cdot r_1+0=r_1 {F}_{k,1}+{F}_{k,0}.
+\end{align*}
+For $n=2$, since $r_1$ is root of $r^2-kr-1=0$ therefore we have
+\begin{align*}
+&\quad {r_1}^2=kr_1+1=r_1 {F}_{k,2}+{F}_{k,1}.\\
+&\text{Now, consider}\\
+&\quad {r_1}^{n+1}={r_1}^n\cdot r_1 = (r_1 {F}_{k,n}+{F}_{k,n-1})r_1= {r_1}^2F_{k,n}+r_1F_{k,n-1}.\\
+&\text{Using ${r_1}^2=kr_1+1$, we have}\\
+&\quad =(kr_1+1)F_{k,n}+r_1F_{k,n-1} = r_1(kF_{k,n}+F_{k,n-1})+F_{k,n} = r_1F_{k,n+1}+F_{k,n}.
+\end{align*}
+This complete the proof of (i).\\
+(iii). Using (i), we have
+\begin{align*}
+{r_1}^{2n}&={F}_{k,n}{r_1}^{n+1}+{r_1}^n{F}_{k,n-1}\\
+&={F}_{k,n}({r_1}{F}_{k,n+1}+{F}_{k,n})+{r_1}^n{F}_{k,n-1}\\
+&={r_1}{F}_{k,n}{F}_{k,n+1}+{F}_{k,n-1}{r_1}^n+{F}_{k,n}^2\\
+&=({r_1}^n-{F}_{k,n-1}){F}_{k,n+1}+{F}_{k,n-1}{r_1}^n+{F}_{k,n}^2\\
+&={r_1}^n({F}_{k,n+1}+{F}_{k,n-1})+{F}_{k,n}^2-{F}_{k,n}F_{k,n-1}.
+\end{align*}
+Using ${F}_{k,n-1}{F}_{k,n+1}-{F}_{k,n}^2=(-1)^n$ and ${F}_{k,n+1}+{F}_{k,n-1}={L}_{k,n}$, we obtain
+\begin{align*}
+{r_1}^{2n}={L}_{k,n}{r_1}^n-(-1)^n.
+\end{align*}
+This complete the proof of (iii).\\
+The proofs of (ii), (iv), (v), (vii), (viii), (ix), (x), (xi),(xii), (xiii), (xiv) and (xv) are similar to (i) and (iii).
+\end{proof}
+\begin{theorem}For all $n, r, s, t\geq 1$, we have\label{3.2t}
+\begin{align*}
+&(i)\quad\hp_{k,n+t}={F}_{k,n}\hp_{k,t+1}+{F}_{k,n-1}\hp_{k,t},\\
+&(ii)\quad\hp_{k,2n+t}={L}_{k,n}\hp_{k,n+t}-(-1)^n\hp_{k,t},\\
+&(iii)\quad\hp_{k,sn+t}=\dfrac{{F}_{k,sn}}{{F}_{k,n}}\hp_{k,n+t}-(-1)^n\dfrac{{F}_{k,(s-1)n}}{{F}_{k,n}}\hp_{k,t},\\ 
+&(iv)\quad\hp_{k,sn+t}{F}_{k,rn}-\hp_{k,rn+t}{F}_{k,sn}=(-1)^{sn}\hp_{k,t}{F}_{k,(r-s)n},\\
+&(v)\quad\hp_{k,t+2^{n+1}+2}=\dfrac{\hp_{k,t}+k\hp_{k,t+1}+\hp_{k,t+2^{n+2}+2}}{{L}_{k,2^{n+1}}},\\
+&(vi)\quad\hq_{k,t+2^{n+1}+2}=\dfrac{\hq_{k,t}+k\hq_{k,t+1}+\hq_{k,t+2^{n+2}+2}}{{L}_{k,2^{n+1}}},\\
+&(vii) \quad \text{For every $n, t\geq 1$ and $l_n=\sum\limits_{i=1}^n{L}_{k,2^i}$, we have }\\
+&\qquad (a)\quad \hp_{k,{t+2^n}}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}} \hp_{k,t+2^{n-1}}- \hp_{k,t};\\
+\dfrac{l_{n-1}}{l_{n-t-1}} \hp_{k,{t+2^{n-s}}}-l_{n-1}\sum\limits_{i=2}^{s}(1+\dfrac{1}{l_{n-i}}) \hp_{k,t},&\\\quad\quad\quad\quad\quad\qquad\qquad   \text{If $s=2, 3, 4,\hdots, n-2 $ };\\l_{n-1} \hp_{k,{t+2}}-l_{n-1}\sum\limits_{i=2}^{n-1}(\dfrac{1}{l_{n-i}}+1) \hp_{k,t}.
+ \end{cases},\\
+ &\qquad (b)\quad \hq_{k,{t+2^n}}= \begin{cases}
+ \dfrac{l_{n-1}}{l_{n-2}} \hq_{k,t+2^{n-1}}- \hq_{k,t};\\
+\dfrac{l_{n-1}}{l_{n-t-1}} \hq_{k,{t+2^{n-s}}}-l_{n-1}\sum\limits_{i=2}^{s}(1+\dfrac{1}{l_{n-i}}) \hq_{k,t},&\\\quad\quad\quad\quad\quad\quad\quad\qquad \text{If $s=2, 3, 4,\hdots, n-2 $ };\\l_{n-1} \hq_{k,{t+2}}-l_{n-1}\sum\limits_{i=2}^{n-1}(\dfrac{1}{l_{n-i}}+1) \hq_{k,t}.
+ \end{cases},\\
+&\qquad (c)\quad  \hp_{k,{2^rn+t}}= \begin{cases}
+\sum\limits_{i+j=n}\binom{n}{i}(\dfrac{l_{r-1}}{l_{r-2}})^i(-1)^j \hp_{k,2^{r-1}i+t};\\
+\sum\limits_{i+j=n}\binom{n}{i}(\dfrac{l_{r-1}}{l_{r-s-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\hp_{k,2^{n-s}i+t}, &\\\quad\quad\quad\quad\quad\qquad\qquad \text{If $s=2, 3, 4,\hdots, n-2 $ };\\\sum\limits_{i+j=n}\binom{n}{i}({l_{r-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\hp_{k,2i+t}.
+ \end{cases},\\
+ &\qquad (d)\quad  \hq_{k,{2^rn+t}}= \begin{cases}
+\sum\limits_{i+j=n}\binom{n}{i}(\dfrac{l_{r-1}}{l_{r-2}})^i(-1)^j \hq_{k,2^{r-1}i+t};\\
+\sum\limits_{i+j=n}\binom{n}{i}(\dfrac{l_{r-1}}{l_{r-s-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\hq_{k,2^{n-s}i+t}, &\\\quad\quad\quad\quad\quad\qquad\qquad \text{If $s=2, 3, 4,\hdots, n-2 $ };\\\sum\limits_{i+j=n}\binom{n}{i}({l_{r-1}})^i(-1)^j (\sum_{h=2}^s(1+\dfrac{l_{r-1}}{l_{r-h}})^j\hq_{k,2i+t}.
+ \end{cases},\\
+ \end{align*}
+\begin{align*}
+ &(vii)\quad\hp_{k,s+2t}=\dfrac{{F}_{k,2t}}{k}\hq_{k,s+1}-\dfrac{{L}_{k,2t-1}}{k}\hp_{k,s},\\
+&(viii)\quad\hq_{k,s+2t}=\dfrac{{F}_{k,2t}}{k}\delta\hp_{k,s+1}-\dfrac{{L}_{k,2t-1}}{k}\hq_{k,s},\\
+&(ix)\quad\hp_{k,s+2t}-\dfrac{{F}_{k,2t}}{k}\hp_{k,s+2}+\dfrac{{F}_{k,2t-2}}{k}\hp_{k,s}=0,\\
+&(x)\quad\hq_{k,s+2t}-\dfrac{{F}_{k,2t}}{k}\hq_{k,s+2}+\dfrac{{F}_{k,2t-2}}{k}\hq_{k,s}=0,\\
+&(xi)\quad\hp_{k,s+2t+1}=\dfrac{{L}_{k,2t+1}}{k}\hp_{k,s+1}-\dfrac{{F}_{k,2t}}{k}\hq_{k,s},\\
+&(xii)\quad\hq_{k,s+2t+1}=\dfrac{{L}_{k,2t+1}}{k}\hq_{k,s+1}-\delta\dfrac{{F}_{k,2t}}{k}\hp_{k,s},\\
+&(xiii)\quad\hp_{k,s+2t+1}-\dfrac{{L}_{k,2t+1}}{k(k^2+3)}\hp_{k,s+3}+\dfrac{{F}_{k,2t-2}}{k(k^2+3)}\hq_{k,s}=0,\\
+&(xiv)\quad\hq_{k,s+2t+1}-\dfrac{{L}_{k,2t+1}}{k(k^2+3)}\hq_{k,s+3}+\dfrac{{F}_{k,2t-2}}{k(k^2+3)}\delta\hp_{k,s}=0.
+\end{align*}
+\end{theorem}
+\begin{proof}
+(i). From (i) and (ii) of lemma (\ref{3.1l}), we have
+\begin{align}\label{2.1e}
+&\quad {r_1}^n=r_1 {F}_{k,n}+{F}_{k,n-1},
+\end{align}
+\begin{align}\label{2.2e}
+&\quad {r_2}^n=r_2 {F}_{k,n}+{F}_{k,n-1}.
+\end{align}
+Multiplying (\ref{2.1e}) by $\dfrac{\bar{r_1}{r_1}^t}{r_1-r_2}$ and (\ref{2.2e}) by $\dfrac{\bar{r_2}{r_2}^t}{r_1-r_2}$, we get
+\begin{align}\label{2.3e}
+&\quad \dfrac{\bar{r_1}{r_1}^{n+t}}{r_1-r_2}=\dfrac{\bar{r_1}{r_1}^{t+1}}{r_1-r_2} {F}_{k,n}+\dfrac{\bar{r_1}{r_1}^{t}}{r_1-r_2}{F}_{k,n-1},
+\end{align}
+\begin{align}\label{2.4e}
+&\quad \dfrac{\bar{r_2}{r_2}^{n+t}}{r_1-r_2}=\dfrac{\bar{r_2}{r_2}^{t+1}}{r_1-r_2} {F}_{k,n}+\dfrac{\bar{r_2}{r_2}^{t}}{r_1-r_2}{F}_{k,n-1}.
+\end{align}
+Subtracting (\ref{2.3e}) and (\ref{2.4e}), we obtain
+\begin{align*}
+&\quad \dfrac{\bar{r_1}{r_1}^{n+t}-\bar{r_2}{r_2}^{n+t}}{r_1-r_2}=\dfrac{\bar{r_1}{r_1}^{t+1}-\bar{r_2}{r_2}^{t+1}}{r_1-r_2} {F}_{k,n}+\dfrac{\bar{r_1}{r_1}^{t}-\bar{r_2}{r_2}^{t}}{r_1-r_2}{F}_{k,n-1}.
+\end{align*}
+Using Binet formula of the hyperbolic \kF\vspace{0mm} octonion $\hp_{k,n}$, we get
+\begin{align*}
+&\quad\hp_{k,n+t}={F}_{k,n}\hp_{k,t+1}+{F}_{k,n-1}\hp_{k,t}.
+\end{align*}
+The proofs of (ii)-(xiv) are similar to (i) using lemma (\ref{3.1l}).
+\end{proof}
+\begin{theorem}For all $n, r, s, t\geq 1$, we have\label{2.3t}
+\begin{align*}
+&(i)\quad\hp_{k,rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i} {F}_{k,r}^{i}{F}_{k,r-1}^{n-i}\hp_{k,i+t},\\
+&(ii)\hq_{k,rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i} {F}_{k,r}^{i}{F}_{k,r-1}^{n-i}\hq_{k,i+t},\\
+&(iii)\quad\hp_{k,2rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)(r+1)}{L}_{k,r}^{i}\hp_{k,ri+t},\\
+&(iv)\quad\hq_{k,2rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)(r+1)}{L}_{k,r}^{i}\hq_{k,ri+t},\\
+&(v)\quad\hp_{k,trn+l}=\dfrac{1}{{F}_{k,r}^{n}}\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)(r+1)} {F}_{k,(t-1)r}^{n-i}{F}_{k,tr}^{i}\hp_{k,ri+l},\\
+&(vi)\quad\hq_{k,trn+l}=\dfrac{1}{{F}_{k,r}^{n}}\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)(r+1)} {F}_{k,(t-1)r}^{n-i}{F}_{k,tr}^{i}\hq_{k,ri+l},\\
+&(vii)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{i} \hp_{k,r(n-i)+i+t}{F}_{k,r}^{i}=\hp_{k,t}{F}_{k,r-1}^{n},\\
+&(viii)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{i} \hq_{k,r(n-i)+i+t}{F}_{k,r}^{i}=\hq_{k,t}{F}_{k,r-1}^{n},\\
+&(ix)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)} \hp_{k,ri+t}{F}_{k,r-1}^{(n-i)}=\hp_{k,n+t}{F}_{k,r}^{n} ,\\
+&(x)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)} \hq_{k,ri+t}{F}_{k,r-1}^{(n-i)}=\hq_{k,n+t}{F}_{k,r}^{n} ,\\
+&(xi)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)}{F}_{k,sm}^{(n-i)}{F}_{k,rm}^{(i)} \hp_{k,m[rn+i(s-r)]+t}=(-1)^{smn}\hp_{k,t}{F}_{k,(r-s)m}^{n},\\
+&(xii)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)}{F}_{k,sm}^{(n-i)}{F}_{k,rm}^{(i)} \hq_{k,m[rn+i(s-r)]+t}=(-1)^{smn}\hq_{k,t}{F}_{k,(r-s)m}^{n},\\
+&(xiv)\quad\hp_{k,n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j} k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&(xv)\quad\hq_{k,n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j} k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hq_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&(xvi)\quad\hp_{k,(2^{r+2}+2)n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j} k^{j}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,(2^{r+1}+2)i+j+t},\\
+&(xvii)\quad\hq_{k,(2^{r+2}+2)n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j} k^{j}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hq_{k,(2^{r+1}+2)i+j+t},\\
+&(xviii)\quad\hp_{k,(2^{r+1}+2)n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j} k^{j}{{L}_{k,2^{r+1}}}^{-n}\hp_{k,(2^{r+1}+2)i+j+t},\\
+\end{align*}
+\begin{align*}
+&(xix)\quad\hp_{k,(2^{r+1}+2)n+t}=\sum\limits_{i+j+s=n}\binom{n}{i, j}) k^{j}{{L}_{k,2^{r+1}}}^{-n}\hp_{k,(2^{r+1}+2)i+j+t},\\
+&(xx)\quad\sum\limits_{i=0}^{n}\binom{n}{i}k^{(i-n)}({L}_{k,2t-1})^{(n-i)}\hp_{k,2ti+s}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n}{2}}\hp_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}(\mathcal{F}_{k,2t})^n\delta^{\frac{n-1}{2}}\hq_{k,n+s},& \text{if $n$ is odd,}\end{cases}, \\
+&(xxi)\quad\sum\limits_{i=0}^{n}\binom{n}{i}k^{(i-n)}({L}_{k,2t-1})^{(n-i)}\hq_{k,2ti+s}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+k^{-n}({F}_{k,2t})^n\delta^{\frac{n}{2}}\hq_{k,n+s},& \text{if $n$ is even;}\\
+k^{-n}({F}_{k,2t})^n\delta^{\frac{n+1}{2}}\hp_{k,n+s},& \text{if $n$ is odd.}
+\end{cases}, \\
+&(xxii)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\hp_{k,2t(n-i)+n}\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+{\delta}^{\frac{n}{2}}\hp_{k,0},& \text{if $n$ is even;}\\
+{\delta}^{\frac{n-1}{2}}\hq_{k,0},& \text{if $n$ is odd,}
+\end{cases},\\
+&(xxiii)\quad\sum\limits_{i=0}^{n}\binom{n}{i}(-1)^{(n-i)}k^{-i}(L_{k,2t+1})^i\hq_{k,2t(n-i)+n}\\\
+&\qquad\qquad\qquad\qquad=\begin{cases} 
+{\delta}^{\frac{n}{2}}\hq_{k,0},& \text{if $n$ is even;}\\
+{\delta}^{\frac{n+1}{2}}\hp_{k,0},& \text{if $n$ is odd.}
+\end{cases} 
+\end{align*}
+\end{theorem}
+\begin{proof}
+(i). From (i) and (ii) of lemma (\ref{3.1l}), we have
+\begin{align*}
+&\quad r_1^{r}=F_{k,r}r_1+F_{k,r-1},\\
+&\quad r_2^{r}=F_{k,r}r_2+F_{k,r-1}.
+\end{align*}
+Now, by the binomial theorem, we have
+\begin{align}\label{2.5e}
+&\quad r_1^{rn}=(F_{k,r}r_1+F_{k,r-1})^n=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}r_1^i, \\
+&\quad r_2^{rn}=(F_{k,r}r_2+F_{k,r-1})^n=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}r_2^i.\label{2.6e}
+\end{align}
+Multiplying (\ref{2.5e}) by $\dfrac{\bar{r_1}}{r_1-r_2}$ and (\ref{2.6e}) by $\dfrac{\bar{r_2}}{r_1-r_2}$ and subtracting, we obtain \\
+\begin{align*}
+& \dfrac{\bar{r_{1}}r_1^{rn+t}-\bar{r_{2}}r_2^{rn+t}}{r_1-r_2}=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}(\dfrac{\bar{r_{1}}r_1^{i+t}-\bar{r_{2}}r_2^{i+t}}{r_1-r_2}).\\
+&\text{Using Binet foemula of $\hp_{k,rn+t}$ and $\hp_{k,i+t}$, we get}\\
+&\hp_{k,rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}\hp_{k,i+t}.
+\end{align*}
+(ii). Multiplying (\ref{2.5e}) by ${\bar{r_1}}$ and (\ref{2.6e}) by ${\bar{r_2}}$ and adding, we obtain \\
+\begin{align*}
+&\bar{r_{1}}r_1^{rn+t}+\bar{r_{2}}r_2^{rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}(\bar{r_{1}}r_1^{i+t}+\bar{r_{2}}r_2^{i+t}).\\
+&\text{Using Binet foemula of $\hq_{k,rn+t}$ and $\hq_{k,i+t}$, we get}\\
+&\hq_{k,rn+t}=\sum\limits_{i=0}^{n}\binom{n}{i} F_{k,r}^iF_{k,r-1}^{n-i}\hq_{k,i+t}.
+\end{align*}
+The proofs of (iii)-(xxiii) are similar to (i) and (ii) using  lemma (\ref{3.1l}).
+\end{proof}
+\noindent Next theorem deals with congruence properties of the hyperbolic \kF\vspace{.5mm} and \kL\vspace{.5mm} octonions. 
+\begin{theorem}For $n, t\geq 1$ and $\mathcal{G}_{k,n}=\hp_{k,n}$ or $\hq_{k,n}$, we have\label{2.4t}
+\begin{align*}
+&(i)\qquad\hp_{k,n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{-n}(-1)^{n}\hp_{k,(2^{r+2}+2)j+t} \equiv 0\quad \big( \text{mod } { L_{k,2^{r+1}}}\big),\\
+&(ii)\qquad\hq_{k,n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{-n}(-1)^{n}\hq_{k,(2^{r+2}+2)j+t} \equiv 0\quad \big(\text{mod } { L_{k,2^{r+1}}}\big),\\
+&(iii)\qquad\hp_{k,(2^{r+2}+2)n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{j}(-1)^{n}\hp_{k,j+t}\equiv 0\quad (\text{mod } L_{k,2^{r+1}}),\\
+&(iv)\qquad\hq_{k,(2^{r+2}+2)n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{j}(-1)^{n}\hq_{k,j+t}\equiv 0\quad (\text{mod } L_{k,2^{r+1}}).
+\end{align*}
+\end{theorem}
+\begin{proof}
+(i). From (xiv) of theorem (\ref{2.3t} ), for all $n, t\geq 1$, we have\\
+\begin{align*}
+\hp_{k,n+t}&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\binom{n}{i, j} k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,2^{r+1}(i+2j)+2(i+j)+t}\\&+\sum\limits_{{i+j+s=n};_{i= 0}}\binom{n}{i, j} k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+\end{align*}
+\begin{align*}
+&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\binom{n}{i, j}  k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,2^{r+1}(i+2j)+2(i+j)+t}\\&+\sum\limits_{j=0}^{n}\binom{n}{j} k^{-n}(-1)^{n}\hp_{k,(2^{r+2}+2)j+t}.\\
+&\hp_{k,n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{-n}(-1)^{n}\hp_{k,(2^{r+2}+2)j+t}\\&=\sum\limits_{{i+j+s=n};_{i\neq 0}}\binom{n}{i, j} k^{-n}(-1)^{j+s}{{L}_{k,2^{r+1}}}^i\hp_{k,2^{r+1}(i+2j)+2(i+j)+t},\\
+&\therefore {L}_{k,2} \quad\text{divides}\quad(\hp_{k,n+t}-\sum\limits_{j=0}^{n}\binom{n}{j} k^{-n}(-1)^{n}\hp_{k,(2^{r+2}+2)j+t}),\\
+&\therefore\hp_{k,n+t}-\sum\limits_{j=0}^{n}\binom{n}{j}  k^{-n}(-1)^{n}\hp_{k,(2^{r+2}+2)j+t}\equiv 0\quad (\text{mod} {L}_{k,2}).
+\end{align*}
+\noindent The proofs of (ii), (iii) and (iv) are similar to (i), using theorem (\ref{2.3t}).
+\end{proof} 
+ \section{Concluding Remarks}
+In this paper, we derived telescoping series for $k$- Fibonacci and $k$- Lucas sequences and proved their relationships with $k$- Fibonacci and $k$- Lucas sequences, same identities can be derived using $M$ matrices.
+ The relationship between $k$- Fibonacci and $k$- Lucas sequences using continued fractions and series of fractions derived is different and never tried in $k$- Fibonacci sequence literature.
+
+%=========================================================

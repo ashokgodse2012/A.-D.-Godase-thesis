@@ -1,0 +1,420 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+
+\chapter{Introduction}
+\begin{quote}
+\texttt{"...partial differential equations are the basis of all physical
+theorems. In the theory of sound in gases, liquids and solids, in the
+investigations of elasticity, in optics, everywhere partial differential
+equations formulate basic laws of nature which can be checked against
+experiments."}
+\begin{flushright}
+BERNHARD RIEMANN.
+\end{flushright}
+\end{quote}
+\newpage
+\def\baselinestretch{1.80}
+\begin{large}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Introduction} \chead{}
+\rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+%%% ---------------------------------------------------------------------------
+\section{Literature Review}
+
+Boundary value problems play an important role in pure and applied
+mathematics. Rapid development of the theory of boundary value problems over
+the past few years has been to a great extent stimulated by the numerous
+applications to problems from physics, chemistry, biology, engineering,
+economics, social and behavioral sciences, computer sciences and
+many other fields.\\
+\\ The remarkable development of boundary value problem is due the great mathematicians to Johann
+Peter Gustav  Lejeure Dirichlet (1805-1859 ), Carl Neumann, Victor Gustav
+Robin  (1855-1897) who contributed considerably to increase the popularity of
+boundary value problems.\\
+In partial differential equation, an elliptic boundary value problem is
+special kind of boundary value problem which can be thought of as the stables
+state of an evolution problem.The study of elliptic boundary value problems
+is one of the important areas of study and research in the theory of partial
+differential equations. In the literature number of methods to study the
+elliptic boundary value problems. Some  of them are Maximum principle
+technique, Monotone method, Singular perturbation technique etc. However
+maximum principles technique is more effective and important technique in
+differential equations. The elliptic boundary value problems and maximum
+principles go hand in hand is well illustrated in an elegant book by Sperb \cite{sp3}.\\
+
+Theory of differential inequality or Maximum Principles play crucial and
+dominant role in the development of different branches of mathematical,
+ physical and biological sciences. Now-a-days it is one of the successful
+ research area which occupied a central place in study of both nonlinear
+ elliptic and parabolic partial differential equations of all orders. This
+ principle is a generalization of the elementary fact of calculus that any
+ function $f(x)$ which satisfies the inequality $f''  > 0 $ on an interval $[
+ a, b]$ takes its maximum value on the boundary of interval. This means
+ solutions of inequality $f''  > 0 $ satisfy a maximum principle.
+ The maximum principle enables us to obtain information about solution of
+differential equations without any explicit knowledge of the solution
+themselves. In particular, the maximum principle is a useful tool in the
+approximation of solutions, a subject of great interest to many scientist.
+One of the reasons for success lies in the fact that, these maximum
+ principles provide various information such as   existence, nonexistence,
+ uniqueness, continuous dependence and also helps to establish decay results,
+ regularity, stability, error bounds both in solid and fluid mechanics. This theme
+ is wide spread and highly accepted in order to achieve many new developments in various
+ branches of mathematical sciences. The subject of maximum principles is endlessly fascinating,
+ remains remarkably active and challenging area of current research despite of its long history.
+ Its theory is beautiful, its technique is powerful and its impact upon science is also profound.\\
+
+During the past few years, various researchers have discovered various
+maximum principles and their applications. It is noted in Courant $ \& $
+Hilbert \cite{c}, Friedman \cite{fr},  Miranda \cite{m1,m2}, Sperb
+\cite{sp3},Protter $\&$ Weinberger \cite{pw2}, Gilbarg and Trudinger \cite{gil}, Fraenkel \cite{fn}.\\
+
+Maximum principle technique is successfully applied to various branches of
+applied mathematics, such as problems in thin plate theory Mareno
+\cite{ma2,ma1}, Komkov \cite{ko}; von Karman plate equation \cite{amo},
+Berger \cite{ber}, Berger and Fife \cite{ber2}; reaction diffusion theory,
+Sperb \cite{sp1,sp2,sp4}, Pao \cite{pa}; torsional stiffness of a prismatic
+bar \cite{an}, oscillation theory,Chan \cite{ch}, Noussair and Swanson
+\cite{no} and Dhaigude \cite{db1}; boundary layer theory, Nickel \cite{ni},
+Dhaigude and Kasture \cite{dk}; torsional creep, Payne \cite{py1}, Ting
+\cite{t}, Payne and Philippin \cite{pp,pp3}; neuclear reactor analysis, Payne
+and Stakgold \cite{pst1}; elasticity theory, Payne and Weinberger \cite{pyw},
+Philippin \cite{phi}, Payne $\&$ Stakgold \cite{pst2}, Dhaigude and Kasture
+\cite{dk} also to obtain bounds, gradient bounds and $L_{2}$ bounds in some
+nonstandard problems, Schaefer \cite{scrlp}, Ladyzhenskaya and Uralceva
+\cite{lu}, Serrin \cite{se1,se2}, Protter and Weinberger \cite{pw1},
+  Sattinger \cite{st}, Bandle \cite{b}, Sperb \cite{sp3}, Payne and Schaefer \cite{ps1}, Stakgold \cite{stk1} etc.\\
+Thus there is a well established method of maximum principle for the study of partial differential equations,
+ their applications to problems of practical interest.\\
+Maximum principle and comparison principle are two sides of same coin. Goyal
+and Schaefer \cite{gs} and Dhaigude \cite{db1} studied comparison theorems
+for fourth order elliptic equations. Maximum principles for fourth order
+elliptic equations are also obtained by Miranda \cite{m2} and Dunninger
+\cite{du1} and for nonlinear elliptic equations by Payne \cite{py2}
+and Payne and Stakgold \cite{pst1}.\\
+ Recently, Goyal $\&$ Goyal \cite{gog}, Schaefer \cite{sc}
+developed maximum principles for elliptic equations and obtain bounds for the
+solution, gradient and Laplacian of the solution. Mareno \cite{ma}, Nichols
+$\&$ Schaefer \cite{nis1}, Goyal $\&$ Schaefer \cite{gs1} developed maximum
+principles for a class of fourth order nonlinear elliptic equations. Many
+researchers obtained maximum principles for higher order elliptic equation
+and discuss uniqueness of the solution for the corresponding boundary value
+problem: Danet \cite{d1,d3,d11}, Goyal $\&$ Goyal \cite{gog2}, Schaefer
+\cite{sre}, Goyal $\&$ Singh \cite{gs4} etc. Dunninger $\&$ Chow \cite{drc},
+Tseng and Lin \cite{tl} obtain apriori bounds for solutions to the constant
+coefficient m-metaharmonic equations. Payne and Philippin \cite{pp4}
+discussed some maximum principle for nonlinear elliptic equations in
+divergence from with applications to capillary surfaces of constant mean
+curvature. Bennet \cite{be}, Henrot and Philippin \cite{he} discussed some
+overdetermined boundary value problems. A series of papers on maximum
+principles appeared with various generalizations and applications of such
+maximum principles. See, Payne, Stakgold and Sperb \cite{psts}, Schaefer and
+Sperb \cite{ss}and Schaefer \cite{s2}. Secondly existence, nonexistence
+properties of solution certain boundary value problem are studied by Schaefer
+\cite{s1}as an application of maximum principle.
+
+Maximum principles due to Nirenberg \cite{n} for uniformly parabolic
+equations are well established in the literature. Maximum principles due to
+Ford and Waid \cite{fw}, Waid \cite{w} for degenerate parabolic operators are
+available in the literature.\
+
+A variety of nonlinear degenerate parabolic equations occurs in physical
+problems such an examples is thermal boundary layer problem, in the study of
+soft tissue etc., discussed in Ramilson and Gebhart \cite{rg}, Holmes
+\cite{ho}, Dhaigude and Kasture \cite{dk2}, Sperb \cite{sp1}.
+
+
+\section{Basic results}
+\begin{defn}\nonumber \textbf{Subharmonic function}\\
+A function $ u $ is said to be subharmonic (  or subharmonic function ) in $
+\Omega$ if it satisfies $ \Delta u \geq  0$ in $ \Omega$.
+\end{defn}
+
+\begin{theorem}\label{c1th1.1} \textbf{[ Maximum principle ]} \\
+Suppose that $u(x)$ satisfy the differential inequality
+\begin{equation}\nonumber
+\Delta u \geq 0       \quad \quad \text{in domain} \,\,\Omega.
+\end{equation}
+If $u$ attains its nonnegative maximum $M$ at any interior point of $\Omega$,
+then $ u(x)  \equiv  M  $ in $\Omega$.
+\end{theorem}
+\newpage
+\begin{defn}\nonumber \textbf{Uniformly elliptic operator}\\
+The operator
+\begin{equation*}
+  L   =  \sum^{n}_{i,j = 1}  a_{ij}(x) \frac{\partial^{2}}{\partial x_{i} \partial x_{j}}
+\end{equation*}
+is said to be uniformly elliptic in  $ \Omega $ if \\
+i) there is a positive quantity $\mu (x)$ such that
+\begin{equation*}
+  \sum^{n}_{i,j = 1}  a_{ij}(x) \xi_{i} \xi_{j}   \geq   \mu ( x )   \sum^{n}_{i = 1} \xi^{2}{i}
+\end{equation*}
+holds for each point of $\Omega$ and \\
+ii) there is a positive constant $\mu_{0}$ such that $ \mu ( x )  \geq
+\mu_{0}$ for all $x$ in $\Omega$.
+\end{defn}
+
+
+In 1927, Hopf's proved the following maximum principle.
+\begin{theorem}\label{c1th1.2}  \textbf{[ Hopf's maximum principle ]}\\
+Suppose that \\
+i) $u(x)$ satisfy the differential inequality
+\begin{equation}\nonumber
+ ( L + h ) [u]  =  \sum^{n}_{i,j = 1}  a_{ij}(x) u_{x_{i}x_{j}}  +  \sum^{n}_{i = 1} b_{,i}(x) u_{x_{i}}  +  h(x) u \geq  0
+\end{equation}
+in domain $\Omega$, \\
+ii)$ L$ is uniformly elliptic in $\Omega$, \\
+iii)the coefficients of $L$ and $h(x)$ are bounded,\\
+iv) $h(x)  \leq  0$ in $\Omega$,\\
+v) $u$ attain its nonnegative maximum $M$ at an
+interior point of $\Omega$. \\
+Then
+$$ u(x)  \equiv  M   \quad \, \,\text{in} \quad \, \Omega$$.
+\end{theorem}
+
+
+\begin{theorem}\label{c1th1.3}  \textbf{[ Hopf's boundary maximum principle ]}\\
+Suppose that \\
+i) $u(x)$ satisfy the differential inequality
+\begin{equation}\nonumber
+ ( L + h ) [u]  =  \sum^{n}_{i,j = 1}  a_{ij}(x) u_{x_{i}x_{j}}  +  \sum^{n}_{i = 1} b_{,i}(x) u_{x_{i}}  +  h(x) u \geq  0
+\end{equation}
+in domain $\Omega$, \\
+ii)$ L $ is uniformly elliptic in $\Omega$, \\
+iii)$h(x)  \leq  0$,\\
+iv) $u  \leq  M$  in $ \Omega $, that $ u  =  M $ at a boundary point $P$,and
+$M \geq  0$, \\
+v) point $P$ lies on the boundary of a ball in $ \Omega$, and\\
+vi) $u(x)$ is continuous $ \Omega \bigcup P $.\\
+Then
+$$ \frac{\partial u }{\partial n}   >  0$$   at $P$
+unless $$ u(x)  \equiv  M  \quad\,\,  \text{in}  \quad \, \Omega$$.
+\end{theorem}
+
+Suppose $ \Omega $ is a plane domain bounded by a sufficiently smooth curve $ \partial \Omega $. \\
+In 1948, maximum principle for the function P has proved by Miranda \cite{m2}
+\begin{theorem}\label{th1}
+Suppose that \\
+i) $\Omega$ is plane domain with boundary $\partial \Omega$,\\
+ii) $u(x)$ be a sufficiently smooth function satisfying
+
+\begin{equation}\label{r2.1}
+  {\Delta}^{2} u = 0  \quad in  \quad \Omega.
+\end{equation}\\
+Then the function
+\begin{equation}\label{r2.2}
+P = |\nabla u(x)|^{2} - u \Delta u
+\end{equation}
+assumes its maximum on $\partial \Omega.$
+\end{theorem}
+
+\begin{remark}\label{re1}
+Payne \cite{py2} noted that
+\begin{equation}\label{r2.4}
+P = |\nabla u(x)|^{2} - 2 u \Delta u
+\end{equation}
+cannot assumes its maximum on $\partial \Omega$ if the average curvature of
+$\partial \Omega  ( \Omega  \subset {E}^{N},  N \geq 2 )$ is positive and $u$
+vanishes on $\partial \Omega$.
+\end{remark}
+
+Since then many authors extended the Miranda's result. For example, maximum
+principles for fourth order equations containing nonlinearities in $u$ or
+$\Delta u $  can be found in the work of Payne \cite{py2}, Schaefer
+\cite{s1,sch2,s2}. Similar results have proved by H. Zhang and W. Zhang
+\cite{z}, Danet \cite{d11}, Tseng and Lin \cite{tl}, Enache and Philippin
+\cite{ep}, Gosavi \cite{go}, Hopf \cite{Hop}, Hille and Protter \cite{hp}
+etc.
+
+In the year 1977, Schaefer \cite{s1} extended a maximum principle due to
+Miranda \cite{m2} for biharmonic function to the class of fourth order
+semilinear elliptic equations of the form
+\begin{equation}\label{r2.5}
+  {\Delta}^{2} u + \rho(x, y) f(u) = 0
+\end{equation}
+He consider the same P function given in \eqref{r2.2}.
+\begin{theorem}\label{th2}
+Suppose that \\
+i) $\Omega$ is plane domain with boundary $\partial \Omega$,\\
+ii) $u(x)$ be a sufficiently smooth solution of \eqref{r2.5},\\
+iii) $\rho$ is a positive function,\\
+iv) $f(u)$ is a point function satisfying the condition $uf(u)  <  0$. \\
+Then the function
+\begin{equation}\nonumber
+P = |\nabla u(x)|^{2} -  u \Delta u
+\end{equation}
+
+ assumes its maximum on $\partial \Omega.$
+\end{theorem}
+The above result is also further extended for a different P- function by
+Schaefer \cite{s1}. It is stated as follows.
+\begin{theorem}\label{th3}
+Suppose that \\
+i) $\Omega$ is plane domain with boundary $\partial \Omega$,\\
+ii) $u(x)$ be a sufficiently smooth solution of \eqref{r2.5},\\
+iii) $\rho(x, y )$ is positive function of position with the condition
+\begin{equation}
+ \Delta \rho  \leq  0 \quad in \quad \Omega  \subset  {E}^{2},
+\end{equation}\\
+iv) $f(s)$ is the point function satisfying the condition $sf(s)  \geq  0$.\\
+Then the function
+\begin{equation}\label{r2.6}
+ P = \frac{1}{\rho}\bigg[ |\nabla u(x)|^{2}  - u \Delta u   \bigg]
+\end{equation}
+assumes its maximum on $\partial \Omega $ unless $P < 0$ in $\Omega$.
+\end{theorem}
+
+
+
+Recently Dhaigude and Gosavi \cite{dg} extend a maximum principle due to
+Schaefer \cite{s1} for a class of fourth order semilinear elliptic equations
+to a more general fourth order semilinear elliptic equation of the form
+\begin{equation}\label{r2.11}
+  {\Delta}^{2} u + a(x, y) \Delta u + b(x, y) f(u) = 0.
+\end{equation}
+
+\begin{theorem}\label{th6}
+Suppose that\\
+i) $u(x)$ be a sufficiently smooth solution of \eqref{r2.11} \\
+ii) a(x, y)and b(x, y) are bounded in $\Omega$ \\
+iii) $a \leq 0, b > 0 $ and \\
+\begin{equation}\label{r2.002}
+b(x, y)u(x, y)f(u) +  a(x, y)|\nabla u|^{2} \geq 0   \quad \text{in} \quad  \Omega.
+\end{equation}
+Then the function
+\begin{equation}\label{r2.4q}
+P = |\nabla u(x)|^{2} -  u \Delta u
+\end{equation}
+attain its non-negative maximum on  $\partial \Omega.$
+\end{theorem}
+
+In 1974, Waid's proved the following maximum principle.
+\begin{theorem}\label{th7}\textbf{[ Maximum principle ]}\\
+Suppose that\\
+i) $u(x, t) $ is a real valued bounded function satisfying
+\begin{equation*}
+L u =  a_{ij}(x, t) u_{,ij}  +  b_{i}(x, t) u_{,i}  +  d(x, t) u -  c(x, t) u_{,t} \geq  0 \,\,  \text{in} \,\, \Omega \times (0, T),
+\end{equation*}
+ii) coefficients \,$ a_{ij}(x, t), b_{i}(x, t) $ \, and $ c(x, t)$ \, are all
+bounded in $\Omega \times (0, T),$ \\
+iii) $c(x, t)  \geq 0$, \\
+iv) $d(x, t)  \leq 0$ in $ \Omega \times (0, T),$ \\
+v)$ \{ c, u_{,t}, u_{,ij}   \} \subset C \bigg( \Omega \times (0,
+T) \bigg) $ \\
+vi) $L$ is the second order nonuniform parabolic operator and\\
+vii) $ c(x, t) > 0 $  at some point of each component at each horizontal
+segment.\\
+If $u(x, t)$ attains a nonnegative maximum $M$ at an interior point $(x_{1},
+t_{1})$ of $ \Omega \times (0, T)$ then $ u(x, t) =  M $ on the component
+of\\
+ $ \bigg( R^{n} \times \{t_{1}\} \cap  \Omega  \times (0, T) \bigg)$ which
+contains $
+(x_{1}, t_{1}).$\\
+Furthermore if $(x_{2}, t_{2})$ is a point of $ \Omega \times (0, T)$  which
+can be connected to $(x_{1}, t_{1})$ by a path in $ \Omega \times (0, T)$
+consisting only of horizontal segment ($ t $ fixed ) and upward vertical
+segment ( $ t $ increasing ) then\\
+$$ u(x_{2}, t_{2}) =  M .$$
+\end{theorem}
+
+\begin{theorem}\label{th8}\textbf{[ Minimum principle ]}\\
+Suppose that\\
+i) $u(x, t) $ is a real valued bounded function satisfying
+\begin{equation*}
+L u =  a_{ij}(x, t) u_{,ij}  +  b_{i}(x, t) u_{,i}  +  d(x, t) u -  c(x, t) u_{,t} \leq  0 \,\,  \text{in} \,\, \Omega \times (0, T),
+\end{equation*}
+ii) coefficients \,$ a_{ij}(x, t), b_{i}(x, t) $ \, and $ c(x, t)$ \, are all
+bounded in $\Omega \times (0, T),$ \\
+iii) $c(x, t)  \geq 0$, \\
+iv) $d(x, t)  \leq 0$ in $ \Omega \times (0, T),$ \\
+v)$ \{ c, u_{,t}, u_{,ij}   \} \subset C \bigg( \Omega \times (0,
+T) \bigg) $ \\
+vi) $L$ is the second order nonuniform parabolic operator and\\
+vii) $ c(x, t) > 0 $  at some point of each component at each horizontal
+segment.\\
+If $u(x, t)$ attains a nonpositive minimum $m$ at an interior point $(x_{1},
+t_{1})$ of $ \Omega \times (0, T)$ then $ u(x, t) =  m $ on the component
+of\\
+$ \bigg( R^{n} \times \{t_{1}\} \cap  \Omega  \times (0, T) \bigg)$ which
+contains $(x_{1}, t_{1}).$\\
+Furthermore if $(x_{2}, t_{2})$ is a point of $ \Omega \times (0, T)$  which
+can be connected to $(x_{1}, t_{1})$ by a path in $ \Omega \times (0, T)$
+consisting only of horizontal segment ($ t $ fixed ) and upward vertical
+segment ( $ t $ increasing ) then\\
+$$ u(x_{2}, t_{2}) =  m.$$
+\end{theorem}
+
+\begin{theorem}\label{th9}\textbf{[ Strong maximum principle ]}\\
+Suppose that\\
+i) $u(x, t) $ is a real valued bounded function satisfying
+\begin{equation*}
+L u =  a_{ij}(x, t) u_{,ij}  +  b_{i}(x, t) u_{,i}  +  d(x, t) u -  c(x, t) u_{,t} \geq  0 \,\,  \text{in} \,\, \Omega \times (0, T),
+\end{equation*}
+ii) coefficients \,$ a_{ij}(x, t), b_{i}(x, t) $ \, and $ c(x, t)$ \, are all
+bounded in $\Omega \times (0, T),$ \\
+iii) $c(x, t)  \geq 0$, \\
+iv) $d(x, t)  \leq 0$ in $ \Omega \times (0, T),$ \\
+v)$ \{ c, u_{,t}, u_{,ij}   \} \subset C \bigg( \Omega \times (0,
+T) \bigg) $ \\
+vi) $L$ is the second order nonuniformly parabolic operator and\\
+vii) $ c(x, t) > 0 $  at some point of each component at each horizontal
+segment,\\
+viii) $u(x, t)$ attains a nonnegative maximum $M$ at an interior point
+$(x_{1}, t_{1})$ of $ \Omega \times (0, T)$, \\
+ix)  a sphere $S$ with radius $r$ through $(x_{1}, t_{1})$ can be constructed
+whose interior lies in entirely in $ \Omega \times (0, T)$, in which $ u < M
+$ and such that \\
+$$ \| (x, t_{1})  -   (x_{1}, t_{1})   \|  <  r\,\, \text{and} $$
+x) the radial direction from the centre of the sphere to $(x_{1}, t_{1})$ is
+not parallel to the $t-$axis.\\
+If $\frac{\partial}{\partial n}$ denotes any directional derivative in an
+outward direction then \\
+$$ \frac{\partial u}{\partial n} (x, t_{1})  >  0.$$
+\end{theorem}
+
+\section{Plan of the Thesis}
+We organize the thesis as follows.
+
+Chapter 2 is devoted to prove maximum principles for the fourth order
+semilinear elliptic equation by auxiliary functions containing the square of
+the second gradient of the solution of such equation. The maximum principle
+so obtained is used to deduce bounds on important quantities.
+
+In chapter 3 we developed maximum principles for a certain functionals
+defined on solution of the fourth order nonlinear elliptic equation. Using
+these maximum principles we proved nonexistence of nontrivial solutions of
+the fourth order nonlinear elliptic equation with zero boundary conditions.
+
+In chapter 4 using Hopf's maximum principle we obtained maximum principles
+for certain functions, which are defined on solutions of the fourth order
+elliptic equations.
+
+Chapter 5 is devoted for sixth order elliptic equations. In this chapter we
+obtained maximum principles for a class of sixth order elliptic equations by
+using auxiliary functions containing the square of the third gradient of
+solution of such equations, we conclude this chapter by obtaining integral
+bounds for the third gradient of the solution of sixth order elliptic
+equation.
+
+In chapter 6 we proved parabolic maximum principles for a certain function,
+which is defined on solutions of Dirichlet, Neumann and Robin types of
+initial boundary value problems. These maximum principles are utilized to
+obtain different bounds for $u_{,t}$.
+
+
+
+
+
+
+
+
+\end{large}

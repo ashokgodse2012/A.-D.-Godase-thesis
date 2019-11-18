@@ -1,0 +1,395 @@
+
+%\def\baselinestretch{1}
+
+
+\chapter{Sixth Order Elliptic Equations}
+\begin{quote}
+\texttt{The enormous usefulness of mathematics in the natural
+sciences is something bordering on the mysterious and there
+is no rational explanation for it. It is not at all natural that
+“laws of nature” exist, much less that man is able to discover
+them. The miracle of the appropriateness of the language of
+mathematics for the formulation of the laws of physics is a
+wonderful gift which we neither understand nor deserve.}
+\begin{flushright}
+EUGENE WIGNER.
+\end{flushright}
+\end{quote}
+
+
+
+The content of this chapter is accepted in following paper.
+
+Maximum principle and bounds for a class of sixth order elliptic equation, IJDEA (Accepted).
+
+\newpage
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Sixth Order Elliptic Equations}
+\chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+
+\def\baselinestretch{1.80}
+\begin{large}
+
+
+\section{Introduction}
+The P-function technique to obtain maximum principles for elliptic equations of the order greater than 2 is well-known. In \cite{m2} Miranda shows that the functional $ P = |\nabla u |^{2} - u \Delta u$ is subharmonic where $u$ is a solution to the biharmonic equation $ \Delta^{2}u = 0 $.   Many
+researchers extend Miranda's result to develop maximum principles for
+different auxiliary functions. In \cite{py2} Payne uses functionals containing the square of the second gradients of the solution to semilinear equations of the form
+\begin{equation}\label{eq1}
+    \Delta^{2}u = f(u)
+\end{equation}
+to deduce integral bounds on $ ( \Delta u )^{2}$. Other similar results for fourth order equations are in \cite{dg, amo, sr2, z}.\\
+
+There are some works which deal with sixth order equations. For example, Schaefer in \cite{sre} developed maximum principles for equations of the form
+\begin{equation}\label{eq2}
+    \Delta^{3}u - a \Delta^{2}u + b \Delta u - c u = 0
+\end{equation}
+with constant coefficients. Recently, Mareno  \cite{mo} obtains a maximum principle for a function defined on the solution of sixth order equation
+\begin{equation}\label{eq3}
+    \Delta^{3}u - a \Delta^{2}u + b \Delta u - c f(u) = 0 \quad \quad  \text{in}  \quad \quad  \Omega,
+\end{equation}
+where $\Omega$ is a bounded domain in ${\mathbb{R}}^{n}$. One can find additional results for higher-order linear elliptic equations in \cite{drc,tl,mp,d11}.\
+
+This chapter is organized as follows. In section 5.2 notations and useful lemmas are given. We develop maximum principles 
+for sixth order elliptic partial differential equations in  section 5.3. We obtained integral bounds on third gradients of the solutions of the boundary value problem 
+under consideration in the last section.
+
+\section{Prerequisites}
+Here $\Omega$ represents a bounded domain in ${\mathbb{R}}^{n}$. Comma notation will denote partial differentiation and the summation convention on repeated indices is used. Furthermore, we make the following identifications for the squares of the first, second, third and fourth gradients of a function $v$ :
+$$ |\nabla v |^{2} = v_{,i}v_{,i}$$
+$$ |\nabla^{2} v |^{2} = v_{,ij}v_{,ij}$$
+$$ |\nabla^{3} v |^{2} = v_{,ijk}v_{,ijk}$$
+$$ |\nabla^{4} v |^{2} = v_{,ijkl}v_{,ijkl}$$
+for indices $ i,j,k,l = 1,2,3,...,n.$ The scalar product of the first, second and third gradient of two functions $v$ and $w$ is denoted by
+$$ \nabla v \cdot \nabla w = v_{,i} w_{,i} $$
+$$\nabla^{2} v \cdot \nabla^{2} w = v_{,ij} w_{,ij} $$
+$$ \nabla^{3} v \cdot \nabla^{3} w = v_{,ijk} w_{,ijk}$$
+for indices $ i,j,k = 1,2,...,n.$\\
+The following Lemmas are useful to prove the main results of this chapter.
+\begin{lemma}\label{c5l1}
+\cite{mo}Let v be an arbitrary function in $C^{4}(\Omega)$. Then
+$$ |\nabla^{4} v |^{2} \geq  \frac{6}{n + 5}| \nabla^{2} (\Delta v)  |^{2}.$$
+\end{lemma}\
+\begin{lemma}\label{c5l2}
+\cite{sp3}Let v be an arbitrary function in $C^{3}(\Omega)$. Then
+$$ |\nabla^{3} v |^{2} \geq  \frac{3}{n + 2} | \nabla(\Delta v)  |^{2}.$$
+\end{lemma}
+\section{Maximum Principles}
+
+In this section, we prove maximum principles for sixth order elliptic equations. First we discuss for the equation
+\begin{equation}\nonumber
+    \Delta^{3}u - \rho (x) f(u) = 0 \quad \quad  \text{in} \quad \quad  \Omega
+\end{equation}
+where $ \rho $ is nonnegative function.
+\begin{theorem}\label{c5th1}
+Suppose that $ u \in C^{7}( \Omega) \bigcap C^{5}( \bar{\Omega}) $ is a solution of
+\begin{equation}\label{c5eq4}
+    \Delta^{3}u - \rho (x) f(u) = 0 \quad \quad  \text{in} \quad \quad  \Omega
+\end{equation}
+where $ n \leq 3 $ and let $ f \in C^{1}(\mathbb{R})$ satisfies $ f^{'}(u) \geq 0$.\\
+ Define the function
+\begin{equation}\label{c5eq5}
+ P = |\nabla^{3}(u)|^{2} + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  -  ( \Delta u)_{,ij} u_{,ij} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i} + \frac{1}{4} ( M + N )\gamma (x)
+\end{equation}
+where the constants $ M $ and $N$ are upper bounds for $f^{2}$ and $|\nabla \rho|^{2}$ respectively. Furthermore, suppose that $ \gamma \in C^{2}( \Omega) \bigcap C( \bar{\Omega}) $  is a positive function that satisfies the differential inequality $ \Delta \gamma  \geq  1 $.Then $P$ achieve its maximum value on $\partial \Omega.$
+\end{theorem}
+\textbf{Proof.}Consider the function
+\begin{equation}\nonumber
+ P = |\nabla^{3}(u)|^{2} + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  -  ( \Delta u)_{,ij} u_{,ij} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i} + \frac{1}{4} ( M + N )\gamma (x)
+\end{equation}
+with usual notations.\\
+Differentiate $P$ with respect to $x_{l}$, we get
+\begin{align}\nonumber
+ P_{,l} &=  2 u_{,ijk}  u_{,ijkl}  +   \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,i}  +   \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,il} -  ( \Delta u)_{,ijl} u_{,ij}  -  ( \Delta u)_{,ij} u_{,ijl}  \\ \nonumber &- \frac{1}{4} ( \Delta u)_{,il}( \Delta u)_{,i}  -  \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,il} + \frac{1}{4} ( M + N )\gamma_{,l}.
+ \end{align}
+ i.e.
+\begin{align}\nonumber
+ P_{,l} &= 2 u_{,ijk} u_{,ijkl} + \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,i} +  \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,il}   -  ( \Delta u)_{,ijl} u_{,ij} \\ &-  ( \Delta u)_{,ij} u_{,ijl} - \frac{1}{2} ( \Delta u)_{,i}( \Delta u)_{,il} + \frac{1}{4} ( M + N )\gamma_{,l}.
+\end{align}\label{c5eq6}
+Again differentiating with respect to $x_{l}$,we obtain
+\begin{align}\nonumber
+ P_{,ll} &=  2 u_{,ijkl}  u_{,ijkl}  +  2 u_{,ijk}  u_{,ijkll}  +   \frac{1}{2} u_{,ill} ( \Delta^{2} u )_{,i}  +   \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,il}  \\ \nonumber & +   \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,il}  +  \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,ill} -  ( \Delta u)_{,ijll} u_{,ij} -  ( \Delta u)_{,ijl} u_{,ijl}  \\ \nonumber & -  ( \Delta u)_{,ijl} u_{,ijl}  -  ( \Delta u)_{,ij} u_{,ijll} - \frac{1}{2} ( \Delta u)_{,ill}( \Delta u)_{,i}  - \frac{1}{2} ( \Delta u)_{,il}( \Delta u)_{,il}  \\ \nonumber &+ \frac{1}{4} ( M + N )  \gamma_{,ll}.
+\end{align}
+Using notations
+\begin{align}\nonumber
+& i) u_{,ijkl}  u_{,ijkl}  =  | \nabla^{4} u |^{2} \quad ii) u_{,ijkll}  =  ( \Delta u)_{,ijk} \\ \nonumber
+& iii) u_{,ill}  =  ( \Delta u)_{,i}  \quad iv) ( \Delta^{2} u )_{,ill}  =  ( \Delta^{3} u )_{,i} \\ \nonumber
+& v) ( \Delta u)_{,ijll}  =  ( \Delta^{2} u)_{,ij}  \quad vi) u_{,ijll}  =  ( \Delta u)_{,ij} \\ \nonumber
+& vii) ( \Delta u)_{,ill}  =  ( \Delta^{2} u)_{,i} \quad viii) \gamma_{,ll}  =  \Delta \gamma \, P_{,ll}  =  \Delta P.
+\end{align}
+Therefore
+\begin{align}\nonumber
+  \Delta P &=  2 | \nabla^{4} u |^{2}  +  2 u_{,ijk}  ( \Delta u)_{,ijk}  +   \frac{1}{2}( \Delta u)_{,i} ( \Delta^{2} u )_{,i}  +   u_{,il} ( \Delta^{2} u )_{,il}  \\ \nonumber & +  \frac{1}{2} u_{,i} ( \Delta^{3} u )_{,i} -  ( \Delta^{2} u)_{,ij} u_{,ij} -  2 ( \Delta u)_{,ijl} u_{,ijl} -
+   | \nabla^{2}(\Delta u)|^{2}\\ \nonumber &  - \frac{1}{2}  | \nabla^{2}(\Delta u)|^{2}  - \frac{1}{2} ( \Delta^{2} u)_{,i}( \Delta u)_{,i}   + \frac{1}{4} ( M + N ) \Delta \gamma.
+\end{align}
+
+Thus
+\begin{equation}\label{c5eq7}
+  \Delta P =  2 | \nabla^{4} u |^{2}  + \frac{1}{2} \nabla u \cdot \nabla( \Delta^{3} u )  -  \frac{3}{2} | \nabla^{2}(\Delta u)|^{2}  + \frac{1}{4} ( M + N ) \Delta \gamma.
+\end{equation}
+
+From equation $\eqref{c5eq4}$, we have
+\begin{equation}\nonumber
+    \Delta^{3}u - \rho (x) f(u) = 0.
+\end{equation}
+Differentiate and after simplification, we get
+\begin{equation}\label{c5a001}
+\frac{1}{2} \nabla u \cdot \nabla( \Delta^{3} u )  =  \frac{1}{2} \nabla u \cdot \nabla \rho f(u)  +  \frac{1}{2} \rho f^{'}(u) | \nabla u |^{2}
+\end{equation}
+substituting the result \eqref{c5a001} into equation $\eqref{c5eq7}$, we obtain
+\begin{equation}\label{c5eq8}
+  \Delta P =  2 | \nabla^{4} u |^{2}  -  \frac{3}{2} | \nabla^{2}(\Delta u)|^{2}  + \frac{1}{2} \nabla u \cdot \nabla \rho f(u)  + \frac{1}{2} \rho f^{'}(u) | \nabla u |^{2} + \frac{1}{4} ( M + N ) \Delta \gamma.
+\end{equation}
+To eliminate third term in equation $\eqref{c5eq8}$ we use following inequality
+\begin{equation}\label{c5eq9}
+\frac{1}{2} \nabla u \cdot \nabla \rho \, f(u)  \geq  - \frac{1}{4} | \nabla u |^{2} | \nabla \rho |^{2}  - \frac{1}{4} f^{2}.
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ \frac{1}{2} \nabla u \cdot \nabla \rho  +  \frac{1}{2} f \bigg]^{2}  \geq  0
+\end{equation}
+\begin{equation}\nonumber
+\frac{1}{4} | \nabla u |^{2} | \nabla \rho |^{2}  +  \frac{1}{2} \nabla u \cdot \nabla \rho \, f(u)  +  \frac{1}{4} f^{2}  \geq  0  \bigg\}
+\end{equation}
+
+Hence by using inequality $\eqref{c5eq9}$ we have
+\begin{align}\nonumber
+  \Delta P &\geq   2 | \nabla^{4} u |^{2}  -  \frac{3}{2} | \nabla^{2}(\Delta u)|^{2}  - \frac{1}{4} |\nabla u |^{2} | \nabla \rho |^{2}  - \frac{1}{4}f^{2}  + \frac{1}{2} \rho f^{'}(u) | \nabla u |^{2} \\ &+ \frac{1}{4} ( M + N ) \Delta \gamma.
+\end{align}\label{c5eq10}
+Using the Lemma $\ref{c5l1}$  we see that the difference of the first two terms, $  2 | \nabla^{4} u |^{2}  -  \frac{3}{2} | \nabla^{2}(\Delta u)|^{2}  $, 
+is nonnegative when $ n \leq 3 $, and by employing our stated assumptions, we observed that $P$ is subharmonic in $\Omega$.
+i.e.
+$$ \Delta P \geq 0  \quad \text{in} \quad  \Omega.$$
+By maximum principle, $P$ achieve its maximum value on $\partial \Omega.$ This completes the proof.
+
+Now we consider sixth-order elliptic equation which contains linearity in Bilaplacian of the solution and is of the form
+\begin{equation}\nonumber
+    \Delta^{3}u -  \Delta^{2}u  -  g(\Delta u)  -  f(u) = 0 \,\,\ \text{in} \,\,\, \Omega
+\end{equation}
+
+\begin{theorem}\label{th2}
+Let $ u \in C^{7}( \Omega) \bigcap C^{5}( \bar{\Omega}) $ be a solution of
+\begin{equation}\label{c5eq11}
+    \Delta^{3}u -  \Delta^{2}u  -  g(\Delta u)  -  f(u) = 0 \,\,\ \text{in} \,\,\, \Omega.
+\end{equation}
+  where $ n \leq 3 $. Suppose that $ f , g  \in C^{1}(\mathbb{R})$ satisfies $ f^{'}(u) \geq 0 ,  (g^{'})^{2}  \leq  g_{0} $.\\
+  Define
+\begin{align}\nonumber
+  Q  =& |\nabla^{3}(u)|^{2} + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  -  ( \Delta u )_{,ij} u_{,ij} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i} + \frac{1}{2}  |\nabla^{2}(u)|^{2} \\ &-  \frac{1}{2} u_{,i} ( \Delta u )_{,i} +  c(x) |\nabla (u)|^{2}
+\end{align}\label{eq12}
+where $ c \in C^{2}( \Omega) \bigcap C ( \bar{\Omega}).$
+ Furthermore, suppose that $ c(x) \geq  c_{0}$, for a positive constant $ c_{0}$, and that $c$ satisfies the differential inequality
+\begin{equation}\nonumber
+ \Delta c - 20 c^{2} - \frac{2}{c_{0}} |\nabla (c)|^{2}  \geq  \frac{5}{4} g_{0}.
+\end{equation}
+Then $Q$ achieve its maximum value on $\partial \Omega.$
+\end{theorem}
+\textbf{Proof.} Consider the function
+\begin{align}\nonumber
+  Q  &= |\nabla^{3}(u)|^{2} + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  -  ( \Delta u )_{,ij} u_{,ij} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i} + \frac{1}{2}  |\nabla^{2}(u)|^{2} \\ \nonumber &-  \frac{1}{2} u_{,i} ( \Delta u )_{,i} +  c(x) |\nabla u|^{2}
+\end{align}
+Differentiating Q with respect to $x_{l}$, we get
+\begin{align}\nonumber
+  Q_{,l}  &= 2 u_{,ijk} u_{,ijkl} + \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,i}  + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,il}  -  ( \Delta u )_{,ijl} u_{,ij} \\ \nonumber &-  ( \Delta u )_{,ij} u_{,ijl}  - \frac{1}{4} ( \Delta u)_{,il}( \Delta u)_{,i} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,il}  + \frac{1}{2} 2 u_{,ij} u_{,ijl} \\ \nonumber &-  \frac{1}{2} u_{,il} ( \Delta u )_{,i}  -  \frac{1}{2} u_{,i} ( \Delta u )_{,il}+  c_{,l} |\nabla u|^{2}  +  2 c u_{,i} u_{,il}
+\end{align}
+
+\begin{align}\nonumber
+  Q_{,l}  &= 2 u_{,ijk} u_{,ijkl} + \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,i}  + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,il}  -  ( \Delta u )_{,ijl} u_{,ij} \\ \nonumber &-  ( \Delta u )_{,ij} u_{,ijl}  -  \frac{1}{2} ( \Delta u)_{,il}( \Delta u)_{,i}  +  u_{,ij} u_{,ijl} -  \frac{1}{2} u_{,il} ( \Delta u )_{,i}   \\ \nonumber &-  \frac{1}{2} u_{,i} ( \Delta u )_{,il}  +  c_{,l} |\nabla u|^{2}  +  2 c u_{,i} u_{,il}
+\end{align}
+
+Again differentiating with respect to $x_{l}$, we get
+\begin{align}\nonumber
+  Q_{,ll}  &= 2 u_{,ijkl} u_{,ijkl}  +  2 u_{,ijk} u_{,ijkll}  + \frac{1}{2} u_{,ill} ( \Delta^{2} u )_{,i}  +  \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,il} \\ \nonumber & + \frac{1}{2} u_{,il} ( \Delta^{2} u )_{,il} + \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,ill} -  ( \Delta u )_{,ijll} u_{,ij}  -  ( \Delta u )_{,ijl} u_{,ijl}  \\ \nonumber &  -  ( \Delta u )_{,ijl} u_{,ijl}  -  ( \Delta u )_{,ij} u_{,ijll}   - \frac{1}{2} ( \Delta u)_{,il}( \Delta u)_{,il} - \frac{1}{2} ( \Delta u)_{,ill}( \Delta u)_{,i} \\ \nonumber & +  u_{,ijl}u_{,ijl}  +  u_{,ij}u_{,ijll}  -  \frac{1}{2} u_{,ill} ( \Delta u )_{,i}  -  \frac{1}{2} u_{,il} ( \Delta u )_{,il}  -  \frac{1}{2} u_{,il} ( \Delta u )_{,il} \\ \nonumber & -  \frac{1}{2} u_{,i} ( \Delta u )_{,ill}  +    c_{,ll} |\nabla u|^{2}  +  2 c_{,l} u_{,i} u_{,il}  +  2 c_{,l} u_{,i} u_{,il} \\ \nonumber & + 2 c u_{,il} u_{,il}  +  2 c u_{,i} u_{,ill}
+\end{align}
+Using notations
+\begin{align}\nonumber
+&i) u_{,ll} =   \Delta  u \,\, \quad \quad ii) u_{,ijkl}u_{,ijkl}  =  |\nabla^{4} u |^{2} \\ \nonumber
+&iii) u_{,ijkll}  =  (\Delta u)_{,ijk}  \quad \quad  iv)  (\Delta u)_{,ill}  =  (\Delta^{2} u)_{,i} \\ \nonumber
+&v) ( \Delta u )_{,ijll} = ( \Delta^{2} u )_{,ij} \quad  vi) ( \Delta u)_{,il}( \Delta u)_{,il} = | \nabla^{2} ( \Delta u) |^{2}\\ \nonumber
+&vii) ( \Delta u)_{,i} ( \Delta u )_{,i} =   | \nabla ( \Delta u) |^{2} \quad  \text{etc}.
+\end{align}
+\begin{align}\nonumber
+  \Delta Q  &=  2 |\nabla^{4} u|^{2}  +  2 u_{,ijk} (\Delta u)_{,ijk}  + \frac{1}{2} ( \Delta u)_{,i} ( \Delta^{2} u )_{,i}  +  u_{,il} ( \Delta^{2} u )_{,il} \\ \nonumber & + \frac{1}{2} u_{,i} ( \Delta^{3} u )_{,i} -  ( \Delta^{2} u )_{,ij} u_{,ij}  -  2 ( \Delta u )_{,ijl} u_{,ijl}  -  | \nabla^{2} ( \Delta u) |^{2}  \\ \nonumber &- \frac{1}{2} ( \Delta^{2} u)_{,i}( \Delta u)_{,i} - \frac{1}{2} | \nabla^{2} ( \Delta u) |^{2}
+  + |\nabla^{3} u|^{2}   +  u_{,ij}( \Delta u)_{,ij}  \\ \nonumber &-  \frac{1}{2} | \nabla ( \Delta u) |^{2}   -  \frac{1}{2} u_{,il} ( \Delta u )_{,il}  -  \frac{1}{2} u_{,il} ( \Delta u )_{,il}  -  \frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  \\ \nonumber &+    \Delta c |\nabla u|^{2}  +  4 c_{,l} u_{,i} u_{,il}   + 2 c |\nabla^{2} u|^{2}  +  2 c u_{,i} ( \Delta u)_{,i}
+\end{align}
+\begin{align}\nonumber
+\Delta Q  &= 2 |\nabla^{4} u|^{2}  +  \frac{1}{2} \nabla u \cdot \nabla ( \Delta^{3} u ) -  \frac{3}{2}|\nabla^{2}( \Delta u)|^{2} + |\nabla^{3}u |^{2}
+\\ &-  \frac{1}{2}|\nabla( \Delta u)|^{2}  -  \frac{1}{2} \nabla u \cdot \nabla ( \Delta^{2} u )  +  \Delta c |\nabla u|^{2}  +  2 \nabla c \cdot  \nabla (|\nabla u|^{2} ) \nonumber \\ &+  2 c \,|\nabla^{2} u|^{2}   +  2 c\, \nabla u \cdot \nabla (\Delta u). \label{c5eq14}
+\end{align}
+From equation $\eqref{c5eq11}$, we have
+\begin{equation}\nonumber
+    \Delta^{3}u -  \Delta^{2}u  -  g(\Delta u)  -  f(u) = 0
+\end{equation}
+
+After differentiating and simplifying, we get
+\begin{equation}\label{c5eq14a}
+\frac{1}{2} \nabla u \cdot \nabla ( \Delta^{3} u ) =    \frac{1}{2} \nabla u \cdot \nabla ( \Delta^{2} u)  +  \frac{1}{2}  g^{'}(\Delta u )\nabla u \cdot \nabla ( \Delta u ) + \frac{1}{2}  f^{'}( u ) |\nabla u|^{2}
+\end{equation}
+substituting the result $\eqref{c5eq14a}$ into equation $\eqref{c5eq14} $, we get
+
+\begin{align}\nonumber
+\Delta Q  &= 2 |\nabla^{4}u |^{2} + \frac{1}{2} \nabla u \cdot \nabla ( \Delta^{2} u)  +  \frac{1}{2}  g^{'}(\Delta u )\nabla u \cdot \nabla ( \Delta u ) + \frac{1}{2}  f^{'}( u ) |\nabla u|^{2}   \\ \nonumber &-  \frac{3}{2}|\nabla^{2}( \Delta u)|^{2} +   |\nabla^{3}u |^{2}   -  \frac{1}{2} |\nabla ( \Delta u)|^{2}  -  \frac{1}{2}\nabla u \cdot \nabla ( \Delta^{2} u)  \\ \nonumber &+ \Delta c |\nabla u|^{2}  +  2 \nabla c \cdot  \nabla (|\nabla u|^{2} ) \nonumber +  2 c \,|\nabla^{2} u|^{2}   +  2 c\, \nabla u \cdot \nabla (\Delta u).
+\end{align}
+\begin{align}\nonumber
+\therefore \Delta Q  &= 2 |\nabla^{4}u |^{2}  -  \frac{3}{2}|\nabla^{2}( \Delta u)|^{2} +  \frac{1}{2}  g^{'}(\Delta u )\nabla u \cdot \nabla ( \Delta u ) + \frac{1}{2}  f^{'}( u ) |\nabla u|^{2}  \\ &+   |\nabla^{3}u |^{2}   -  \frac{1}{2} |\nabla ( \Delta u)|^{2}  + \Delta c |\nabla u|^{2}  +  2 \nabla c \cdot  \nabla (|\nabla u|^{2} ) \nonumber \\ &+  2 c \,|\nabla^{2} u|^{2}   +  2 c\, \nabla u \cdot \nabla (\Delta u).\label{c5eq15}
+\end{align}
+By using following inequalities we can  remove terms 3, 8 and 10 in equation $\eqref{c5eq15} $.
+\begin{equation}\label{c5eq16}
+ \frac{1}{2}  g^{'}(\Delta u )\nabla u \cdot \nabla ( \Delta u ) \geq   \frac{- 5}{4}  g_{0}  |\nabla u|^{2}  -  \frac{1}{20} |\nabla ( \Delta u)|^{2},
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ \frac{\sqrt{5}}{2} g'(\Delta u ) \nabla u  +   \frac{1}{2\sqrt{5}} \nabla( \Delta u ) \bigg]^{2} \geq  0
+\end{equation}
+\begin{equation}\nonumber
+\frac{5}{4}  (g'(\Delta u ))^{2}   |\nabla u|^{2}  +   \frac{1}{2}  g^{'}(\Delta u )\nabla u \cdot \nabla ( \Delta u )   +   \frac{1}{20} |\nabla ( \Delta u)|^{2} \geq  0 \bigg\}
+\end{equation}
+
+\begin{equation}\label{c5eq17}
+ 2 c\, \nabla u \cdot \nabla (\Delta u)  \geq  - 20 c^{2} |\nabla u|^{2}  -  \frac{1}{20} |\nabla ( \Delta u)|^{2},
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ \sqrt{20}\, c \nabla u  +  \frac{1}{\sqrt{20}}  \nabla (\Delta u) \bigg]^{2} \geq  0
+\end{equation}
+\begin{equation}\nonumber
+20 c^{2} |\nabla u|^{2} +   2 c\, \nabla u \cdot \nabla (\Delta u)  +    \frac{1}{20} |\nabla ( \Delta u)|^{2}   \geq  0 \bigg\}
+\end{equation}
+and
+\begin{equation}\label{c5eq18}
+2 \nabla c \cdot  \nabla (|\nabla u|^{2} )  \geq  \frac{- 2}{ c_{0}} |\nabla c|^{2}  |\nabla u|^{2}   -  2 c_{0} |\nabla^{2} u|^{2}
+\end{equation}
+\begin{equation}\nonumber
+\bigg\{ \because \bigg[ \sqrt{2}\, \nabla c \nabla u  +  \sqrt{2}  \, c_{0} \nabla^{2} u \bigg]^{2}  \geq   0
+\end{equation}
+\begin{equation}\nonumber
+2  |\nabla c|^{2}  |\nabla u|^{2}  +  4 c_{0}\, \nabla c \cdot  \nabla u \, \nabla^{2} u   +  2 c^{2}_{0} |\nabla^{2} u|^{2} \geq  0
+\end{equation}
+\begin{equation}\nonumber
+ \because \nabla ( | \nabla u |^{2} ) =  2 \nabla u \, \nabla^{2} u
+\end{equation}
+\begin{equation}\nonumber
+ 2  |\nabla c|^{2}  |\nabla u|^{2}  +  2 c_{0} \, \nabla c \cdot \nabla ( | \nabla u |^{2} )    +  2 c^{2}_{0} |\nabla^{2} u|^{2}  \geq  0 \bigg\}
+\end{equation}
+
+Thus equation $\eqref{c5eq15}$, becomes
+\begin{align}\nonumber
+\Delta Q  &\geq 2 |\nabla^{4}u |^{2}  -  \frac{3}{2}|\nabla^{2}( \Delta u)|^{2} +   |\nabla^{3}u |^{2}  -  \frac{5}{4} g_{0}|\nabla u|^{2} \\ \nonumber &-  \frac{1}{20} |\nabla ( \Delta u) |^{2}  -  20 c^{2} |\nabla u|^{2}  -  \frac{1}{20} |\nabla ( \Delta u) |^{2}  -  \frac{2}{c_{0}} |\nabla c |^{2} |\nabla u |^{2} \\ \nonumber &-  2 c_{0}  |\nabla^{2}u |^{2}  +  \frac{1}{2}  f^{'}( u ) |\nabla u|^{2}  -  \frac{1}{2}|\nabla ( \Delta u)|^{2}  +  \Delta c  |\nabla u|^{2} +   2 c |\nabla^{2} u|^{2}.
+\end{align}
+Rearranging the terms, we get
+\begin{align}\nonumber
+\Delta Q  &\geq 2 |\nabla^{4}u |^{2}  -  \frac{3}{2}|\nabla^{2}( \Delta u)|^{2} +   |\nabla^{3}u |^{2} -  \frac{3}{5} |\nabla ( \Delta u)|^{2}  + \frac{1}{2}  f^{'}( u ) |\nabla u|^{2} \\&+ 2 ( c - c_{0} )  \,|\nabla^{2} u|^{2}  +  \bigg( \Delta c - 20 c^{2} -  \frac{5}{4}  g_{0}  - \frac{2}{c_{0}} |\nabla (c)|^{2}  \bigg) |\nabla u|^{2} .
+\end{align}\label{c5eq19}
+Using Lemma $\ref{c5l1}$, Lemma  $\ref{c5l2}$  and our stated assumptions, we clearly see that $Q$ is subharmonic in $\Omega$.
+Thus
+$$ \Delta P \geq 0  \quad \text{in} \quad  \Omega.$$
+This completes the proof.
+
+\section{Application}
+In this section as an application of our maximum principle we find integral bounds on third gradient of solutions $ u \in C^{7}( \Omega) \bigcap C^{5}( \bar{\Omega}) $  of the following boundary value problem
+\begin{align}\nonumber
+  {\Delta}^{3} u  -  \rho(x) f(u) = 0 \quad \text{in} \quad \Omega,\\ \nonumber
+  u = \, \frac{\partial u}{\partial n} =\, \frac{\partial^{2} u}{\partial n^{2}} = \,0 \quad \text{on} \quad  \partial \Omega.
+\end{align}
+\begin{theorem}\label{c5th4}
+Let $ u \in C^{7}( \Omega) \bigcap C^{5}( \bar{\Omega}) $ be a solution of
+\begin{align}\label{eq20}
+  {\Delta}^{3} u  -  \rho(x) f(u) = 0 \quad \text{in} \quad \Omega,\\\label{eq21}
+  u = \, \frac{\partial u}{\partial n} =\, \frac{\partial^{2} u}{\partial n^{2}} = \,0 \quad \text{on} \quad  \partial \Omega.
+\end{align}
+Suppose that the assumptions of Theorem $\ref{c5th1}$ are satisfied, then
+\begin{equation*}
+   \int_{\Omega}  |\nabla^{3}(u)|^{2} dx  \leq  \frac{2}{3} A \bigg[ \max_{\partial \Omega} \bigg( |\nabla^{3}(u)|^{2} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i}  +  \frac{1}{2} ( M + N )\gamma  \bigg) \bigg] .
+\end{equation*}
+where $A$ is the area of $\Omega$.
+\end{theorem}
+
+\textbf{Proof:} Using Theorem $\ref{c5th1}$, we see that
+\begin{equation*}
+    P \leq \max_{\partial \Omega} \bigg[ |\nabla^{3}(u)|^{2} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i}  +  \frac{1}{2} ( M + N )\gamma  \bigg].
+\end{equation*}
+Therefore \begin{align}\nonumber
+|\nabla^{3}(u)|^{2} + &\frac{1}{2} u_{,i} ( \Delta^{2} u )_{,i}  -  ( \Delta u)_{,ij} u_{,ij} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i} \\&\leq \max_{\partial \Omega} \bigg[ |\nabla^{3}(u)|^{2} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i}  +  \frac{1}{2} ( M + N )\gamma  \bigg].
+\end{align}\label{eq22}
+ By using Green's first identity  and use boundary conditions $\eqref{eq21} $, we have
+\begin{equation*}
+\int_{\Omega}  v  \Delta u dx  +  \int_{\Omega}  \nabla v . \nabla u   dx   =  \int_{\partial \Omega} v \frac{\partial u}{\partial n} ds
+\end{equation*}
+Put $ v  =   u_{,ij}  \,\, u  =  u_{,ij} $
+\begin{equation*}
+\int_{\Omega}  u_{,ij}  (\Delta u)_{i} dx  +  \int_{\Omega}  u_{,ijk} u_{,ijk}   dx   =  \int_{\partial \Omega} u_{,ij} u_{,ijk} n_{k} ds
+\end{equation*}
+\begin{equation*}
+    \int_{\Omega} u_{,ijk} u_{,ijk} dx  =  \int_{\partial \Omega} u_{,ij} u_{,ijk} n_{k} ds   -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx
+\end{equation*}
+\begin{equation}\label{c5g1}
+ \therefore   \int_{\Omega} u_{,ijk} u_{,ijk} dx -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  =  -  2 \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx
+\end{equation}
+Using Green's first identity with $  v  =   u_{,i}  \,\, u  =  (\Delta u)_{,i} $
+\begin{equation*}
+\int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx  +  \int_{\Omega}  u_{,ij}  (\Delta u)_{,ij}  dx   =  \int_{\partial \Omega} u_{,i} (\Delta u)_{,ij} n_{j} ds
+\end{equation*}
+\begin{equation*}
+\therefore   \int_{\Omega}  u_{,ij}  (\Delta u)_{,ij}  dx   =  \int_{\partial \Omega} u_{,i} (\Delta u)_{,ij} n_{j} ds  -   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx
+\end{equation*}
+From equation $\eqref{c5g1}$,
+\begin{equation*}
+ \int_{\Omega} u_{,ijk} u_{,ijk} dx -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  =  -  2 \int_{\partial \Omega} u_{,i} (\Delta u)_{,ij} n_{j} ds  +  2   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx
+\end{equation*}
+Thus
+\begin{equation}\label{c5g2}
+ \int_{\Omega} u_{,ijk} u_{,ijk} dx -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  +   \frac{1}{2}   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx =  \frac{5}{2}   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx
+\end{equation}
+Again using Green's identity with $  v  =   u_{,i}  \,\, u  =  (\Delta u)_{,i} $
+\begin{equation*}
+\int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx  +  \int_{\Omega}   \Delta u (\Delta^{2} u)  dx   =  \int_{\partial \Omega} u_{,i} n_{i} (\Delta^{2} u)  ds
+\end{equation*}
+\begin{equation*}
+\therefore  \frac{5}{2}\int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx  =  - \frac{5}{2}  \int_{\Omega}   \Delta u (\Delta^{2} u)  dx
+\end{equation*}
+Therefore equation $\eqref{c5g2}$ becomes
+\begin{equation}\label{c5g3}
+ \int_{\Omega} u_{,ijk} u_{,ijk} dx -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  +   \frac{1}{2}   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx =  -  \frac{5}{2}   \int_{\Omega}  \Delta u  (\Delta^{2} u)_{i} dx
+\end{equation}
+Again use Green's first identity with $  v  =   \Delta u  \,\, u  =  \Delta u $
+\begin{equation*}
+\int_{\Omega}  \Delta u  (\Delta^{2} u) dx  +  \int_{\Omega}   (\Delta u)_{,i} (\Delta u)_{,i}  dx   =  \int_{\partial \Omega} \Delta u ( \Delta u)_{,i}n_{i}  ds
+\end{equation*}
+\begin{equation*}
+\therefore -  \frac{5}{2} \int_{\Omega}  \Delta u  (\Delta^{2} u) dx  =   \frac{5}{2}  \int_{\Omega}   (\Delta u)_{,i} (\Delta u)_{,i}  dx
+\end{equation*}
+From equation $ \eqref{c5g3}$,
+\begin{equation*}
+ \int_{\Omega} u_{,ijk} u_{,ijk} dx -   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  +   \frac{1}{2}   \int_{\Omega}  u_{,i}  (\Delta^{2} u)_{i} dx =    \frac{5}{2}  \int_{\Omega}   (\Delta u)_{,i} (\Delta u)_{,i}  dx
+\end{equation*}
+
+
+
+
+
+
+%\begin{align}\nonumber
+%   \int_{\Omega} u_{,ijk} u_{,ijk} dx  &-   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  =   -  2 \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx  \\ &\nonumber =  %- 2  \int_{\partial \Omega} u_{,i} n_{j}(\Delta u)_{,ij}ds  +   2 \int_{\Omega} u_{,i} ( \Delta^{2} u)_{,i}dx.
+%\end{align}
+%Therefore,
+%\begin{align}\nonumber
+%    \int_{\Omega} u_{,ijk} u_{,ijk} dx  &-   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx   + \frac{1}{2} \int_{\Omega} u_{,i} ( \Delta^{2} u )_{,i}dx   = %\frac{5}{2}  \int_{\Omega} u_{,i} ( \Delta^{2} u )_{,i}dx \\& \nonumber =  \frac{5}{2}  \int_{\partial \Omega} u_{,i} n_{i}( \Delta^{2} u )ds  -  %\frac{5}{2}  \int_{\Omega} ( \Delta u ) ( \Delta^{2} u )dx \\ & \nonumber = -  \frac{5}{2}  \int_{\Omega} ( \Delta u ) ( \Delta^{2} u )dx = -  \frac{5}{2}  %\int_{\partial \Omega} ( \Delta u ) ( \Delta u )_{,i} n_{i} ds   +   \frac{5}{2}  \int_{\Omega} ( \Delta u )_{,i} ( \Delta u )_{,i}dx \\ & \nonumber =  %\frac{5}{2}  \int_{\Omega} ( \Delta u )_{,i} ( \Delta u )_{,i}dx.
+%\end{align}
+
+Collect all terms in $P$ together and integrating, we see that
+\begin{align}\nonumber
+\int_{\Omega} u_{,ijk} u_{,ijk} dx  &-   \int_{\Omega} u_{,ij} ( \Delta u)_{,ij}dx   + \frac{1}{2} \int_{\Omega} u_{,i} ( \Delta^{2} u )_{,i}dx  -  \frac{1}{4} \int_{\Omega} ( \Delta u)_{,i} ( \Delta u)_{,i} dx \\ & \nonumber  =  \frac{3}{2} \int_{\Omega} ( \Delta u)_{,i} ( \Delta u)_{,i} dx
+\end{align}
+A further computation using integration by parts shows that
+\begin{equation*}
+   \int_{\Omega}  |\nabla^{3}(u)|^{2} dx  =  \int_{\Omega} ( \Delta u)_{,i} ( \Delta u)_{,i} dx
+\end{equation*}
+and so finally we deduce the following integral bound on the square of the third gradient of $u$:
+\begin{equation*}
+   \int_{\Omega}  |\nabla^{3}(u)|^{2} dx  \leq  \frac{2}{3} A \bigg[ \max_{\partial \Omega} \bigg( |\nabla^{3}(u)|^{2} - \frac{1}{4} ( \Delta u)_{,i}( \Delta u)_{,i}  +  \frac{1}{2} ( M + N )\gamma  \bigg) \bigg] .
+\end{equation*}
+
+\end{large}

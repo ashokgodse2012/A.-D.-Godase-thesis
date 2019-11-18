@@ -1,0 +1,249 @@
+% -----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+%\def\baselinestretch{1}
+\chapter{Distributional Natural Transform and operational calculus}
+\begin{quote}
+\textcolor[rgb]{0.25,0.40,0.60}{\lq\lq\textsl{An equation means nothing to me unless it expresses a thought of God}\rq\rq}.
+\begin{flushright}
+\textcolor[rgb]{0.55,0.00,0.55}{\em-\texttt{ SRINIVASA RAMANUJAN}}.
+\end{flushright}
+\end{quote}
+
+
+\lhead{\scriptsize\itshape\medskip Properties of Generalized Natural Transform}
+\section{Introduction}
+ In the previous chapter, we have defined the generalized Natural transform over the testing function space $\mathfrak{D}_{a,b}$ and studied its fundamental theorems. In this chapter we have proved some properties of generalized Natural transform which are useful for the application purpose.
+\begin{theorem}
+ The generalized Natural transform is linear.i.e. if $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ and $R_{g}(s,u)$ be the generalized Natural transform of $g(t)$, then
+ \begin{equation}
+ \mathbb{N}[\alpha f \pm \beta g]=\alpha R_{f}(s,u) \pm\beta R_{g}(s,u)
+ \end{equation}
+\end{theorem}
+\begin{proof}
+ From the definition of generalized Natural transform we have
+ \begin{align*}
+ \mathbb{N}[\alpha f(t) \pm \beta g(t)]&=<\alpha f(t) \pm \beta g(t),\frac{e^{\frac{-st}{u}}}{u}>\\
+&=\frac{1}{u}<\alpha f(t) \pm \beta g(t),e^{\frac{-st}{u}}>\\
+&=\frac{1}{u}<\alpha f(t),e^{\frac{-st}{u}}>\pm\frac{1}{u}<\beta g(t),e^{\frac{-st}{u}}>\\
+&=\alpha\frac{1}{u}< f(t),e^{\frac{-st}{u}}>\pm\beta\frac{1}{u}< g(t),e^{\frac{-st}{u}}>\\
+&=\alpha R_{f}(s,u)\pm\beta R_{g}(s,u)
+ \end{align*}
+\end{proof}
+%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$, then
+\begin{equation}
+D_{s}^{k}R_{f}(s,u)=<f(t),D_{s}^{k}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation}
+where $D_{s}^{k}=\dfrac{d^{k}}{ds^{k}}$ be the $k^{th}$ derivative with respect to $s$.
+\end{theorem}
+\begin{proof}
+To prove the theorem we apply the method of induction on $k$.
+For $k=0$ the result is very obvious i.e.
+\begin{equation*}
+R_{f}(s,u)=<f(t),\frac{e^{\frac{-st}{u}}}{u}>
+\end{equation*}
+Assume that the result is true for $(k-1)^{th}$ derivative i.e.
+\begin{equation*}
+D_{s}^{k-1}R_{f}(s,u)=<f(t),D_{s}^{k-1}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation*}
+Let $s,u$ be fixed and $\Delta{s}\neq 0$ then consider 
+\begin{equation}
+\frac{ D_{s}^{k-1}R_{f}(s+\Delta{s},u)-D_{s}^{k-1}R_{f}(s,u)}{\Delta{s}}-<f(t),D_{s}^{k-1}\frac{1}{u}e^{\frac{-st}{u}}>=<f(t),\psi_{\Delta{s}}(t)>
+\end{equation}
+Where $\psi_{\Delta{s}}(t)=\frac{1}{\Delta{s}}[D_{s}^{k-1}e^{\frac{-(s+\Delta{s})t}{u}}-D_{s}^{k-1}e^{\frac{-st}{u}}]-D_{s}^{k}\frac{1}{u}e^{\frac{-st}{u}}$\\
+Now to prove the result for $k$, it is enough to show that as $\vert\Delta{s}\vert\rightarrow 0,\psi_{\Delta{s}}(t)$ converges to zero in $\mathfrak{D}_{a,b}$.\\
+For the non-negative integer $n$, consider
+\begin{equation}
+\psi_{\Delta{s}}^{(n)}(t)= \frac{1}{\Delta{s}}\int_{s-t}^{s-t+\Delta{s}}\int_{s-t}^{y}D_{\zeta}^{n+k+1}(\frac{e^{\frac{-\zeta t}{u}}}{u})d\zeta dy
+\end{equation}
+Let $\Upsilon : [\zeta / s-t-\Delta{S}<\gamma<s-t+\Delta{S}]$
+\begin{equation*}
+\vert\psi_{\Delta{s}}^{(n)}(t)\vert\leq\frac{\Delta{s}}{2}\underset{\zeta}{Sup.}\vert D_{\zeta}^{n+k+1}(\frac{e^{\frac{-\zeta t}{u}}}{u})\vert
+\end{equation*}
+ As $\vert\Delta{s}\vert \rightarrow 0 ,\psi_{\Delta{s}}(t)$ converges to zero in $\mathfrak{D}_{a,b}$.\\
+Hence result is true for $k$ i.e.
+\begin{equation}
+D_{s}^{k}R_{f}(s,u)=<f(t),D_{s}^{k}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ and
+\begin{align*}
+  g(t) = \begin{cases}
+  f(t-\lambda)\hspace{0.5cm}  t\geq\lambda \\
+   0           \hspace{0.5cm}  t<\lambda
+  \end{cases},
+ \end{align*}
+ then 
+ \begin{equation*}
+ R_{g}(s,u)=e^{\frac{-s\lambda}{u}}R_{f}(s,u)
+ \end{equation*}
+ where $ R_{g}(s,u) $ is the generalized Natural transform of $g(t)$.
+\end{theorem}
+\begin{proof}
+From the definition of function $g(t)$, we can say that \hspace{0.5cm}$g(t)\in \mathfrak{D}_{a,b}$ we have
+\begin{align*}
+  R_{g}(s,u)&=<f(t-\lambda),\frac{e^{\frac{-st}{u}}}{u}>\\
+  &=<f(t),\frac{e^{\frac{-s(t+\lambda)}{u}}}{u}>\\
+  &=e^{\frac{-s\lambda}{u}}<f(t),\frac{e^{\frac{-st}{u}}}{u}>\\
+  &=e^{\frac{-s\lambda}{u}}R_{f}(s,u)
+ \end{align*}
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$
+ then 
+ \begin{equation*}
+ R_{f}(t^{n}D_{t}^{n}f(t);s,u)=u^{n}D_{u}^{n}R_{f}(s,u)
+ \end{equation*}
+\end{theorem}
+
+\begin{proof}
+Let $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ then
+\begin{align*}
+D_{u}^{n}R_{f}(s,u)&=D_{u}^{n}<f(t),\frac{e^{\frac{-st}{u}}}{u}>\\
+&=D_{u}^{n}<f(ut),e^{-st}>\\
+&=<D_{u}^{n}f(ut),e^{-st}>\\
+&=<t^{n}D_{t}^{n}f(ut),e^{-st}>\\
+&=\frac{1}{u^{n}}<(ut)^{n}D_{t}^{n}f(ut),e^{-st}>\\
+&=\frac{1}{u^{n}}R_{f}(t^{n}D_{t}^{n}f(t);s,u)
+\end{align*}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$
+ then 
+ \begin{equation*}
+ R_{f}(f(at);s,u)=\frac{1}{a}R_{f}(f(t);\frac{s}{a},u)
+ \end{equation*}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+R_{f}(f(at);s,u)&=<f(at),\frac{e^{\frac{-st}{u}}}{u}>\\
+&=\frac{1}{a}<f(t),\frac{e^{\frac{-\frac{s}{a}t}{u}}}{u}>\\
+&=\frac{1}{a}R_{f}(f(t);\frac{s}{a},u)
+\end{align*}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ 
+ then 
+ \begin{equation*}
+ R_{f}(e^{at}f(t);s,u)=\frac{s}{s-au}R_{f}(\frac{su}{s-au})
+ \end{equation*}
+\end{theorem}
+
+\begin{proof}
+\begin{align*}
+ R_{f}(e^{at}f(t);s,u)&=<e^{at}f(t),\frac{e^{\frac{-st}{u}}}{u}>\\
+&=\frac{1}{u}<f(t),e^{-(\frac{s}{u}-a)t}>\\
+&=\frac{s}{s-au}<f(\frac{su}{s-au}t),e^{-st}>\\
+&=\frac{s}{s-au}R_{f}(\frac{su}{s-au})
+\end{align*}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ 
+ then 
+ \begin{equation*}
+ R_{f}(tf(t);s,u)=\frac{u^{2}}{s}D^{1}_{u}R_{f}(f(t);s,u)+\frac{u}{s}R_{f}(f(t);s,u)=\frac{u}{s}D^{1}_{u}u.R_{f}(f(t);s,u)
+ \end{equation*}
+ We can generalize above result as
+  \begin{equation*}  
+  R_{f}(t^{n}f(t);s,u)=\frac{u^{n}}{s^{n}}D^{1}_{u}u^{n}.R_{f}(f(t);s,u)
+  \end{equation*}
+\end{theorem}
+\begin{proof}
+For $f(t)\in \mathfrak{D}_{a,b}$ and using the property of differentiation, we have
+\begin{align*}
+ D^{1}_{u}R_{f}(f(t);s,u) &=<f(t),D^{1}_{u}\frac{e^{\frac{-st}{u}}}{u}>\\
+ &=\frac{s}{u^{2}}<tf(t),\frac{e^{\frac{-st}{u}}}{u}> - \frac{1}{u}<f(t),\frac{e^{\frac{-st}{u}}}{u}>\\
+R_{f}(tf(t);s,u) &=\frac{u^{2}}{s}D^{1}_{u}R_{f}(f(t);s,u)+\frac{u}{s}R_{f}(f(t);s,u)
+\end{align*}
+with the help of mathematical induction we can easily prove that the result is true for $t^{n}$ i.e.\\
+\begin{equation*}  
+  R_{f}(t^{n}f(t);s,u)=\frac{u^{n}}{s^{n}}D^{1}_{u}u^{n}.R_{f}(f(t);s,u)
+  \end{equation*}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u)$ be the generalized Natural transform of $f(t)$ then
+\begin{equation}
+D_{u}^{k}R_{f}(s,u)=<f(t),D_{u}^{k}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation}
+Where $D_{u}^{k}=\dfrac{d^{k}}{du^{k}}$ be the $k^{th}$ derivative with respect to $u$.
+\end{theorem}
+
+\begin{proof}
+We prove this theorem by the method of mathematical induction on $k$.\\
+For $k=0$ the result is very obvious i.e.
+\begin{equation*}
+R_{f}(s,u)=<f(t),\frac{e^{\frac{-st}{u}}}{u}>
+\end{equation*}
+Assume that the result is true for $(k-1)^{th}$ derivative i.e.
+\begin{equation*}
+D_{u}^{k-1}R_{f}(s,u)=<f(t),D_{u}^{k-1}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation*}
+Now we will prove the result for $k$.\\
+Let $ u $ be fixed and $\Delta{u}\neq 0$ then consider 
+\begin{align*}
+\frac{1}{\Delta{u}}<D_{u}^{k-1}R_{f}(s,u+\Delta{u})-D_{u}^{k-1}R_{f}(s,u)>\\
+-<f(t),D_{u}^{k-1}\frac{1}{u}e^{\frac{-st}{u}}>
+&=<f(t),\theta_{\Delta{u}}(t)>
+\end{align*}
+Where $\theta_{\Delta{u}}(t)=\frac{1}{\Delta{u}}[D_{u}^{k-1}(\frac{e^{\frac{-st}{u+\Delta{u}}}}{u+\Delta{u}})-D_{u}^{k-1}(\frac{e^{\frac{-st}{u}}}{u})]-D_{u}^{k}\frac{1}{u}e^{\frac{-st}{u}}$\\
+To complete the proof of the theorem, we merely required to establish that $\theta_{\Delta{u}}(t)\rightarrow 0$, as ${\Delta{u}}\rightarrow 0 $ in the sense of $\mathfrak{D}_{a,b}$.\\
+Let $ j $ be the non-negative integer, such that
+\begin{equation}
+\theta_{\Delta{u}}^{(j)}(t)= \frac{1}{\Delta{u}}\int_{u-t}^{u-t+\Delta{u}}\int_{u-t}^{y}D_{\zeta}^{j+k+1}(\frac{e^{\frac{-st}{\zeta}}}{\zeta})d\zeta dy
+\end{equation}
+Let $\Upsilon : [\zeta / u-t-\vert\Delta{u}\vert < \zeta < u-t+\vert\Delta{u}\vert]$\\
+After having the simple calculations, we have
+\begin{equation*}
+\vert\theta_{\Delta{u}}^{(j)}(t)\vert\leq\frac{\Delta{u}}{2}\underset{\zeta}{Sup}\vert D_{\zeta}^{j+k+1}(\frac{e^{\frac{-st}{\zeta}}}{\zeta})\vert
+\end{equation*}
+$\therefore$ As $\vert\Delta{u}\vert \rightarrow 0 ,\theta_{\Delta{u}}(t)$ converges uniformly to zero in $\mathfrak{D}_{a,b}$.\\
+Hence result is true for $k$ i.e.
+\begin{equation}
+D_{u}^{k}R_{f}(s,u)=<f(t),D_{u}^{k}(\frac{e^{\frac{-st}{u}}}{u})>
+\end{equation}
+Hence the proof.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+ Let $f(t),g(t)\in \mathfrak{D}_{a,b}$ and $R_{f}(s,u),R_{g}(s,u)$ be the distributional Natural transforms of $f(t),g(t)$ then
+\begin{itemize}
+\item[(1)]$R[D^{m}_{t}(f \ast g):s,u)=u.R_{f}(D^{m}_{t}f(t))R_{g}(g(\tau))$
+\item[(2)]$R[D^{m}_{t}(f \ast g):s,u)=u.R_{f}(f(\tau))R_{g}(D^{m}_{t}g(t))$
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+As the proof of (1)and (2)are similar, we will give the proof of (1) part only.\\
+We know that
+\begin{equation}
+D^{m}_{t}(f \ast g)=f^{m} \ast g=g \ast f^{m}
+\end{equation}
+Consider
+\begin{align*}
+R[D^{m}_{t}(f \ast g):s,u)&=<D^{m}_{t}(f \ast g),\frac{e^{\frac{-st}{u}}}{u}>\\
+&=<D^{m}_{t}f(t),<g(\tau),\frac{e^{\frac{-s(t+\tau)}{u}}}{u}>>\\
+&=u<D^{m}_{t}f(t),\frac{e^{\frac{-st}{u}}}{u}><g(\tau),\frac{e^{\frac{-s\tau}{u}}}{u}>\\
+&=u.R_{f}(D^{m}_{t}f(t))R_{g}(g(\tau))
+\end{align*}
+Hence the proof.
+ \end{proof}
+
+%%% ---------------------------------------------------------------------------
+%In this paper we discussed the existence and uniqueness of solution for both
+%Hilfer and Hilfer-Hadamard fractional differential equations. By using Picard
+%function sequence the solutions are constructed and the ratio test is used to
+%obtain the convergence of iterative schemes.

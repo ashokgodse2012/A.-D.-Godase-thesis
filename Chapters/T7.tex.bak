@@ -1,0 +1,185 @@
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+%\rhead{\tiny\itshape\leftmark{}}
+\lhead{\scriptsize\itshape\medskip Bibliography}
+\chead{} \rfoot{\scriptsize\medskip\itshape Gajanan C. Lomte}
+%\cfoot{\medskip\sffamily\large\thepage }
+\lfoot{\scriptsize\medskip\itshape Dr.B.A.M.University, Aurangabad.}
+\renewcommand{\headrulewidth}{0.01pt}
+\renewcommand{\footrulewidth}{0.01pt}
+%\def\baselinestretch{1}
+
+%\chapter{Fourth Order Uniformaly Elliptic Equations}
+\begin{large}
+\begin{thebibliography}{00}
+\bibitem{an} N. Anderson and  A. M. Arthus, \emph{ Upper and lower bounds for the torsional stiffness of a prismatic bar,} Proc. Roy. London Ser.A 328(1972), 295-299.
+\bibitem{b} C. Bandle, \emph{ Bounds for the solutions of poision problem and applications to nonlinear eigenvalue problems,} SIAM J. Math. Anal., 6 (1975), 146-152.
+
+\bibitem{be} A. Bennett, \emph{ Symmetry in an overdetermined fourth order elliptic boundary value problem ,} SIAM J. Math. Anal., 17 (1986), 1354-1358.
+\bibitem{ber} M. S. Berger, \emph{ On von Karaman's equations and the buckling of thin elastic plate I,}  Commun. Pure Appl. Math., 20 (1967), 687-719.
+\bibitem{ber2} M. S. Berger and P. C. Fife, \emph{ Von Karaman's equations and the buckling of thin elastic plate II, Plate with general edge conditions,} Commun. Pure Appl. Math., 21 (1968), 227-241.
+
+\bibitem{ch} C. Chan, \emph{ A sturm theorem for nonself-adjoint elliptic inequalities with mixed boundary conditions and its applications,} Bull. London Math. Soc., 5 (1973), 225-228.
+
+
+\bibitem{cd} S. N. Chow and D. R. Dunninger, \emph{ A maximum principle for  n-metaharmonic the solutions of poision problem and applications to nonlinear eigenvalue problems,} SIAM J. Math. Anal., 6 (1975), 146-152.
+
+\bibitem{cs} C. Cosner and P. W. Schaefer, \emph{ On the development of functionals which satisfy a maximum principle,} Appl. Anal., 26 (1987), 45-60.
+
+
+\bibitem{c} R. Courant and D. Hilbert, \emph{ Methods of Mathemtical Physics,} Vol. II, Wieley Eastern, New Delhi, 1962.
+\bibitem{d1} C. P. Danet, \emph{ Uniqueness results for a class of higher order boundary value problems,} Glasgow Math. J., 26 (2006), 547-552.
+\bibitem{d2} C. P. Danet, \emph{ On the elliptic inequality $Lu \leq 0$,} Math.Inequal. $\&$ Appl., 11 (2008), 559-562.
+\bibitem{d3} C. P. Danet, \emph{ A remarks on a uniqueness results for a boundary value problem of eight order,} Appl. Math. E-Notes, 9 (2009), 192-196.
+
+\bibitem{d11} C. P. Danet, \emph{ Uniqueness in some higer higher elliptic boundary value problems in n dimension domain,} El.J. Qualitative Th. Diff. Eq.,54  (2011), 1-12.
+
+\bibitem{db1} D. B. Dhaigude, \emph{ Comparison theorems for a class of elliptic equations of order 4 m,} Chinese J. Math., 15 (1987), 61-67.
+\bibitem{dg} D. B. Dhaigude and M. R. Gosavi,\emph{ Maximum principles for fourth order semilinear elliptic equations and applications}, Differ. Equ. Dyn. Syst.  12, 3 \& 4(2004), 279-287.
+
+
+\bibitem{dk} D. B. Dhaigude and D. Y. Kasture, \emph{ Comparison theorems for nonlinear elliptic systems of second order with applications,} J. Math. Anal. Appl., 112 (1985), 178-189.
+\bibitem{dk2} D. B. Dhaigude and D. Y. Kasture, \emph{ Nonlinear Time Degenerate Parabolic Inequalities and Applications,} J. Math. Anal. Appl., 175, 2(1993), 476-481.
+
+
+\bibitem{du1} D. R. Dunninger, \emph{ Maximum principles for solutions of some fourth- order elliptic equations,} J. Math. Anal. Appl., 37 (1972), 655-658.
+\bibitem{du2} D. R. Dunninger, \emph{ Maximum principles for fourth order ordinary differential inequalities,} J. Math. Anal. Appl., 82 (1981), 399-405.
+\bibitem{drc} D. R. Dunninger and S. Chow, \emph{A maximum principle for n-metaharmonic functions,} Proc. Amer. Soc. 43 (1974), 79-83.
+
+
+
+
+\bibitem{ep} C. Enache and G. A. Philippin, \emph{ Some maximum principles for a class of ellptic boundary value problems,} Math.Ineq.  Appl., 9 (2006), 695-706.
+\bibitem{fn} L. E. Fraenkel, \emph{ An inroduction to Maximum Principles and Symmetry in Elliptic Problems,} Cambridge University Press, 2000.
+\bibitem{fr} A. Friedman, \emph{ Partial Differential Equations of Parabolic Type,} Prentice Hall Inc. Cliffs, 1964.
+
+\bibitem{fw} W.T. Ford and M.C. Waid, \emph{On maximum principles for some degenerate parabolic operators,} J. Math.Anal. Appl.,40 (1972), 271-277.
+
+\bibitem{gil} D. Gilbarg and N. S. Trudinger, \emph{ Elliptic Partial Differential Equations of Second Order,} Springer-Verlag, New York, 1977.
+\bibitem{gog2} S. Goyal and V. B. Goyal,\emph{ Liouvlle - type and uniqueness results for a class of sixth order elliptic equations,} J. Math. Anal. Appl., 139 (1989), 586-599.
+\bibitem{gog} S. Goyal and V. B. Goyal,\emph{ On some fourth order elliptic boundary value problems,} Appl. Math. Sci., 5 (36) (2011), 1781-1793.
+
+\bibitem{gs1} V. B. Goyal, P. W. Scheafer,\emph{ On a subharmonic functional in fourth order nonlinear elliptic problems}, J. Math. Anal. Appl., 83 (1981), 20-25.
+
+\bibitem{gs} V. B. Goyal and P. W. Schaefer, \emph{ On Entire Solutions in Some Nonlinear Fourth Order Elliptic Equations,} Nonlinear Phenomena In Mathematical Sciences,(1982), 463-467.
+
+
+\bibitem{gs2} V. B. Goyal and P. W. Schaefer, \emph{ Liouville theorems for elliptic systems and nonlinear equations of fourth order,} Proc. Royal Soc. Edinburgh, 91A  (1982), 235-243.
+\bibitem{gs3} V. B. Goyal and P. W. Schaefer, \emph{ Comparison principles for some fourth order elliptic problems,} Lect. Notes in Mathematics, Springer Varlag, Berlin, 964 (1982), 272-279.
+
+\bibitem{gs4} V. B. Goyal and K. P. Singh, \emph{ Maximum principles for a certain class of semi- linear elliptic partial differential equations,} J. Math. Anal., 69 (1979), 1-7.
+\bibitem{go} M. R. Gosavi, \emph{ Elliptic and Parabolic Differential Inequalities and Their Applications,} Thesis,Dr.B.A.M.U.(2004)
+
+\bibitem{hai} Z. Hailiang,\emph{ Maximum principles for a class of semilinear elliptic boundary value problems}, Bull. Austral. Math. Soc., 52 (1995), 169-176.
+\bibitem{he}A. Henrot and G.A. Philippin, \emph{Some overdetermined boundary value problems with elliptical free boundaries,} sIAM J. Math. Anal., 28 (1998), 309-320.
+\bibitem{hp} G.N. Hille and M.H. Protter, \emph{Maximum principles for a class of first order elliptical systems, } J. Diff. Eq., 24 (1977), 136-151.
+\bibitem{ho} M.H. Holmes, \emph{Comparison theorems and similarities solution approximations for a nonlinear diffusion equation arising in the study of soft tissue, }SIAM J. Appl. Math. 44, (3)(1984), 545-556.
+\bibitem{Hop} E. Hopf, \emph{A remark on linear elliptic differential equation of second order,} Proc. Amer. Math. Soc.,3 (1952),791-793.
+
+\bibitem{ko} V. Komkov, \emph{Certain estimates for the solution of nonlinear elliptic differential equations applicable to the theory of thin plates, }SIAM J. Appl. Math., 28 (1975), 24-34.
+
+
+\bibitem{lu} Ladyzhenskaya and Ural'ceva, \emph{ Local Estimates for Gradients of Solutions of Nonuniformly Elliptic and Parabolic Equations,} Comm. Pure and Appl. Math., 23 (1970), 677-703.
+\bibitem{ma1} A. Mareno,\emph{ Maximum principles for a fourth order equation from plate theory, } J. Math. Anal. Appl., 343 (2008), 932-937.
+
+\bibitem{amo} A. Mareno, \emph{Integral bounds for Von karman equations,} Z. Angew. Math. Mech., 90 (2010), 509-513.
+
+\bibitem{mo} A. Mareno, \emph{Maximum principles for some higher-order semilinear elliptic equations,} Glasgow Math. J., 53 (2011), 313-320.
+
+\bibitem{ma} A. Mareno,\emph{ Maximum principles and bounds for a class of fourth order nonlinear elliptic equations, } J. Math. Anal. Appl., 377 (2011),     495-500.
+\bibitem{ma2} A. Mareno,\emph{ A maximum principle result for a nonlinear equation from thin plate theory, } Appl. Math. Sci., 6 (47)(2012), 2307-2314.
+
+
+\bibitem{m2} C. Miranda, \emph{ Formule di maggiorazione e teorema di esistenza per le funzioni biarmoniche di due variabli,} Giorn. Mat. Battaglini, 78(1948), 97-118.
+
+\bibitem{m1} C. Miranda, \emph{ Partial Differential Equations of Elliptic Type,} Springer-Verlag, Berlin, 1970.
+\bibitem{mp} A.Mohammed and G. Porru, \emph{Maximum principles for ordinary diffenrential inequlities of fourth and sixth order,} J. Math. Anal. Appl., 146 (1990), 408-419.
+
+\bibitem{nis1} E. C. Nichols and P. W. Schaefer, \emph{ A maximum principle in nonlinear fourth order elliptic equations, } Lect. Notes Pure Appl.Math., 109 (1987), 375-379.
+
+\bibitem{ni} K. Nickel, \emph{ Parabolic equations with applications to boundary layer theory,} Partial Differential Equations and Continuum Mechanics, University of Wisconsin press, Madison,(1961), 319-330.
+
+\bibitem{n} L. Nirenberg, \emph{A strong maximum principle for parabolic equations,} Comm. Pure. Appl.Math.  6 (1953) 167-177.
+\bibitem{no} Noussair, C. A. Swanson, \emph{ Comparison theorems for elliptic and parabolic inequalities,} Illinous J. Math. 18 (1974), 165-169.
+\bibitem{pa} C. V. Pao, \emph{ Nonlinear Parabolic and Elliptic Equations,} Plenum Press, New York, 1992.
+\bibitem{py1} L. E. Payne, \emph{ Bounds for the Maximum stress in the Saint Venant Torsion Problem,} Indian J. Mech. Math.,(1968), 51-59.
+
+\bibitem{py2} L. E. Payne, \emph{Some remarks on maximum principles,} J. Analyse. Math.30 (1976), 421-433.
+
+\bibitem{pp} L. E. Payne and G. A. Philippin, \emph{ Some applications of the maximum principle in the problem of torsional creep, } SIAM J. Appl. Math.,33 (1977), 446-455.
+\bibitem{pp4} L. E. Payne and G. A. Philippin, \emph{ Some maximum principle for nonlinear elliptic equations in divergence from with applications to capillary surfaces of constant mean curvature, } Nonlinear Analysis,3 (1979), 193-211.
+
+
+\bibitem{pp2} L. E. Payne and G. A. Philippin, \emph{ On maximum principles for a class of nonlinear second order elliptic equations, } J. Diff. Eq.,37 (1980), 39-48.
+\bibitem{pp3} L. E. Payne and G. A. Philippin, \emph{ Isoperimetric inequalities in the torsion and clamped membrane problems for convex plane regions, } SIAM J. Appl. Math., 14 (1983), 1154-1162.
+
+
+\bibitem{ps1} L. E. Payne and P. W. Schaefer, \emph{ Pointwise and L2 bounds in some nonstandard problems for the heat equation, } J. Math. Anal. Appl.,284 (2003), 283-293.
+\bibitem{pst1} L. E. Payne and I. Stakgold, \emph{ Nonlinear problems in nuclear reactor analysis, } Proc. Conf. on Nonlinear Problems in Physical Sciences and Biology, Springer Lecture Notes in Math. 322 (1972), 298-307.
+\bibitem{pst2} L. E. Payne and I. Stakgold, \emph{ On the mean value of the fundamental mode in the fixed membrane problem, } Appl. Anal., 3 (1973), 295-306.
+\bibitem{psts} L. E. Payne, I. Stakgold and R. P. Sperb, \emph{ On hopf type maximum principles for convex domains, } Nonlinear Anal., 1 (1977), 547-559.
+\bibitem{pyw} L. E. Payne and H. F. Weinberger, \emph{ Lower bounds for vibrations frequencies of elastically supported membranes and plates, } J. Soc. Ind. Appl. Math., 5 (1957), 171-182.
+\bibitem{phi} G. A. Philippin, \emph{ Some remarks on the elastically supported membrane, } Z. A. M. P., 29 (1978), 306-314.
+\bibitem{ps} G.A. Philippin and A. V. Safoui, \emph{Some applications of the maximum principle to a variety of fully nonlinear elliptic PDE's,} Z.A.M.P.,54 (2003), 739-755.
+
+\bibitem{pw1} M. H. Protter and H. F. Weinberger, \emph{ A maximum principle and gradient bounds for linear elliptic equations, } Indiana Univ. Math. J., 23 (3) (1973), 239-249.
+
+\bibitem{pw2} M. H. Protter and H. F. Weinberger, \emph{ Maximum Principles in Differential Equations,} Springer-Verlag, New York, 1984.
+
+\bibitem{rg} J.M. Ramilson and B. Gebhart, \emph{Buoyancy induced transport in porous media saturated with pure or saline water at low temperatures,} Int. J. Heat and Mass Trasfer, 23 (1980), 1521-1530.
+
+
+\bibitem{st} D. H. Sattinger, \emph{ Topics in Stability and Bifurcation Theory,} Springer Lecture Notes in Math. Vol. 309, Springer -Verlag, Berlin and New York, 1973.
+\bibitem{s1} P. W. Schaefer, \emph{ On a maximum principle for a class of fourth order semilinear elliptic equations,} Proc. Roy. Soc. Edinburgh 77A,(1977), 319-323.
+\bibitem{s2} P. W. Schaefer, \emph{ Some maximum principle for nonliear elliptic boundary value problems,} Quart. Appl. Math., (1978), 517-523.
+\bibitem{sre} P. W. Schaefer, \emph{Uniqueness in some higher order elliptic boundary value problems,} Z. Angew. Math. Mech., 29 (1978), 693-697.
+\bibitem{sch2} P. W. Schaefer, \emph{ Some maximum principles in semiliear elliptic equations,} Proc. Amer. Math. Soc., 98 (1986), 97-102.
+
+\bibitem{sr2} P. W. Schaefer,\emph{ Pointwise estimates in a class of fourth-order nonlinear elliptic equations}, Z. Angew. Math. Phys., 38(1987) 477-479.
+
+\bibitem{sc} P. W. Schaefer,\emph{ Solution, gradient and laplacian bounds in some nonlinear fourth order elliptic equations}, SIAM J. Math. Anal., 18(1987) 430-434.
+
+
+\bibitem{ss} P. W. Schaefer and R. P, Sperb, \emph{ Maximum principles and bounds in some inhomogeneous elliptic boundary value problems,} SIAM J.Math. Anal., 8 (1977), 871-878.
+\bibitem{se1} J. B. Serrin, \emph{ Gradient estimates for solutions of nonlinear elliptic and parabolic equations,} Symposium on Nonlinear Functional Analysis, Univ. of Wisconsin 1971.
+\bibitem{se2} J. B. Serrin, \emph{ Nonlinear elliptic equations of second order,} Symposium on Partial Differential Equations, Univ. of Californiya, Barkeley 1971.
+
+
+\bibitem{sp1} R. P. Sperb, \emph{ Nonlinear diffusion-reaction problems with time dependent diffusion coefficient,} Z. Angew.Math. Phys., 30 (1979), 663-675.
+
+\bibitem{sp2} R. P. Sperb, \emph{ Growth estimate in diffusion-reaction problems,} Arch. Rat.Mech. Anal., 75, 2 (1981), 127-145.
+
+
+\bibitem{sp3} R. P. Sperb, \emph{ Maximum Principles and Their Applications,} Academic Press, New York, 1981.
+\bibitem{sp5} R. P. Sperb, \emph{ Comparison results in a class of reaction-diffusion problems,} Z. Angew.Math. Phys., 32 (1981), 12-15.
+
+\bibitem{sp4} R. P. Sperb, \emph{ Optimal sub or super solutions in reaction-diffusion problems,} J. Differential Equations, 178 (2002), 101-122.
+
+\bibitem{stk1} I. Stakgold, \emph{ Gradient bounds for plasma confinement,} Tech. Report, 44A Univ. of Delaware 1979.
+\bibitem{tl} S. Tseng and C. S. Lin, \emph{On a subhaormonic functional of some even order elliptic problems,} J. Math. Anal. Appl., 207 (1997), 127-157.
+
+\bibitem{t} T. W. Ting, \emph{ Elastic -plastic torsion of simply connected cylindrical bars,} Indiana Univ. Math. J., 20 (1971), 1047-1076.
+
+\bibitem{w} M.C. Waid, \emph{Strong maximum principle for time degenerate parabolic operators,} SIAM J. Appl. Math., 26 (1) (1974), 196-202.
+\bibitem{webb} J.R.L. Webb, \emph{Maximum principles for functionals associated with the solution of semilinear elliptic boundary value problems,} Z.A.M.P., 40 (1989), 330-338.
+\bibitem{z} H. Zhang and W. Zhang, \emph{Maximum principles and bounds in a class of fourth order uniformly elliptic equations,} J. Phys. A: Math. Gen., 35 (2002), 9245-9250.
+
+\end{thebibliography}
+
+\end{large}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
